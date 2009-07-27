@@ -61,6 +61,58 @@ static const char kOptionFontSize[] = "font_size";
 static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
 
+static gboolean
+control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
+{
+  // cairo_surface_t *image;
+  cairo_t *cr = gdk_cairo_create(widget->window);
+  cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 0.0); /* transparent */
+
+  /* draw the background */
+  cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
+  cairo_paint (cr);
+
+  // image = cairo_image_surface_create_from_png ("/home/wwang29/Desktop/add.png");
+  // cairo_set_source_surface (cr, image, 0, 0);
+  // cairo_paint (cr);
+  // cairo_surface_destroy (image);
+
+  cairo_destroy(cr);
+  return FALSE;
+}
+
+static void
+on_screen_size_changed (GdkScreen *screen, GtkWidget *control)
+{
+    gint window_width, window_height;
+
+    gtk_window_get_size (GTK_WINDOW(control), &window_width, &window_height);
+    gtk_window_move (GTK_WINDOW(control), 0,
+                     gdk_screen_get_height(screen) - window_height);
+}
+
+static void
+control_screen_changed(GtkWidget *widget, GdkScreen *old_screen, gpointer userdata)
+{
+    /* To check if the display supports alpha channels, get the colormap */
+    GdkScreen *screen = gtk_widget_get_screen(widget);
+    GdkColormap *colormap = gdk_screen_get_rgba_colormap(screen);
+
+    /* Now we have a colormap appropriate for the screen, use it */
+    gtk_widget_set_colormap(widget, colormap);
+
+    if (!userdata)
+      on_screen_size_changed (screen, widget);
+}
+
+static void
+control_clicked(GtkWindow *win, GdkEventButton *event, gpointer user_data)
+{
+  SimpleGtkHost* sgh = (SimpleGtkHost*)user_data;
+  sgh->AddGadgetMenuCallback();
+}
+
+
 class SimpleGtkHost::Impl {
   struct GadgetInfo {
     GadgetInfo()
@@ -231,6 +283,63 @@ class SimpleGtkHost::Impl {
     g_signal_connect(G_OBJECT(main_widget_), "delete_event",
                      G_CALLBACK(DeleteEventHandler), this);
 #endif
+
+    // UI for MOBLIN
+    GtkWidget *control = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    gtk_widget_set_app_paintable(control, TRUE);
+    g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), NULL);
+    g_signal_connect(G_OBJECT(control), "screen-changed", G_CALLBACK(control_screen_changed), NULL);
+
+    gtk_window_set_decorated (GTK_WINDOW(control), FALSE);
+    gtk_window_set_skip_pager_hint (GTK_WINDOW(control), TRUE);
+
+    std::string img_data;
+    if (GetGlobalFileManager()->ReadFile("resource://add_control.png", &img_data)) {
+      GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
+
+      GtkWidget* image = gtk_image_new_from_pixbuf (pixbuf);
+      g_object_unref(pixbuf);
+
+      gtk_container_add (GTK_CONTAINER (control), image);
+      gtk_window_resize (GTK_WINDOW(control), gdk_pixbuf_get_width (pixbuf),
+                         gdk_pixbuf_get_height (pixbuf));
+    }
+    control_screen_changed(control, NULL, NULL);
+    gtk_widget_add_events(control, GDK_BUTTON_PRESS_MASK);
+    g_signal_connect(G_OBJECT(control), "button-press-event", G_CALLBACK(control_clicked), owner_);
+
+    g_signal_connect (gdk_screen_get_default(), "size-changed",
+                      G_CALLBACK (on_screen_size_changed), control);
+
+    gtk_widget_show_all(control);
+
+    //set it at the correct pos
+    on_screen_size_changed (gtk_widget_get_screen (control), control);
+
+    // logo
+    GtkWidget *logo = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    gtk_widget_set_app_paintable(logo, TRUE);
+    g_signal_connect(G_OBJECT(logo), "expose-event", G_CALLBACK(control_expose), NULL);
+    g_signal_connect(G_OBJECT(logo), "screen-changed", G_CALLBACK(control_screen_changed),
+                     (gpointer)1);
+
+    gtk_window_set_decorated(GTK_WINDOW(logo), FALSE);
+    gtk_window_set_opacity  (GTK_WINDOW(logo), 0.8);
+    gtk_window_set_skip_pager_hint (GTK_WINDOW(logo), TRUE);
+
+    if (GetGlobalFileManager()->ReadFile("resource://logo_moblin.png", &img_data)) {
+      GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
+
+      GtkWidget* image = gtk_image_new_from_pixbuf (pixbuf);
+      g_object_unref(pixbuf);
+
+      gtk_container_add (GTK_CONTAINER (logo), image);
+      gtk_window_resize (GTK_WINDOW(logo), gdk_pixbuf_get_width (pixbuf),
+                         gdk_pixbuf_get_height (pixbuf));
+    }
+    control_screen_changed(logo, NULL, (gpointer)1);
+    gtk_widget_show_all(logo);
+    gtk_window_move (GTK_WINDOW(logo), 4, 4);
   }
 
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
@@ -899,6 +1008,11 @@ ViewHostInterface *SimpleGtkHost::NewViewHost(Gadget *gadget,
 Gadget *SimpleGtkHost::LoadGadget(const char *path, const char *options_name,
                                   int instance_id, bool show_debug_console) {
   return impl_->LoadGadget(path, options_name, instance_id, show_debug_console);
+}
+
+void SimpleGtkHost::AddGadgetMenuCallback()
+{
+  impl_->AddGadgetMenuCallback(NULL);
 }
 
 void SimpleGtkHost::RemoveGadget(Gadget *gadget, bool save_data) {

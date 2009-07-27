@@ -195,7 +195,9 @@ class SingleViewHost::Impl {
 
     bool skip_wm = !(flags_ & WM_MANAGEABLE);
     gtk_window_set_skip_taskbar_hint(GTK_WINDOW(window_), skip_wm);
-    gtk_window_set_skip_pager_hint(GTK_WINDOW(window_), skip_wm);
+    //comment out for moblin switcher to generate the thumbnail
+    //gtk_window_set_skip_pager_hint(GTK_WINDOW(window_), skip_wm);
+    ////gtk_window_set_type_hint (GTK_WINDOW(window_), GDK_WINDOW_TYPE_HINT_UTILITY);
     gtk_window_set_decorated(GTK_WINDOW(window_), (flags_ & DECORATED));
     gtk_window_set_gravity(GTK_WINDOW(window_), GDK_GRAVITY_STATIC);
     SetResizable(view_->GetResizable());
@@ -441,8 +443,10 @@ class SingleViewHost::Impl {
     gdk_window_raise(window_->window);
 
     // gtk_window_stick() must be called everytime.
-    if (!(flags_ & WM_MANAGEABLE))
-      gtk_window_stick(GTK_WINDOW(window_));
+
+    // commented out for moblin ux
+    //if (!(flags_ & WM_MANAGEABLE))
+    //  gtk_window_stick(GTK_WINDOW(window_));
 
     // Load window states again to make sure it's still correct
     // after the window is shown.

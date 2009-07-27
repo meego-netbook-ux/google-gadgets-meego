@@ -126,7 +126,9 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		weather_sm.jpg \
 		en/strings.xml \
 		fr/strings.xml \
-		zh-CN/strings.xml
+		zh-CN/strings.xml \
+		add_control.png \
+		logo_moblin.png
 
 EXTRA_DIST=$(RESOURCE_FILES)
 CLEANFILES=*.gg
