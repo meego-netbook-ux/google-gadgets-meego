@@ -290,9 +290,10 @@ class SimpleGtkHost::Impl {
     g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), NULL);
     g_signal_connect(G_OBJECT(control), "screen-changed", G_CALLBACK(control_screen_changed), NULL);
 
-    gtk_window_set_decorated (GTK_WINDOW(control), FALSE);
+    gtk_window_set_decorated       (GTK_WINDOW(control), FALSE);
     gtk_window_set_skip_pager_hint (GTK_WINDOW(control), TRUE);
-    gtk_window_set_type_hint (GTK_WINDOW(control), GDK_WINDOW_TYPE_HINT_UTILITY);
+    gtk_window_set_type_hint       (GTK_WINDOW(control), GDK_WINDOW_TYPE_HINT_UTILITY);
+    gtk_window_set_title           (GTK_WINDOW(control), "ignore");
 
     std::string img_data;
     if (GetGlobalFileManager()->ReadFile("resource://add_control.png", &img_data)) {
@@ -326,10 +327,11 @@ class SimpleGtkHost::Impl {
     g_signal_connect(G_OBJECT(logo), "screen-changed", G_CALLBACK(control_screen_changed),
                      (gpointer)1);
 
-    gtk_window_set_decorated(GTK_WINDOW(logo), FALSE);
-    gtk_window_set_opacity  (GTK_WINDOW(logo), 0.8);
+    gtk_window_set_decorated       (GTK_WINDOW(logo), FALSE);
+    gtk_window_set_opacity         (GTK_WINDOW(logo), 0.8);
     gtk_window_set_skip_pager_hint (GTK_WINDOW(logo), TRUE);
-    gtk_window_set_type_hint (GTK_WINDOW(logo), GDK_WINDOW_TYPE_HINT_UTILITY);
+    gtk_window_set_type_hint       (GTK_WINDOW(logo), GDK_WINDOW_TYPE_HINT_UTILITY);
+    gtk_window_set_title           (GTK_WINDOW(logo), "ignore");
 
     if (GetGlobalFileManager()->ReadFile("resource://logo_moblin.png", &img_data)) {
       GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
