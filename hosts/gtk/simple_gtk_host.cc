@@ -312,10 +312,12 @@ class SimpleGtkHost::Impl {
     g_signal_connect (gdk_screen_get_default(), "size-changed",
                       G_CALLBACK (on_screen_size_changed), control);
 
+    gtk_widget_realize (control);
+    gdk_window_set_back_pixmap (control->window, NULL, FALSE);
     gtk_widget_show_all(control);
 
     //set it at the correct pos
-    on_screen_size_changed (gtk_widget_get_screen (control), control);
+    //on_screen_size_changed (gtk_widget_get_screen (control), control);
 
     // logo
     GtkWidget *logo = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -340,6 +342,9 @@ class SimpleGtkHost::Impl {
                          gdk_pixbuf_get_height (pixbuf));
     }
     control_screen_changed(logo, NULL, (gpointer)1);
+
+    gtk_widget_realize (logo);
+    gdk_window_set_back_pixmap (logo->window, NULL, FALSE);
     gtk_widget_show_all(logo);
     gtk_window_move (GTK_WINDOW(logo), 4, 4);
   }
