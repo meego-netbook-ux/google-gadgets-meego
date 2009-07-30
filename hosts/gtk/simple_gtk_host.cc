@@ -61,6 +61,8 @@ static const char kOptionFontSize[] = "font_size";
 static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
 
+static GdkAtom xa_cardinal;
+
 static gboolean
 control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
 {
@@ -112,6 +114,35 @@ control_clicked(GtkWindow *win, GdkEventButton *event, gpointer user_data)
   sgh->AddGadgetMenuCallback();
 }
 
+guint
+get_number_of_desktops_mutter()
+{
+  GdkAtom actual_type;
+  gint actual_format;
+  gint num_items;
+  guchar *ret_data_ptr;
+
+  GdkAtom atom_net_number_desktops = gdk_atom_intern("_NET_NUMBER_OF_DESKTOPS", FALSE);
+
+  guint num = 0;
+  if (gdk_property_get(gdk_get_default_root_window(),
+                       atom_net_number_desktops,
+                       gdk_atom_intern("CARDINAL", FALSE),  0L, 1L, FALSE,
+                       &actual_type, &actual_format, &num_items, (guchar**)&ret_data_ptr))
+    {
+      num = (int)*ret_data_ptr;
+      g_free(ret_data_ptr);
+    }
+
+  return num;
+}
+
+void
+set_cardinal_property(GdkWindow *window, GdkAtom prop, gulong value)
+{
+	gdk_property_change(window, prop, xa_cardinal, 32,
+				GDK_PROP_MODE_REPLACE, (const guchar *) &value, 1);
+}
 
 class SimpleGtkHost::Impl {
   struct GadgetInfo {
@@ -205,6 +236,7 @@ class SimpleGtkHost::Impl {
   }
 
   void SetupUI() {
+#if 0
     const int priority = MenuInterface::MENU_ITEM_PRI_HOST;
     host_menu_ = gtk_menu_new();
     MenuBuilder menu_builder(GTK_MENU_SHELL(host_menu_));
@@ -284,7 +316,13 @@ class SimpleGtkHost::Impl {
                      G_CALLBACK(DeleteEventHandler), this);
 #endif
 
+#endif
     // UI for MOBLIN
+    // gint n_workspace = 15; //get_number_of_desktops_mutter ();
+    xa_cardinal = gdk_atom_intern("CARDINAL", FALSE);
+
+    // GdkAtom xa_NET_WM_DESKTOP = gdk_atom_intern("_NET_WM_DESKTOP", FALSE);
+
     GtkWidget *control = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_widget_set_app_paintable(control, TRUE);
     g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), NULL);
@@ -313,9 +351,11 @@ class SimpleGtkHost::Impl {
     g_signal_connect (gdk_screen_get_default(), "size-changed",
                       G_CALLBACK (on_screen_size_changed), control);
 
-    gtk_widget_realize (control);
+    gtk_widget_realize         (control);
+    // set_cardinal_property      (control->window, xa_NET_WM_DESKTOP, n_workspace);
+    // gdk_flush();
     gdk_window_set_back_pixmap (control->window, NULL, FALSE);
-    gtk_widget_show_all(control);
+    gtk_widget_show_all        (control);
 
     //set it at the correct pos
     //on_screen_size_changed (gtk_widget_get_screen (control), control);
