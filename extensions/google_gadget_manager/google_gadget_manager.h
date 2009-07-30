@@ -157,8 +157,8 @@ const char kIGoogleBGColorOption[] = "bg_color";
 
 /** Fake instance id for google gadget browser. */
 const int kGoogleGadgetBrowserInstanceId = INT_MAX;
-const char kGoogleGadgetBrowserName[] = "google-gadget-browser";
-const char kGoogleGadgetBrowserOptionsName[] = "google-gadget-browser";
+const char kGoogleGadgetBrowserName[] = "google-gadget-control";
+const char kGoogleGadgetBrowserOptionsName[] = "google-gadget-control";
 
 /**
  * Manages gadgets and instances based on Google gadget metadata.

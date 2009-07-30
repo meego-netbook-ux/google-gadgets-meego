@@ -22,4 +22,5 @@ SUBDIRS = analog_clock \
 	  igoogle \
 	  rss \
 	  photos \
-	  gadget_browser
+	  gadget_browser \
+	  gadget_control

@@ -1494,6 +1494,7 @@ AC_CONFIG_FILES([Makefile
                  gadgets/photos/Makefile
                  gadgets/rss/Makefile
                  gadgets/gadget_browser/Makefile
+                 gadgets/gadget_control/Makefile
                  ggadget/Makefile
                  ggadget/libggadget-1.0.pc
                  ggadget/sysdeps.h

@@ -54,6 +54,9 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   virtual bool OpenURL(const Gadget *gadget, const char *url) {
     return owner_->OpenURL(gadget, url);
   }
+  virtual void Exit() {
+    owner_->Exit();
+  }
  private:
   ggadget::HostInterface *owner_;
   int view_debug_mode_;

@@ -102,6 +102,8 @@ class HostInterface {
    * @param url The url to be opened.
    */
   virtual bool OpenURL(const Gadget *gadget, const char *url) = 0;
+
+  virtual void Exit() = 0;
 };
 
 } // namespace ggadget

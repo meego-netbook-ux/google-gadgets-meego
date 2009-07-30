@@ -330,6 +330,8 @@ class Gadget {
    */
   bool OpenURL(const char *url) const;
 
+  bool Exit() const;
+
   /**
    * Connect a log listener which will receive all logs for this gadget.
    */

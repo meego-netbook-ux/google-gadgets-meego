@@ -226,7 +226,8 @@ class SimpleGtkHost::Impl {
       delete it->second.gadget;
     }
 
-    gtk_widget_destroy(host_menu_);
+    //    gtk_widget_destroy(host_menu_); //commented out for moblin
+
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
     g_object_unref(G_OBJECT(status_icon_));
 #else

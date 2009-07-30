@@ -504,6 +504,7 @@ class Gadget::Impl : public ScriptableHelperNativeOwnedDefault {
 
     // OpenURL will check permissions by itself.
     framework_.RegisterMethod("openUrl", NewSlot(owner_, &Gadget::OpenURL));
+    framework_.RegisterMethod("exit", NewSlot(owner_, &Gadget::Exit));
   }
 
   class RemoveMeWatchCallback : public WatchCallbackInterface {
@@ -1227,6 +1228,24 @@ bool Gadget::OpenURL(const char *url) const {
     return impl_->host_->OpenURL(this, url);
 
   LOG("OpenURL() can only be called during user interaction.");
+  return false;
+}
+
+
+bool Gadget::Exit() const {
+  if (!impl_->permissions_.IsRequiredAndGranted(Permissions::NETWORK) &&
+      !impl_->permissions_.IsRequiredAndGranted(Permissions::ALL_ACCESS)) {
+    LOG("No permission to exit.");
+    return false;
+  }
+
+  if (impl_->IsInUserInteraction())
+    {
+      impl_->host_->Exit();
+      return true;
+    }
+
+  LOG("Exit() can only be called during user interaction.");
   return false;
 }
 
