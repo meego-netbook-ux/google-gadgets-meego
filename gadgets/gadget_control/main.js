@@ -15,7 +15,7 @@
 */
 
 // UI constants.
-var kCategoryButtonHeight = category_active_img.height;
+// var kCategoryButtonHeight = category_active_img.height;
 var kPluginBoxWidth = 134;
 var kPluginBoxHeight = 124;
 var kDefaultPluginRows = 3;
@@ -86,7 +86,7 @@ function view_onopen() {
   var screen_width = system.screen.size.width;
   var screen_height = system.screen.size.height;
   var width, height;
-  init_layout();
+  // init_layout();
   if (screen_width >= 1024) {
     width = kFixedExtraWidth + 4 * kPluginBoxWidth + kBorderMarginH;
   } else if (screen_width >= 800) {
@@ -101,6 +101,7 @@ function view_onopen() {
   } else {
     height = kMinHeight;
   }
+  debug.trace ("view width: " + width);
   view.resizeTo(width, height);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when
@@ -153,36 +154,36 @@ function window_onsize() {
   var plugins_height = window_body.height - kFixedExtraHeight;
   var columns = Math.floor(plugins_width / kPluginBoxWidth);
   var rows = Math.floor(plugins_height / kPluginBoxHeight);
-  plugins_div.width = plugins_width;
-  plugins_div.height = plugins_height;
-  plugin_info_div.width = plugins_width - 6;
-  categories_div.height = plugins_height + 28;
+  // plugins_div.width = plugins_width;
+  // plugins_div.height = plugins_height;
+  // plugin_info_div.width = plugins_width - 6;
+  // categories_div.height = plugins_height + 28;
   language_box.height = Math.min(440, window_body.height - 30);
-  gPluginBoxGapX = Math.floor((plugins_width - kPluginBoxWidth * columns) /
-                              (columns + 1));
-  gPluginBoxGapY = Math.floor((plugins_height - kPluginBoxHeight * rows) /
-                              (rows + 1));
-  if (rows != gPluginRows || columns != gPluginColumns) {
-    gPluginRows = rows;
-    gPluginColumns = columns;
-    gPluginsPerPage = rows * columns;
-    if (plugins_div.children.count > 0)
-      SelectPage(gCurrentPageStartIndex);
-  } else {
-    var index = 0;
-    for (var i = 0; i < rows; i++) {
-      for (var j = 0; j < columns; j++) {
-        if (index >= plugins_div.children.count)
-          break;
-        var box = plugins_div.children.item(index);
-        box.x = Math.round(j * (kPluginBoxWidth + gPluginBoxGapX) +
-                           gPluginBoxGapX / 2);
-        box.y = Math.round(i * (kPluginBoxHeight + gPluginBoxGapY) +
-                           gPluginBoxGapY / 2);
-        index++;
-      }
-    }
-  }
+  // gPluginBoxGapX = Math.floor((plugins_width - kPluginBoxWidth * columns) /
+  //                             (columns + 1));
+  // gPluginBoxGapY = Math.floor((plugins_height - kPluginBoxHeight * rows) /
+  //                             (rows + 1));
+  // if (rows != gPluginRows || columns != gPluginColumns) {
+  //   gPluginRows = rows;
+  //   gPluginColumns = columns;
+  //   gPluginsPerPage = rows * columns;
+  //   if (plugins_div.children.count > 0)
+  //     SelectPage(gCurrentPageStartIndex);
+  // } else {
+  //   var index = 0;
+  //   for (var i = 0; i < rows; i++) {
+  //     for (var j = 0; j < columns; j++) {
+  //       if (index >= plugins_div.children.count)
+  //         break;
+  //       var box = plugins_div.children.item(index);
+  //       box.x = Math.round(j * (kPluginBoxWidth + gPluginBoxGapX) +
+  //                          gPluginBoxGapX / 2);
+  //       box.y = Math.round(i * (kPluginBoxHeight + gPluginBoxGapY) +
+  //                          gPluginBoxGapY / 2);
+  //       index++;
+  //     }
+  //   }
+  // }
 }
 
 function language_label_onsize() {
@@ -268,7 +269,7 @@ function UpdateLanguageBox() {
 
 function SelectLanguage(language) {
   gCurrentLanguage = language;
-  UpdateCategories();
+  // UpdateCategories();
 }
 
 function AddCategoryButton(category, y) {
