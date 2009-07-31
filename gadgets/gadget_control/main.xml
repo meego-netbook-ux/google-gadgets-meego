@@ -79,7 +79,7 @@
 	&WELCOME_TO_GADGETS;
       </label>
       <label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60"
-	     enabled='true'
+	     enabled='true' onclick='welcome_add_gadget()'
 	     onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
 	     >
 	&WELCOME_ADD_GADGET;
@@ -103,6 +103,8 @@
         src="images/category_active.png" stretchMiddle="true"/>
     </div>
     <div name="plugins_div" width="536" height="372" x="136" y="62"/>
+    -->
+    <!--
     <div name="plugin_info_div" width="536" height="113" x="136"
       y="100%" pinY="100%">
       <label name="plugin_title" width="100%" color="#FFFFFF" size="9"

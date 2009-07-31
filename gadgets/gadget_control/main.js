@@ -1,3 +1,5 @@
+/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
+
 /*
   Copyright 2008 Google Inc.
 
@@ -295,13 +297,13 @@ function category_onmouseout() {
 function SelectCategory(category) {
   gCurrentCategory = category;
   if (category) {
-    category_active_img.y = categories_div.children.item(category).offsetY;
-    category_active_img.visible = true;
+    /* category_active_img.y = categories_div.children.item(category).offsetY; */
+    /* category_active_img.visible = true; */
     gCurrentPlugins = GetPluginsOfCategory(gCurrentLanguage, gCurrentCategory);
     SelectPage(0);
     ResetSearchBox();
   } else {
-    category_active_img.visible = false;
+    /* category_active_img.visible = false; */
     gCurrentPlugins = [];
   }
 }
@@ -621,6 +623,39 @@ function search_box_onchange() {
 }
 
 function ui_exit() {
-    if (view.confirm (strings.CONFIRM_EXIT))
-        framework.exit();
+  if (view.confirm (strings.CONFIRM_EXIT))
+    framework.exit();
+}
+
+function welcome_add_gadget() {
+  window_body.removeElement (welcome_div);
+  window_body.appendElement ('<div name="plugins_div" width="536" height="372" x="10" y="62"/>');
+  window_body.appendElement (' \
+    <div name="plugin_info_div" width="536" height="113" x="10"        \n \
+      y="100%" pinY="100%">                                             \n\
+      <label name="plugin_title" width="100%" color="#FFFFFF" size="9"  \n\
+        trimming="character-ellipsis"/>                                 \n\
+      <label name="plugin_description" width="100%" y="16" color="#FFFFFF" \n\
+        size="9" trimming="character-ellipsis" wordwrap="true"          \n\
+        onsize="plugin_description_onsize()"/>                          \n\
+      <label name="plugin_other_data" width="100%" y="48" color="#FFFFFF" \n\
+        size="8" trimming="character-ellipsis"/>                        \n\
+    </div>\n');
+
+  window_body.appendElement (' \
+    <div name="navigation_div" width="350" height="44" x="100%" pinX="100%" \n\
+      y="100%" pinY="100%">                                             \n\
+      <button name="previous_button" pinX="100%" x="240"                \n\
+        image="images/previous_default.png"                             \n\
+        downImage="images/previous_down.png"                            \n\
+        overImage="images/previous_hover.png"                           \n\
+         onclick="previous_button_onclick()"/>                          \n\
+      <label name="page_label" enabled="true" height="39" x="260"       \n\
+        align="center" color="#FFFFFF" size="10" vAlign="middle"        \n\
+        onsize="page_label_onsize()"/>                                  \n\
+      <button name="next_button" x="280" image="images/next_default.png" \n\
+        downImage="images/next_down.png" overImage="images/next_hover.png" \n\
+        onclick="next_button_onclick()"/>                               \n\
+    </div>');
+  SelectCategory(kCategoryAll);
 }
