@@ -225,13 +225,14 @@ class SimpleGtkHost::Impl {
         gtk_widget_destroy(it->second.debug_console);
       delete it->second.gadget;
     }
-
-    //    gtk_widget_destroy(host_menu_); //commented out for moblin
+#if 0  //commented out for moblin
+    gtk_widget_destroy(host_menu_);
 
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
     g_object_unref(G_OBJECT(status_icon_));
 #else
     gtk_widget_destroy(main_widget_);
+#endif
 #endif
     delete options_;
   }
