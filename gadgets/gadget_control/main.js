@@ -18,8 +18,8 @@
 
 // UI constants.
 // var kCategoryButtonHeight = category_active_img.height;
-var kPluginBoxWidth = 134;
-var kPluginBoxHeight = 124;
+var kPluginBoxWidth = 240;
+var kPluginBoxHeight = 100;
 var kDefaultPluginRows = 3;
 var kDefaultPluginColumns = 4;
 var kCategoryGap = 15;
@@ -156,36 +156,39 @@ function window_onsize() {
   var plugins_height = window_body.height - kFixedExtraHeight;
   var columns = Math.floor(plugins_width / kPluginBoxWidth);
   var rows = Math.floor(plugins_height / kPluginBoxHeight);
-  // plugins_div.width = plugins_width;
-  // plugins_div.height = plugins_height;
-  // plugin_info_div.width = plugins_width - 6;
-  // categories_div.height = plugins_height + 28;
   language_box.height = Math.min(440, window_body.height - 30);
-  // gPluginBoxGapX = Math.floor((plugins_width - kPluginBoxWidth * columns) /
-  //                             (columns + 1));
-  // gPluginBoxGapY = Math.floor((plugins_height - kPluginBoxHeight * rows) /
-  //                             (rows + 1));
-  // if (rows != gPluginRows || columns != gPluginColumns) {
-  //   gPluginRows = rows;
-  //   gPluginColumns = columns;
-  //   gPluginsPerPage = rows * columns;
-  //   if (plugins_div.children.count > 0)
-  //     SelectPage(gCurrentPageStartIndex);
-  // } else {
-  //   var index = 0;
-  //   for (var i = 0; i < rows; i++) {
-  //     for (var j = 0; j < columns; j++) {
-  //       if (index >= plugins_div.children.count)
-  //         break;
-  //       var box = plugins_div.children.item(index);
-  //       box.x = Math.round(j * (kPluginBoxWidth + gPluginBoxGapX) +
-  //                          gPluginBoxGapX / 2);
-  //       box.y = Math.round(i * (kPluginBoxHeight + gPluginBoxGapY) +
-  //                          gPluginBoxGapY / 2);
-  //       index++;
-  //     }
-  //   }
-  // }
+
+  if (plugins_div) {
+    plugins_div.width = plugins_width;
+    plugins_div.height = plugins_height;
+    plugin_info_div.width = plugins_width - 6;
+    categories_div.height = plugins_height + 28;
+    gPluginBoxGapX = Math.floor((plugins_width - kPluginBoxWidth * columns) /
+                                (columns + 1));
+    gPluginBoxGapY = Math.floor((plugins_height - kPluginBoxHeight * rows) /
+                                (rows + 1));
+    if (rows != gPluginRows || columns != gPluginColumns) {
+      gPluginRows = rows;
+      gPluginColumns = columns;
+      gPluginsPerPage = rows * columns;
+      if (plugins_div.children.count > 0)
+        SelectPage(gCurrentPageStartIndex);
+    } else {
+      var index = 0;
+      for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < columns; j++) {
+          if (index >= plugins_div.children.count)
+            break;
+          var box = plugins_div.children.item(index);
+          box.x = Math.round(j * (kPluginBoxWidth + gPluginBoxGapX) +
+                             gPluginBoxGapX / 2);
+          box.y = Math.round(i * (kPluginBoxHeight + gPluginBoxGapY) +
+                             gPluginBoxGapY / 2);
+          index++;
+        }
+      }
+    }
+  }
 }
 
 function language_label_onsize() {
@@ -320,22 +323,27 @@ function AddPluginBox(plugin, index, row, column) {
     "' enabled='true' onmouseover='pluginbox_onmouseover(" + index + ")'" +
     " onmouseout='pluginbox_onmouseout(" + index + ")'>" +
     " <img width='100%' height='100%' stretchMiddle='true'/>" +
-    (info_url ?
-      " <a x='7' y='6' size='10' width='120' align='center' color='#FFFFFF'" +
+    (info_url ? //plugin title
+      " <a x='95' y='6' size='10' width='140' align='left' color='#FFFFFF'" +
       "  overColor='#FFFFFF' underline='false' trimming='character-ellipsis'" +
       "  onmouseover='plugin_title_onmouseover(" + index + ")'" +
-      "  onmouseout='plugin_title_onmouseout(" + index + ")'/>" :
-      " <label x='7' y='6' size='10' width='120' align='center' " +
-      "  color='#FFFFFF' trimming='character-ellipsis'/>") +
-    " <img x='16' y='75' opacity='70' src='images/thumbnails_shadow.png'/>" +
-    " <div x='27' y='33' width='80' height='83' background='#FFFFFF'>" +
+      "  onmouseout='plugin_title_onmouseout(" + index + ")' height='30' wordwrap='true'/>" :
+     " <label x='95' y='6' size='10' width='140' align='left' height='30'" +
+      "  color='#FFFFFF' trimming='character-ellipsis' wordwrap='true'/>") +
+    '<div width="140" height="45" x="95" y="40">' + //plugin description
+      '<label width="100%" height="100%" y="0" color="#FFFFFF" \n\
+        size="9" trimming="character-ellipsis" wordwrap="true"          \n\
+        />' +
+    '</div>\n' +
+    " <img x='0' y='48' opacity='70' src='images/thumbnails_shadow.png'/>" +
+    " <div x='11' y='6' width='80' height='83' background='#FFFFFF'>" +
     "  <img width='80' height='60' src='images/default_thumbnail.jpg'" +
     "   cropMaintainAspect='true'/>" +
     "  <img y='60' width='80' height='60' src='images/default_thumbnail.jpg'" +
     "   flip='vertical' cropMaintainAspect='true'/>" +
     "  <img src='images/thumbnails_default_mask.png'/>" +
     " </div>" +
-    " <button x='22' y='94' width='90' height='30' visible='false' size='10'" +
+    " <button x='6' y='67' width='90' height='30' visible='false' size='10'" +
     "  color='#FFFFFF' stretchMiddle='true' trimming='character-ellipsis'" +
     "  downImage='images/add_button_down.png' " +
     "  overImage='images/add_button_hover.png'" +
@@ -350,9 +358,11 @@ function AddPluginBox(plugin, index, row, column) {
   title.innerText = GetPluginTitle(plugin, gCurrentLanguage);
   if (info_url)
     title.href = info_url;
+  var desc = box.children.item(2).children.item(0);
+  desc.innerText = GetPluginDescription(plugin, gCurrentLanguage);
 
-  var thumbnail_element1 = box.children.item(3).children.item(0);
-  var thumbnail_element2 = box.children.item(3).children.item(1);
+  var thumbnail_element1 = box.children.item(4).children.item(0);
+  var thumbnail_element2 = box.children.item(4).children.item(1);
   if (plugin.source == 1) { // built-in gadgets
     thumbnail_element1.src = plugin.attributes.thumbnail_url;
     thumbnail_element2.src = plugin.attributes.thumbnail_url;
@@ -360,7 +370,7 @@ function AddPluginBox(plugin, index, row, column) {
     AddThumbnailTask(plugin, index, thumbnail_element1, thumbnail_element2);
   }
 
-  plugin.button = box.children.item(4);
+  plugin.button = box.children.item(5);
   UpdateAddButtonVisualStatus(plugin);
 }
 
@@ -629,7 +639,7 @@ function ui_exit() {
 
 function welcome_add_gadget() {
   window_body.removeElement (welcome_div);
-  window_body.appendElement ('<div name="plugins_div" width="536" height="372" x="10" y="62"/>');
+  window_body.appendElement ('<div name="plugins_div" width="536" height="372" x="4" y="62"/>');
   window_body.appendElement (' \
     <div name="plugin_info_div" width="536" height="113" x="10"        \n \
       y="100%" pinY="100%">                                             \n\
@@ -658,4 +668,5 @@ function welcome_add_gadget() {
         onclick="next_button_onclick()"/>                               \n\
     </div>');
   SelectCategory(kCategoryAll);
+  window_onsize ();
 }
