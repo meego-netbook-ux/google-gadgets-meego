@@ -59,16 +59,18 @@ class GtkHostBase : public ggadget::HostInterface {
     return true;
   }
 
-  void Exit() {
-    if (IsSafeToExit())
-      on_exit_signal_();
+  void RealExit() {
+    on_exit_signal_ ();
   }
+
+  void Exit();
 
   Connection *ConnectOnExit(ggadget::Slot0<void> *callback) {
     return on_exit_signal_.Connect(callback);
   }
 
   static int FlagsToViewHostFlags(int flags);
+  static gboolean ExitCallback (gpointer that);
 
  protected:
   bool ConfirmGadget(const std::string &path, const std::string &options_name,

@@ -155,5 +155,16 @@ int GtkHostBase::FlagsToViewHostFlags(int flags) {
   return vh_flags;
 }
 
+void GtkHostBase::Exit () {
+    if (IsSafeToExit())
+      g_timeout_add (200, (GSourceFunc)GtkHostBase::ExitCallback, (gpointer)this);
+}
+
+gboolean GtkHostBase::ExitCallback (gpointer that) {
+  GtkHostBase* _that = (GtkHostBase*) that;
+  _that->RealExit();
+  return FALSE;
+}
+
 } // namespace gtk
 } // namespace hosts
