@@ -36,6 +36,7 @@
   <WELCOME_TO_GADGETS>Welcome to gadgets, they're tiny bits of fun for your computer. What do you want to do?</WELCOME_TO_GADGETS>
   <WELCOME_ADD_GADGET>Add a new Gadget</WELCOME_ADD_GADGET>
   <WELCOME_CHECK_UPDATES>Check for updates</WELCOME_CHECK_UPDATES>
+  <WELCOME_NO_UPDATES>Sorry, we don't have any updated Gadgets available. You could:</WELCOME_NO_UPDATES>
 
   <PLUGIN_DATA_BULLET>&#187;&#160;</PLUGIN_DATA_BULLET>
   <PLUGIN_DATA_SEPARATOR>&#160;/&#160;</PLUGIN_DATA_SEPARATOR>
