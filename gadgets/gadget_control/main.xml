@@ -70,66 +70,28 @@
         type="droplist" background="#FFFFFF" itemWidth="100%" itemHeight="19"
         maxDroplistItems="30" onchange="language_box_onchange()"/>
     </div>
-    <div name="welcome_div" width="100%" height="120" y="83">
-      <img name="category_hover_img" opacity="55" width="200" height="23"
-        visible="false" src="images/category_hover.png" stretchMiddle="true"/>
-      <img name="category_active_img" height="23" width="200" visible="false"
-        src="images/category_active.png" stretchMiddle="true"/>
-      <label name="welcome_label" width="100%" wordWrap="true" color="white" size="16">
-	&WELCOME_TO_GADGETS;
-      </label>
-      <label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60"
-	     enabled='true' onclick='welcome_add_gadget()'
-	     onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
-	     >
-	&WELCOME_ADD_GADGET;
-      </label>
-      <label name="welcome_check_upd" width="180" color="white" size="14" x="10" y="90" enabled='true'
-	     onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'>
-	&WELCOME_CHECK_UPDATES;
-      </label>
+    <div name="main_div" width="100%" height="400" y="83">
+      <div name="welcome_div" width="100%" height="100%">
+	<img name="category_hover_img" opacity="55" width="200" height="23"
+             visible="false" src="images/category_hover.png" stretchMiddle="true"/>
+	<img name="category_active_img" height="23" width="200" visible="false"
+             src="images/category_active.png" stretchMiddle="true"/>
+	<label name="welcome_label" width="100%" wordWrap="true" color="white" size="16">
+	  &WELCOME_TO_GADGETS;
+	</label>
+	<label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60"
+	       enabled='true' onclick='welcome_add_gadget(false)'
+	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
+	       >
+	  &WELCOME_ADD_GADGET;
+	</label>
+	<label name="welcome_check_upd" width="180" color="white" size="14" x="10" y="90" 
+	       enabled='true' onclick='welcome_add_gadget(true)'
+	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'>
+	  &WELCOME_CHECK_UPDATES;
+	</label>
+      </div>
     </div>
-    <!--
-    <div name="categories_div" width="120" height="400" x="6" y="83"
-      autoscroll="true" scrollbar.lineStep="23"
-      scrollbar.leftImage="x" scrollbar.rightImage="x"
-      scrollbar.background="images/scrollbar_track.png"
-      scrollbar.thumbImage="images/scrollbar_thumb.png"
-      scrollbar.thumbOverImage="images/scrollbar_thumb.png"
-      scrollbar.thumbDownImage="images/scrollbar_thumb.png">
-      <img name="category_hover_img" opacity="55" width="100%" height="23"
-        visible="false" src="images/category_hover.png" stretchMiddle="true"/>
-      <img name="category_active_img" height="23" width="100%" visible="false"
-        src="images/category_active.png" stretchMiddle="true"/>
-    </div>
-    <div name="plugins_div" width="536" height="372" x="136" y="62"/>
-    -->
-    <!--
-    <div name="plugin_info_div" width="536" height="113" x="136"
-      y="100%" pinY="100%">
-      <label name="plugin_title" width="100%" color="#FFFFFF" size="9"
-        trimming="character-ellipsis"/>
-      <label name="plugin_description" width="100%" y="16" color="#FFFFFF"
-        size="9" trimming="character-ellipsis" wordwrap="true"
-        onsize="plugin_description_onsize()"/>
-      <label name="plugin_other_data" width="100%" y="48" color="#FFFFFF"
-        size="8" trimming="character-ellipsis"/>
-    </div>
-    <div name="navigation_div" width="350" height="44" x="100%" pinX="100%"
-      y="100%" pinY="100%">
-      <button name="previous_button" pinX="100%" x="240"
-        image="images/previous_default.png"
-        downImage="images/previous_down.png"
-        overImage="images/previous_hover.png"
-         onclick="previous_button_onclick()"/>
-      <label name="page_label" enabled="true" height="39" x="260"
-        align="center" color="#FFFFFF" size="10" vAlign="middle"
-        onsize="page_label_onsize()"/>
-      <button name="next_button" x="280" image="images/next_default.png"
-        downImage="images/next_down.png" overImage="images/next_hover.png"
-        onclick="next_button_onclick()"/>
-    </div>
-    -->
   </div>
   <label color="#ffffff" size="10" wordWrap="false" vAlign="middle" bold="true"
     pinX="50%" x="50%" height="24">&GADGET_NAME;</label>

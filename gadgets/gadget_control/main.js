@@ -304,7 +304,10 @@ function SelectCategory(category) {
     /* category_active_img.y = categories_div.children.item(category).offsetY; */
     /* category_active_img.visible = true; */
     gCurrentPlugins = GetPluginsOfCategory(gCurrentLanguage, gCurrentCategory);
-    SelectPage(0);
+    if (gCurrentPlugins.length == 0)
+      welcome_no_updates ();
+    else
+      SelectPage(0);
     ResetSearchBox();
   } else {
     /* category_active_img.visible = false; */
@@ -657,9 +660,35 @@ function ui_exit() {
   }
 }
 
-function welcome_add_gadget() {
-  window_body.removeElement (welcome_div);
-  window_body.appendElement ('<div name="plugins_div" width="536" height="372" x="4" y="62"/>');
+function welcome_no_updates () {
+  main_div.removeAllElements ();
+  window_body.removeElement (navigation_div);
+  main_div.appendElement (' \
+	<img name="category_hover_img" opacity="55" width="200" height="23" \
+             visible="false" src="images/category_hover.png" stretchMiddle="true"/> \
+');
+  main_div.appendElement (' \
+	<img name="category_active_img" height="23" width="200" visible="false" \
+             src="images/category_active.png" stretchMiddle="true"/> \
+');
+  main_div.appendElement (' \
+      <label name="welcome_label" width="100%" wordWrap="true" color="white" size="16"> \
+	&WELCOME_NO_UPDATES;                                            \
+      </label>');
+
+  main_div.appendElement (' \
+      <label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60" \
+	     enabled="true" onclick="welcome_add_gadget(false)"         \
+	     onmouseover="category_onmouseover()" onmouseout="category_onmouseout()" \
+	     > \
+	&WELCOME_ADD_GADGET; \
+      </label> \
+');
+}
+
+function welcome_add_gadget(is_update) {
+  main_div.removeAllElements ();
+  main_div.appendElement ('<div name="plugins_div" width="100%" height="100%"/>');
 
   window_body.appendElement (' \
     <div name="navigation_div" width="350" height="44" x="100%" pinX="100%" \n\
@@ -676,6 +705,9 @@ function welcome_add_gadget() {
         downImage="images/next_down.png" overImage="images/next_hover.png" \n\
         onclick="next_button_onclick()"/>                               \n\
     </div>');
-  SelectCategory(kCategoryAll);
+  if (is_update)
+    SelectCategory (kCategoryUpdates);
+  else
+    SelectCategory(kCategoryAll);
   window_onsize ();
 }
