@@ -50,6 +50,7 @@ var kDownloadStatusNone = 0;
 var kDownloadStatusAdding = 1;
 var kDownloadStatusAdded = 2;
 var kDownloadStatusError = 3;
+var kDownloadStatusOffline = 4;
 
 function init() {
   LoadMetadata();
@@ -158,11 +159,11 @@ function window_onsize() {
   var rows = Math.floor(plugins_height / kPluginBoxHeight);
   language_box.height = Math.min(440, window_body.height - 30);
 
-  if (plugins_div) {
+  if (typeof(plugins_div) != "undefined") {
     plugins_div.width = plugins_width;
     plugins_div.height = plugins_height;
     /* plugin_info_div.width = plugins_width - 6; */
-    categories_div.height = plugins_height + 28;
+    /* categories_div.height = plugins_height + 28; */
     gPluginBoxGapX = Math.floor((plugins_width - kPluginBoxWidth * columns) /
                                 (columns + 1));
     gPluginBoxGapY = Math.floor((plugins_height - kPluginBoxHeight * rows) /
@@ -377,6 +378,7 @@ function AddPluginBox(plugin, index, row, column) {
 
 function SetDownloadStatus(plugin, status) {
   plugin.download_status = status;
+
   var button = plugin.button;
   if (!button)
     return;
@@ -397,18 +399,21 @@ var kAddingStatusLabels = [
   strings.STATUS_ADDING,
   strings.STATUS_ADDED,
   strings.STATUS_ERROR_ADDING,
+  strings.STATUS_OFFLINE,
 ];
 var kUpdatingStatusLabels = [
   strings.UPDATE_BUTTON_LABEL,
   strings.STATUS_UPDATING,
   strings.STATUS_UPDATED,
   strings.STATUS_ERROR_UPDATING,
+  strings.STATUS_OFFLINE,
 ];
 var kStatusButtonImages = [
   "images/add_button_default.png",
   "images/status_adding_default.png",
   "images/status_added_default.png",
   "images/status_failed_default.png",
+  "images/status_adding_default.png",
 ];
 
 function UpdateAddButtonVisualStatus(plugin) {
@@ -416,8 +421,19 @@ function UpdateAddButtonVisualStatus(plugin) {
   var status = plugin.download_status;
   var labels = gCurrentCategory == kCategoryUpdates ?
                kUpdatingStatusLabels : kAddingStatusLabels;
-  button.caption = labels[status];
-  button.image = kStatusButtonImages[status];
+  var offline = ! framework.system.network.online;
+
+  if (offline) {
+    button.caption   = strings.STATUS_OFFLINE;
+    button.image     = kStatusButtonImages[kDownloadStatusOffline];
+    button.overImage = button.image;
+    button.visible   = plugin.mouse_over;
+    return;
+  }
+  else {
+    button.caption = labels[status];
+    button.image = kStatusButtonImages[status];
+  }
   // Don't disable the button when the download status is kDownloadStatusAdding
   // to ensure the button can get mouseout.
 
@@ -440,7 +456,8 @@ function add_button_onmousedown(index) {
 
 function add_button_onclick(index) {
   var plugin = gCurrentPlugins[index];
-  if (plugin.download_status != kDownloadStatusAdding) {
+  if (plugin.download_status != kDownloadStatusAdding &&
+      framework.system.network.online) {
     var is_updating = (gCurrentCategory == kCategoryUpdates);
     plugin.button = event.srcElement;
     SetDownloadStatus(plugin, kDownloadStatusAdding);
@@ -634,24 +651,15 @@ function search_box_onchange() {
 }
 
 function ui_exit() {
-  if (view.confirm (strings.CONFIRM_EXIT))
+  if (view.confirm (strings.CONFIRM_EXIT)) {
+    plugin.RemoveMe (true);
     framework.exit();
+  }
 }
 
 function welcome_add_gadget() {
   window_body.removeElement (welcome_div);
   window_body.appendElement ('<div name="plugins_div" width="536" height="372" x="4" y="62"/>');
-  /* window_body.appendElement (' \ */
-  /*   <div name="plugin_info_div" width="536" height="113" x="10"        \n \ */
-  /*     y="100%" pinY="100%">                                             \n\ */
-  /*     <label name="plugin_title" width="100%" color="#FFFFFF" size="9"  \n\ */
-  /*       trimming="character-ellipsis"/>                                 \n\ */
-  /*     <label name="plugin_description" width="100%" y="16" color="#FFFFFF" \n\ */
-  /*       size="9" trimming="character-ellipsis" wordwrap="true"          \n\ */
-  /*       onsize="plugin_description_onsize()"/>                          \n\ */
-  /*     <label name="plugin_other_data" width="100%" y="48" color="#FFFFFF" \n\ */
-  /*       size="8" trimming="character-ellipsis"/>                        \n\ */
-  /*   </div>\n'); */
 
   window_body.appendElement (' \
     <div name="navigation_div" width="350" height="44" x="100%" pinX="100%" \n\
