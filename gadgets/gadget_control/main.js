@@ -104,7 +104,6 @@ function view_onopen() {
   } else {
     height = kMinHeight;
   }
-  debug.trace ("view width: " + width);
   view.resizeTo(width, height);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when
