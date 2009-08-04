@@ -97,9 +97,9 @@
     pinX="50%" x="50%" height="24">&GADGET_NAME;</label>
   <div height="80" width="100%" hitTest="htcaption"/>
   <button name="minimize_button" pinX="24" pinY="0" x="90%" y="0" height="40"
-    image="images/close_button_up.png"
-    overImage="images/close_button_over.png"
-    downImage="images/close_button_down.png"
+    image="images/hide_button.png"
+    overImage="images/hide_button.png"
+    downImage="images/hide_button.png"
     onclick="plugin.RemoveMe(true)" enabled="true"/>
   <button name="close_button" pinX="24" pinY="0" x="100%" y="0"
     image="images/close_button_up.png"

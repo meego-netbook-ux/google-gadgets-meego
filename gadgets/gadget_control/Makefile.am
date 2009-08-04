@@ -34,6 +34,7 @@ GADGET_CONTROL_FILES= \
 		images/close_button_down.png \
 		images/close_button_over.png \
 		images/close_button_up.png \
+		images/hide_button.png \
 		images/control_border.png \
 		images/default_thumbnail.jpg \
 		images/next_default.png \

@@ -104,9 +104,7 @@ function view_onopen() {
   } else {
     height = kMinHeight;
   }
-  debug.trace ("view width: " + width);
   view.resizeTo(width, height);
-  options.putValue ("main_view_x", 0);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when
   // gadget is created and will be registered by c++ code right after the
