@@ -1142,6 +1142,11 @@ void GoogleGadgetManager::ShowGadgetBrowserDialog(HostInterface *host) {
   }
 
   if (browser_gadget_ && browser_gadget_->IsValid()) {
+    OptionsInterface* opt = browser_gadget_->GetOptions();
+    opt->PutInternalValue ("main_view_x", Variant(0));
+    //code in gadgets.cc will ensure we're in screen...
+    opt->PutInternalValue ("main_view_y", Variant(10000));
+
     browser_gadget_->ShowMainView();
   } else {
     delete browser_gadget_;

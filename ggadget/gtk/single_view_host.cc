@@ -748,8 +748,14 @@ class SingleViewHost::Impl {
         win_center_y < 0 || win_center_y >= screen_height) {
       DLOG("View is out of screen: sw: %d, sh: %d, x: %d, y: %d",
            screen_width, screen_height, win_center_x, win_center_y);
-      win_x_ = (screen_width - win_width_) / 2;
-      win_y_ = (screen_height - win_height_) / 2;
+      if (win_center_x < 0)
+        win_x_ = win_width_ / 2;
+      if (win_center_x >= screen_width)
+        win_x_ = screen_width - win_width_ / 2;
+      if (win_center_y < 0)
+        win_y_ = win_height_ / 2;
+      if (win_center_y >= screen_height)
+        win_y_ = screen_height - win_height_ / 2;
       gtk_window_move(GTK_WINDOW(window_), win_x_, win_y_);
     }
   }

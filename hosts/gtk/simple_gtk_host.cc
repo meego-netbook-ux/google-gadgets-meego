@@ -62,6 +62,7 @@ static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
 
 static GdkAtom xa_cardinal;
+static GtkWidget* hidden_ctrl_win;
 
 static gboolean
 control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
@@ -107,9 +108,17 @@ control_screen_changed(GtkWidget *widget, GdkScreen *old_screen, gpointer userda
       on_screen_size_changed (screen, widget);
 }
 
+GtkWidget*
+g_get_last_hidden_ctrl_win()
+{
+  return hidden_ctrl_win;
+}
+
 static void
 control_clicked(GtkWindow *win, GdkEventButton *event, gpointer user_data)
 {
+  hidden_ctrl_win = GTK_WIDGET(win);
+  gtk_widget_hide_all (hidden_ctrl_win);
   SimpleGtkHost* sgh = (SimpleGtkHost*)user_data;
   sgh->AddGadgetMenuCallback();
 }

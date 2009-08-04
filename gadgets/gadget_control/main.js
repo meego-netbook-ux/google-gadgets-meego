@@ -23,14 +23,14 @@ var kPluginBoxHeight = 100;
 var kDefaultPluginRows = 3;
 var kDefaultPluginColumns = 4;
 var kCategoryGap = 15;
-var kFixedExtraWidth = 142;
-var kFixedExtraHeight = 183;
+var kFixedExtraWidth = 0;
+var kFixedExtraHeight = 143;
 var kBorderMarginH = 12;
 var kBorderMarginV = 30;
 var kWindowMarginH = 12;
 var kCategoryItemWidth = 140;
 
-var kMinWidth = kFixedExtraWidth + 3 * kPluginBoxWidth + kBorderMarginH;
+var kMinWidth = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
 var kMinHeight = kFixedExtraHeight + kPluginBoxHeight + kBorderMarginV;
 
 // Default layout: 714x555.
@@ -91,9 +91,9 @@ function view_onopen() {
   var width, height;
   // init_layout();
   if (screen_width >= 1024) {
-    width = kFixedExtraWidth + 4 * kPluginBoxWidth + kBorderMarginH;
-  } else if (screen_width >= 800) {
     width = kFixedExtraWidth + 3 * kPluginBoxWidth + kBorderMarginH;
+  } else if (screen_width >= 800) {
+    width = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
   } else {
     width = kMinWidth;
   }
@@ -106,6 +106,7 @@ function view_onopen() {
   }
   debug.trace ("view width: " + width);
   view.resizeTo(width, height);
+  options.putValue ("main_view_x", 0);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when
   // gadget is created and will be registered by c++ code right after the
