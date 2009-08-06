@@ -73,36 +73,29 @@ std::string NetworkConnman::GetConnInfo(ScriptableInterface *result) {
 
 void NetworkConnman::OnSignal(const std::string &name, int argc, const Variant *argv) {
   DLOG("Got signal from connman: %s", name.c_str());
-  bool need_update = false;
 
   if (name == "StateChanged") {
     std::string state;
     if (argc >= 1 && argv[0].ConvertToString(&state)) {
       is_online_ = (state == CONNMAN_STATE_ONLINE);
       DLOG("Network is %s.", is_online_ ? "online" : "offline");
-      if (is_online_) {
-        need_update = true;
-      } else {
-        connection_type_ = CONNECTION_TYPE_UNKNOWN;
-        physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
-      }
+      connection_type_ = CONNECTION_TYPE_UNKNOWN;
+      physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
     }
   } else if (name == "PropertyChanged") {
-    need_update = is_online_;
+
+    std::string name;
+    argv[0].ConvertToString (&name);
+    if (name == "EnabledTechnologies" && argv[1].type() == Variant::TYPE_SCRIPTABLE)  {
+      ScriptableInterface *obj =
+        VariantValue<ScriptableInterface*>()(argv[1]);
+      UpdateConnInfo (obj);
+    }
   }
-  if (need_update)
-    Update();
 }
 
-void NetworkConnman::Update() {
-  DLOG("Update network information.");
-  DBusScriptableReceiver result;
-
-  if (connman_->CallMethod("GetProperties",
-                           true, kDefaultDBusTimeout, result.NewSlot(),
-                           MESSAGE_TYPE_INVALID)) {
-
-    std::string tech = GetConnInfo (result.GetValue());
+void NetworkConnman::UpdateConnInfo (ScriptableInterface *result) {
+    std::string tech = GetConnInfo (result);
     if (tech == "ethernet") {
             connection_type_ = CONNECTION_TYPE_802_3;
             physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
@@ -118,6 +111,16 @@ void NetworkConnman::Update() {
   // Always return 802.3 type if the connection type is unknown.
   if (connection_type_ == CONNECTION_TYPE_UNKNOWN)
     connection_type_ = CONNECTION_TYPE_802_3;
+}
+
+void NetworkConnman::Update() {
+  DLOG("Update network information.");
+  DBusScriptableReceiver result;
+
+  if (connman_->CallMethod("GetProperties",
+                           true, kDefaultDBusTimeout, result.NewSlot(),
+                           MESSAGE_TYPE_INVALID))
+    UpdateConnInfo (result.GetValue());
 }
 
 } // namespace linux_system
