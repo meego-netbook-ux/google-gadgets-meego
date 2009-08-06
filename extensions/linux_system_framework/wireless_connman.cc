@@ -106,7 +106,9 @@ class WirelessConnman::Impl {
 
  public:
   Impl()
-    : connman_(NULL) {
+    : connman_(NULL), on_signal_connection_(NULL), connected_connection_(NULL),
+      on_signal_manager_(NULL)
+  {
 
     connman_ = DBusProxy::NewSystemProxy(CONNMAN_SERVICE, CONNMAN_MANAGER_PATH,
                                          CONNMAN_MANAGER_INTERFACE);
@@ -116,11 +118,20 @@ class WirelessConnman::Impl {
     }
 
     DLOG("Connman is used.");
+    on_signal_manager_ = connman_->ConnectOnSignalEmit(
+        NewSlot(this, &Impl::OnSignal));
 
     UpdateWirelessInfo();
   }
   ~Impl() {
-    delete connman_;
+    if (on_signal_connection_)
+      on_signal_connection_->Disconnect();
+    if (on_signal_manager_)
+      on_signal_manager_->Disconnect();
+    if (connected_connection_)
+      delete connected_connection_;
+    if (connman_)
+      delete connman_;
   }
   bool IsAvailable() {
     return available_;
@@ -263,7 +274,17 @@ class WirelessConnman::Impl {
           if (type == "wifi") {
             connected_wifi_interface_ = name;
             connected_wifi_strength_  = strength;
-            delete connection;
+
+            if (connected_connection_) {
+              if (on_signal_connection_)
+                on_signal_connection_->Disconnect();
+              delete connected_connection_;
+            }
+
+            connected_connection_ = connection;
+            //NOTE: we use the same signal handler for manager and connection
+            on_signal_connection_ = connection->ConnectOnSignalEmit (NewSlot(this, &Impl::OnSignal));
+
             return false;
           }
         }
@@ -423,6 +444,39 @@ class WirelessConnman::Impl {
     }
   }
 
+  void UpdateAPList (ScriptableInterface* obj) {
+    ap_paths_.clear();
+    ap_index_.clear();
+
+    obj->EnumerateElements ( NewSlot (this, &Impl::CallbackAPs) );
+  }
+
+  void OnSignal(const std::string &name, int argc, const Variant *argv) {
+    DLOG("Got signal from connman: %s", name.c_str());
+    if (name == "PropertyChanged" && argc == 2) {
+      std::string name;
+      argv[0].ConvertToString (&name);
+      if (name == "Strength" && argv[1].type() == Variant::TYPE_INT64) {
+        connected_wifi_strength_ = (int)VariantValue<char>()(argv[1]);
+      }
+      else if (name == "StateChanged" && argv[1].type() == Variant::TYPE_STRING) {
+        std::string state = VariantValue<std::string>()(argv[1]);
+        connected_ = state == "online";
+      }
+      else if (argv[1].type() == Variant::TYPE_SCRIPTABLE)  {
+        ScriptableInterface *obj = VariantValue<ScriptableInterface*>()(argv[1]);
+        if (name == "ConnectedTechnologies")
+          GetWirelessStatus (obj);
+        else if (name == "AvailableTechnologies")
+          GetWirelessAvail (obj);
+        else if (name == "Services") {
+          // update ap list
+          UpdateAPList(obj);
+        }
+      }
+    }
+  }
+
  private:
   bool available_;
   bool connected_;
@@ -433,7 +487,9 @@ class WirelessConnman::Impl {
   int connected_wifi_strength_;
 
   DBusProxy *connman_;
+  DBusProxy *connected_connection_;
   Connection *on_signal_connection_;
+  Connection *on_signal_manager_;
 };
 
 WirelessConnman::WirelessConnman()
