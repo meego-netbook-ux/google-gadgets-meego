@@ -244,6 +244,18 @@ AC_ARG_ENABLE([qt-host],
               [build_qt_host=yes])
 
 #================== library options ===============
+AC_ARG_ENABLE([network-manager],
+              AS_HELP_STRING([--disable-network-manager],
+                             [don't build with NetworkManager]),
+              [build_network_manager=$enableval],
+              [build_network_manager=yes])
+
+AC_ARG_ENABLE([connman],
+              AS_HELP_STRING([--disable-connman],
+                             [don't build with Connman]),
+              [build_connman=$enableval],
+              [build_connman=yes])
+
 AC_ARG_ENABLE([libggadget-dbus],
               AS_HELP_STRING([--disable-libggadget-dbus],
                              [don't build libggadget-dbus]),
@@ -895,11 +907,13 @@ fi
 
 # Check NetworkManager
 has_network_manager=no
-PKG_CHECK_MODULES(NETWORK_MANAGER,
-                  [NetworkManager >= 0.7], [has_network_manager=yes],
-                  [PKG_CHECK_MODULES(NETWORK_MANAGER,
-                   [NetworkManager >= 0.6], [has_network_manager=old],
-                   [has_network_manager=no])])
+if test x$build_network_manager = xyes; then
+   PKG_CHECK_MODULES(NETWORK_MANAGER,
+                     [NetworkManager >= 0.7], [has_network_manager=yes],
+		     [PKG_CHECK_MODULES(NETWORK_MANAGER,
+		     [NetworkManager >= 0.6], [has_network_manager=old],
+		     [has_network_manager=no])])
+fi
 
 if test x$has_network_manager != xno; then
   PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_NETWORK_MANAGER"
@@ -907,8 +921,21 @@ if test x$has_network_manager != xno; then
     PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_NEW_NETWORK_MANAGER_API"
   fi
 else
-  AC_MSG_WARN([Development package of NetworkManager is not installed,]
-              [network/wireless support of framework.system won't be built.])
+  AC_MSG_WARN([[Development package of NetworkManager is not enabled]])
+fi
+
+# Check connman
+has_connman=no
+if test x$build_connman = xyes; then
+  PKG_CHECK_MODULES(CONNMAN,
+                    [connman >= 0.37], [has_connman=yes],
+                    [has_connman=no])
+fi
+
+if test x$has_connman != xno; then
+  PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_CONNMAN"
+else
+  AC_MSG_WARN([[Development package of connman is not enabled]])
 fi
 
 # Check gtkmozembed
@@ -1427,6 +1454,7 @@ AM_CONDITIONAL([GGL_HAVE_ZIP], [test x$ZIP != x])
 AM_CONDITIONAL([GGL_HAVE_GTK2], [test x$has_gtk2 = xyes])
 AM_CONDITIONAL([GGL_HAVE_RSVG], [test x$has_librsvg = xyes])
 AM_CONDITIONAL([GGL_HAVE_NETWORK_MANAGER], [test x$has_network_manager != xno])
+AM_CONDITIONAL([GGL_HAVE_CONNMAN], [test x$has_connman != xno])
 AM_CONDITIONAL([GGL_CROSS_COMPILING], [test x$cross_compiling = xyes])
 AM_CONDITIONAL([GGL_DISABLE_SHARED], [test x$enable_shared != xyes])
 
@@ -1573,6 +1601,7 @@ Build options:
  Other features:
   GTK SVG Support                 $has_librsvg
   NetworkManager support          $has_network_manager
+  Connman support                 $has_connman
   Startup notification support    $has_startup_notification
   Built-in xdgmime support        $enable_xdgmime
   Browser plugins directory       $default_browser_plugins_dir

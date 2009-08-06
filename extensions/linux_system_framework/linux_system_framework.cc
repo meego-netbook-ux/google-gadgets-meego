@@ -40,6 +40,11 @@
 #ifdef HAVE_NETWORK_MANAGER
 #include "network.h"
 #endif
+
+#ifdef HAVE_CONNMAN
+#include "network_connman.h"
+#endif
+
 #endif
 
 #define Initialize linux_system_framework_LTX_Initialize
@@ -78,6 +83,12 @@ static ScriptableUser *g_script_user_ = NULL;
 static Network *g_network_ = NULL;
 static ScriptableNetwork *g_script_network_ = NULL;
 #endif
+
+#ifdef HAVE_CONNMAN
+static NetworkConnman *g_network_ = NULL;
+static ScriptableNetwork *g_script_network_ = NULL;
+#endif
+
 #endif
 
 } // namespace linux_system
@@ -117,6 +128,10 @@ extern "C" {
     g_network_ = new Network;
     g_script_network_ = new ScriptableNetwork(g_network_);
 #endif
+#ifdef HAVE_CONNMAN
+    g_network_ = new NetworkConnman;
+    g_script_network_ = new ScriptableNetwork(g_network_);
+#endif
 #endif
     return true;
   }
@@ -146,6 +161,10 @@ extern "C" {
     delete g_user_;
 
 #ifdef HAVE_NETWORK_MANAGER
+    delete g_script_network_;
+    delete g_network_;
+#endif
+#ifdef HAVE_CONNMAN
     delete g_script_network_;
     delete g_network_;
 #endif
@@ -225,7 +244,7 @@ extern "C" {
                                         Variant(g_script_bios_));
     reg_system->RegisterVariantConstant("machine",
                                         Variant(g_script_machine_));
-#ifdef HAVE_NETWORK_MANAGER
+#if defined(HAVE_NETWORK_MANAGER) || defined(HAVE_CONNMAN)
     reg_system->RegisterVariantConstant("network",
                                         Variant(g_script_network_));
 #endif

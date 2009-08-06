@@ -57,6 +57,13 @@ libggadget_linux_la_SOURCES += \
 			  network.cc \
 			  wireless.cc
 endif
+
+if GGL_HAVE_CONNMAN
+libggadget_linux_la_SOURCES += \
+			  network_connman.cc \
+			  wireless_connman.cc
+endif
+
 endif
 
 libggadget_linux_la_CXXFLAGS = \
@@ -75,6 +82,9 @@ if GGL_BUILD_LIBGGADGET_DBUS
 libggadget_linux_la_CPPFLAGS += $(DBUS_CFLAGS)
 if GGL_HAVE_NETWORK_MANAGER
 libggadget_linux_la_CPPFLAGS += $(NETWORK_MANAGER_CFLAGS)
+endif
+if GGL_HAVE_CONNMAN
+libggadget_linux_la_CPPFLAGS += $(CONNMAN_CFLAGS)
 endif
 libggadget_linux_la_LIBADD += \
 			  $(top_builddir)/ggadget/dbus/libggadget-dbus@GGL_EPOCH@.la \
