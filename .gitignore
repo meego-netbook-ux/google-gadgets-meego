@@ -51,3 +51,5 @@ xmldocs.make
 /xdg/intl-desktop-file.sh
 *.desktop
 /extensions/gtkmoz_browser_element/gtkmoz-browser-child
+ggadget/sysdeps.h
+third_party/xdgmime/test-mime
