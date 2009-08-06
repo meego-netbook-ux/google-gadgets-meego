@@ -41,7 +41,9 @@
 #include <ggadget/slot.h>
 #include <ggadget/string_utils.h>
 #include <ggadget/system_utils.h>
+#ifdef GGL_USAGE_COLLECTOR
 #include <ggadget/usage_collector_interface.h>
+#endif
 #include <ggadget/xml_http_request_interface.h>
 #include "sidebar_gtk_host.h"
 #include "simple_gtk_host.h"
@@ -77,7 +79,9 @@ static const char *kGlobalExtensions[] = {
 #ifdef GGL_HOST_LINUX
   "linux-system-framework",
 #endif
+#ifdef GGL_USAGE_COLLECTOR
   "analytics-usage-collector",
+#endif
   "google-gadget-manager",
   NULL
 };
@@ -552,6 +556,7 @@ int main(int argc, char* argv[]) {
   ext_manager->SetReadonly();
   ggadget::InitXHRUserAgent(GGL_APP_NAME);
 
+#ifdef GGL_USAGE_COLLECTOR
   if (!g_arguments.no_collector) {
     ggadget::UsageCollectorFactoryInterface *collector_factory =
         ggadget::GetUsageCollectorFactory();
@@ -570,6 +575,7 @@ int main(int argc, char* argv[]) {
           screen_size_param.c_str());
     }
   }
+#endif
 
   // Only init managed host if it's not standalone mode.
   if (!g_arguments.standalone)

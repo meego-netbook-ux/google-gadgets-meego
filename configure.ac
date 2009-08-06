@@ -134,7 +134,7 @@ build_libggadget_npapi=yes
 build_libggadget_qt=yes
 
 # Extension conditions.
-# analytics_usage_collector will always be built.
+build_usage_collector=yes
 build_curl_xml_http_request=yes
 build_dbus_script_class=yes
 # default_framework will always be built.
@@ -388,6 +388,12 @@ AC_ARG_ENABLE([gtkwebkit-browser-element],
                              [don't build gtkwebkit-browser-element]),
               [build_gtkwebkit_browser_element=$enableval],
               [build_gtkwebkit_browser_element=yes])
+
+AC_ARG_ENABLE([usage-collector],
+              AS_HELP_STRING([--disable-usage-collector],
+                             [don't build usage-collector]),
+              [build_usage_collector=$enableval],
+              [build_usage_collector=yes])
 
 #================ other options =======================
 AC_ARG_ENABLE([update-mime-database],
@@ -1195,6 +1201,10 @@ if test x$build_gtkwebkit_browser_element = xyes; then
   fi
 fi
 
+if test x$build_usage_collector = xyes; then
+  PREDEFINED_MACROS="$PREDEFINED_MACROS -DGGL_USAGE_COLLECTOR"
+fi
+  
 # Check necessary functions
 AC_CHECK_FUNC(mkdtemp, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MKDTEMP"])
 AC_CHECK_FUNC(mmap, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MMAP"])
@@ -1434,6 +1444,10 @@ AM_CONDITIONAL(
   [test x$build_gtkwebkit_browser_element = xyes])
 
 AM_CONDITIONAL(
+  [GGL_BUILD_USAGE_COLLECTOR],
+  [test x$build_usage_collector = xyes])
+
+AM_CONDITIONAL(
   [GGL_ENABLE_UPDATE_MIME_DATABASE],
   [test x$enable_update_mime_database = xyes])
 
@@ -1597,6 +1611,7 @@ Build options:
   Build smjs-script-runtime       $build_smjs_script_runtime
   Build webkit-script-runtime     $build_webkit_script_runtime
   Build gtkwebkit-browser-element $build_gtkwebkit_browser_element
+  Build analytics-usage-collector $build_usage_collector
 
  Other features:
   GTK SVG Support                 $has_librsvg

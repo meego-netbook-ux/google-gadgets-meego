@@ -34,7 +34,9 @@ class MainLoopInterface;
 class OptionsInterface;
 class HostInterface;
 class Gadget;
+#ifdef GGL_USAGE_COLLECTOR
 class PlatformUsageCollectorInterface;
+#endif
 
 namespace google {
 
@@ -322,7 +324,9 @@ class GoogleGadgetManager : public GadgetManagerInterface {
   void ScheduleDailyPing();
   bool OnFirstDailyPing(int timer);
   bool OnDailyPing(int timer);
+#ifdef GGL_USAGE_COLLECTOR
   void SendGadgetUsagePing(int type, const char *gadget_id);
+#endif
   bool RemoveGadgetInstanceInternal(int instance_id, bool send_ping);
 
   class GadgetBrowserScriptUtils;
@@ -350,7 +354,9 @@ class GoogleGadgetManager : public GadgetManagerInterface {
   GadgetsMetadata metadata_;
   Gadget *browser_gadget_;
   bool first_run_;
+#ifdef GGL_USAGE_COLLECTOR
   PlatformUsageCollectorInterface *collector_;
+#endif
 };
 
 } // namespace google

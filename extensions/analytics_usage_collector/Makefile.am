@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+if GGL_BUILD_USAGE_COLLECTOR
 EXTRA_DIST = CMakeLists.txt
 
 INCLUDES		= -I$(top_builddir) \
@@ -36,3 +37,4 @@ analytics_usage_collector_la_LDFLAGS = \
 			  -no-undefined \
 			  -avoid-version \
 			  -module
+endif
