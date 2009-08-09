@@ -15,6 +15,7 @@
 */
 
 #include <gtk/gtk.h>
+#include <cairo/cairo.h>
 #include <string>
 #include <map>
 
@@ -75,9 +76,11 @@ control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
   cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
   cairo_paint (cr);
 
-  // image = cairo_image_surface_create_from_png ("/home/wwang29/Desktop/add.png");
-  // cairo_set_source_surface (cr, image, 0, 0);
-  // cairo_paint (cr);
+  if (userdata) {
+    cairo_surface_t *image = (cairo_surface_t*)userdata;
+    cairo_set_source_surface (cr, image, 0, 0);
+    cairo_paint (cr);
+  }
   // cairo_surface_destroy (image);
 
   cairo_destroy(cr);
@@ -336,7 +339,7 @@ class SimpleGtkHost::Impl {
 
     GtkWidget *control = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_widget_set_app_paintable(control, TRUE);
-    g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), NULL);
+
     g_signal_connect(G_OBJECT(control), "screen-changed", G_CALLBACK(control_screen_changed), NULL);
 
     gtk_window_set_decorated       (GTK_WINDOW(control), FALSE);
@@ -344,17 +347,12 @@ class SimpleGtkHost::Impl {
     gtk_window_set_type_hint       (GTK_WINDOW(control), GDK_WINDOW_TYPE_HINT_UTILITY);
     gtk_window_set_title           (GTK_WINDOW(control), "ignore");
 
-    std::string img_data;
-    if (GetGlobalFileManager()->ReadFile("resource://add_control.png", &img_data)) {
-      GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
-
-      GtkWidget* image = gtk_image_new_from_pixbuf (pixbuf);
-      g_object_unref(pixbuf);
-
-      gtk_container_add (GTK_CONTAINER (control), image);
-      gtk_window_resize (GTK_WINDOW(control), gdk_pixbuf_get_width (pixbuf),
-                         gdk_pixbuf_get_height (pixbuf));
+    cairo_surface_t* image = cairo_image_surface_create_from_png (GGL_RESOURCE_DIR "/add_control.png");
+    if (image) {
+      gtk_window_resize (GTK_WINDOW(control), cairo_image_surface_get_width (image),
+                         cairo_image_surface_get_height (image));
     }
+    g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), image);
     control_screen_changed(control, NULL, NULL);
     gtk_widget_add_events(control, GDK_BUTTON_PRESS_MASK);
     g_signal_connect(G_OBJECT(control), "button-press-event", G_CALLBACK(control_clicked), owner_);

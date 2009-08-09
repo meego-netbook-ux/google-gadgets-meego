@@ -127,14 +127,13 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		en/strings.xml \
 		fr/strings.xml \
 		zh-CN/strings.xml \
-		add_control.png \
 		logo_moblin.png
 
-EXTRA_DIST=$(RESOURCE_FILES)
+EXTRA_DIST=$(RESOURCE_FILES) add_control.png
 CLEANFILES=*.gg
 
 if GGL_HAVE_ZIP
-resource_DATA = resources.gg
+resource_DATA = resources.gg add_control.png
 resourcedir=$(GGL_RESOURCE_DIR)
 
 resources.gg: $(RESOURCE_FILES)
