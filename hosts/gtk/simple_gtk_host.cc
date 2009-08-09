@@ -66,6 +66,13 @@ static GdkAtom xa_cardinal;
 static GtkWidget* hidden_ctrl_win;
 
 static gboolean
+show_widget_cb(gpointer data)
+{
+  gtk_widget_show_all (GTK_WIDGET(data));
+  return FALSE;
+}
+
+static gboolean
 control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
 {
   // cairo_surface_t *image;
@@ -400,8 +407,8 @@ class SimpleGtkHost::Impl {
 
     gtk_widget_realize (logo);
     gdk_window_set_back_pixmap (logo->window, NULL, FALSE);
-    gtk_widget_show_all(logo);
     gtk_window_move (GTK_WINDOW(logo), 4, 4);
+    gtk_timeout_add (1000, (GtkFunction)show_widget_cb, logo);
   }
 
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
