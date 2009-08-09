@@ -370,6 +370,9 @@ class SimpleGtkHost::Impl {
 
     //set it at the correct pos
     //on_screen_size_changed (gtk_widget_get_screen (control), control);
+  }
+
+  void PostSetupUI() {
 
     // logo
     GtkWidget *logo = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -384,6 +387,7 @@ class SimpleGtkHost::Impl {
     gtk_window_set_type_hint       (GTK_WINDOW(logo), GDK_WINDOW_TYPE_HINT_UTILITY);
     gtk_window_set_title           (GTK_WINDOW(logo), "ignore");
 
+    std::string img_data;
     if (GetGlobalFileManager()->ReadFile("resource://logo_moblin.png", &img_data)) {
       GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
 
@@ -1053,6 +1057,8 @@ SimpleGtkHost::SimpleGtkHost(const char *options,
                    debug_console_config)) {
   impl_->SetupUI();
   impl_->LoadGadgets();
+  impl_->PostSetupUI(); //we let the logo appear later to ensure it
+                        //has the right _NET_WM_DESKTOP property
 }
 
 SimpleGtkHost::~SimpleGtkHost() {

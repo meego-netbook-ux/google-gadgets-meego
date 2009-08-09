@@ -95,17 +95,16 @@ void NetworkConnman::OnSignal(const std::string &name, int argc, const Variant *
 }
 
 void NetworkConnman::UpdateConnInfo (ScriptableInterface *result) {
-    std::string tech = GetConnInfo (result);
-    if (tech == "ethernet") {
-            connection_type_ = CONNECTION_TYPE_802_3;
-            physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
-    } else if (tech == "wifi") {
-      connection_type_ = CONNECTION_TYPE_NATIVE_802_11;
-      physcial_media_type_ = PHYSICAL_MEDIA_TYPE_NATIVE_802_11;
-    } else {
-      connection_type_ = CONNECTION_TYPE_UNKNOWN;
-      physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
-    }
+  std::string tech = GetConnInfo (result);
+  if (tech == "ethernet") {
+    connection_type_ = CONNECTION_TYPE_802_3;
+    physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
+  } else if (tech == "wifi") {
+    connection_type_ = CONNECTION_TYPE_NATIVE_802_11;
+    physcial_media_type_ = PHYSICAL_MEDIA_TYPE_NATIVE_802_11;
+  } else {
+    connection_type_ = CONNECTION_TYPE_UNKNOWN;
+    physcial_media_type_ = PHYSICAL_MEDIA_TYPE_UNSPECIFIED;
   }
 
   // Always return 802.3 type if the connection type is unknown.

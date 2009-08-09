@@ -63,7 +63,7 @@
       &SHOW_ONLY_LABEL;
     </label>
     -->
-    <div name="language_box_div" width="166" height="23" x="100%" pinX="100%" y="8">
+    <div name="language_box_div" width="166" height="23" x="100%" pinX="100%" y="17">
       <img width="100%" height="100%" src="images/control_border.png"
         stretchMiddle="true"/>
       <combobox name="language_box" width="160" height="440" x="3" y="2"
@@ -93,15 +93,15 @@
       </div>
     </div>
   </div>
-  <label color="#ffffff" size="10" wordWrap="false" vAlign="middle" bold="true"
-    pinX="50%" x="50%" height="24">&GADGET_NAME;</label>
+  <label color="#ffffff" size="14" wordWrap="false" vAlign="middle" bold="true"
+    pinX="50%" x="50%" height="40">&GADGET_NAME;</label>
   <div height="80" width="100%" hitTest="htcaption"/>
-  <button name="minimize_button" pinX="24" pinY="0" x="90%" y="0" height="40"
+  <button name="minimize_button" pinX="88" pinY="0" x="100%" y="3" height="30"
     image="images/hide_button.png"
     overImage="images/hide_button.png"
     downImage="images/hide_button.png"
     onclick="plugin.RemoveMe(true)" enabled="true"/>
-  <button name="close_button" pinX="24" pinY="0" x="100%" y="0"
+  <button name="close_button" pinX="48" pinY="0" x="100%" y="-2"
     image="images/close_button_up.png"
     overImage="images/close_button_over.png"
     downImage="images/close_button_down.png"
