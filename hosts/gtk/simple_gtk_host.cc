@@ -217,8 +217,11 @@ class SimpleGtkHost::Impl {
         hotkey_grabber_.SetHotKey(hotkey);
         hotkey_grabber_.SetEnableGrabbing(true);
       }
-      options_->GetInternalValue(
-          kOptionGadgetsShown).ConvertToBool(&gadgets_shown_);
+      // The default value of gadgets_shown_ is true.
+      value = options_->GetInternalValue(kOptionGadgetsShown);
+      if (value.type() == Variant::TYPE_BOOL)
+        gadgets_shown_ = VariantValue<bool>()(value);
+
       options_->GetInternalValue(kOptionFontSize).ConvertToInt(&font_size_);
       font_size_ = std::min(kMaxFontSize, std::max(kMinFontSize, font_size_));
     }
