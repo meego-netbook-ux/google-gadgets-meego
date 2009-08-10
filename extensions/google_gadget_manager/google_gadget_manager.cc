@@ -167,8 +167,8 @@ void GoogleGadgetManager::Init() {
 
   if (first_run_) {
     // Add some default built-in gadgets.
-    NewGadgetInstance("analog-clock");
-    NewGadgetInstance("rss");
+    // NewGadgetInstance("analog-clock");
+    // NewGadgetInstance("rss");
     // Schedule an immediate update if it is first run.
     ScheduleUpdate(0);
     if (collector_)
