@@ -196,6 +196,8 @@ class SimpleGtkHost::Impl {
       gadgets_shown_(true),
       safe_to_exit_(true),
       font_size_(kDefaultFontSize),
+      gadgets_count_(0),
+      control_(NULL),
       gadget_manager_(GetGadgetManager()),
       on_new_gadget_instance_connection_(NULL),
       on_remove_gadget_instance_connection_(NULL),
@@ -372,6 +374,7 @@ class SimpleGtkHost::Impl {
     // gdk_flush();
     gdk_window_set_back_pixmap (control->window, NULL, FALSE);
     gtk_widget_show_all        (control);
+    control_ = control;
 
     //set it at the correct pos
     //on_screen_size_changed (gtk_widget_get_screen (control), control);
@@ -409,6 +412,9 @@ class SimpleGtkHost::Impl {
     gdk_window_set_back_pixmap (logo->window, NULL, FALSE);
     gtk_window_move (GTK_WINDOW(logo), 4, 4);
     gtk_timeout_add (1000, (GtkFunction)show_widget_cb, logo);
+    if (GetGadgetsCount() == 0 && control_) {
+      control_clicked (GTK_WINDOW(control_), NULL, owner_);
+    }
   }
 
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
@@ -424,6 +430,7 @@ class SimpleGtkHost::Impl {
 #endif
 
   bool EnumerateGadgetInstancesCallback(int id) {
+    gadgets_count_ ++;
     if (!LoadGadgetInstance(id))
       gadget_manager_->RemoveGadgetInstance(id);
     // Return true to continue the enumeration.
@@ -588,8 +595,13 @@ class SimpleGtkHost::Impl {
   }
 
   void LoadGadgets() {
+    gadgets_count_ = 0;
     gadget_manager_->EnumerateGadgetInstances(
         NewSlot(this, &Impl::EnumerateGadgetInstancesCallback));
+  }
+
+  int GetGadgetsCount() {
+    return gadgets_count_;
   }
 
   void ShowAllMenuCallback(const char *) {
@@ -1037,6 +1049,9 @@ class SimpleGtkHost::Impl {
   bool gadgets_shown_;
   bool safe_to_exit_;
   int font_size_;
+
+  int gadgets_count_;
+  GtkWidget* control_;
 
   GadgetManagerInterface *gadget_manager_;
   Connection *on_new_gadget_instance_connection_;
