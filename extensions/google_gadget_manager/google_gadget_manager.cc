@@ -34,7 +34,9 @@
 #include <ggadget/scriptable_helper.h>
 #include <ggadget/scriptable_map.h>
 #include <ggadget/system_utils.h>
+#ifdef GGL_USAGE_COLLECTOR
 #include <ggadget/usage_collector_interface.h>
+#endif
 #include <ggadget/view.h>
 #include <ggadget/xml_http_request_interface.h>
 #include <ggadget/xml_parser_interface.h>
@@ -83,8 +85,11 @@ GoogleGadgetManager::GoogleGadgetManager()
       full_download_(false),
       updating_metadata_(false),
       browser_gadget_(NULL),
-      first_run_(false),
-      collector_(NULL) {
+#ifdef GGL_USAGE_COLLECTOR
+      collector_(NULL),
+#endif
+      first_run_(false)
+{
   ASSERT(main_loop_);
   ASSERT(global_options_);
   ASSERT(file_manager_);
@@ -143,6 +148,7 @@ void GoogleGadgetManager::Init() {
   first_run_ = (run_count == 0 && instance_statuses_.empty());
   global_options_->PutValue(kRunCountOption, Variant(run_count + 1));
 
+#ifdef GGL_USAGE_COLLECTOR
   UsageCollectorFactoryInterface *uc_factory = GetUsageCollectorFactory();
   if (uc_factory)
     collector_ = uc_factory->GetPlatformUsageCollector();
@@ -164,6 +170,7 @@ void GoogleGadgetManager::Init() {
               NewSlot(this, &GoogleGadgetManager::OnFirstDailyPing)));
     }
   }
+#endif
 
   if (first_run_) {
     // Add some default built-in gadgets.
@@ -171,8 +178,10 @@ void GoogleGadgetManager::Init() {
     // NewGadgetInstance("rss");
     // Schedule an immediate update if it is first run.
     ScheduleUpdate(0);
+#ifdef GGL_USAGE_COLLECTOR
     if (collector_)
       collector_->ReportFirstUse();
+#endif
   } else {
     ScheduleNextUpdate();
   }
@@ -477,7 +486,9 @@ int GoogleGadgetManager::NewGadgetInstance(const char *gadget_id) {
         return -1;
       if (!new_instance_signal_.HasActiveConnections() ||
           new_instance_signal_(i)) {
+#ifdef GGL_USAGE_COLLECTOR
         SendGadgetUsagePing(1, gadget_id);
+#endif
         return i;
       } else {
         RemoveGadgetInstanceInternal(i, false);
@@ -501,7 +512,9 @@ int GoogleGadgetManager::NewGadgetInstance(const char *gadget_id) {
   active_gadgets_.insert(gadget_id);
   if (!new_instance_signal_.HasActiveConnections() ||
       new_instance_signal_(instance_id)) {
+#ifdef GGL_USAGE_COLLECTOR
     SendGadgetUsagePing(1, gadget_id);
+#endif
     return instance_id;
   }
 
@@ -549,10 +562,10 @@ bool GoogleGadgetManager::RemoveGadgetInstanceInternal(int instance_id,
     ActuallyRemoveInstance(instance_id, false);
   }
   TrimInstanceStatuses();
-
+#ifdef GGL_USAGE_COLLECTOR
   if (send_ping)
     SendGadgetUsagePing(2, gadget_id.c_str());
-
+#endif
   remove_instance_signal_(instance_id);
   return true;
 }
@@ -1168,22 +1181,25 @@ bool GoogleGadgetManager::OnFirstDailyPing(int timer) {
 }
 
 bool GoogleGadgetManager::OnDailyPing(int timer) {
-  ASSERT(collector_);
   global_options_->PutValue(kLastDailyPingTimeOption,
                             Variant(main_loop_->GetCurrentTime()));
+#ifdef GGL_USAGE_COLLECTOR
+  ASSERT(collector_);
   collector_->ReportUsage();
-
+#endif
   int64_t last_weekly_time = 0;
   global_options_->GetValue(kLastWeeklyPingTimeOption).ConvertToInt64(
       &last_weekly_time);
   int64_t current_time = static_cast<int64_t>(main_loop_->GetCurrentTime());
   if (current_time > last_weekly_time + kWeeklyPingIntervalBase) {
+#ifdef GGL_USAGE_COLLECTOR
     // Report gadget usage weekly.
     int size = static_cast<int>(instance_statuses_.size());
     for (int i = 0; i < size; i++) {
       if (instance_statuses_[i] == kInstanceStatusActive)
         SendGadgetUsagePing(0, GetInstanceGadgetId(i).c_str());
     }
+#endif
     global_options_->PutValue(kLastWeeklyPingTimeOption, Variant(current_time));
   } else if (current_time < last_weekly_time) {
     // In case of options data error or timer error.
@@ -1192,6 +1208,7 @@ bool GoogleGadgetManager::OnDailyPing(int timer) {
   return true;
 }
 
+#ifdef GGL_USAGE_COLLECTOR
 void GoogleGadgetManager::SendGadgetUsagePing(int type, const char *gadget_id) {
   if (!collector_)
     return;
@@ -1229,6 +1246,7 @@ void GoogleGadgetManager::SendGadgetUsagePing(int type, const char *gadget_id) {
     }
   }
 }
+#endif
 
 } // namespace google
 } // namespace ggadget

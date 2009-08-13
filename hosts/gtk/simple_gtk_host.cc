@@ -212,6 +212,8 @@ class SimpleGtkHost::Impl {
 
     if (options_) {
       std::string hotkey;
+      Variant value;
+
       if (options_->GetInternalValue(kOptionHotKey).ConvertToString(&hotkey) &&
           hotkey.length()) {
         hotkey_grabber_.SetHotKey(hotkey);

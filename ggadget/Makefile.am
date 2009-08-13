@@ -134,7 +134,6 @@ gglinclude_HEADERS	= anchor_element.h \
 			  text_frame.h \
 			  texture.h \
 			  unicode_utils.h \
-			  usage_collector_interface.h \
 			  uuid.h \
 			  variant.h \
 			  video_element_base.h \
@@ -231,7 +230,6 @@ libggadget@GGL_EPOCH@_la_SOURCES = \
 			  text_frame.cc \
 			  texture.cc \
 			  unicode_utils.cc \
-			  usage_collector_factory.cc \
 			  uuid.cc \
 			  variant.cc \
 			  video_element_base.cc \
@@ -244,6 +242,12 @@ libggadget@GGL_EPOCH@_la_SOURCES = \
 			  xml_parser.cc \
 			  xml_utils.cc \
 			  zip_file_manager.cc
+
+if GGL_BUILD_USAGE_COLLECTOR
+gglinclude_HEADERS += usage_collector_interface.h
+libggadget@GGL_EPOCH@_la_SOURCES += usage_collector_factory.cc
+endif
+
 
 libggadget@GGL_EPOCH@_la_CPPFLAGS = \
 			  $(LTDLINCL) \
