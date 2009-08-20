@@ -15,7 +15,7 @@
   limitations under the License.
 -->
 
-<view width="700" height="585" resizable="true" onopen="view_onopen()"
+<view width="700" height="585" resizable="false" onopen="view_onopen()"
   onclose="view_onclose()" oncontextmenu="view_oncontextmenu()"
   onsizing="view_onsizing()" onsize="view_onsize()">
   <edit name="category_item_ruler" visible="false" multiline="false"
@@ -42,16 +42,16 @@
 
   <div name="window_body" x="6" y="24" width="688" height="555"
     onsize="window_onsize()">
-    <div name="search_div" width="215" height="50" x="10" pinX="0">
-      <div width="166" height="23" y="17">
+    <div name="search_div" width="315" height="50" x="10" pinX="0">
+      <div width="266" height="23" y="17">
         <img width="100%" height="100%" src="images/control_border.png"
           stretchMiddle="true"/>
-        <edit name="search_box" width="160" height="19" x="3" y="2"
+        <edit name="search_box" width="260" height="19" x="3" y="2"
           value="&SEARCH_GADGETS;" color="#808080" size="10"
           onchange="search_box_onchange()" onfocusin="search_box_onfocusin()"
           onfocusout="search_box_onfocusout()"/>
       </div>
-      <button name="search_button" x="164" y="8"
+      <button name="search_button" x="264" y="8"
          image="images/search_lens_default.png"
         downImage="images/search_lens_down.png"
         overImage="images/search_lens_hover.png"
@@ -93,8 +93,8 @@
       </div>
     </div>
   </div>
-  <label color="#ffffff" size="14" wordWrap="false" vAlign="middle" bold="true"
-    pinX="50%" x="50%" height="40">&GADGET_NAME;</label>
+  <label color="#ffffff" size="14" wordWrap="false" hAlign="left" vAlign="middle" bold="true"
+    pinX="0%" x="10" height="40">&GADGET_NAME;</label>
   <div height="80" width="100%" hitTest="htcaption"/>
   <button name="minimize_button" pinX="88" pinY="0" x="100%" y="3" height="30"
     image="images/hide_button.png"
@@ -106,9 +106,11 @@
     overImage="images/close_button_over.png"
     downImage="images/close_button_down.png"
     onclick="ui_exit()" enabled="true"/>
+<!--
   <img name="resize_corner" src="images/resize_corner.png"
-    hitTest="htbottomright" cursor="sizenwse" opacity="160"
+    hitTest="htbottomright" opacity="160"
     pinX="20" pinY="20" x="100%" y="100%"/>
+-->
   <script src="main.js"/>
   <script src="thumbnail.js"/>
   <script src="plugins.js"/>
