@@ -641,6 +641,13 @@ function search_box_onchange() {
   } else {
     if (gSearchPluginsTimer)
       view.clearTimeout(gSearchPluginsTimer);
+
+    if (typeof(plugins_div) == "undefined") {
+      // when we start search in the welcome screen, we create the
+      // plugin_div in this way
+      populate_plugins_div ();
+    }
+
     gSearchPluginsTimer = setTimeout(function () {
       if (search_box.value && search_box.value != strings.SEARCH_GADGETS) {
         SelectCategory(null);
@@ -685,7 +692,7 @@ function welcome_no_updates () {
 ');
 }
 
-function welcome_add_gadget(is_update) {
+function populate_plugins_div () {
   main_div.removeAllElements ();
   main_div.appendElement ('<div name="plugins_div" width="100%" height="100%"/>');
 
@@ -704,6 +711,12 @@ function welcome_add_gadget(is_update) {
         downImage="images/next_down.png" overImage="images/next_hover.png" \n\
         onclick="next_button_onclick()"/>                               \n\
     </div>');
+}
+
+function welcome_add_gadget(is_update) {
+
+  populate_plugins_div ();
+
   if (is_update)
     SelectCategory (kCategoryUpdates);
   else
