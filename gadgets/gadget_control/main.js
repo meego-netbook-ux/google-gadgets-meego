@@ -90,6 +90,7 @@ function view_onopen() {
   var screen_height = system.screen.size.height;
   var width, height;
   // init_layout();
+
   if (screen_width >= 1024) {
     width = kFixedExtraWidth + 3 * kPluginBoxWidth + kBorderMarginH;
   } else if (screen_width >= 800) {

@@ -58,7 +58,9 @@ class Gadget {
     /** User clicked the 'back' button. */
     CMD_TOOLBAR_BACK = 2,
     /** User clicked the 'forward' button. */
-    CMD_TOOLBAR_FORWARD = 3
+    CMD_TOOLBAR_FORWARD = 3,
+
+    CMD_UPDATE_METADATA = 4
   };
 
   /** Display states of the gadget's main view. */

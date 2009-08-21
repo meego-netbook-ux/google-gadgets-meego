@@ -43,6 +43,7 @@ var gddInfoMaskIdealSize = 4;
 var gddCmdAboutDialog = 1;
 var gddCmdToolbarBack = 2;
 var gddCmdToolbarForward = 3;
+var gddCmdUpdateMetadata = 4;
 
 // Content item layouts
 var gddContentItemLayoutNowrapItems = 0;
