@@ -270,6 +270,8 @@ void GoogleGadgetManager::OnUpdateDone(bool request_success,
       global_options_->PutValue(kLastUpdateTimeOption,
                                 Variant(last_update_time_));
       ScheduleNextUpdate();
+
+      browser_gadget_->OnCommand (Gadget::CMD_UPDATE_METADATA);
       return;
     }
 
@@ -1160,6 +1162,7 @@ void GoogleGadgetManager::ShowGadgetBrowserDialog(HostInterface *host) {
       main_view->ConnectOnCloseEvent(
           NewSlot(&metadata_, &GadgetsMetadata::FreeMemory));
       GadgetBrowserScriptUtils::Register(this, main_view->GetScriptContext());
+
     }
   }
 

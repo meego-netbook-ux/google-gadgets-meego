@@ -68,6 +68,16 @@ var kBottomCategories = [
   kCategoryCommunication, kCategoryHoliday,
 ];
 
+plugin.onCommand = on_command;
+
+function on_command (cmd) {
+  debug.trace (" ================= ON COMMAND: " + cmd);
+  if (cmd == gddCmdUpdateMetadata) {
+    LoadMetadata ();
+    SelectCategory(kCategoryAll);
+  }
+}
+
 function SplitValues(src) {
   return src ? src.toLowerCase().split(",") : [];
 }
