@@ -16,7 +16,7 @@
 -->
 
 <strings>
-<GOOGLE_GADGETS>Google Gadgets</GOOGLE_GADGETS>
+<GOOGLE_GADGETS>Gadgets</GOOGLE_GADGETS>
 <API_VERSION>(API Version: %s)</API_VERSION>
 <GGL_COPYRIGHT>Copyright &#169; 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:</GGL_COPYRIGHT>
 <GGL_DESCRIPTION>For more information please visit our project site:</GGL_DESCRIPTION>
@@ -145,8 +145,8 @@ even in the middle of a word. -->
 <HOTKEY_DISABLED>Disabled</HOTKEY_DISABLED>
 
 <!-- Tooltip text for the status icon. The %s parameter is the hotkey string. -->
-<STATUS_ICON_TOOLTIP>Google Gadgets</STATUS_ICON_TOOLTIP>
-<STATUS_ICON_TOOLTIP_WITH_HOTKEY>Google Gadgets, press %s to show or hide gadgets.</STATUS_ICON_TOOLTIP_WITH_HOTKEY>
+<STATUS_ICON_TOOLTIP>Gadgets</STATUS_ICON_TOOLTIP>
+<STATUS_ICON_TOOLTIP_WITH_HOTKEY>Gadgets, press %s to show or hide gadgets.</STATUS_ICON_TOOLTIP_WITH_HOTKEY>
 
 <!-- Messages for debug console. -->
 <DEBUG_CLEAR>Clear</DEBUG_CLEAR>
@@ -157,14 +157,14 @@ even in the middle of a word. -->
 <DEBUG_LOCK_SCROLL>Lock scroll</DEBUG_LOCK_SCROLL>
 
 <!-- Names used in *.desktop files. -->
-<HOST_GTK_DESKTOP_NAME>Google Gadgets (GTK)</HOST_GTK_DESKTOP_NAME>
-<HOST_QT_DESKTOP_NAME>Google Gadgets (Qt)</HOST_QT_DESKTOP_NAME>
-<GADGET_DESIGNER_NAME>Google Gadget Designer</GADGET_DESIGNER_NAME>
+<HOST_GTK_DESKTOP_NAME>Gadgets (GTK)</HOST_GTK_DESKTOP_NAME>
+<HOST_QT_DESKTOP_NAME>Gadgets (Qt)</HOST_QT_DESKTOP_NAME>
+<GADGET_DESIGNER_NAME>Gadget Designer</GADGET_DESIGNER_NAME>
 
 <!-- Comments used in *.desktop files. -->
-<HOST_GTK_DESKTOP_COMMENT>Run Google Gadgets in GNOME/GTK environment</HOST_GTK_DESKTOP_COMMENT>
-<HOST_QT_DESKTOP_COMMENT>Run Google Gadgets in KDE/Qt environment</HOST_QT_DESKTOP_COMMENT>
-<GADGET_DESIGNER_COMMENT>Google Gadget Designer</GADGET_DESIGNER_COMMENT>
+<HOST_GTK_DESKTOP_COMMENT>Run Gadgets in GNOME/GTK environment</HOST_GTK_DESKTOP_COMMENT>
+<HOST_QT_DESKTOP_COMMENT>Run Gadgets in KDE/Qt environment</HOST_QT_DESKTOP_COMMENT>
+<GADGET_DESIGNER_COMMENT>Gadget Designer</GADGET_DESIGNER_COMMENT>
 
 <!-- Descriptions of Gadget API permissions. TODO: to be reviewed -->
 <PERMISSION_FILEREAD>Reads content of local files and directories</PERMISSION_FILEREAD>
@@ -176,8 +176,8 @@ even in the middle of a word. -->
 
 <GADGET_LOAD_FAILURE>The gadget could not be loaded:&#10;&#10;%s</GADGET_LOAD_FAILURE>
 <!-- TODO: The following "Linux"s should be changed if we support platforms other than Linux. -->
-<GADGET_REQUIRE_API_VERSION>The gadget requires Google Gadgets supporting API at least version %s:&#10;&#10;%s</GADGET_REQUIRE_API_VERSION>
-<GADGET_REQUIRE_HOST_VERSION>The gadget requires Google Gadgets for Linux at least version %s:&#10;&#10;%s</GADGET_REQUIRE_HOST_VERSION>
+<GADGET_REQUIRE_API_VERSION>The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s</GADGET_REQUIRE_API_VERSION>
+<GADGET_REQUIRE_HOST_VERSION>The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s</GADGET_REQUIRE_HOST_VERSION>
 <GADGET_PLATFORM_NOT_SUPPORTED>The gadget doesn't work on Linux platform:%&#10;&#10;%s</GADGET_PLATFORM_NOT_SUPPORTED>
 
 <GOOGLE_HOMEPAGE_URL>http://www.google.com</GOOGLE_HOMEPAGE_URL>
