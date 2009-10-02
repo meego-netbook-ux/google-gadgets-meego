@@ -16,9 +16,9 @@
 -->
 
 <strings>
-  <GADGET_NAME>Google Gadgets Control</GADGET_NAME>
-  <GADGET_DESCRIPTION>Google Gadgets Control</GADGET_DESCRIPTION>
-  <GADGET_ABOUT_TEXT>Google Gadgets Control</GADGET_ABOUT_TEXT>
+  <GADGET_NAME>Gadgets Control</GADGET_NAME>
+  <GADGET_DESCRIPTION>Gadgets Control</GADGET_DESCRIPTION>
+  <GADGET_ABOUT_TEXT>Gadgets Control</GADGET_ABOUT_TEXT>
 
   <SHOW_ONLY_LABEL>Show only:</SHOW_ONLY_LABEL>
   <PAGE_LABEL>{{PAGE}} of {{TOTAL}}</PAGE_LABEL>
@@ -32,8 +32,8 @@
   <STATUS_UPDATED>Updated</STATUS_UPDATED>
   <STATUS_ERROR_UPDATING>Error</STATUS_ERROR_UPDATING>
   <SEARCH_GADGETS>Search gadgets</SEARCH_GADGETS>
-  <CONFIRM_EXIT>Do you want to close the Google Gadgets Zone? This will remove all your installed gadgets.</CONFIRM_EXIT>
-  <WELCOME_TO_GADGETS>Welcome to Google Gadgets, they're tiny bits of fun for your computer. What do you want to do?</WELCOME_TO_GADGETS>
+  <CONFIRM_EXIT>Do you want to close the Gadgets Zone? This will remove all your installed gadgets.</CONFIRM_EXIT>
+  <WELCOME_TO_GADGETS>Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?</WELCOME_TO_GADGETS>
   <WELCOME_ADD_GADGET>Add a new Gadget</WELCOME_ADD_GADGET>
   <WELCOME_CHECK_UPDATES>Check for updates</WELCOME_CHECK_UPDATES>
   <WELCOME_NO_UPDATES>Sorry, we don't have any updated Gadgets available. You could:</WELCOME_NO_UPDATES>
