@@ -572,6 +572,11 @@ void QtViewWidget::timerEvent(QTimerEvent *event) {
   }
 }
 
+void QtViewWidget::closeEvent(QCloseEvent *event) {
+  emit closeBySystem();
+  event->ignore();
+}
+
 void QtViewWidget::paintEvent(QPaintEvent *event) {
   impl_->paintEvent(event);
 }
@@ -636,6 +641,8 @@ void QtViewWidget::wheelEvent(QWheelEvent * event) {
 
   if (impl_->view_->OnMouseEvent(e) != EVENT_RESULT_UNHANDLED)
     event->accept();
+  else
+    event->ignore();
 }
 
 void QtViewWidget::keyPressEvent(QKeyEvent *event) {
@@ -663,9 +670,9 @@ void QtViewWidget::keyPressEvent(QKeyEvent *event) {
     handler_result2 = impl_->view_->OnKeyEvent(e2);
   }
 
-  if (handler_result != ggadget::EVENT_RESULT_UNHANDLED ||
-      handler_result2 != ggadget::EVENT_RESULT_UNHANDLED)
-    event->accept();
+  if (handler_result == ggadget::EVENT_RESULT_UNHANDLED &&
+      handler_result2 == ggadget::EVENT_RESULT_UNHANDLED)
+    QWidget::keyPressEvent(event);
 }
 
 void QtViewWidget::keyReleaseEvent(QKeyEvent *event) {
@@ -682,8 +689,8 @@ void QtViewWidget::keyReleaseEvent(QKeyEvent *event) {
     LOG("Unknown key: 0x%x", event->key());
   }
 
-  if (handler_result != ggadget::EVENT_RESULT_UNHANDLED)
-    event->accept();
+  if (handler_result == ggadget::EVENT_RESULT_UNHANDLED)
+    QWidget::keyReleaseEvent(event);
 }
 
 // We treat inputMethodEvent as special KeyboardEvent.
