@@ -479,7 +479,7 @@ class ViewWidgetBinder::Impl : public SmallObject<> {
 #endif
 
     if (event->area.x == 0 && event->area.y == 0 &&
-        event->area.width == 1 && event->area.height == 1) {
+        event->area.width == 1234 && event->area.height == 1234) {
       //DLOG("View(%p): self queue draw.", impl->view_);
       if (gdk_region_empty(region)) {
         DLOG("View(%p) has pending queue draw, but doesn't have clip region.",
