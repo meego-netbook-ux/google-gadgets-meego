@@ -119,6 +119,14 @@ AC_SUBST(GGL_BASE_DIR)
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
 
+GETTEXT_PACKAGE=ggl
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],
+                   ["$GETTEXT_PACKAGE"],
+                   [Name of default gettext domain])
+
+IT_PROG_INTLTOOL([0.34.90])
+
 ###########################################################
 ##                      Config options.                  ##
 ###########################################################
@@ -1571,6 +1579,7 @@ AC_CONFIG_FILES([Makefile
                  third_party/xdgmime/Makefile
                  unittest/Makefile
                  xdg/Makefile
+		 po/Makefile.in
                  ])
 AC_OUTPUT
 
