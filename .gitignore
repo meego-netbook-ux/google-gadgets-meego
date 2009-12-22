@@ -53,3 +53,5 @@ xmldocs.make
 /extensions/gtkmoz_browser_element/gtkmoz-browser-child
 ggadget/sysdeps.h
 third_party/xdgmime/test-mime
+!/po/POTFILES.in
+!/po/Makefile.in.in

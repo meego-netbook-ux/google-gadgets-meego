@@ -17,12 +17,16 @@
 INCLUDES		= -I$(top_builddir) \
 			  -I$(top_srcdir)
 
-noinst_PROGRAMS		= intl-desktop-file
+noinst_PROGRAMS		= intl-desktop-file l10n-reader
 
 intl_desktop_file_SOURCES= intl_desktop_file.cc
 intl_desktop_file_CPPFLAGS= $(PREDEFINED_MACROS)
 intl_desktop_file_CXXFLAGS= $(DEFAULT_COMPILE_FLAGS)
 intl_desktop_file_LDADD= $(top_builddir)/ggadget/libggadget@GGL_EPOCH@.la
+
+l10n_reader_SOURCES = l10n-reader.c
+l10n_reader_CFLAGS = $(XML_CPPFLAGS)
+l10n_reader_LDADD  = $(XML_LIBS)
 
 if GGL_DISABLE_SHARED
 intl_desktop_file_LDADD += \
