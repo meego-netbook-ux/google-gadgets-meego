@@ -56,6 +56,7 @@ class NetworkConnman : public NetworkInterface {
  private:
   void OnSignal(const std::string &name, int argc, const Variant *argv);
   void Update();
+  void UpdateConnInfo (ScriptableInterface *result);
 
  private:
   // true if using nm 0.7 or above, false if using nm 0.6.x

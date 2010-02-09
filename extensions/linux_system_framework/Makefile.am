@@ -30,11 +30,13 @@ noinst_HEADERS		= file_system.h \
 			  machine.h \
 			  memory.h \
 			  network.h \
+			  network_connman.h \
 			  perfmon.h \
 			  power.h \
 			  process.h \
 			  user.h \
 			  wireless.h \
+			  wireless_connman.h \
 			  hal_strings.h
 
 noinst_LTLIBRARIES	= libggadget-linux.la

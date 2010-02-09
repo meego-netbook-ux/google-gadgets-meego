@@ -106,7 +106,7 @@ class WirelessConnman::Impl {
 
  public:
   Impl()
-    : connman_(NULL), on_signal_connection_(NULL), connected_connection_(NULL),
+    : connman_(NULL), connected_connection_(NULL), on_signal_connection_(NULL),
       on_signal_manager_(NULL)
   {
 
