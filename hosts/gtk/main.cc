@@ -208,7 +208,7 @@ struct Arguments {
   Arguments()
     : debug_mode(0),
       wm_border(false),
-      no_sidebar(false),
+      no_sidebar(true),
       no_transparent(false),
       no_decorator(false),
       matchbox(false),
