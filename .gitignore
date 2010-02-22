@@ -55,3 +55,4 @@ ggadget/sysdeps.h
 third_party/xdgmime/test-mime
 !/po/POTFILES.in
 !/po/Makefile.in.in
+/libltdl/
