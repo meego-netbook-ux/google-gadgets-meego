@@ -762,6 +762,11 @@ if test x$build_libggadget_qt = xyes; then
   fi
 fi
 
+
+PKG_CHECK_MODULES(CLUTTER, [clutter-1.0])
+AC_SUBST(CLUTTER_LIBS)
+AC_SUBST(CLUTTER_CFLAGS)
+
 # Check gtk2 related libraries.
 has_gtk2=no
 if test x$build_libggadget_gtk = xyes; then
@@ -1514,6 +1519,7 @@ AC_CONFIG_FILES([Makefile
                  extensions/gst_audio_framework/Makefile
                  extensions/gst_video_element/Makefile
                  extensions/gtk_edit_element/Makefile
+                 extensions/clutter_edit_element/Makefile
                  extensions/gtk_system_framework/Makefile
                  extensions/gtkmoz_browser_element/Makefile
                  extensions/libxml2_xml_parser/Makefile
@@ -1557,6 +1563,7 @@ AC_CONFIG_FILES([Makefile
                  ggadget/npapi/tests/Makefile
                  ggadget/npapi/libggadget-npapi-1.0.pc
                  ggadget/gtk/Makefile
+		 ggadget/clutter/Makefile
                  ggadget/gtk/tests/Makefile
                  ggadget/gtk/libggadget-gtk-1.0.pc
                  ggadget/js/Makefile
@@ -1571,6 +1578,7 @@ AC_CONFIG_FILES([Makefile
                  hosts/Makefile
                  hosts/gtk/Makefile
                  hosts/qt/Makefile
+                 hosts/clutter/Makefile
                  resources/Makefile
                  third_party/Makefile
                  third_party/codesighs/Makefile

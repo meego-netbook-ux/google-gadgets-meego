@@ -17,6 +17,7 @@ EXTRA_DIST = CMakeLists.txt
 
 SUBDIRS = dbus_script_class \
 	  gtk_edit_element \
+	  clutter_edit_element \
 	  qt_edit_element \
 	  qt_xml_http_request \
 	  gtkmoz_browser_element \

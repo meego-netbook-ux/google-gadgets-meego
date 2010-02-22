@@ -19,7 +19,7 @@ EXTRA_DIST = CMakeLists.txt
 SUBDIRS = . tests js xdg npapi
 
 if GGL_BUILD_LIBGGADGET_GTK
-SUBDIRS += gtk
+SUBDIRS += gtk clutter
 endif
 
 if GGL_BUILD_LIBGGADGET_QT

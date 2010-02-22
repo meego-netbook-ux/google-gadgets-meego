@@ -19,7 +19,7 @@ EXTRA_DIST = CMakeLists.txt
 SUBDIRS =
 
 if GGL_BUILD_GTK_HOST
-SUBDIRS += gtk
+SUBDIRS += gtk clutter
 endif
 
 if GGL_BUILD_QT_HOST
