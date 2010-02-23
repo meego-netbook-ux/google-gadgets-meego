@@ -143,27 +143,6 @@ static gboolean KeyReleaseEvent(ClutterActor *actor,
                                 ClutterKeyEvent *event,
                                 gpointer         userdata) {
   switch(event->keyval) {
-  case CLUTTER_F11:
-    if (CLUTTER_ACTOR_IS_VISIBLE(host_group)) {
-      //clutter_effect_scale(fade_tmpl, host_group, 1.5, 1.5, NULL, NULL);
-      //clutter_effect_fade(fade_tmpl, host_group, 0x00, hide_on_complete, NULL);
-      ClutterAnimation* animation = clutter_actor_animate (
-            host_group, CLUTTER_LINEAR, 1000,
-            "opacity", 0, "scale-x", 1.5, "scale-y", 1.5, NULL);
-      g_signal_connect (animation, "completed",
-                          G_CALLBACK (hide_on_complete),
-                          NULL); 
-
-    } else {
-      clutter_actor_show(host_group);
-      //clutter_effect_scale(fade_tmpl, host_group, 1.0, 1.0, NULL, NULL);
-      //clutter_effect_fade(fade_tmpl, host_group, 0xff, NULL, NULL);
-      clutter_actor_animate (
-            host_group, CLUTTER_LINEAR, 1000,
-            "opacity", 255, "scale-x", 1.0, "scale-y", 1.0, NULL);
-    }
-
-    return false;
 
   case CLUTTER_Escape:
     clutter_main_quit();
@@ -329,32 +308,25 @@ int main(int argc, char* argv[]) {
   g_signal_connect(stage, "key-release-event",
                    G_CALLBACK (KeyReleaseEvent), NULL);
 
-  ClutterActor *hand = clutter_texture_new_from_file (PIXMAP_DIR "redhand.png",
-                                                      NULL);
-  clutter_container_add_actor (CLUTTER_CONTAINER(stage), hand);
-
   gfloat stage_width, stage_height;
-  gfloat hand_width, hand_height;
 
   clutter_actor_get_size (stage, &stage_width, &stage_height);
-  clutter_actor_get_size (hand, &hand_width, &hand_height);
 
-  clutter_actor_set_position (hand, (stage_width - hand_width) / 2,
-                              (stage_height - hand_height) / 2);
-
-  clutter_actor_show (hand);
   clutter_actor_show (stage);
+
+  //background
+  ClutterActor *stage_background =
+    clutter_texture_new_from_file(PIXMAP_DIR "gadgets-background.png",
+                                  NULL);
+  clutter_actor_set_size(stage_background, stage_width, stage_height);
+
+  clutter_container_add_actor(CLUTTER_CONTAINER(stage), stage_background);
 
   host_group = ((hosts::clutter::SimpleClutterHost *)host)->GetActor();
   clutter_container_add_actor(CLUTTER_CONTAINER(stage), host_group);
   clutter_actor_set_anchor_point_from_gravity(host_group,
                                               CLUTTER_GRAVITY_CENTER);
   clutter_actor_set_position(host_group, stage_width / 2, stage_height / 2);
-
-  /* Set up group for fade in effect */
-  clutter_actor_set_opacity(host_group, 0x00);
-  clutter_actor_set_scale(host_group, 1.2, 1.2);
-  clutter_actor_hide(host_group);
 
   // Load gadget files.
   if (gadget_paths.size()) {

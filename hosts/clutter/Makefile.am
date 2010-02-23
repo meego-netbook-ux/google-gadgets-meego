@@ -24,7 +24,7 @@ ggl_clutter_SOURCES		= main.cc \
 
 ggl_clutter_CPPFLAGS 		= @CLUTTER_CFLAGS@ \
 			  	$(PREDEFINED_MACROS) \
-			  	-DPIXMAP_DIR=\""$(datadir)"/google-gadgets-clutter/\" \
+			  	-DPIXMAP_DIR=\"$(GGL_RESOURCE_DIR)/\" \
 			  	-DGGL_APP_NAME=\"ggl-clutter\"
 
 ggl_clutter_CXXFLAGS		= $(DEFAULT_COMPILE_FLAGS)
@@ -36,9 +36,11 @@ ggl_clutter_LDADD		= @CLUTTER_LIBS@ \
 
 ggl_clutter_LDFLAGS = -R$(libdir)
 
-pixmapdir = $(datadir)/google-gadgets-clutter/
+pixmapdir = $(GGL_RESOURCE_DIR)
 BITMAPS = redhand.png \
-	  add.png
+	  add.png \
+	  gadgets-background.png
+
 pixmap_DATA = $(BITMAPS)
 
 # TODO: install these files into correct path.
