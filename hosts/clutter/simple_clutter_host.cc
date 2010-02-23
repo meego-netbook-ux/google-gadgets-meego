@@ -138,26 +138,21 @@ class SimpleClutterHost::Impl {
     clutter_actor_set_size(main_group_, stage_width, stage_height);
 
     gadget_browser_host_.SetGadgetGroup(main_group_);
-    ClutterColor light_black = {0x00, 0x00, 0x00, 0xaa};
-    ClutterActor *rect = clutter_rectangle_new_with_color(&light_black);
-
-    clutter_actor_set_size(rect, stage_width, stage_height);
-    clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), rect);
-    clutter_actor_show(rect);
 
     gadget_group_ = clutter_group_new();
     clutter_actor_set_size(gadget_group_, stage_width, stage_height);
     clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), gadget_group_);
     clutter_actor_show(gadget_group_);
 
-    ClutterActor *add_button = clutter_texture_new_from_file(PIXMAP_DIR "add.png", NULL);
+    ClutterActor *add_button =
+      clutter_texture_new_from_file(PIXMAP_DIR "control.png", NULL);
     clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), add_button);
     g_signal_connect(add_button, "button-release-event",
                      G_CALLBACK(AddButtonClicked), this);
 
     gfloat add_width, add_height;
     clutter_actor_get_size(add_button, &add_width, &add_height);
-    clutter_actor_set_position(add_button, stage_width - 20 - add_width, 20);
+    clutter_actor_set_position(add_button, 20, stage_height - 20 - add_width);
 
     clutter_actor_set_reactive(add_button, true);
 
@@ -311,7 +306,7 @@ class SimpleClutterHost::Impl {
     info->gadget = gadget;
 
     SingleViewHost *svh = new SingleViewHost(type, zoom_, 0,
-                                            view_debug_mode_);
+                                             view_debug_mode_, main_group_);
 
     if (type == ViewHostInterface::VIEW_HOST_OPTIONS) {
       return svh;

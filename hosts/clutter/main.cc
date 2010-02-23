@@ -132,11 +132,13 @@ static void OnClientMessage(const std::string &data) {
   ggadget::GetGadgetManager()->NewGadgetInstanceFromFile(data.c_str());
 }
 
+#if 0
 static void hide_on_complete(ClutterAnimation* animation)
 {
   ClutterActor* actor = CLUTTER_ACTOR(clutter_animation_get_object (animation));
   clutter_actor_hide(actor);
 }
+#endif
 
 static ClutterActor *host_group;
 static gboolean KeyReleaseEvent(ClutterActor *actor,
@@ -300,6 +302,7 @@ int main(int argc, char* argv[]) {
                                                debug_console, 800, 600);
 
   ClutterActor *stage = clutter_stage_get_default();
+  gfloat stage_width, stage_height;
   ClutterColor color = {0x00, 0x00, 0x00, 0xff};
 
   clutter_stage_set_title(CLUTTER_STAGE(stage), "Google Gadgets on Clutter");
@@ -307,9 +310,6 @@ int main(int argc, char* argv[]) {
   clutter_actor_set_size(stage, 800, 600);
   g_signal_connect(stage, "key-release-event",
                    G_CALLBACK (KeyReleaseEvent), NULL);
-
-  gfloat stage_width, stage_height;
-
   clutter_actor_get_size (stage, &stage_width, &stage_height);
 
   clutter_actor_show (stage);

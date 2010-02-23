@@ -37,8 +37,8 @@ ggl_clutter_LDADD		= @CLUTTER_LIBS@ \
 ggl_clutter_LDFLAGS = -R$(libdir)
 
 pixmapdir = $(GGL_RESOURCE_DIR)
-BITMAPS = redhand.png \
-	  add.png \
+BITMAPS = control.png \
+	  control-hover.png \
 	  gadgets-background.png
 
 pixmap_DATA = $(BITMAPS)

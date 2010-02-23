@@ -45,9 +45,10 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   virtual ViewHostInterface *NewViewHost(Gadget *gadget,
                                          ViewHostInterface::Type type) {
     ggadget::clutter::SingleViewHost *svh = new ggadget::clutter::SingleViewHost
-      (type, 1.0, 0, view_debug_mode_);
-    svh->ConnectOnViewChanged
-      (NewSlot (this, &hosts::clutter::GadgetBrowserHost::OnViewChanged, svh));
+      (type, 1.0, 0, view_debug_mode_, main_group_);
+
+    svh->ConnectOnShowHide
+      (NewSlot (this, &hosts::clutter::GadgetBrowserHost::OnViewShowHideHandler, svh));
 
     return svh;
   }
@@ -76,14 +77,26 @@ class GadgetBrowserHost : public ggadget::HostInterface {
     owner_->Exit();
   }
 
-  void OnViewChanged(ggadget::clutter::SingleViewHost *svh) {
+  void OnViewShowHideHandler(bool show, ggadget::clutter::SingleViewHost *svh) {
     ClutterActor *actor = svh->GetActor();
     if (actor) {
-        clutter_container_add_actor (CLUTTER_CONTAINER (main_group_), actor);
+      //setting the position of gadget control to bottom left
+      ClutterActor *stage = clutter_stage_get_default();
+      gfloat stage_width, stage_height;
+      clutter_actor_get_size (stage, &stage_width, &stage_height);
+      clutter_actor_set_anchor_point_from_gravity (actor, CLUTTER_GRAVITY_SOUTH_WEST);
+      clutter_actor_set_position (actor, 0, stage_height);
 
-        clutter_actor_show(actor);
+      //animation
+      clutter_actor_set_scale (actor, 0.1, 0.1);
+
+      clutter_actor_animate (actor, CLUTTER_EASE_IN_CUBIC, 300,
+                             "scale-x", 1.0,
+                             "scale-y", 1.0,
+                             NULL);
     }
   }
+
  private:
   ggadget::HostInterface *owner_;
   ClutterActor *main_group_;

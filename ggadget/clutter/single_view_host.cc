@@ -65,7 +65,7 @@ static const uint64_t kQueueDrawTimerDuration = 1000;
 class SingleViewHost::Impl {
  public:
   Impl(SingleViewHost *owner, ViewHostInterface::Type type,
-       double zoom, int flags, int debug_mode)
+       double zoom, int flags, int debug_mode, ClutterActor* main_group)
     : owner_(owner),
       view_(NULL),
       actor_(NULL),
@@ -98,7 +98,9 @@ class SingleViewHost::Impl {
       drag_offset_y_(0),
       enable_signals_(true),
       feedback_handler_(NULL),
-      can_close_dialog_(false) {
+      can_close_dialog_(false),
+      main_group_ (main_group)
+  {
     ASSERT(owner);
   }
 
@@ -253,6 +255,7 @@ class SingleViewHost::Impl {
     // the window size has correct default size when showing.
     AdjustWindowSize();
     LoadWindowStates();
+    clutter_container_add_actor (CLUTTER_CONTAINER (main_group_), actor_);
     clutter_actor_show(actor_);
 
     // Load window states again to make sure it's still correct
@@ -680,7 +683,10 @@ class SingleViewHost::Impl {
   bool enable_signals_;
 
   Slot1<bool, int> *feedback_handler_;
-  bool can_close_dialog_; // Only useful when a model dialog is running.
+  bool can_close_dialog_; // Only useful when a model dialog is
+                          // running.
+
+  ClutterActor* main_group_;
 
   Signal0<void> on_view_changed_signal_;
   Signal1<void, bool> on_show_hide_signal_;
@@ -698,8 +704,9 @@ class SingleViewHost::Impl {
 };
 
 SingleViewHost::SingleViewHost(ViewHostInterface::Type type,
-                               double zoom, int flags, int debug_mode)
-  : impl_(new Impl(this, type, zoom, flags, debug_mode)) {
+                               double zoom, int flags, int debug_mode,
+                               ClutterActor* main_group)
+  : impl_(new Impl(this, type, zoom, flags, debug_mode, main_group)) {
 }
 
 SingleViewHost::~SingleViewHost() {

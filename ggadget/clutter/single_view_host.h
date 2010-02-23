@@ -87,7 +87,8 @@ class SingleViewHost : public ViewHostInterface {
    * @param debug_mode DebugMode when drawing elements.
    */
   SingleViewHost(ViewHostInterface::Type type,
-                 double zoom, int flags, int debug_mode);
+                 double zoom, int flags, int debug_mode,
+                 ClutterActor* main_group);
   virtual ~SingleViewHost();
 
   virtual Type GetType() const;
