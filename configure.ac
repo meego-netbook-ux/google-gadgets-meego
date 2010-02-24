@@ -167,6 +167,9 @@ build_webkit_script_runtime=yes
 build_gtkwebkit_browser_element=yes
 build_soup_xml_http_request=yes
 
+# moblin specific
+build_moblin_panel=yes
+
 #================ compile options ==============
 AC_ARG_ENABLE([debug],
               AS_HELP_STRING([--enable-debug], [enable debug]),
@@ -402,6 +405,12 @@ AC_ARG_ENABLE([usage-collector],
                              [don't build usage-collector]),
               [build_usage_collector=$enableval],
               [build_usage_collector=yes])
+
+AC_ARG_ENABLE([moblin-panel],
+              AS_HELP_STRING([--disable-moblin-panel],
+                             [don't build moblin panel]),
+              [build_moblin_panel=$enableval],
+              [build_moblin_panel=yes])
 
 #================ other options =======================
 AC_ARG_ENABLE([update-mime-database],
@@ -957,6 +966,21 @@ else
   AC_MSG_WARN([[Development package of connman is not enabled]])
 fi
 
+# check moblin panel
+has_mpl=no
+if test x$build_moblin_panel = xyes; then
+  PKG_CHECK_MODULES(MPL,
+                    [moblin-panel >= 0.50.0], [has_mpl=yes],
+                    [has_mpl=no])
+fi
+
+if test x$has_mpl != xno; then
+#  PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MPL"
+  AC_DEFINE([HAVE_MPL], [], [Define if we have moblin panel.])
+else
+  AC_MSG_WARN([[Development package of moblin-panel is not enabled]])
+fi
+
 # Check gtkmozembed
 # Check priority:
 #  xulrunner 1.9: libxul-embedding-unstable and mozilla-js
@@ -1217,7 +1241,7 @@ fi
 if test x$build_usage_collector = xyes; then
   PREDEFINED_MACROS="$PREDEFINED_MACROS -DGGL_USAGE_COLLECTOR"
 fi
-  
+
 # Check necessary functions
 AC_CHECK_FUNC(mkdtemp, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MKDTEMP"])
 AC_CHECK_FUNC(mmap, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MMAP"])
@@ -1482,6 +1506,7 @@ AM_CONDITIONAL([GGL_HAVE_GTK2], [test x$has_gtk2 = xyes])
 AM_CONDITIONAL([GGL_HAVE_RSVG], [test x$has_librsvg = xyes])
 AM_CONDITIONAL([GGL_HAVE_NETWORK_MANAGER], [test x$has_network_manager != xno])
 AM_CONDITIONAL([GGL_HAVE_CONNMAN], [test x$has_connman != xno])
+AM_CONDITIONAL([GGL_HAVE_MPL], [test x$has_mpl != xno])
 AM_CONDITIONAL([GGL_CROSS_COMPILING], [test x$cross_compiling = xyes])
 AM_CONDITIONAL([GGL_DISABLE_SHARED], [test x$enable_shared != xyes])
 
@@ -1630,6 +1655,7 @@ Build options:
   Build webkit-script-runtime     $build_webkit_script_runtime
   Build gtkwebkit-browser-element $build_gtkwebkit_browser_element
   Build analytics-usage-collector $build_usage_collector
+  Build moblin panel              $has_mpl
 
  Other features:
   GTK SVG Support                 $has_librsvg

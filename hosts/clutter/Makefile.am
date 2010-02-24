@@ -33,6 +33,10 @@ ggl_clutter_LDADD		= @CLUTTER_LIBS@ \
 				$(top_builddir)/ggadget/libggadget@GGL_EPOCH@.la \
 		  		$(top_builddir)/ggadget/clutter/libggadget-clutter@GGL_EPOCH@.la
 
+if GGL_HAVE_MPL
+ggl_clutter_CPPFLAGS += $(MPL_CFLAGS)
+ggl_clutter_LDADD +=  $(MPL_LIBS)
+endif
 
 ggl_clutter_LDFLAGS = -R$(libdir)
 
