@@ -103,6 +103,7 @@ class SimpleClutterHost::Impl {
       gadgets_shown_(true),
       font_size_(kDefaultFontSize),
       gadget_manager_(GetGadgetManager()),
+      main_group_(NULL), gadget_group_(NULL), add_button_(NULL),
       stage_width (width), stage_height (height)
   {
     ASSERT(gadget_manager_);
@@ -135,28 +136,24 @@ class SimpleClutterHost::Impl {
 
   void SetupUI() {
     main_group_ = clutter_group_new();
-    clutter_actor_set_size(main_group_, stage_width, stage_height);
 
     gadget_browser_host_.SetGadgetGroup(main_group_);
 
     gadget_group_ = clutter_group_new();
-    clutter_actor_set_size(gadget_group_, stage_width, stage_height);
     clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), gadget_group_);
     clutter_actor_show(gadget_group_);
 
-    ClutterActor *add_button =
+    add_button_ =
       clutter_texture_new_from_file(PIXMAP_DIR "control.png", NULL);
-    clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), add_button);
-    g_signal_connect(add_button, "button-release-event",
+    clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), add_button_);
+    g_signal_connect(add_button_, "button-release-event",
                      G_CALLBACK(AddButtonClicked), this);
 
-    gfloat add_width, add_height;
-    clutter_actor_get_size(add_button, &add_width, &add_height);
-    clutter_actor_set_position(add_button, 20, stage_height - 20 - add_width);
-
-    clutter_actor_set_reactive(add_button, true);
-
-    clutter_actor_show(add_button);
+    clutter_actor_set_reactive(add_button_, true);
+    clutter_actor_set_anchor_point_from_gravity (add_button_,
+                                                 CLUTTER_GRAVITY_SOUTH_WEST);
+    clutter_actor_show(add_button_);
+    AdjustSize (stage_width, stage_height);
   }
 
   static void AddButtonClicked(ClutterActor *actor, ClutterButtonEvent *event,
@@ -467,6 +464,19 @@ class SimpleClutterHost::Impl {
     }
   }
 
+  void AdjustSize (int width, int height) {
+    stage_width = width;
+    stage_height = height;
+
+    if (main_group_)
+      clutter_actor_set_size(main_group_, stage_width, stage_height);
+    if (gadget_group_)
+      clutter_actor_set_size(gadget_group_, stage_width, stage_height);
+    if (add_button_)
+      clutter_actor_set_position(add_button_, 0, stage_height);
+    clutter_actor_show_all (main_group_);
+  }
+
   typedef std::map<int, GadgetInfo> GadgetInfoMap;
   GadgetInfoMap gadgets_;
 
@@ -484,6 +494,7 @@ class SimpleClutterHost::Impl {
   GadgetManagerInterface *gadget_manager_;
   ClutterActor *main_group_;
   ClutterActor *gadget_group_;
+  ClutterActor *add_button_;
   int stage_width, stage_height;
 
   Permissions global_permissions_;
@@ -543,6 +554,10 @@ Gadget* SimpleClutterHost::LoadGadget(const char *path, const char *options_name
 
 void SimpleClutterHost::Exit () {
   g_timeout_add (200, (GSourceFunc)&SimpleClutterHost::ExitCallback, (gpointer)this);
+}
+
+void SimpleClutterHost::AdjustSize (int width, int height) {
+  impl_->AdjustSize (width, height);
 }
 
 gboolean SimpleClutterHost::ExitCallback (gpointer that) {

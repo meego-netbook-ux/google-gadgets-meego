@@ -59,6 +59,7 @@ class SimpleClutterHost : public ggadget::HostInterface {
   virtual Gadget* LoadGadget(const char *path, const char *options_name, int instance_id, bool); 
 
   void Exit();
+  void AdjustSize (int width, int height);
   static gboolean ExitCallback (gpointer that);
 
   ClutterActor *GetActor();

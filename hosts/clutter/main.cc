@@ -22,7 +22,9 @@
   Iain Holmes <iain@linux.intel.com>
   Roger WANG <roger.wang@intel.com>
 */
+#include "config.h"
 
+#include <glib/gi18n.h>
 #include <clutter/clutter.h>
 #include <glib/gthread.h>
 #include <locale.h>
@@ -55,7 +57,14 @@
 #include <ggadget/options_interface.h>
 #include "simple_clutter_host.h"
 
+#ifdef HAVE_MPL
+#include <moblin-panel/mpl-panel-clutter.h>
+#include <moblin-panel/mpl-panel-common.h>
+#endif
+
 //static ggadget::clutter::MainLoop g_main_loop;
+static ClutterActor *stage_background;
+static hosts::clutter::SimpleClutterHost *simple_clutter_host;
 
 static const char kOptionsName[] = "clutter-host-options";
 static const char kRunOnceSocketName[] = "ggl-host-socket";
@@ -99,6 +108,10 @@ static const char *g_help_string =
   "      1 - Draw bounding boxes around container elements.\n"
   "      2 - Draw bounding boxes around all elements.\n"
   "      4 - Draw bounding boxes around clip region.\n"
+#endif
+#ifdef HAVE_MPL
+  "  -s, --standalone\n"
+  "      run standalone instead of in panel\n"
 #endif
   "  -z zoom, --zoom zoom\n"
   "      Specify initial zoom factor for View, no effect for sidebar.\n"
@@ -155,8 +168,32 @@ static gboolean KeyReleaseEvent(ClutterActor *actor,
   }
 }
 
+static void OnStageResized  (ClutterActor          *stage,
+                             ClutterActorBox       *box,
+                             ClutterAllocationFlags flags,
+                             gpointer               user_data)
+{
+  DLOG ("OnStageResized: %d %d %d %d",
+        (int)box->x1, (int)box->y1,
+        (int)box->x2, (int)box->y2);
+  gfloat width = box->x2 - box->x1;
+  gfloat height = box->y2 - box->y1;
+  if (stage_background)
+    clutter_actor_set_size (stage_background, width, height);
+  simple_clutter_host->AdjustSize (width, height);
+  if (host_group) {
+    clutter_actor_set_anchor_point_from_gravity(host_group,
+                                                CLUTTER_GRAVITY_CENTER);
+    clutter_actor_set_position(host_group, width / 2, height / 2);
+  }
+}
+
 int main(int argc, char* argv[]) {
+#ifndef HAVE_MPL
   clutter_init(&argc, &argv);
+#else
+  MPL_PANEL_CLUTTER_INIT_WITH_GTK (&argc, &argv);
+#endif
 
   srand (time(NULL));
 #ifdef _DEBUG
@@ -172,6 +209,9 @@ int main(int argc, char* argv[]) {
   bool sidebar = true;
   bool background = false;
   bool enable_collector = true;
+#ifdef HAVE_MPL
+  bool standalone = false;
+#endif
   ggadget::Gadget::DebugConsoleConfig debug_console =
       ggadget::Gadget::DEBUG_CONSOLE_DISABLED;
 
@@ -237,7 +277,14 @@ int main(int argc, char* argv[]) {
     } else if (strcmp("-nc", argv[i]) == 0 ||
                strcmp("--no-collector", argv[i]) == 0) {
       enable_collector = false;
-    } else {
+    }
+#ifdef HAVE_MPL
+    else if (strcmp("-s", argv[i]) == 0 ||
+               strcmp("--standalone", argv[i]) == 0) {
+      standalone = true;
+    }
+#endif
+    else {
       std::string path = ggadget::GetAbsolutePath(argv[i]);
       if (!path.empty()) {
         if (run_once.IsRunning()) {
@@ -298,16 +345,39 @@ int main(int argc, char* argv[]) {
   ggadget::HostInterface *host;
   ggadget::OptionsInterface *options = ggadget::CreateOptions(kOptionsName);
 
-  host = new hosts::clutter::SimpleClutterHost(options, zoom, debug_mode,
-                                               debug_console, 800, 600);
+  host = simple_clutter_host =
+    new hosts::clutter::SimpleClutterHost(options, zoom, debug_mode,
+                                          debug_console, 800, 600);
 
-  ClutterActor *stage = clutter_stage_get_default();
+  ClutterActor* stage = NULL;
   gfloat stage_width, stage_height;
-  ClutterColor color = {0x00, 0x00, 0x00, 0xff};
+#ifdef HAVE_MPL
+  if (standalone) {
+#endif
+    stage = clutter_stage_get_default();
+    ClutterColor color = {0x00, 0x00, 0x00, 0xff};
 
-  clutter_stage_set_title(CLUTTER_STAGE(stage), "Google Gadgets on Clutter");
-  clutter_stage_set_color(CLUTTER_STAGE(stage), &color);
-  clutter_actor_set_size(stage, 800, 600);
+    clutter_stage_set_title(CLUTTER_STAGE(stage), "Google Gadgets on Clutter");
+    clutter_stage_set_color(CLUTTER_STAGE(stage), &color);
+    clutter_actor_set_size(stage, 800, 600);
+#ifdef HAVE_MPL
+  } else {
+    MplPanelClient  *panel;
+
+    panel = mpl_panel_clutter_new ("gadgets",
+                                   _("gadgets"),
+                                   NULL,
+                                   "applications-button",
+                                   FALSE);
+
+    MPL_PANEL_CLUTTER_SETUP_EVENTS_WITH_GTK (panel);
+
+    stage = mpl_panel_clutter_get_stage (MPL_PANEL_CLUTTER (panel));
+  }
+#endif
+  g_signal_connect(stage, "allocation-changed",
+                   G_CALLBACK (OnStageResized), stage);
+
   g_signal_connect(stage, "key-release-event",
                    G_CALLBACK (KeyReleaseEvent), NULL);
   clutter_actor_get_size (stage, &stage_width, &stage_height);
@@ -315,7 +385,7 @@ int main(int argc, char* argv[]) {
   clutter_actor_show (stage);
 
   //background
-  ClutterActor *stage_background =
+  stage_background =
     clutter_texture_new_from_file(PIXMAP_DIR "gadgets-background.png",
                                   NULL);
   clutter_actor_set_size(stage_background, stage_width, stage_height);
