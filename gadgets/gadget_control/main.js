@@ -86,27 +86,11 @@ function init_layout() {
 }
 
 function view_onopen() {
-  /* var screen_width = system.screen.size.width; */
-  /* var screen_height = system.screen.size.height; */
-  var screen_width = 800;
-  var screen_height = 600;
   var width, height;
   // init_layout();
 
-  if (screen_width >= 1024) {
-    width = kFixedExtraWidth + 3 * kPluginBoxWidth + kBorderMarginH;
-  } else if (screen_width >= 800) {
-    width = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
-  } else {
-    width = kMinWidth;
-  }
-  if (screen_height >= 768) {
-    height = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
-  } else if (screen_height >= 600) {
-    height = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
-  } else {
-    height = kMinHeight;
-  }
+  width = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
+  height = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
   view.resizeTo(width, height);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when
