@@ -189,11 +189,6 @@ static void OnStageResized  (ClutterActor          *stage,
 }
 
 int main(int argc, char* argv[]) {
-#ifndef HAVE_MPL
-  clutter_init(&argc, &argv);
-#else
-  MPL_PANEL_CLUTTER_INIT_WITH_GTK (&argc, &argv);
-#endif
 
   srand (time(NULL));
 #ifdef _DEBUG
@@ -295,6 +290,17 @@ int main(int argc, char* argv[]) {
       }
     }
   }
+
+#ifndef HAVE_MPL
+  clutter_init(&argc, &argv);
+#else
+  if (!standalone) {
+    MPL_PANEL_CLUTTER_INIT_WITH_GTK (&argc, &argv);
+  }
+  else
+    clutter_init(&argc, &argv);
+#endif
+
 
   if (run_once.IsRunning()) {
     DLOG("Another instance already exists.");

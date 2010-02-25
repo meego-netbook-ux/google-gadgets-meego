@@ -43,6 +43,8 @@ ggl_clutter_LDFLAGS = -R$(libdir)
 pixmapdir = $(GGL_RESOURCE_DIR)
 BITMAPS = control.png \
 	  control-hover.png \
+	  trash-normal.png \
+	  trash-colored.png \
 	  gadgets-background.png
 
 pixmap_DATA = $(BITMAPS)

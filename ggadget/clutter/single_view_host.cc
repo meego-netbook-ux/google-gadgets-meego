@@ -517,6 +517,9 @@ class SingleViewHost::Impl {
       clutter_actor_set_position (impl->actor_,
                                   event->x - impl->drag_offset_x_,
                                   event->y - impl->drag_offset_y_);
+      impl->on_moved_signal_ (event->x - impl->drag_offset_x_,
+                              event->y - impl->drag_offset_y_);
+
     }
 
     return false;
@@ -530,12 +533,16 @@ class SingleViewHost::Impl {
     g_signal_handler_disconnect(actor, impl->motion_handler_id_);
     g_signal_handler_disconnect(actor, impl->button_release_handler_id_);
 
-    impl->move_dragging_ = false;
     clutter_ungrab_pointer();
+    if (impl->move_dragging_) {
+      impl->move_dragging_ = false;
+      impl->StopMoveDrag ();
+    }
     return false;
   }
 
   void BeginMoveDrag(int button) {
+    DLOG("Start move dragging.");
     if (on_begin_move_drag_signal_(button))
       return;
 
@@ -562,6 +569,9 @@ class SingleViewHost::Impl {
   }
 
   void StopMoveDrag() {
+    DLOG("Stop move dragging.");
+
+    on_end_move_drag_signal_();
   }
 
   void EnsureInsideScreen() {
@@ -831,8 +841,10 @@ ClutterActor *SingleViewHost::GetActor() const {
 }
 
 void SingleViewHost::GetActorPosition(int *x, int *y) const {
-  if (x) *x = impl_->win_x_;
-  if (y) *y = impl_->win_y_;
+  gfloat x0, y0;
+  clutter_actor_get_position (impl_->actor_, &x0, &y0);
+  if (x) *x = (int)x0;
+  if (y) *y = (int)y0;
 }
 
 void SingleViewHost::SetActorPosition(int x, int y) {
@@ -840,8 +852,10 @@ void SingleViewHost::SetActorPosition(int x, int y) {
 }
 
 void SingleViewHost::GetActorSize(int *width, int *height) const {
-  if (width) *width = impl_->win_width_;
-  if (height) *height = impl_->win_height_;
+  gfloat width0, height0;
+  clutter_actor_get_size (impl_->actor_, &width0, &height0);
+  if (width) *width = (int)width0;
+  if (height) *height = (int)height0;
 }
 
 bool SingleViewHost::IsKeepAbove() const {
@@ -862,6 +876,18 @@ Connection *SingleViewHost::ConnectOnViewChanged(Slot0<void> *slot) {
 
 Connection *SingleViewHost::ConnectOnShowHide(Slot1<void, bool> *slot) {
   return impl_->on_show_hide_signal_.Connect(slot);
+}
+
+Connection *SingleViewHost::ConnectOnBeginMoveDrag(Slot1<bool, int> *slot) {
+  return impl_->on_begin_move_drag_signal_.Connect(slot);
+}
+
+Connection *SingleViewHost::ConnectOnMoved(Slot2<void, int, int> *slot) {
+  return impl_->on_moved_signal_.Connect(slot);
+}
+
+Connection *SingleViewHost::ConnectOnEndMoveDrag(Slot0<void> *slot) {
+  return impl_->on_end_move_drag_signal_.Connect(slot);
 }
 
 } // namespace clutter

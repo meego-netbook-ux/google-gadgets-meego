@@ -53,6 +53,7 @@
 #include <ggadget/options_interface.h>
 #include <ggadget/string_utils.h>
 #include <ggadget/permissions.h>
+#include <ggadget/math_utils.h>
 
 #include "gadget_browser_host.h"
 
@@ -72,6 +73,21 @@ static const char kOptionFontSize[] = "font_size";
 
 static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
+
+
+static gboolean SwitchAddButtonIcon (ClutterActor *actor,
+                                     ClutterEvent *event,
+                                     gpointer      user_data)
+{
+  if (event->type == CLUTTER_ENTER) {
+    clutter_texture_set_from_file (CLUTTER_TEXTURE (actor),
+                                   PIXMAP_DIR "control-hover.png", NULL);
+  }else{
+    clutter_texture_set_from_file (CLUTTER_TEXTURE (actor),
+                                   PIXMAP_DIR "control.png", NULL);
+  }
+  return TRUE;
+}
 
 class SimpleClutterHost::Impl {
   struct GadgetInfo {
@@ -104,7 +120,9 @@ class SimpleClutterHost::Impl {
       font_size_(kDefaultFontSize),
       gadget_manager_(GetGadgetManager()),
       main_group_(NULL), gadget_group_(NULL), add_button_(NULL),
-      stage_width (width), stage_height (height)
+      trash_button_(NULL),
+      stage_width (width), stage_height (height),
+      trash_active_ (false)
   {
     ASSERT(gadget_manager_);
     ASSERT(options_);
@@ -136,6 +154,7 @@ class SimpleClutterHost::Impl {
 
   void SetupUI() {
     main_group_ = clutter_group_new();
+    clutter_set_motion_events_enabled (TRUE);
 
     gadget_browser_host_.SetGadgetGroup(main_group_);
 
@@ -143,16 +162,29 @@ class SimpleClutterHost::Impl {
     clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), gadget_group_);
     clutter_actor_show(gadget_group_);
 
+    trash_button_ =
+      clutter_texture_new_from_file(PIXMAP_DIR "trash-normal.png", NULL);
+    clutter_actor_set_reactive(trash_button_, true);
+
+    clutter_actor_set_anchor_point_from_gravity (trash_button_,
+                                                 CLUTTER_GRAVITY_SOUTH_WEST);
+    clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), trash_button_);
+    clutter_actor_hide(trash_button_);
+
     add_button_ =
       clutter_texture_new_from_file(PIXMAP_DIR "control.png", NULL);
     clutter_container_add_actor(CLUTTER_CONTAINER(main_group_), add_button_);
-    g_signal_connect(add_button_, "button-release-event",
-                     G_CALLBACK(AddButtonClicked), this);
-
     clutter_actor_set_reactive(add_button_, true);
+    g_signal_connect (add_button_, "button-release-event",
+                      G_CALLBACK (AddButtonClicked), this);
+
+    g_signal_connect (add_button_, "enter-event",
+                      G_CALLBACK (SwitchAddButtonIcon), NULL);
+    g_signal_connect (add_button_, "leave-event",
+                      G_CALLBACK (SwitchAddButtonIcon), NULL);
+
     clutter_actor_set_anchor_point_from_gravity (add_button_,
                                                  CLUTTER_GRAVITY_SOUTH_WEST);
-    clutter_actor_show(add_button_);
     AdjustSize (stage_width, stage_height);
   }
 
@@ -322,6 +354,14 @@ class SimpleClutterHost::Impl {
       svh->ConnectOnShowHide(
           NewSlot(this, &Impl::OnMainViewShowHideHandler, gadget_id));
 
+      svh->ConnectOnBeginMoveDrag(
+          NewSlot(this, &Impl::OnMainViewBeginMoveDragHandler, gadget_id));
+      svh->ConnectOnEndMoveDrag(
+          NewSlot(this, &Impl::OnMainViewEndMoveDragHandler, gadget_id));
+      svh->ConnectOnMoved(
+          NewSlot(this, &Impl::OnMainViewMovedHandler, gadget_id));
+
+
       view_decorator->ConnectOnClose(
           NewSlot(this, &Impl::OnCloseHandler, dvh));
       view_decorator->SetButtonVisible(MainViewDecoratorBase::POP_IN_OUT_BUTTON,
@@ -412,6 +452,63 @@ class SimpleClutterHost::Impl {
     }
   }
 
+  bool OnMainViewBeginMoveDragHandler(int button, int gadget_id) {
+    clutter_actor_show(trash_button_);
+    clutter_actor_hide(add_button_);
+    trash_active_ = false;
+    return false;
+  }
+
+  void OnMainViewMovedHandler(int x, int y, int gadget_id) {
+    GadgetInfoMap::iterator it = gadgets_.find(gadget_id);
+    if (it != gadgets_.end()) {
+      int x, y, w, h;
+      ClutterGeometry geo;
+
+      it->second.main->GetActorPosition(&x, &y);
+      it->second.main->GetActorSize(&w, &h);
+      clutter_actor_get_geometry (trash_button_, &geo);
+
+      Rectangle rect(x, y, w, h), rect0 (geo.x, geo.y, geo.width, geo.height);
+
+      if (rect0.Intersect(rect)) {
+        if (!trash_active_) {
+          clutter_texture_set_from_file (CLUTTER_TEXTURE (trash_button_),
+                                         PIXMAP_DIR "trash-colored.png", NULL);
+          trash_active_ = true;
+        }
+      }else{
+        if (trash_active_) {
+          clutter_texture_set_from_file (CLUTTER_TEXTURE (trash_button_),
+                                         PIXMAP_DIR "trash-normal.png", NULL);
+          trash_active_ = false;
+        }
+      }
+    }
+  }
+
+  void OnMainViewEndMoveDragHandler(int gadget_id) {
+    GadgetInfoMap::iterator it = gadgets_.find(gadget_id);
+    if (it != gadgets_.end()) {
+      int x, y, w, h;
+      ClutterGeometry geo;
+
+      it->second.main->GetActorPosition(&x, &y);
+      it->second.main->GetActorSize(&w, &h);
+      clutter_actor_get_geometry (trash_button_, &geo);
+
+      Rectangle rect(x, y, w, h), rect0 (geo.x, geo.y, geo.width, geo.height);
+
+      if (rect0.Intersect(rect)) {
+        //RemoveGadget (it->second.gadget, true);
+        it->second.gadget->RemoveMe (true);
+      }
+    }
+
+    clutter_actor_show(add_button_);
+    clutter_actor_hide(trash_button_);
+  }
+
   void OnPopOutHandler(DecoratedViewHost *decorated) {
   }
 
@@ -474,7 +571,8 @@ class SimpleClutterHost::Impl {
       clutter_actor_set_size(gadget_group_, stage_width, stage_height);
     if (add_button_)
       clutter_actor_set_position(add_button_, 0, stage_height);
-    clutter_actor_show_all (main_group_);
+    if (trash_button_)
+      clutter_actor_set_position(trash_button_, 0, stage_height);
   }
 
   typedef std::map<int, GadgetInfo> GadgetInfoMap;
@@ -494,8 +592,9 @@ class SimpleClutterHost::Impl {
   GadgetManagerInterface *gadget_manager_;
   ClutterActor *main_group_;
   ClutterActor *gadget_group_;
-  ClutterActor *add_button_;
+  ClutterActor *add_button_, *trash_button_;
   int stage_width, stage_height;
+  bool trash_active_;
 
   Permissions global_permissions_;
 };
