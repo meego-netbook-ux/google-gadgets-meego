@@ -74,6 +74,11 @@ static const char kOptionFontSize[] = "font_size";
 static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
 
+static void OnMapComplete (ClutterTimeline *timeline, ClutterActor *actor)
+{
+  clutter_actor_move_anchor_point_from_gravity (actor,
+                                                CLUTTER_GRAVITY_NORTH_WEST);
+}
 
 static gboolean SwitchAddButtonIcon (ClutterActor *actor,
                                      ClutterEvent *event,
@@ -398,6 +403,24 @@ class SimpleClutterHost::Impl {
 
     clutter_actor_set_position (actor, gadget_x, gadget_y);
     clutter_actor_show (actor);
+
+    //animation
+    clutter_actor_move_anchor_point_from_gravity (actor,
+                                                  CLUTTER_GRAVITY_CENTER);
+    clutter_actor_set_scale (actor, 0, 0);
+
+    ClutterAnimation* animation;
+    animation = clutter_actor_animate (actor, CLUTTER_EASE_OUT_ELASTIC,
+                                       350,
+                                       "scale-x", 1.0,
+                                       "scale-y", 1.0,
+                                       NULL);
+
+    g_signal_connect (clutter_animation_get_timeline (animation),
+                      "completed",
+                      G_CALLBACK (OnMapComplete),
+                      actor);
+
     DLOG("NewViewHost: ADDED ACTOR(%p) x = %d, y = %d, width = %d, height = %d\n",
          actor,
          (int)gadget_x, (int)gadget_y, (int)gadget_width, (int)gadget_height);
