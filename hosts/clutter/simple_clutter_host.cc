@@ -133,8 +133,8 @@ class SimpleClutterHost::Impl {
     ASSERT(options_);
 
     if (options_) {
-      options_->GetInternalValue(
-          kOptionGadgetsShown).ConvertToBool(&gadgets_shown_);
+      // options_->GetInternalValue(
+      //     kOptionGadgetsShown).ConvertToBool(&gadgets_shown_);
       options_->GetInternalValue(kOptionFontSize).ConvertToInt(&font_size_);
       font_size_ = std::min(kMaxFontSize, std::max(kMinFontSize, font_size_));
     }
@@ -338,8 +338,9 @@ class SimpleClutterHost::Impl {
     GadgetInfo *info = &gadgets_[gadget_id];
     ASSERT(info->gadget == NULL || info->gadget == gadget);
     info->gadget = gadget;
+    int vh_flags = SingleViewHost::RECORD_STATES;
 
-    SingleViewHost *svh = new SingleViewHost(type, zoom_, 0,
+    SingleViewHost *svh = new SingleViewHost(type, zoom_, vh_flags,
                                              view_debug_mode_, main_group_);
 
     if (type == ViewHostInterface::VIEW_HOST_OPTIONS) {
@@ -394,15 +395,15 @@ class SimpleClutterHost::Impl {
     ClutterActor *actor = svh->GetActor();
     clutter_container_add_actor (CLUTTER_CONTAINER (gadget_group_), actor);
 
-    gfloat gadget_width, gadget_height;
-    clutter_actor_get_size(actor, &gadget_width, &gadget_height);
+    // gfloat gadget_width, gadget_height;
+    // clutter_actor_get_size(actor, &gadget_width, &gadget_height);
 
-    gfloat gadget_x, gadget_y;
-    gadget_x = rand() % (int)(stage_width - gadget_width);
-    gadget_y = rand() % (int)(stage_height - gadget_height);
+    // gfloat gadget_x, gadget_y;
+    // gadget_x = rand() % (int)(stage_width - gadget_width);
+    // gadget_y = rand() % (int)(stage_height - gadget_height);
 
-    clutter_actor_set_position (actor, gadget_x, gadget_y);
-    clutter_actor_show (actor);
+    // clutter_actor_set_position (actor, gadget_x, gadget_y);
+    // clutter_actor_show (actor);
 
     //animation
     clutter_actor_move_anchor_point_from_gravity (actor,
@@ -421,9 +422,9 @@ class SimpleClutterHost::Impl {
                       G_CALLBACK (OnMapComplete),
                       actor);
 
-    DLOG("NewViewHost: ADDED ACTOR(%p) x = %d, y = %d, width = %d, height = %d\n",
-         actor,
-         (int)gadget_x, (int)gadget_y, (int)gadget_width, (int)gadget_height);
+    // DLOG("NewViewHost: ADDED ACTOR(%p) x = %d, y = %d, width = %d, height = %d\n",
+    //      actor,
+    //      (int)gadget_x, (int)gadget_y, (int)gadget_width, (int)gadget_height);
     return dvh;
   }
 

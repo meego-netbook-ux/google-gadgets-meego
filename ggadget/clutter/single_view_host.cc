@@ -348,7 +348,7 @@ class SingleViewHost::Impl {
 
     g_print ("Show context menu\n");
     MenuBuilder menu_builder();
-  
+
     return true;
   }
 
@@ -516,12 +516,13 @@ class SingleViewHost::Impl {
     Impl *impl = reinterpret_cast<Impl *>(userdata);
 
     if (impl->move_dragging_) {
-      clutter_actor_set_position (impl->actor_,
-                                  event->x - impl->drag_offset_x_,
-                                  event->y - impl->drag_offset_y_);
-      impl->on_moved_signal_ (event->x - impl->drag_offset_x_,
-                              event->y - impl->drag_offset_y_);
+      int x = event->x - impl->drag_offset_x_;
+      int y = event->y - impl->drag_offset_y_;
 
+      clutter_actor_set_position (impl->actor_, x, y);
+      impl->on_moved_signal_ (x, y);
+      impl->win_x_ = x;
+      impl->win_y_ = y;
     }
 
     return false;
@@ -574,6 +575,7 @@ class SingleViewHost::Impl {
     DLOG("Stop move dragging.");
 
     on_end_move_drag_signal_();
+    SaveWindowStates (true, false);
   }
 
   void EnsureInsideScreen() {
