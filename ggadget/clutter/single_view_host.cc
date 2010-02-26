@@ -432,6 +432,8 @@ class SingleViewHost::Impl {
     clutter_actor_get_size(impl->actor_, &win_width, &win_height);
     clutter_cairo_texture_set_surface_size (CLUTTER_CAIRO_TEXTURE(impl->actor_),
                                   win_width, win_height);
+
+    impl->view_->MarkRedraw ();
     impl->binder_->Redraw();
 
     return false;
