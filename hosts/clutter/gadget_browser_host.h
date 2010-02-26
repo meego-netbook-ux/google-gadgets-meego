@@ -77,6 +77,29 @@ class GadgetBrowserHost : public ggadget::HostInterface {
     owner_->Exit();
   }
 
+  static gboolean on_gadget_group_event (ClutterActor *actor,
+                                         ClutterButtonEvent *event,
+                                         gpointer      user_data) {
+    if (event->type == CLUTTER_BUTTON_PRESS) {
+
+      hosts::clutter::GadgetBrowserHost *inst =
+        (hosts::clutter::GadgetBrowserHost *) user_data;
+      ClutterActor* ctrl_actor = inst->svh_->GetActor();
+      gfloat x, y, w, h;
+      clutter_actor_get_transformed_size (ctrl_actor, &w, &h);
+      clutter_actor_get_transformed_position (ctrl_actor, &x, &y);
+      if (!(event->x > x && event->x < x + w &&
+            event->y > y && event->y < y + h)) {
+
+        DLOG ("Got button press outside control, so hide it");
+        inst->svh_->GetView()->GetGadget()->RemoveMe (true);
+        g_signal_handler_disconnect (clutter_stage_get_default(),
+                                     inst->stage_event_handler_id_);
+      }
+    }
+    return FALSE;
+  }
+
   void OnViewShowHideHandler(bool show, ggadget::clutter::SingleViewHost *svh) {
     ClutterActor *actor = svh->GetActor();
     if (actor) {
@@ -94,6 +117,11 @@ class GadgetBrowserHost : public ggadget::HostInterface {
                              "scale-x", 1.0,
                              "scale-y", 1.0,
                              NULL);
+      // set up click handler to hide me when click on other gadgets
+      svh_ = svh;
+      stage_event_handler_id_ =
+        g_signal_connect (stage, "captured-event",
+                          G_CALLBACK (on_gadget_group_event), this);
     }
   }
 
@@ -101,6 +129,8 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   ggadget::HostInterface *owner_;
   ClutterActor *main_group_;
   int view_debug_mode_;
+  ggadget::clutter::SingleViewHost *svh_;
+  guint stage_event_handler_id_;
 };
 
 } // namespace clutter
