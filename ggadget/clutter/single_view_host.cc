@@ -336,7 +336,16 @@ class SingleViewHost::Impl {
         x = 0;
         y = 0;
       }
+
+      // save anchor gravity, normally we keep the gravity at
+      // north-west, but when loading states we happened to be in the
+      // middle of animation for mapping effect.
+
+      ClutterGravity g = clutter_actor_get_anchor_point_gravity (actor_);
+      clutter_actor_set_anchor_point_from_gravity (actor_,
+                                                   CLUTTER_GRAVITY_NORTH_WEST);
       clutter_actor_set_position(actor_, x, y);
+      clutter_actor_move_anchor_point_from_gravity (actor_, g);
     }
     // Don't load size and zoom information, it's conflict with view
     // decorator.
