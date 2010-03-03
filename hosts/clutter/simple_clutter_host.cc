@@ -357,6 +357,9 @@ class SimpleClutterHost::Impl {
       info->main = svh;
       info->main_decorator = dvh;
 
+      dvh->SetAutoLoadChildViewSize(true);
+      dvh->LoadChildViewSize();
+
       svh->ConnectOnShowHide(
           NewSlot(this, &Impl::OnMainViewShowHideHandler, gadget_id));
 

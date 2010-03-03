@@ -58,6 +58,7 @@ DecoratedViewHost::DecoratedViewHost(ViewDecoratorBase *view_decorator)
 }
 
 DecoratedViewHost::~DecoratedViewHost() {
+  impl_->SaveChildViewSize();
   delete impl_;
   impl_ = NULL;
 }

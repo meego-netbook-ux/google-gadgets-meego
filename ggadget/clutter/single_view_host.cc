@@ -380,7 +380,8 @@ class SingleViewHost::Impl {
         double new_width = width + impl->resize_width_mode_ * delta_x;
         double new_height = height + impl->resize_height_mode_ * delta_y;
 
-        if (impl->view_->GetResizable() == ViewInterface::RESIZABLE_TRUE) {
+        if (impl->view_->GetResizable() == ViewInterface::RESIZABLE_TRUE ||
+            impl->view_->GetResizable() == ViewInterface::RESIZABLE_KEEP_RATIO) {
           double view_width = new_width / impl->resize_view_zoom_;
           double view_height = new_height / impl->resize_view_zoom_;
 
