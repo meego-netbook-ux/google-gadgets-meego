@@ -1,0 +1,8 @@
+MnbToolbarButton#gadgets-button {
+  background-image: url("@gglresdir@/gadget-normal.png");
+}
+
+MnbToolbarButton#gadgets-button:hover, MnbToolbarButton#gadgets-button:active, MnbToolbarButton#gadgets-button:checked {
+  background-image: url("@gglresdir@/gadget-colored.png");
+}
+

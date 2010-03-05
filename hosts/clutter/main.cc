@@ -372,8 +372,8 @@ int main(int argc, char* argv[]) {
 
     panel = mpl_panel_clutter_new ("gadgets",
                                    _("gadgets"),
-                                   NULL,
-                                   "applications-button",
+                                   PIXMAP_DIR "gadgets-panel.css",
+                                   "gadgets-button",
                                    FALSE);
 
     MPL_PANEL_CLUTTER_SETUP_EVENTS_WITH_GTK (panel);

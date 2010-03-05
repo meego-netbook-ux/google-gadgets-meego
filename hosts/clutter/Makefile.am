@@ -45,9 +45,18 @@ BITMAPS = control.png \
 	  control-hover.png \
 	  trash-normal.png \
 	  trash-colored.png \
+	  gadget-normal.png \
+	  gadget-colored.png \
 	  gadgets-background.png
 
-pixmap_DATA = $(BITMAPS)
+pixmap_DATA = $(BITMAPS) gadgets-panel.css
+
+%.css: %.css.in $(top_builddir)/config.log
+	$(QUIET_GEN)sed -e "s|\@gglresdir\@|$(GGL_RESOURCE_DIR)|" $< > $@
+
+EXTRA_DIST = gadgets-panel.css.in
+DISTCLEANFILES = gadgets-panel.css
+
 
 # TODO: install these files into correct path.
 #all-local:
