@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+_Name=Moblin Gadgets Panel
+Icon=google-gadgets
+Exec=ggl-clutter
+Terminal=false
+Type=Application
+OnlyShowIn=MOBLIN;
+X-GNOME-Autostart-enable=false
+X-Moblin-Priority=Low
+X-Moblin-Service=org.moblin.UX.Shell.Panels.gadgets
+X-Moblin-Panel-Optional=true
+X-Moblin-Panel-Stylesheet=@GGL_RES_DIR@/gadgets-panel.css
+X-Moblin-Panel-Button-Style=gadgets-button

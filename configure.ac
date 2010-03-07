@@ -972,6 +972,12 @@ if test x$build_moblin_panel = xyes; then
   PKG_CHECK_MODULES(MPL,
                     [moblin-panel >= 0.50.0], [has_mpl=yes],
                     [has_mpl=no])
+
+  AS_AC_EXPAND(GGL_RES_DIR, $GGL_RESOURCE_DIR)
+#  AC_DEFINE_UNQUOTED([GGL_RES_DIR], "$GGL_RES_DIR", [GGL theme directory])
+
+  PANEL_DIR=$($PKG_CONFIG moblin-panel --variable=moblin_panel_panels_dir)
+  AC_SUBST(PANEL_DIR)
 fi
 
 if test x$has_mpl != xno; then
@@ -1604,6 +1610,7 @@ AC_CONFIG_FILES([Makefile
                  hosts/gtk/Makefile
                  hosts/qt/Makefile
                  hosts/clutter/Makefile
+		 hosts/clutter/gadgets-panel.desktop.in
                  resources/Makefile
                  third_party/Makefile
                  third_party/codesighs/Makefile

@@ -56,3 +56,12 @@ third_party/xdgmime/test-mime
 !/po/POTFILES.in
 !/po/Makefile.in.in
 /libltdl/
+!*.css.in
+/hosts/clutter/ggl-clutter
+/GPATH
+/GRTAGS
+/GSYMS
+/GTAGS
+/hosts/clutter/ggl-clutter.sh
+!/hosts/clutter/org.moblin.UX.Shell.Panels.gadgets.service.in
+!/hosts/clutter/gadgets-panel.desktop.in.in

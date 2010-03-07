@@ -54,9 +54,21 @@ pixmap_DATA = $(BITMAPS) gadgets-panel.css
 %.css: %.css.in $(top_builddir)/config.log
 	$(QUIET_GEN)sed -e "s|\@gglresdir\@|$(GGL_RESOURCE_DIR)|" $< > $@
 
-EXTRA_DIST = gadgets-panel.css.in
-DISTCLEANFILES = gadgets-panel.css
+%.service: %.service.in
+	$(QUIET_GEN)sed -e "s|\@bindir\@|$(bindir)|" $< > $@
 
+desktop_in_files = gadgets-panel.desktop.in.in
+desktop_data = $(desktop_in_files:.desktop.in.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
+
+paneldir = @PANEL_DIR@
+panel_DATA = $(desktop_data)
+
+servicedir = $(datadir)/dbus-1/services
+service_DATA = org.moblin.UX.Shell.Panels.gadgets.service
+
+EXTRA_DIST = gadgets-panel.css.in $(service_DATA)
+CLEANFILES = gadgets-panel.css $(desktop_DATA)
 
 # TODO: install these files into correct path.
 #all-local:
