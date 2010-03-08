@@ -28,7 +28,8 @@ SUBDIRS = $(LIBLTDL_DIR) \
 	  resources \
 	  xdg \
 	  gadgets \
-	  hosts
+	  hosts \
+	  po
 
 EXTRA_DIST = autotools cmake CMakeLists.txt Doxyfile
 

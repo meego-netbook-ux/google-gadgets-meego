@@ -35,7 +35,7 @@ clutterincludedir	= $(GGL_INCLUDE_DIR)/ggadget/clutter
 clutterinclude_HEADERS	= cairo_graphics.h \
 			  key_convert.h \
 			  main_loop.h \
-			  menu_builder.h
+			  menu_builder.h \
 			  single_view_host.h \
 			  tooltip.h \
 			  utilities.h \

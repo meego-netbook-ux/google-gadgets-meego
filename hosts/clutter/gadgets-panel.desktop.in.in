@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
-_Name=Moblin Gadgets Panel
+_Name=Gadgets
 Icon=google-gadgets
 Exec=ggl-clutter
 Terminal=false

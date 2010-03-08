@@ -20,7 +20,9 @@ INCLUDES			= -I$(top_builddir) \
 bin_PROGRAMS			= ggl-clutter
 
 ggl_clutter_SOURCES		= main.cc \
-				simple_clutter_host.cc
+				simple_clutter_host.cc \
+				simple_clutter_host.h \
+				gadget_browser_host.h
 
 ggl_clutter_CPPFLAGS 		= @CLUTTER_CFLAGS@ \
 			  	$(PREDEFINED_MACROS) \
@@ -65,10 +67,11 @@ paneldir = @PANEL_DIR@
 panel_DATA = $(desktop_data)
 
 servicedir = $(datadir)/dbus-1/services
-service_DATA = org.moblin.UX.Shell.Panels.gadgets.service
+service_in_files = org.moblin.UX.Shell.Panels.gadgets.service.in
+service_DATA = $(service_in_files:.service.in=.service)
 
-EXTRA_DIST = gadgets-panel.css.in $(service_DATA)
-CLEANFILES = gadgets-panel.css $(desktop_DATA)
+EXTRA_DIST = gadgets-panel.css.in $(service_in_files) $(BITMAPS)
+CLEANFILES = gadgets-panel.css $(desktop_DATA) $(service_DATA)
 
 # TODO: install these files into correct path.
 #all-local:
