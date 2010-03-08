@@ -90,7 +90,7 @@ static const char *kGlobalExtensions[] = {
   "linux-system-framework",
 #endif
   "smjs-script-runtime",
-  "curl-xml-http-request",
+  "soup-xml-http-request",
   //  "analytics-usage-collector",
   "google-gadget-manager",
   NULL
