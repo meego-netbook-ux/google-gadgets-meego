@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -18,8 +18,7 @@ msgstr ""
 "X-Poedit-Language: Chinese\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:244
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:244
 msgid "Gadgets"
 msgstr "小工具"
 
@@ -44,8 +43,7 @@ msgstr "%I:%M%P"
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43
-#: ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
 msgstr "%dd 以前"
@@ -60,8 +58,7 @@ msgstr "%d 天以前"
 msgid "%d days ago"
 msgstr "%d 天以前"
 
-#: ../po/resources_strings.c:55
-#: ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
 msgstr "%dh 以前"
@@ -76,8 +73,7 @@ msgstr "%d 小时以前"
 msgid "%d hrs ago"
 msgstr "%d 小时以前"
 
-#: ../po/resources_strings.c:67
-#: ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
 msgstr "%dm 以前"
@@ -96,8 +92,7 @@ msgstr "%d 分钟之前"
 msgid "Open"
 msgstr "打开"
 
-#: ../po/resources_strings.c:82
-#: ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
 msgid "Remove"
 msgstr "移除"
 
@@ -117,8 +112,7 @@ msgstr "下一个"
 msgid "Toggle Expanded View"
 msgstr "切换扩展视图"
 
-#: ../po/resources_strings.c:97
-#: ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
 msgstr "菜单"
 
@@ -134,66 +128,6 @@ msgstr "最小化"
 msgid "Program can't start because it failed to load the following module(s):"
 msgstr "无法启动程序，因为无法加载下列模块："
 
-#: ../po/resources_strings.c:115
-msgid "&About..."
-msgstr "关于(_A)..."
-
-#: ../po/resources_strings.c:118
-msgid "Add &Gadgets..."
-msgstr "添加小工具(_G)..."
-
-#: ../po/resources_strings.c:121
-msgid "Always on &Top"
-msgstr "总在最前面(_T)"
-
-#: ../po/resources_strings.c:124
-msgid "Auto &Fit"
-msgstr "自动调整(_F)"
-
-#: ../po/resources_strings.c:127
-msgid "A&uto Hide"
-msgstr "自动隐藏(_u)"
-
-#: ../po/resources_strings.c:130
-msgid "&Collapse"
-msgstr "崩溃(_C)"
-
-#: ../po/resources_strings.c:133
-msgid "&Dock to Sidebar"
-msgstr "Dock 到侧栏(_D)"
-
-#: ../po/resources_strings.c:136
-msgid "Doc&k Sidebar"
-msgstr "Dock 侧栏(_k)"
-
-#: ../po/resources_strings.c:139
-msgid "E&xit"
-msgstr "退出(_x)"
-
-#: ../po/resources_strings.c:142
-msgid "Ex&pand"
-msgstr "展开(_p)"
-
-#: ../po/resources_strings.c:145
-msgid "&Font Size"
-msgstr "字体大小(_F)"
-
-#: ../po/resources_strings.c:148
-msgid "&Default"
-msgstr "默认(_D)"
-
-#: ../po/resources_strings.c:151
-msgid "&Larger"
-msgstr "放大(_L)"
-
-#: ../po/resources_strings.c:154
-msgid "&Smaller"
-msgstr "缩小(_S)"
-
-#: ../po/resources_strings.c:157
-msgid "Hide A&ll"
-msgstr "隐藏所有(_l)"
-
 #: ../po/resources_strings.c:160
 msgid "&Left"
 msgstr "向左(_L)"
@@ -205,22 +139,6 @@ msgstr "选项(_O)..."
 #: ../po/resources_strings.c:166
 msgid "R&emove"
 msgstr "移除(_e)"
-
-#: ../po/resources_strings.c:169
-msgid "&Right"
-msgstr "向右(_R)"
-
-#: ../po/resources_strings.c:172
-msgid "Show A&ll"
-msgstr "显示所有(_l)"
-
-#: ../po/resources_strings.c:175
-msgid "&Undock from Sidebar"
-msgstr "从侧栏 Undock(_U)"
-
-#: ../po/resources_strings.c:178
-msgid "&Zoom"
-msgstr "变焦(_Z)"
 
 #: ../po/resources_strings.c:181
 msgid "100%"
@@ -249,18 +167,6 @@ msgstr "50%"
 #: ../po/resources_strings.c:199
 msgid "75%"
 msgstr "75%"
-
-#: ../po/resources_strings.c:202
-msgid "Change &Hotkey..."
-msgstr "更改快捷键(_H)..."
-
-#: ../po/resources_strings.c:205
-msgid "De&bug Console"
-msgstr "调试控制台(_b)"
-
-#: ../po/resources_strings.c:208
-msgid "&Sidebar"
-msgstr "侧栏(_S)"
 
 #: ../po/resources_strings.c:211
 msgid "Feedback..."
@@ -299,8 +205,7 @@ msgstr "点击输入新的快捷键："
 msgid "Press new hotkey"
 msgstr "按新的快捷键"
 
-#: ../po/resources_strings.c:238
-#: ../po/resources_strings.c:250
+#: ../po/resources_strings.c:238 ../po/resources_strings.c:250
 msgid "Clear"
 msgstr "清除"
 
@@ -341,8 +246,7 @@ msgstr "小工具(GTK)"
 msgid "Gadgets (Qt)"
 msgstr "小工具 (Qt)"
 
-#: ../po/resources_strings.c:274
-#: ../po/resources_strings.c:283
+#: ../po/resources_strings.c:274 ../po/resources_strings.c:283
 msgid "Gadget Designer"
 msgstr "小工具设计者"
 
@@ -401,3 +305,90 @@ msgstr "小工具不支持 Linux 平台：%&#10;&#10;%s"
 msgid "http://www.google.com"
 msgstr "http://www.google.cn/"
 
+#: ../po/resources_strings.c:202
+msgid "Change &Hotkey..."
+msgstr "更改快捷键(&H)..."
+
+#: ../po/resources_strings.c:208
+msgid "&Sidebar"
+msgstr "侧栏(&S)"
+
+#: ../po/resources_strings.c:205
+msgid "De&bug Console"
+msgstr "调试控制台(&b)"
+
+#: ../po/resources_strings.c:175
+msgid "&Undock from Sidebar"
+msgstr "从侧栏 Undock(&U)"
+
+#: ../po/resources_strings.c:178
+msgid "&Zoom"
+msgstr "变焦(&Z)"
+
+#: ../po/resources_strings.c:169
+msgid "&Right"
+msgstr "向右(&R)"
+
+#: ../po/resources_strings.c:172
+msgid "Show A&ll"
+msgstr "显示所有(&l)"
+
+#: ../po/resources_strings.c:157
+msgid "Hide A&ll"
+msgstr "隐藏所有(&l)"
+
+#: ../po/resources_strings.c:115
+msgid "&About..."
+msgstr "关于(&A)..."
+
+#: ../po/resources_strings.c:118
+msgid "Add &Gadgets..."
+msgstr "添加小工具(&G)..."
+
+#: ../po/resources_strings.c:121
+msgid "Always on &Top"
+msgstr "总在最前面(&T)"
+
+#: ../po/resources_strings.c:124
+msgid "Auto &Fit"
+msgstr "自动调整(&F)"
+
+#: ../po/resources_strings.c:136
+msgid "Doc&k Sidebar"
+msgstr "Dock 侧栏(&k)"
+
+#: ../po/resources_strings.c:133
+msgid "&Dock to Sidebar"
+msgstr "Dock 到侧栏(&D)"
+
+#: ../po/resources_strings.c:130
+msgid "&Collapse"
+msgstr "崩溃(&C)"
+
+#: ../po/resources_strings.c:127
+msgid "A&uto Hide"
+msgstr "自动隐藏(&u)"
+
+#: ../po/resources_strings.c:148
+msgid "&Default"
+msgstr "默认(&D)"
+
+#: ../po/resources_strings.c:145
+msgid "&Font Size"
+msgstr "字体大小(&F)"
+
+#: ../po/resources_strings.c:142
+msgid "Ex&pand"
+msgstr "展开(&p)"
+
+#: ../po/resources_strings.c:139
+msgid "E&xit"
+msgstr "退出(&x)"
+
+#: ../po/resources_strings.c:154
+msgid "&Smaller"
+msgstr "缩小(&S)"
+
+#: ../po/resources_strings.c:151
+msgid "&Larger"
+msgstr "放大(&L)"
