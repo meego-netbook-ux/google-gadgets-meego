@@ -188,6 +188,7 @@ void GoogleGadgetManager::Init() {
 }
 
 bool GoogleGadgetManager::OnFreeMetadataTimer(int timer) {
+  GGL_UNUSED(timer);
   if (!browser_gadget_) {
     // Only free metadata when the gadget browser is not active.
     metadata_.FreeMemory();
@@ -235,6 +236,7 @@ void GoogleGadgetManager::ScheduleUpdate(int64_t time) {
 }
 
 bool GoogleGadgetManager::OnUpdateTimer(int timer) {
+  GGL_UNUSED(timer);
   UpdateGadgetsMetadata(false);
   return false;
 }
@@ -414,12 +416,18 @@ bool GoogleGadgetManager::InitInstanceOptions(const char *gadget_id,
                                               int instance_id) {
   std::string options_name = GetGadgetInstanceOptionsName(instance_id);
   OptionsInterface *instance_options = CreateOptions(options_name.c_str());
+
   Variant org_gadget_id =
       instance_options->GetInternalValue(kInstanceGadgetIdOption);
-  if (org_gadget_id == Variant(gadget_id)) {
-    // The existing options can be reused.
-    delete instance_options;
-    return true;
+
+  // Options won't be reused for blank igoogle gadgets and rss gadgets.
+  if (strcmp(gadget_id, kIGoogleGadgetName) != 0 &&
+      strcmp(gadget_id, kRSSGadgetName) != 0) {
+    if (org_gadget_id == Variant(gadget_id)) {
+      // The existing options can be reused.
+      delete instance_options;
+      return true;
+    }
   }
 
   if (org_gadget_id.type() != Variant::TYPE_VOID) {
@@ -526,7 +534,7 @@ int GoogleGadgetManager::NewGadgetInstance(const char *gadget_id) {
 }
 
 int GoogleGadgetManager::NewGadgetInstanceFromFile(const char *file) {
-  return GadgetIdIsFileLocation(file) ? NewGadgetInstance(file) : -1;
+  return NewGadgetInstance(file);
 }
 
 bool GoogleGadgetManager::RemoveGadgetInstanceInternal(int instance_id,
@@ -616,6 +624,7 @@ class AddedTimeUpdater {
  public:
   AddedTimeUpdater(GadgetInfoMap *map) : map_(map) { }
   bool Callback(const char *name, const Variant &value, bool encrypted) {
+    GGL_UNUSED(encrypted);
     if (strncmp(name, kGadgetAddedTimeOptionPrefix,
                 arraysize(kGadgetAddedTimeOptionPrefix) - 1) == 0) {
       std::string gadget_id(name);
@@ -983,7 +992,7 @@ std::string GoogleGadgetManager::GetGadgetPath(const char *gadget_id) {
         return file_manager_->GetFullPath(
             GetDownloadedGadgetLocation(gadget_id).c_str());
       }
-    
+
       result.clear();
       StringMap::const_iterator module_id_it = info->attributes.find(kModuleIDAttrib);
       if (module_id_it != info->attributes.end())
@@ -1184,6 +1193,7 @@ bool GoogleGadgetManager::OnFirstDailyPing(int timer) {
 }
 
 bool GoogleGadgetManager::OnDailyPing(int timer) {
+  GGL_UNUSED(timer);
   global_options_->PutValue(kLastDailyPingTimeOption,
                             Variant(main_loop_->GetCurrentTime()));
 #ifdef GGL_USAGE_COLLECTOR

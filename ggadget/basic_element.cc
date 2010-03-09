@@ -866,7 +866,10 @@ class BasicElement::Impl : public SmallObject<> {
       *hittest = this_hittest;
     }
 
-    if (!enabled_) {
+    // Direct EVENT_MOUSE_UP and EVENT_MOUSE_OUT must be processed even if the
+    // element is disabled.
+    if (!enabled_ && !(direct && (type == Event::EVENT_MOUSE_UP ||
+                                  type == Event::EVENT_MOUSE_OUT))) {
       return EVENT_RESULT_UNHANDLED;
     }
 
@@ -2156,6 +2159,7 @@ void BasicElement::PostSizeEvent() {
 }
 
 void BasicElement::SetDesignerMode(bool designer_mode) {
+  GGL_UNUSED(designer_mode);
   impl_->designer_mode_ = true;
 }
 
@@ -2229,15 +2233,19 @@ Connection *BasicElement::ConnectOnContentChanged(Slot0<void> *handler) {
 }
 
 EventResult BasicElement::HandleMouseEvent(const MouseEvent &event) {
+  GGL_UNUSED(event);
   return EVENT_RESULT_UNHANDLED;
 }
 EventResult BasicElement::HandleDragEvent(const DragEvent &event) {
+  GGL_UNUSED(event);
   return EVENT_RESULT_UNHANDLED;
 }
 EventResult BasicElement::HandleKeyEvent(const KeyboardEvent &event) {
+  GGL_UNUSED(event);
   return EVENT_RESULT_UNHANDLED;
 }
 EventResult BasicElement::HandleOtherEvent(const Event &event) {
+  GGL_UNUSED(event);
   return EVENT_RESULT_UNHANDLED;
 }
 
@@ -2248,10 +2256,13 @@ void BasicElement::AggregateClipRegion(const Rectangle &boundary,
 
 void BasicElement::AggregateMoreClipRegion(const Rectangle &boundary,
                                            ClipRegion *region) {
+  GGL_UNUSED(boundary);
+  GGL_UNUSED(region);
 }
 
 void BasicElement::EnsureAreaVisible(const Rectangle &rect,
                                      const BasicElement *source) {
+  GGL_UNUSED(source);
   // First test if the rectangle is visible in this element.
   if (impl_->parent_ && rect.x + rect.w > 0 && rect.y + rect.h > 0 &&
       rect.x < GetPixelWidth() && rect.y < GetPixelHeight()) {

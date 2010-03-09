@@ -65,6 +65,8 @@ class QtHost::Impl : public QObject {
     qApp->setQuitOnLastWindowClosed(false);
     menu_.addAction(QString::fromUtf8(GM_("MENU_ITEM_ADD_GADGETS")),
                     this, SLOT(OnAddGadget()));
+    menu_.addAction(QString::fromUtf8(GM_("MENU_ITEM_ADD_IGOOGLE_GADGET")),
+                    this, SLOT(OnAddIGoogleGadget()));
     menu_.addAction(QString::fromUtf8(GM_("MENU_ITEM_SHOW_ALL")),
                     this, SLOT(OnShowAll()));
     menu_.addAction(QString::fromUtf8(GM_("MENU_ITEM_HIDE_ALL")),
@@ -216,6 +218,7 @@ class QtHost::Impl : public QObject {
   }
 
   void RemoveGadget(Gadget *gadget, bool save_data) {
+    GGL_UNUSED(save_data);
     ViewInterface *main_view = gadget->GetMainView();
 
     // If this gadget is popped out, popin it first.
@@ -377,6 +380,10 @@ class QtHost::Impl : public QObject {
  public slots:
   void OnAddGadget() {
     GetGadgetManager()->ShowGadgetBrowserDialog(&gadget_browser_host_);
+  }
+
+  void OnAddIGoogleGadget() {
+    GetGadgetManager()->NewGadgetInstanceFromFile(kIGoogleGadgetName);
   }
 
   void OnGadgetMenuItem() {

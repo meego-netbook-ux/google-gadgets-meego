@@ -1087,7 +1087,22 @@ class BrowserElementImpl {
         LOG("%s feedback needs 3 parameters, but only %zu is given",
             kOpenURLFeedback, param_count);
       } else {
-        result = OpenURL(params[2]) ? '1' : '0';
+        result = ongotourl_signal_(params[2], true) || OpenURL(params[2]) ?
+            '1' : '0';
+      }
+    } else if (strcmp(type, kGoToURLFeedback) == 0) {
+      if (param_count != 3) {
+        LOG("%s feedback needs 3 parameters, but only %zu is given",
+            kGoToURLFeedback, param_count);
+      } else {
+        result = ongotourl_signal_(params[2], false) ? '1' : '0';
+      }
+    } else if (strcmp(type, kNetErrorFeedback) == 0) {
+      if (param_count != 3) {
+        LOG("%s feedback needs 3 parameters, but only %zu is given",
+            kNetErrorFeedback, param_count);
+      } else {
+        result = onerror_signal_(params[2]) ? '1' : '0';
       }
     } else {
       LOG("Unknown feedback: %s", type);
@@ -1128,6 +1143,8 @@ class BrowserElementImpl {
   Connection *minimized_connection_, *restored_connection_,
              *popout_connection_, *popin_connection_,
              *dock_connection_, *undock_connection_;
+  Signal2<bool, const char *, bool> ongotourl_signal_;
+  Signal1<bool, const char *> onerror_signal_;
 };
 
 BrowserController *BrowserController::instance_ = NULL;
@@ -1164,14 +1181,9 @@ void BrowserController::ProcessFeedback(size_t param_count,
   }
 }
 
-class BrowserElement::Impl : public BrowserElementImpl {
- public:
-  Impl(BrowserElement *owner) : BrowserElementImpl(owner) { }
-};
-
 BrowserElement::BrowserElement(View *view, const char *name)
     : BasicElement(view, "browser", name, true),
-      impl_(new Impl(this)) {
+      impl_(new BrowserElementImpl(this)) {
   SetEnabled(true);
 }
 
@@ -1187,6 +1199,10 @@ void BrowserElement::DoClassRegister() {
   RegisterProperty("alwaysOpenNewWindow",
                    NewSlot(&BrowserElement::IsAlwaysOpenNewWindow),
                    NewSlot(&BrowserElement::SetAlwaysOpenNewWindow));
+  RegisterClassSignal("onerror", &BrowserElementImpl::onerror_signal_,
+                      &BrowserElement::impl_);
+  RegisterClassSignal("ongotourl", &BrowserElementImpl::ongotourl_signal_,
+                      &BrowserElement::impl_);
 }
 
 BrowserElement::~BrowserElement() {

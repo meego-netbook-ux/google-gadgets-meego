@@ -248,6 +248,7 @@ class ArraySignatureIterator {
     return sig;
   }
   bool Callback(int id, const Variant &value) {
+    GGL_UNUSED(id);
     std::string sig = GetVariantSignature(value);
     if (sig.empty()) return true;
     if (is_array_ && !signature_list_.empty() && sig != signature_list_[0])
@@ -267,6 +268,7 @@ class DictSignatureIterator {
   std::string GetSignature() const { return signature_; }
   bool Callback(const char *name, ScriptableInterface::PropertyType type,
                 const Variant &value) {
+    GGL_UNUSED(name);
     if (type == ScriptableInterface::PROPERTY_METHOD ||
         value.type() == Variant::TYPE_VOID) {
       // Ignore method and void type properties.
@@ -647,6 +649,7 @@ class DBusMarshaller::Impl {
       delete marshaller_;
     }
     bool Callback(int id, const Variant &value) {
+      GGL_UNUSED(id);
       Argument arg(signature_, value);
       return marshaller_->AppendArgument(arg);
     }
@@ -664,6 +667,7 @@ class DBusMarshaller::Impl {
       delete marshaller_;
     }
     bool Callback(int id, const Variant &value) {
+      GGL_UNUSED(id);
       if (index_ >= signature_list_.size()) {
         DLOG("The signature of the variant does not match the specified "
              "signature.");
@@ -1396,6 +1400,8 @@ class DBusMainLoopClosure::Impl {
    public:
     DBusDispatchCallback(Impl *impl) : impl_(impl) { }
     virtual bool Call(MainLoopInterface *main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
+      GGL_UNUSED(watch_id);
 #ifdef DBUS_VERBOSE_LOG
       DLOG("Dispatch DBus connection.");
 #endif
@@ -1409,6 +1415,8 @@ class DBusMainLoopClosure::Impl {
       return status == DBUS_DISPATCH_DATA_REMAINS;
     }
     virtual void OnRemove(MainLoopInterface* main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
+      GGL_UNUSED(watch_id);
       impl_->dispatch_timeout_ = -1;
       delete this;
     }
@@ -1428,6 +1436,7 @@ class DBusMainLoopClosure::Impl {
       SetEnabled(dbus_watch_get_enabled(watch));
     }
     virtual bool Call(MainLoopInterface *main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
       ASSERT(impl_);
       ASSERT(main_loop == impl_->main_loop_);
       ASSERT(watch_id == read_id_ || watch_id == write_id_);
@@ -1458,6 +1467,7 @@ class DBusMainLoopClosure::Impl {
       return true;
     }
     virtual void OnRemove(MainLoopInterface* main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
       ASSERT(main_loop == impl_->main_loop_);
       ASSERT(watch_id == read_id_ || watch_id == write_id_);
       if (read_id_ == watch_id)
@@ -1540,6 +1550,8 @@ class DBusMainLoopClosure::Impl {
       SetEnabled(dbus_timeout_get_enabled(timeout));
     }
     virtual bool Call(MainLoopInterface *main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
+      GGL_UNUSED(watch_id);
       ASSERT(impl_);
       ASSERT(main_loop == impl_->main_loop_);
       ASSERT(watch_id == watch_id_);
@@ -1567,6 +1579,8 @@ class DBusMainLoopClosure::Impl {
       return true;
     }
     virtual void OnRemove(MainLoopInterface* main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
+      GGL_UNUSED(watch_id);
       ASSERT(main_loop == impl_->main_loop_);
       ASSERT(watch_id == watch_id_);
       watch_id_ = -1;
@@ -1663,6 +1677,8 @@ class DBusMainLoopClosure::Impl {
   static void DispatchStatus(DBusConnection *connection,
                              DBusDispatchStatus new_status,
                              void *data) {
+    GGL_UNUSED(connection);
+    GGL_UNUSED(new_status);
 #ifdef DBUS_VERBOSE_LOG
     DLOG("DispatchStatus");
 #endif
@@ -1693,6 +1709,7 @@ class DBusMainLoopClosure::Impl {
   }
 
   static void RemoveWatch(DBusWatch* watch, void* data) {
+    GGL_UNUSED(data);
 #ifdef DBUS_VERBOSE_LOG
     DLOG("DBus remove watch.");
 #endif
@@ -1703,6 +1720,7 @@ class DBusMainLoopClosure::Impl {
   }
 
   static void WatchToggled(DBusWatch* watch, void* data) {
+    GGL_UNUSED(data);
 #ifdef DBUS_VERBOSE_LOG
     DLOG("DBus toggle watch.");
 #endif
@@ -1725,6 +1743,7 @@ class DBusMainLoopClosure::Impl {
   }
 
   static void RemoveTimeout(DBusTimeout *timeout, void* data) {
+    GGL_UNUSED(data);
 #ifdef DBUS_VERBOSE_LOG
     DLOG("DBus remove timeout.");
 #endif
@@ -1735,6 +1754,7 @@ class DBusMainLoopClosure::Impl {
   }
 
   static void TimeoutToggled(DBusTimeout *timeout, void* data) {
+    GGL_UNUSED(data);
 #ifdef DBUS_VERBOSE_LOG
     DLOG("DBus toggle timeout.");
 #endif

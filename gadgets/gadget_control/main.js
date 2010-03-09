@@ -20,11 +20,11 @@
 // var kCategoryButtonHeight = category_active_img.height;
 var kPluginBoxWidth = 240;
 var kPluginBoxHeight = 100;
-var kDefaultPluginRows = 3;
-var kDefaultPluginColumns = 4;
+var kDefaultPluginRows = 2;
+var kDefaultPluginColumns = 2;
 var kCategoryGap = 15;
-var kFixedExtraWidth = 0;
-var kFixedExtraHeight = 143;
+var kFixedExtraWidth = 142;
+var kFixedExtraHeight = 183;
 var kBorderMarginH = 12;
 var kBorderMarginV = 30;
 var kWindowMarginH = 12;
@@ -86,25 +86,11 @@ function init_layout() {
 }
 
 function view_onopen() {
-  var screen_width = system.screen.size.width;
-  var screen_height = system.screen.size.height;
   var width, height;
   // init_layout();
 
-  if (screen_width >= 1024) {
-    width = kFixedExtraWidth + 3 * kPluginBoxWidth + kBorderMarginH;
-  } else if (screen_width >= 800) {
-    width = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
-  } else {
-    width = kMinWidth;
-  }
-  if (screen_height >= 768) {
-    height = kFixedExtraHeight + 3 * kPluginBoxHeight + kBorderMarginV;
-  } else if (screen_height >= 600) {
-    height = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
-  } else {
-    height = kMinHeight;
-  }
+  width = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
+  height = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
   view.resizeTo(width, height);
 
   // We do the init in timer because gadgetBrowserUtils is not ready when

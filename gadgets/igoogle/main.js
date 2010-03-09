@@ -47,6 +47,11 @@ function ViewOnOpen() {
     }
   };
 
+  try {
+    browser.onerror = OnBrowserError;
+  } catch (e) {
+  }
+
   plugin.onAddCustomMenuItems = OnAddCustomMenuItems;
   SetUpCommonParams();
   LoadGadget();
@@ -60,6 +65,13 @@ function OnAddCustomMenuItems(menu) {
   menu.AddItem(strings.GADGET_REFRESH, refresh_flags, RefreshMenuHandler);
   var unload_flags = addGadgetUI.visible ? gddMenuItemFlagGrayed : 0;
   menu.AddItem(strings.GADGET_UNLOAD, unload_flags, UnloadMenuHandler);
+}
+
+function OnBrowserError(url) {
+  view.setTimeout(function() {
+    DisplayMessage(strings.GADGET_ERROR);
+  }, 100);
+  return true;
 }
 
 function RefreshMenuHandler(item_text) {
@@ -391,21 +403,20 @@ function OnLoadGadget() {
     /^\w+:\/\/\w+\.google\.\w+\/ig\/adde.*moduleurl=(.*.xml)/
   ];
 
-  var gadget_url = null;
-  var url = urlEntry.value;
-  if (url != null) {
+  var gadget_url = urlEntry.value;
+  if (gadget_url) {
     for (i in url_patterns) {
-      var match_result = url.match(url_patterns[i]);
+      var match_result = gadget_url.match(url_patterns[i]);
       if (match_result != null) {
         gadget_url = match_result[1];
-        if (!gadget_url.match(/^\w+:\/\//))
-          gadget_url = "http://" + gadget_url;
         break;
       }
     }
   }
 
-  if (gadget_url != null) {
+  if (gadget_url) {
+    if (!gadget_url.match(/^\w+:\/\//))
+      gadget_url = "http://" + gadget_url;
     g_download_url = gadget_url;
     options.putValue(kDownloadURLOption, g_download_url);
     LoadGadget();

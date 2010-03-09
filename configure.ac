@@ -21,7 +21,7 @@
 #  Version
 #  Bug report address
 AC_INIT([google-gadgets-for-linux],
-        [0.11.1],
+        [0.11.2],
         [google-gadgets-for-linux-dev@googlegroups.com])
 
 # Requires autoconf version >= 2.50
@@ -50,7 +50,7 @@ ggl_save_LDFLAGS=$LDFLAGS
 # Version numbers of Google Gadgets for Linux package.
 GGL_MAJOR_VERSION=0
 GGL_MINOR_VERSION=11
-GGL_MICRO_VERSION=1
+GGL_MICRO_VERSION=2
 
 GGL_VERSION_UNQUOTED="$GGL_MAJOR_VERSION.$GGL_MINOR_VERSION.$GGL_MICRO_VERSION"
 GGL_VERSION="\"$GGL_VERSION_UNQUOTED\""
@@ -93,7 +93,7 @@ AC_SUBST(LIBGGADGET_BINARY_VERSION)
 
 # This string is used in auto update request. It should be updated to the
 # time of a release build is made. Its format is yymmdd-HHMMSS.
-GGL_VERSION_TIMESTAMP="\"090909-000000\""
+GGL_VERSION_TIMESTAMP="\"100127-000000\""
 AC_SUBST(GGL_VERSION_TIMESTAMP)
 
 # Define the version of Google Desktop Gadget API that this release supports.
@@ -166,6 +166,9 @@ build_smjs_script_runtime=yes
 build_webkit_script_runtime=yes
 build_gtkwebkit_browser_element=yes
 build_soup_xml_http_request=yes
+
+# moblin specific
+build_moblin_panel=yes
 
 #================ compile options ==============
 AC_ARG_ENABLE([debug],
@@ -402,6 +405,12 @@ AC_ARG_ENABLE([usage-collector],
                              [don't build usage-collector]),
               [build_usage_collector=$enableval],
               [build_usage_collector=yes])
+
+AC_ARG_ENABLE([moblin-panel],
+              AS_HELP_STRING([--disable-moblin-panel],
+                             [don't build moblin panel]),
+              [build_moblin_panel=$enableval],
+              [build_moblin_panel=yes])
 
 #================ other options =======================
 AC_ARG_ENABLE([update-mime-database],
@@ -762,6 +771,11 @@ if test x$build_libggadget_qt = xyes; then
   fi
 fi
 
+
+PKG_CHECK_MODULES(CLUTTER, [clutter-1.0])
+AC_SUBST(CLUTTER_LIBS)
+AC_SUBST(CLUTTER_CFLAGS)
+
 # Check gtk2 related libraries.
 has_gtk2=no
 if test x$build_libggadget_gtk = xyes; then
@@ -950,6 +964,27 @@ if test x$has_connman != xno; then
   PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_CONNMAN"
 else
   AC_MSG_WARN([[Development package of connman is not enabled]])
+fi
+
+# check moblin panel
+has_mpl=no
+if test x$build_moblin_panel = xyes; then
+  PKG_CHECK_MODULES(MPL,
+                    [moblin-panel >= 0.50.0], [has_mpl=yes],
+                    [has_mpl=no])
+
+  AS_AC_EXPAND(GGL_RES_DIR, $GGL_RESOURCE_DIR)
+#  AC_DEFINE_UNQUOTED([GGL_RES_DIR], "$GGL_RES_DIR", [GGL theme directory])
+
+  PANEL_DIR=$($PKG_CONFIG moblin-panel --variable=moblin_panel_panels_dir)
+  AC_SUBST(PANEL_DIR)
+fi
+
+if test x$has_mpl != xno; then
+#  PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MPL"
+  AC_DEFINE([HAVE_MPL], [], [Define if we have moblin panel.])
+else
+  AC_MSG_WARN([[Development package of moblin-panel is not enabled]])
 fi
 
 # Check gtkmozembed
@@ -1212,7 +1247,7 @@ fi
 if test x$build_usage_collector = xyes; then
   PREDEFINED_MACROS="$PREDEFINED_MACROS -DGGL_USAGE_COLLECTOR"
 fi
-  
+
 # Check necessary functions
 AC_CHECK_FUNC(mkdtemp, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MKDTEMP"])
 AC_CHECK_FUNC(mmap, [PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MMAP"])
@@ -1477,6 +1512,7 @@ AM_CONDITIONAL([GGL_HAVE_GTK2], [test x$has_gtk2 = xyes])
 AM_CONDITIONAL([GGL_HAVE_RSVG], [test x$has_librsvg = xyes])
 AM_CONDITIONAL([GGL_HAVE_NETWORK_MANAGER], [test x$has_network_manager != xno])
 AM_CONDITIONAL([GGL_HAVE_CONNMAN], [test x$has_connman != xno])
+AM_CONDITIONAL([GGL_HAVE_MPL], [test x$has_mpl != xno])
 AM_CONDITIONAL([GGL_CROSS_COMPILING], [test x$cross_compiling = xyes])
 AM_CONDITIONAL([GGL_DISABLE_SHARED], [test x$enable_shared != xyes])
 
@@ -1514,6 +1550,7 @@ AC_CONFIG_FILES([Makefile
                  extensions/gst_audio_framework/Makefile
                  extensions/gst_video_element/Makefile
                  extensions/gtk_edit_element/Makefile
+                 extensions/clutter_edit_element/Makefile
                  extensions/gtk_system_framework/Makefile
                  extensions/gtkmoz_browser_element/Makefile
                  extensions/libxml2_xml_parser/Makefile
@@ -1557,6 +1594,7 @@ AC_CONFIG_FILES([Makefile
                  ggadget/npapi/tests/Makefile
                  ggadget/npapi/libggadget-npapi-1.0.pc
                  ggadget/gtk/Makefile
+		 ggadget/clutter/Makefile
                  ggadget/gtk/tests/Makefile
                  ggadget/gtk/libggadget-gtk-1.0.pc
                  ggadget/js/Makefile
@@ -1571,6 +1609,8 @@ AC_CONFIG_FILES([Makefile
                  hosts/Makefile
                  hosts/gtk/Makefile
                  hosts/qt/Makefile
+                 hosts/clutter/Makefile
+		 hosts/clutter/gadgets-panel.desktop.in
                  resources/Makefile
                  third_party/Makefile
                  third_party/codesighs/Makefile
@@ -1622,6 +1662,7 @@ Build options:
   Build webkit-script-runtime     $build_webkit_script_runtime
   Build gtkwebkit-browser-element $build_gtkwebkit_browser_element
   Build analytics-usage-collector $build_usage_collector
+  Build moblin panel              $has_mpl
 
  Other features:
   GTK SVG Support                 $has_librsvg

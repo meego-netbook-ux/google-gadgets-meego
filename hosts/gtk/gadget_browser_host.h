@@ -33,7 +33,7 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   GadgetBrowserHost(ggadget::HostInterface *owner, int view_debug_mode)
     : owner_(owner), view_debug_mode_(view_debug_mode) {
   }
-  virtual ViewHostInterface *NewViewHost(Gadget *gadget,
+  virtual ViewHostInterface *NewViewHost(Gadget *,
                                          ViewHostInterface::Type type) {
     int flags = ggadget::gtk::SingleViewHost::WM_MANAGEABLE |
                 ggadget::gtk::SingleViewHost::REMOVE_ON_CLOSE |
@@ -46,26 +46,20 @@ class GadgetBrowserHost : public ggadget::HostInterface {
                               show_debug_console);
   }
   virtual void RemoveGadget(Gadget *gadget, bool save_data) {
+    GGL_UNUSED(save_data);
     ggadget::GetGadgetManager()->RemoveGadgetInstance(gadget->GetInstanceID());
     g_timeout_add (100, (GSourceFunc)GadgetBrowserHost::cb_show_ctrl_win, NULL);
   }
   virtual bool LoadFont(const char *filename) {
     return owner_->LoadFont(filename);
   }
-  virtual void ShowGadgetDebugConsole(Gadget *gadget) {}
+  virtual void ShowGadgetDebugConsole(Gadget *) {}
   virtual int GetDefaultFontSize() { return ggadget::kDefaultFontSize; }
   virtual bool OpenURL(const Gadget *gadget, const char *url) {
     return owner_->OpenURL(gadget, url);
   }
   virtual void Exit() {
     owner_->Exit();
-  }
-  static gboolean cb_show_ctrl_win (gpointer data) {
-    GtkWidget* win = g_get_last_hidden_ctrl_win ();
-    if (win) {
-      gtk_widget_show_all (win);
-    }
-    return FALSE;
   }
  private:
   ggadget::HostInterface *owner_;

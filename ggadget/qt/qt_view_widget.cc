@@ -204,8 +204,6 @@ class QtViewWidget::Impl {
     if (!view_) return;
     int buttons = GetMouseButtons(event->buttons());
     if (buttons != MouseEvent::BUTTON_NONE) {
-      owner_->grabMouse();
-
       if (!mouse_drag_moved_) {
         // Ignore tiny movement of mouse.
         QPoint offset = QCursor::pos() - mouse_pos_;
@@ -303,7 +301,6 @@ class QtViewWidget::Impl {
     }
   }
   void mouseReleaseEvent(QMouseEvent *event) {
-    owner_->releaseMouse();
     if (!view_ || mouse_drag_moved_)
       return;
 
@@ -379,6 +376,7 @@ class QtViewWidget::Impl {
       event->acceptProposedAction();
   }
   void dragLeaveEvent(QDragLeaveEvent *event) {
+    GGL_UNUSED(event);
     if (!view_) return;
     DLOG("drag leave");
     DragEvent drag_event(Event::EVENT_DRAG_OUT, 0, 0);
@@ -548,6 +546,7 @@ void QtViewWidget::QueueDraw() {
 }
 
 void QtViewWidget::timerEvent(QTimerEvent *event) {
+  GGL_UNUSED(event);
   uint64_t current_time = GetGlobalMainLoop()->GetCurrentTime();
   if (impl_->draw_queued_) {
     impl_->draw_queued_ = false;
@@ -738,12 +737,14 @@ void QtViewWidget::resizeEvent(QResizeEvent *event) {
 }
 
 void QtViewWidget::focusInEvent(QFocusEvent *event) {
+  GGL_UNUSED(event);
   if (!impl_->view_) return;
   SimpleEvent e(Event::EVENT_FOCUS_IN);
   impl_->view_->OnOtherEvent(e);
 }
 
 void QtViewWidget::focusOutEvent(QFocusEvent *event) {
+  GGL_UNUSED(event);
   if (!impl_->view_) return;
   SimpleEvent e(Event::EVENT_FOCUS_OUT);
   impl_->view_->OnOtherEvent(e);

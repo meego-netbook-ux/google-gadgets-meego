@@ -110,6 +110,7 @@ class View::Impl : public SmallObject<> {
     }
 
     virtual bool Call(MainLoopInterface *main_loop, int watch_id) {
+      GGL_UNUSED(watch_id);
       ASSERT(event_.GetToken() == watch_id);
       ScopedLogContext log_context(impl_->gadget_);
 
@@ -156,6 +157,8 @@ class View::Impl : public SmallObject<> {
     }
 
     virtual void OnRemove(MainLoopInterface *main_loop, int watch_id) {
+      GGL_UNUSED(main_loop);
+      GGL_UNUSED(watch_id);
       ASSERT(event_.GetToken() == watch_id);
       delete this;
     }
@@ -401,7 +404,10 @@ class View::Impl : public SmallObject<> {
       // We used to check IsReallyEnabled() here, which seems too strict
       // because the grabmouse_element_ may move out of the visible area, but
       // it should still grab the mouse.
-      if (grabmouse_element_.Get()->IsEnabled() &&
+      // EVENT_MOUSE_UP should always be fired no matter if the element is
+      // enabled or not.
+      if ((grabmouse_element_.Get()->IsEnabled() ||
+           type == Event::EVENT_MOUSE_UP) &&
           (event.GetButton() & MouseEvent::BUTTON_LEFT) &&
           (type == Event::EVENT_MOUSE_MOVE || type == Event::EVENT_MOUSE_UP ||
            type == Event::EVENT_MOUSE_CLICK)) {

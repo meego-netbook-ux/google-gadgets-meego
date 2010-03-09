@@ -53,6 +53,8 @@
 #endif
 #include <nsEvent.h>
 #include <nsICategoryManager.h>
+#include <nsIChannel.h>
+#include <nsIChannelEventSink.h>
 #include <nsIComponentRegistrar.h>
 #include <nsIContentPolicy.h>
 #include <nsIDOMAbstractView.h>
@@ -63,6 +65,8 @@
 #include <nsIGenericFactory.h>
 #include <nsIInterfaceRequestor.h>
 #include <nsIInterfaceRequestorUtils.h>
+#include <nsIPrefBranch.h>
+#include <nsIPrefService.h>
 #include <nsIScriptExternalNameSet.h>
 #include <nsIScriptGlobalObject.h>
 #include <nsIScriptNameSpaceManager.h>
@@ -557,6 +561,9 @@ static BrowserInfo *FindBrowserByContentPolicyContext(nsISupports *context,
     window = do_QueryInterface(view);
   }
 
+  nsCOMPtr<nsIDOMWindow> top_window;
+  window->GetTop(getter_AddRefs(top_window));
+
   *is_loading = PR_FALSE;
   for (BrowserMap::iterator it = g_browsers.begin(); it != g_browsers.end();
        ++it) {
@@ -565,7 +572,7 @@ static BrowserInfo *FindBrowserByContentPolicyContext(nsISupports *context,
     nsCOMPtr<nsIDOMWindow> window1;
     rv = browser->GetContentDOMWindow(getter_AddRefs(window1));
     NS_ENSURE_SUCCESS(rv, NULL);
-    if (window == window1) {
+    if (window == window1 || top_window == window1) {
       nsCOMPtr<nsIWebProgress> progress(do_GetInterface(browser));
       if (progress)
         progress->GetIsLoadingDocument(is_loading);
@@ -576,9 +583,11 @@ static BrowserInfo *FindBrowserByContentPolicyContext(nsISupports *context,
   return NULL;
 }
 
-class ContentPolicy : public nsIContentPolicy {
+class ContentPolicy : public nsIContentPolicy, public nsIChannelEventSink {
  public:
   NS_DECL_ISUPPORTS
+
+  static const PRUint32 kTypeRedirect = 999;
 
   NS_IMETHOD ShouldLoad(PRUint32 content_type, nsIURI *content_location,
                         nsIURI *request_origin, nsISupports *context,
@@ -609,10 +618,33 @@ class ContentPolicy : public nsIContentPolicy {
     PRBool is_loading = PR_FALSE;
     BrowserInfo *browser_info = FindBrowserByContentPolicyContext(
         context, &is_loading);
-    if (!browser_info || !browser_info->always_open_new_window)
+    if (!browser_info) {
       return NS_OK;
+    }
 
-    if (content_type == TYPE_DOCUMENT || content_type == TYPE_SUBDOCUMENT) {
+    if (strncmp(url_spec.get(), "about:neterror", 14) == 0) {
+      std::string r = SendFeedback(browser_info->browser_id,
+                                   kNetErrorFeedback, url_spec.get(),
+                                   NULL);
+      if (r[0] != '0')
+        *retval = REJECT_OTHER;
+      return NS_OK;
+    }
+
+    if (content_type == TYPE_DOCUMENT || content_type == TYPE_SUBDOCUMENT ||
+        content_type == kTypeRedirect) {
+      if (content_type == kTypeRedirect ||
+          !browser_info->always_open_new_window) {
+        std::string r = SendFeedback(browser_info->browser_id,
+                                     kGoToURLFeedback, url_spec.get(),
+                                     NULL);
+        // The controller should have opened the URL, so don't let the
+        // embedded browser open it.
+        if (r[0] != '0')
+          *retval = REJECT_OTHER;
+        return NS_OK;
+      }
+
       if (request_origin)
         request_origin->GetSpec(origin_spec);
 
@@ -667,9 +699,28 @@ class ContentPolicy : public nsIContentPolicy {
     return ShouldLoad(content_type, content_location, request_origin,
                       context, mime_type, extra, retval);
   }
+
+  NS_IMETHOD OnChannelRedirect(nsIChannel *old_channel, nsIChannel *new_channel,
+                               PRUint32 flags) {
+    nsCOMPtr<nsIURI> uri;
+    nsresult rv = new_channel->GetURI(getter_AddRefs(uri));
+    NS_ENSURE_SUCCESS(rv, rv);
+    nsCOMPtr<nsIInterfaceRequestor> callbacks;
+    rv = new_channel->GetNotificationCallbacks(getter_AddRefs(callbacks));
+    NS_ENSURE_SUCCESS(rv, rv);
+    nsCOMPtr<nsIDOMWindow> window(do_GetInterface(callbacks));
+    if (window) {
+      PRInt16 should_load;
+      rv = ShouldLoad(kTypeRedirect, uri, nsnull, window,
+                      NS_LITERAL_CSTRING(""), nsnull, &should_load);
+      NS_ENSURE_SUCCESS(rv, rv);
+      return should_load == ACCEPT ? NS_OK : NS_ERROR_FAILURE;
+    }
+    return NS_OK;
+  }
 };
 
-NS_IMPL_ISUPPORTS1(ContentPolicy, nsIContentPolicy)
+NS_IMPL_ISUPPORTS2(ContentPolicy, nsIContentPolicy, nsIChannelEventSink)
 
 static ContentPolicy g_content_policy;
 static ContentPolicy *GetContentPolicy() {
@@ -1205,6 +1256,10 @@ static nsresult InitCustomComponents() {
                                           CONTENT_POLICY_CONTRACTID,
                                           PR_FALSE, PR_TRUE, nsnull);
   NS_ENSURE_SUCCESS(rv, rv);
+  rv = category_manager->AddCategoryEntry("net-channel-event-sinks",
+                                          CONTENT_POLICY_CONTRACTID,
+                                          CONTENT_POLICY_CONTRACTID,
+                                          PR_FALSE, PR_TRUE, nsnull);
   return rv;
 }
 
@@ -1214,7 +1269,7 @@ static bool InitGecko() {
 
   static const GREVersionRange kGREVersion = {
     "1.9a", PR_TRUE,
-    "1.9.2", PR_FALSE,
+    "1.9.4", PR_FALSE,
   };
 
   char xpcom_location[4096];
@@ -1300,6 +1355,13 @@ int main(int argc, char **argv) {
 
   gtk_moz_embed_push_startup();
   InitCustomComponents();
+
+  nsCOMPtr<nsIPrefBranch> prefs = do_GetService(NS_PREFSERVICE_CONTRACTID);
+  if (prefs) {
+    // To let mozilla display appropriate error messages on network errors.
+    prefs->SetBoolPref("browser.xul.error_pages.enabled", PR_TRUE);
+  }
+
   if (g_down_fd != 0) {
     // Only start ping timer in actual environment to ease testing.
     // Use high priority to ensure the callback is called even if the main
