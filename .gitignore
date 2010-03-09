@@ -65,3 +65,7 @@ third_party/xdgmime/test-mime
 /hosts/clutter/ggl-clutter.sh
 !/hosts/clutter/org.moblin.UX.Shell.Panels.gadgets.service.in
 !/hosts/clutter/gadgets-panel.desktop.in.in
+/ggadget/tests/file_manager_test_data_dest/
+*.gmo
+*.mo
+/hosts/clutter/org.moblin.UX.Shell.Panels.gadgets.service
