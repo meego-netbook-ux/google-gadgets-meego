@@ -15,7 +15,6 @@
 */
 
 #include <gtk/gtk.h>
-#include <cairo/cairo.h>
 #include <string>
 #include <map>
 
@@ -62,107 +61,6 @@ static const char kOptionFontSize[] = "font_size";
 static const int kMinFontSize = 4;
 static const int kMaxFontSize = 16;
 
-static GdkAtom xa_cardinal;
-static GtkWidget* hidden_ctrl_win;
-
-static gboolean
-show_widget_cb(gpointer data)
-{
-  gtk_widget_show_all (GTK_WIDGET(data));
-  return FALSE;
-}
-
-static gboolean
-control_expose(GtkWidget *widget, GdkEventExpose *event, gpointer userdata)
-{
-  // cairo_surface_t *image;
-  cairo_t *cr = gdk_cairo_create(widget->window);
-  cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 0.0); /* transparent */
-
-  /* draw the background */
-  cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-  cairo_paint (cr);
-
-  if (userdata) {
-    cairo_surface_t *image = (cairo_surface_t*)userdata;
-    cairo_set_source_surface (cr, image, 0, 0);
-    cairo_paint (cr);
-  }
-  // cairo_surface_destroy (image);
-
-  cairo_destroy(cr);
-  return FALSE;
-}
-
-static void
-on_screen_size_changed (GdkScreen *screen, GtkWidget *control)
-{
-    gint window_width, window_height;
-
-    gtk_window_get_size (GTK_WINDOW(control), &window_width, &window_height);
-    gtk_window_move (GTK_WINDOW(control), 0,
-                     gdk_screen_get_height(screen) - window_height);
-}
-
-static void
-control_screen_changed(GtkWidget *widget, GdkScreen *old_screen, gpointer userdata)
-{
-    /* To check if the display supports alpha channels, get the colormap */
-    GdkScreen *screen = gtk_widget_get_screen(widget);
-    GdkColormap *colormap = gdk_screen_get_rgba_colormap(screen);
-
-    /* Now we have a colormap appropriate for the screen, use it */
-    gtk_widget_set_colormap(widget, colormap);
-
-    if (!userdata)
-      on_screen_size_changed (screen, widget);
-}
-
-GtkWidget*
-g_get_last_hidden_ctrl_win()
-{
-  return hidden_ctrl_win;
-}
-
-static void
-control_clicked(GtkWindow *win, GdkEventButton *event, gpointer user_data)
-{
-  hidden_ctrl_win = GTK_WIDGET(win);
-  gtk_widget_hide_all (hidden_ctrl_win);
-  SimpleGtkHost* sgh = (SimpleGtkHost*)user_data;
-  sgh->AddGadgetMenuCallback();
-}
-
-guint
-get_number_of_desktops_mutter()
-{
-  GdkAtom actual_type;
-  gint actual_format;
-  gint num_items;
-  guchar *ret_data_ptr;
-
-  GdkAtom atom_net_number_desktops = gdk_atom_intern("_NET_NUMBER_OF_DESKTOPS", FALSE);
-
-  guint num = 0;
-  if (gdk_property_get(gdk_get_default_root_window(),
-                       atom_net_number_desktops,
-                       gdk_atom_intern("CARDINAL", FALSE),  0L, 1L, FALSE,
-                       &actual_type, &actual_format, &num_items, (guchar**)&ret_data_ptr))
-    {
-      num = (int)*ret_data_ptr;
-      g_free(ret_data_ptr);
-    }
-
-  return num;
-}
-
-void
-set_cardinal_property(GdkWindow *window, GdkAtom prop, gulong value)
-{
-	gdk_property_change(window, prop, xa_cardinal, 32,
-				GDK_PROP_MODE_REPLACE, (const guchar *) &value, 1);
-}
-
 class SimpleGtkHost::Impl {
   struct GadgetInfo {
     GadgetInfo()
@@ -196,8 +94,6 @@ class SimpleGtkHost::Impl {
       gadgets_shown_(true),
       safe_to_exit_(true),
       font_size_(kDefaultFontSize),
-      gadgets_count_(0),
-      control_(NULL),
       gadget_manager_(GetGadgetManager()),
       on_new_gadget_instance_connection_(NULL),
       on_remove_gadget_instance_connection_(NULL),
@@ -219,11 +115,8 @@ class SimpleGtkHost::Impl {
         hotkey_grabber_.SetHotKey(hotkey);
         hotkey_grabber_.SetEnableGrabbing(true);
       }
-      // The default value of gadgets_shown_ is true.
-      value = options_->GetInternalValue(kOptionGadgetsShown);
-      if (value.type() == Variant::TYPE_BOOL)
-        gadgets_shown_ = VariantValue<bool>()(value);
-
+      options_->GetInternalValue(
+          kOptionGadgetsShown).ConvertToBool(&gadgets_shown_);
       options_->GetInternalValue(kOptionFontSize).ConvertToInt(&font_size_);
       font_size_ = std::min(kMaxFontSize, std::max(kMinFontSize, font_size_));
     }
@@ -259,12 +152,10 @@ class SimpleGtkHost::Impl {
 #else
     gtk_widget_destroy(main_widget_);
 #endif
-#endif
     delete options_;
   }
 
   void SetupUI() {
-#if 0
     const int priority = MenuInterface::MENU_ITEM_PRI_HOST;
     host_menu_ = gtk_menu_new();
     MenuBuilder menu_builder(GTK_MENU_SHELL(host_menu_));
@@ -347,83 +238,6 @@ class SimpleGtkHost::Impl {
     g_signal_connect(G_OBJECT(main_widget_), "delete_event",
                      G_CALLBACK(DeleteEventHandler), this);
 #endif
-
-#endif
-    // UI for MOBLIN
-    // gint n_workspace = 15; //get_number_of_desktops_mutter ();
-    xa_cardinal = gdk_atom_intern("CARDINAL", FALSE);
-
-    // GdkAtom xa_NET_WM_DESKTOP = gdk_atom_intern("_NET_WM_DESKTOP", FALSE);
-
-    GtkWidget *control = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_widget_set_app_paintable(control, TRUE);
-
-    g_signal_connect(G_OBJECT(control), "screen-changed", G_CALLBACK(control_screen_changed), NULL);
-
-    gtk_window_set_decorated       (GTK_WINDOW(control), FALSE);
-    gtk_window_set_skip_pager_hint (GTK_WINDOW(control), TRUE);
-    gtk_window_set_type_hint       (GTK_WINDOW(control), GDK_WINDOW_TYPE_HINT_UTILITY);
-    gtk_window_set_title           (GTK_WINDOW(control), "ignore");
-
-    cairo_surface_t* image = cairo_image_surface_create_from_png (GGL_RESOURCE_DIR "/add_control.png");
-    if (image) {
-      gtk_window_resize (GTK_WINDOW(control), cairo_image_surface_get_width (image),
-                         cairo_image_surface_get_height (image));
-    }
-    g_signal_connect(G_OBJECT(control), "expose-event", G_CALLBACK(control_expose), image);
-    control_screen_changed(control, NULL, NULL);
-    gtk_widget_add_events(control, GDK_BUTTON_PRESS_MASK);
-    g_signal_connect(G_OBJECT(control), "button-press-event", G_CALLBACK(control_clicked), owner_);
-
-    g_signal_connect (gdk_screen_get_default(), "size-changed",
-                      G_CALLBACK (on_screen_size_changed), control);
-
-    gtk_widget_realize         (control);
-    // set_cardinal_property      (control->window, xa_NET_WM_DESKTOP, n_workspace);
-    // gdk_flush();
-    gdk_window_set_back_pixmap (control->window, NULL, FALSE);
-    gtk_widget_show_all        (control);
-    control_ = control;
-
-    //set it at the correct pos
-    //on_screen_size_changed (gtk_widget_get_screen (control), control);
-  }
-
-  void PostSetupUI() {
-
-    // logo
-    GtkWidget *logo = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_widget_set_app_paintable(logo, TRUE);
-    g_signal_connect(G_OBJECT(logo), "expose-event", G_CALLBACK(control_expose), NULL);
-    g_signal_connect(G_OBJECT(logo), "screen-changed", G_CALLBACK(control_screen_changed),
-                     (gpointer)1);
-
-    gtk_window_set_decorated       (GTK_WINDOW(logo), FALSE);
-    gtk_window_set_opacity         (GTK_WINDOW(logo), 0.8);
-    gtk_window_set_skip_pager_hint (GTK_WINDOW(logo), TRUE);
-    gtk_window_set_type_hint       (GTK_WINDOW(logo), GDK_WINDOW_TYPE_HINT_UTILITY);
-    gtk_window_set_title           (GTK_WINDOW(logo), "ignore");
-
-    std::string img_data;
-    if (GetGlobalFileManager()->ReadFile("resource://logo_moblin.png", &img_data)) {
-      GdkPixbuf *pixbuf = LoadPixbufFromData(img_data);
-
-      GtkWidget* image = gtk_image_new_from_pixbuf (pixbuf);
-      g_object_unref(pixbuf);
-
-      gtk_container_add (GTK_CONTAINER (logo), image);
-      gtk_window_resize (GTK_WINDOW(logo), gdk_pixbuf_get_width (pixbuf),
-                         gdk_pixbuf_get_height (pixbuf));
-    }
-    control_screen_changed(logo, NULL, (gpointer)1);
-
-    gtk_widget_realize (logo);
-    gdk_window_set_back_pixmap (logo->window, NULL, FALSE);
-    gtk_window_move (GTK_WINDOW(logo), 4, 4);
-    gtk_timeout_add (1000, (GtkFunction)show_widget_cb, logo);
-    if (GetGadgetsCount() == 0 && control_) {
-      control_clicked (GTK_WINDOW(control_), NULL, owner_);
-    }
   }
 
 #if GTK_CHECK_VERSION(2,10,0) && defined(GGL_HOST_LINUX)
@@ -439,7 +253,6 @@ class SimpleGtkHost::Impl {
 #endif
 
   bool EnumerateGadgetInstancesCallback(int id) {
-    gadgets_count_ ++;
     if (!LoadGadgetInstance(id))
       gadget_manager_->RemoveGadgetInstance(id);
     // Return true to continue the enumeration.
@@ -605,13 +418,8 @@ class SimpleGtkHost::Impl {
   }
 
   void LoadGadgets() {
-    gadgets_count_ = 0;
     gadget_manager_->EnumerateGadgetInstances(
         NewSlot(this, &Impl::EnumerateGadgetInstancesCallback));
-  }
-
-  int GetGadgetsCount() {
-    return gadgets_count_;
   }
 
   void ShowAllMenuCallback(const char *) {
@@ -1080,9 +888,6 @@ class SimpleGtkHost::Impl {
   bool safe_to_exit_;
   int font_size_;
 
-  int gadgets_count_;
-  GtkWidget* control_;
-
   GadgetManagerInterface *gadget_manager_;
   Connection *on_new_gadget_instance_connection_;
   Connection *on_remove_gadget_instance_connection_;
@@ -1107,8 +912,6 @@ SimpleGtkHost::SimpleGtkHost(const char *options,
                    debug_console_config)) {
   impl_->SetupUI();
   impl_->LoadGadgets();
-  impl_->PostSetupUI(); //we let the logo appear later to ensure it
-                        //has the right _NET_WM_DESKTOP property
 }
 
 SimpleGtkHost::~SimpleGtkHost() {
@@ -1124,11 +927,6 @@ ViewHostInterface *SimpleGtkHost::NewViewHost(Gadget *gadget,
 Gadget *SimpleGtkHost::LoadGadget(const char *path, const char *options_name,
                                   int instance_id, bool show_debug_console) {
   return impl_->LoadGadget(path, options_name, instance_id, show_debug_console);
-}
-
-void SimpleGtkHost::AddGadgetMenuCallback()
-{
-  impl_->AddGadgetMenuCallback(NULL);
 }
 
 void SimpleGtkHost::RemoveGadget(Gadget *gadget, bool save_data) {

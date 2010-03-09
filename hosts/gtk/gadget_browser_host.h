@@ -22,10 +22,8 @@
 #include <ggadget/gtk/single_view_host.h>
 #include <ggadget/gtk/utilities.h>
 
-
 namespace hosts {
 namespace gtk {
-extern GtkWidget* g_get_last_hidden_ctrl_win();
 
 // A special Host for Gadget browser to show browser in a decorated window.
 class GadgetBrowserHost : public ggadget::HostInterface {
@@ -48,7 +46,6 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   virtual void RemoveGadget(Gadget *gadget, bool save_data) {
     GGL_UNUSED(save_data);
     ggadget::GetGadgetManager()->RemoveGadgetInstance(gadget->GetInstanceID());
-    g_timeout_add (100, (GSourceFunc)GadgetBrowserHost::cb_show_ctrl_win, NULL);
   }
   virtual bool LoadFont(const char *filename) {
     return owner_->LoadFont(filename);

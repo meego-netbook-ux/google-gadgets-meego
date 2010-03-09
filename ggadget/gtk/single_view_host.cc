@@ -181,9 +181,7 @@ class SingleViewHost::Impl {
 
     bool skip_wm = !(flags_ & WM_MANAGEABLE);
     gtk_window_set_skip_taskbar_hint(GTK_WINDOW(window_), skip_wm);
-    //comment out for moblin switcher to generate the thumbnail
-    //gtk_window_set_skip_pager_hint(GTK_WINDOW(window_), skip_wm);
-    gtk_window_set_type_hint (GTK_WINDOW(window_), GDK_WINDOW_TYPE_HINT_UTILITY);
+    gtk_window_set_skip_pager_hint(GTK_WINDOW(window_), skip_wm);
     gtk_window_set_decorated(GTK_WINDOW(window_), (flags_ & DECORATED));
     gtk_window_set_gravity(GTK_WINDOW(window_), GDK_GRAVITY_STATIC);
     SetResizable(view_->GetResizable());
@@ -410,10 +408,8 @@ class SingleViewHost::Impl {
     gdk_window_raise(window_->window);
 
     // gtk_window_stick() must be called everytime.
-
-    // commented out for moblin ux
-    //if (!(flags_ & WM_MANAGEABLE))
-    //  gtk_window_stick(GTK_WINDOW(window_));
+    if (!(flags_ & WM_MANAGEABLE))
+      gtk_window_stick(GTK_WINDOW(window_));
 
     // Load window states again to make sure it's still correct
     // after the window is shown.
@@ -715,14 +711,8 @@ class SingleViewHost::Impl {
         win_center_y < 0 || win_center_y >= screen_height) {
       DLOG("View is out of screen: sw: %d, sh: %d, x: %d, y: %d",
            screen_width, screen_height, win_center_x, win_center_y);
-      if (win_center_x < 0)
-        win_x_ = win_width_ / 2;
-      if (win_center_x >= screen_width)
-        win_x_ = screen_width - win_width_ / 2;
-      if (win_center_y < 0)
-        win_y_ = win_height_ / 2;
-      if (win_center_y >= screen_height)
-        win_y_ = screen_height - win_height_ / 2;
+      win_x_ = (screen_width - win_width_) / 2;
+      win_y_ = (screen_height - win_height_) / 2;
       gtk_window_move(GTK_WINDOW(window_), win_x_, win_y_);
     }
   }

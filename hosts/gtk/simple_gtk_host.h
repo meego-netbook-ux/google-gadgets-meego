@@ -42,7 +42,6 @@ class SimpleGtkHost : public GtkHostBase {
   virtual void RemoveGadget(Gadget *gadget, bool save_data);
   virtual void ShowGadgetDebugConsole(Gadget *gadget);
   virtual int GetDefaultFontSize();
-  void AddGadgetMenuCallback();
 
  public:
   virtual bool IsSafeToExit() const;
