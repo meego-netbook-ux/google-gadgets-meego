@@ -1,0 +1,403 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-06 10:55+0000\n"
+"PO-Revision-Date: 2010-03-09 22:11-0800\n"
+"Last-Translator: David Cicognani <davidx.cicognani@intel.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../po/resources_strings.c:25
+#: ../po/resources_strings.c:244
+msgid "Gadgets"
+msgstr "Gadgets"
+
+#: ../po/resources_strings.c:28
+#, c-format
+msgid "(API Version: %s)"
+msgstr "(Version API : %s)"
+
+#: ../po/resources_strings.c:31
+msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "Copyright © 2009 Google Inc. Tous droits réservés.&#10;Licencié sous la licence Apache, Version 2.0 :"
+
+#: ../po/resources_strings.c:34
+msgid "For more information please visit our project site:"
+msgstr "Pour plus d'informations veuillez consulter notre site de projet :"
+
+#: ../po/resources_strings.c:37
+msgid "%I:%M%P"
+msgstr "%H:%M"
+
+#: ../po/resources_strings.c:40
+msgid "%b %d"
+msgstr "%d %b"
+
+#: ../po/resources_strings.c:43
+#: ../po/resources_strings.c:46
+#, c-format
+msgid "%dd ago"
+msgstr "il y a %dd"
+
+#: ../po/resources_strings.c:49
+#, c-format
+msgid "%d day ago"
+msgstr "il y a %d jour"
+
+#: ../po/resources_strings.c:52
+#, c-format
+msgid "%d days ago"
+msgstr "il y a %d jours"
+
+#: ../po/resources_strings.c:55
+#: ../po/resources_strings.c:58
+#, c-format
+msgid "%dh ago"
+msgstr "il y a %dh"
+
+#: ../po/resources_strings.c:61
+#, c-format
+msgid "%d hr ago"
+msgstr "il y a %d heure"
+
+#: ../po/resources_strings.c:64
+#, c-format
+msgid "%d hrs ago"
+msgstr "il y a %d heures"
+
+#: ../po/resources_strings.c:67
+#: ../po/resources_strings.c:70
+#, c-format
+msgid "%dm ago"
+msgstr "il y a %dm"
+
+#: ../po/resources_strings.c:73
+#, c-format
+msgid "%d min ago"
+msgstr "il y a %d minute"
+
+#: ../po/resources_strings.c:76
+#, c-format
+msgid "%d mins ago"
+msgstr "il y a %d minutes"
+
+#: ../po/resources_strings.c:79
+msgid "Open"
+msgstr "Ouvrir"
+
+#: ../po/resources_strings.c:82
+#: ../po/resources_strings.c:100
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ../po/resources_strings.c:85
+msgid "Don't show me items like this"
+msgstr "Ne pas afficher de tels articles"
+
+#: ../po/resources_strings.c:88
+msgid "Previous"
+msgstr "Précédent"
+
+#: ../po/resources_strings.c:91
+msgid "Next"
+msgstr "Suivant"
+
+#: ../po/resources_strings.c:94
+msgid "Toggle Expanded View"
+msgstr "Basculer l'affichage agrandi"
+
+#: ../po/resources_strings.c:97
+#: ../po/resources_strings.c:106
+msgid "Menu"
+msgstr "Menu"
+
+#: ../po/resources_strings.c:103
+msgid "Add gadgets"
+msgstr "Ajouter des gadgets"
+
+#: ../po/resources_strings.c:109
+msgid "Minimize"
+msgstr "Réduire"
+
+#: ../po/resources_strings.c:112
+msgid "Program can't start because it failed to load the following module(s):"
+msgstr "Le programme ne peut démarrer car le(s) module(s) suivant(s) n'a(ont) pu être initialisé(s) :"
+
+#: ../po/resources_strings.c:115
+msgid "&About..."
+msgstr "À &propos..."
+
+#: ../po/resources_strings.c:118
+msgid "Add &Gadgets..."
+msgstr "Ajouter des &Gadgets..."
+
+#: ../po/resources_strings.c:121
+msgid "Always on &Top"
+msgstr "&Toujours au premier plan"
+
+#: ../po/resources_strings.c:124
+msgid "Auto &Fit"
+msgstr "A&juster automatiquement"
+
+#: ../po/resources_strings.c:127
+msgid "A&uto Hide"
+msgstr "Masquer a&utomatiquement"
+
+#: ../po/resources_strings.c:130
+msgid "&Collapse"
+msgstr "&Réduire"
+
+#: ../po/resources_strings.c:133
+msgid "&Dock to Sidebar"
+msgstr "An&crer sur la barre latérale"
+
+#: ../po/resources_strings.c:136
+msgid "Doc&k Sidebar"
+msgstr "A&ncrer la barre latérale"
+
+#: ../po/resources_strings.c:139
+msgid "E&xit"
+msgstr "&Quitter"
+
+#: ../po/resources_strings.c:142
+msgid "Ex&pand"
+msgstr "Agrand&ir"
+
+#: ../po/resources_strings.c:145
+msgid "&Font Size"
+msgstr "Tai&lle de la police"
+
+#: ../po/resources_strings.c:148
+msgid "&Default"
+msgstr "&Défaut"
+
+#: ../po/resources_strings.c:151
+msgid "&Larger"
+msgstr "Plus gr&and"
+
+#: ../po/resources_strings.c:154
+msgid "&Smaller"
+msgstr "Plus p&etit"
+
+#: ../po/resources_strings.c:157
+msgid "Hide A&ll"
+msgstr "Masquer &tout"
+
+#: ../po/resources_strings.c:160
+msgid "&Left"
+msgstr "&Gauche"
+
+#: ../po/resources_strings.c:163
+msgid "&Options..."
+msgstr "&Options..."
+
+#: ../po/resources_strings.c:166
+msgid "R&emove"
+msgstr "&Supprimer"
+
+#: ../po/resources_strings.c:169
+msgid "&Right"
+msgstr "&Droite"
+
+#: ../po/resources_strings.c:172
+msgid "Show A&ll"
+msgstr "Afficher &tout"
+
+#: ../po/resources_strings.c:175
+msgid "&Undock from Sidebar"
+msgstr "Détac&her de la barre latérale"
+
+#: ../po/resources_strings.c:178
+msgid "&Zoom"
+msgstr "&Zoomer"
+
+#: ../po/resources_strings.c:181
+msgid "100%"
+msgstr "100 %"
+
+#: ../po/resources_strings.c:184
+msgid "125%"
+msgstr "125 %"
+
+#: ../po/resources_strings.c:187
+msgid "150%"
+msgstr "150 %"
+
+#: ../po/resources_strings.c:190
+msgid "175%"
+msgstr "175 %"
+
+#: ../po/resources_strings.c:193
+msgid "200%"
+msgstr "200 %"
+
+#: ../po/resources_strings.c:196
+msgid "50%"
+msgstr "50 %"
+
+#: ../po/resources_strings.c:199
+msgid "75%"
+msgstr "75 %"
+
+#: ../po/resources_strings.c:202
+msgid "Change &Hotkey..."
+msgstr "Modifier le &raccourci clavier..."
+
+#: ../po/resources_strings.c:205
+msgid "De&bug Console"
+msgstr "Console de déb&ogage"
+
+#: ../po/resources_strings.c:208
+msgid "&Sidebar"
+msgstr "&Barre latérale"
+
+#: ../po/resources_strings.c:211
+msgid "Feedback..."
+msgstr "Retour d'information..."
+
+#: ../po/resources_strings.c:214
+msgid "Third Party Gadget Installation"
+msgstr "Installation de Gadget tiers"
+
+#: ../po/resources_strings.c:217
+msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
+msgstr "Google n'a testé ni verfié les fonctions ou la sécurité de ce Gadget tiers. Veuillez confirmer l'installation :"
+
+#: ../po/resources_strings.c:220
+msgid "Description: "
+msgstr "Description : "
+
+#: ../po/resources_strings.c:223
+msgid "Required permissions: "
+msgstr "Permissions requises :"
+
+#: ../po/resources_strings.c:226
+#, c-format
+msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
+msgstr "Un script (%s:%d) sur ce gadget est peut être occupé ou bien ne répond plus. Souhaitez-vous l'arrêter ?"
+
+#: ../po/resources_strings.c:229
+msgid "Change Hotkey"
+msgstr "Modifier le raccourci clavier"
+
+#: ../po/resources_strings.c:232
+msgid "Click to input the new hotkey:"
+msgstr "Cliquez pour saisir le nouveau raccourci clavier :"
+
+#: ../po/resources_strings.c:235
+msgid "Press new hotkey"
+msgstr "Appuyez le nouveau raccourci clavier"
+
+#: ../po/resources_strings.c:238
+#: ../po/resources_strings.c:250
+msgid "Clear"
+msgstr "Effacer"
+
+#: ../po/resources_strings.c:241
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: ../po/resources_strings.c:247
+#, c-format
+msgid "Gadgets, press %s to show or hide gadgets."
+msgstr "Gadgets, appuyez %s pour afficher ou masquer les gadgets. "
+
+#: ../po/resources_strings.c:253
+msgid "Trace"
+msgstr "Tracer"
+
+#: ../po/resources_strings.c:256
+msgid "Info"
+msgstr "Informations"
+
+#: ../po/resources_strings.c:259
+msgid "Warning"
+msgstr "Avertissement"
+
+#: ../po/resources_strings.c:262
+msgid "Error"
+msgstr "Erreur"
+
+#: ../po/resources_strings.c:265
+msgid "Lock scroll"
+msgstr "Arrêt défil."
+
+#: ../po/resources_strings.c:268
+msgid "Gadgets (GTK)"
+msgstr "Gadgets (GTK)"
+
+#: ../po/resources_strings.c:271
+msgid "Gadgets (Qt)"
+msgstr "Gadgets (Qt)"
+
+#: ../po/resources_strings.c:274
+#: ../po/resources_strings.c:283
+msgid "Gadget Designer"
+msgstr "Gadget Designer"
+
+#: ../po/resources_strings.c:277
+msgid "Run Gadgets in GNOME/GTK environment"
+msgstr "Exécuter les Gadgets en environnement GNOME/GTK"
+
+#: ../po/resources_strings.c:280
+msgid "Run Gadgets in KDE/Qt environment"
+msgstr "Exécuter les Gadgets en environnement KDE/Qt"
+
+#: ../po/resources_strings.c:286
+msgid "Reads content of local files and directories"
+msgstr "Lit le contenu des fichiers locaux et des répertoires"
+
+#: ../po/resources_strings.c:289
+msgid "Creates or modifies local files and directories"
+msgstr "Crée ou modifie les fichiers locaux et les répertoires"
+
+#: ../po/resources_strings.c:292
+msgid "Queries or modifies the status of hardware devices"
+msgstr "Recherche ou modifie le statut des périphériques matériel"
+
+#: ../po/resources_strings.c:295
+msgid "Accesses network"
+msgstr "Accède au réseau"
+
+#: ../po/resources_strings.c:298
+msgid "Accesses personalization data"
+msgstr "Accède aux données de personnalisation"
+
+#: ../po/resources_strings.c:301
+msgid "Executes native code and local applications"
+msgstr "Exécute le code natif et les applications locales"
+
+#: ../po/resources_strings.c:304
+#, c-format
+msgid "The gadget could not be loaded:&#10;&#10;%s"
+msgstr "Le gadget n'a pu être chargé : &#10;&#10;%s"
+
+#: ../po/resources_strings.c:307
+#, c-format
+msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr "Le gadget nécessite au moins la version Gadgets supporting API %s : &#10;&#10;%s"
+
+#: ../po/resources_strings.c:310
+#, c-format
+msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
+msgstr "Le gadget nécessite au moins la version Gadgets for Linux %s : &#10;&#10;%s"
+
+#: ../po/resources_strings.c:313
+msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
+msgstr "Le gadget ne fonctionne pas sur la plate-forme Linux : %&#10;&#10;%s"
+
+#: ../po/resources_strings.c:316
+msgid "http://www.google.com"
+msgstr "http://www.google.com"
+
