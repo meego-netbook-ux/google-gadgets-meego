@@ -31,7 +31,7 @@
 
   <div name="bg_middle_left" background="images/bg_middle_left.png"
     y="82" width="6" height="383"/>
-  <div name="bg_middle_middle" background="#333333"
+  <div name="bg_middle_middle" background="#ffffff"
     x="6" y="82" width="714" height="383"/>
   <div name="bg_middle_right" background="images/bg_middle_right.png"
     pinX="100%" x="100%" y="82" width="6" height="383"/>
@@ -79,16 +79,16 @@
              visible="false" src="images/category_hover.png" stretchMiddle="true"/>
 	<img name="category_active_img" height="23" width="200" visible="false"
              src="images/category_active.png" stretchMiddle="true"/>
-	<label name="welcome_label" width="100%" wordWrap="true" color="white" size="16">
+	<label name="welcome_label" width="100%" wordWrap="true" color="#292929" size="16">
 	  &WELCOME_TO_GADGETS;
 	</label>
-	<label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60"
+	<label name="welcome_add_gg" width="180" color="#292929" size="14" x="10" y="60"
 	       enabled='true' onclick='welcome_add_gadget(false)'
 	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
 	       >
 	  &WELCOME_ADD_GADGET;
 	</label>
-	<label name="welcome_check_upd" width="180" color="white" size="14" x="10" y="90" 
+	<label name="welcome_check_upd" width="180" color="#292929" size="14" x="10" y="90" 
 	       enabled='true' onclick='welcome_add_gadget(true)'
 	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'>
 	  &WELCOME_CHECK_UPDATES;
@@ -99,16 +99,11 @@
   <label color="#ffffff" size="14" wordWrap="false" hAlign="left" vAlign="middle" bold="true"
     pinX="0%" x="10" height="40">&GADGET_NAME;</label>
   <div height="80" width="100%" hitTest="htcaption"/>
-  <button name="minimize_button" pinX="88" pinY="0" x="100%" y="3" height="30"
+  <button name="minimize_button" pinX="32" pinY="0" x="100%" y="7" height="22"
     image="images/hide_button.png"
-    overImage="images/hide_button.png"
-    downImage="images/hide_button.png"
+    overImage="images/hide_button_hover.png"
+    downImage="images/hide_button_hover.png"
     onclick="plugin.RemoveMe(true)" enabled="true"/>
-  <button name="close_button" pinX="48" pinY="0" x="100%" y="-2"
-    image="images/close_button_up.png"
-    overImage="images/close_button_over.png"
-    downImage="images/close_button_down.png"
-    onclick="ui_exit()" enabled="true"/>
 <!--
   <img name="resize_corner" src="images/resize_corner.png"
     hitTest="htbottomright" opacity="160"
