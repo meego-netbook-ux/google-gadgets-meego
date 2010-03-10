@@ -2,19 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-08 10:36+0000\n"
+"POT-Creation-Date: 2010-03-10 10:35+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: GLSPTB_Gabor <gaborx.k.becht@intel.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:244
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:244
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
 msgstr "Gadgets"
 
@@ -24,8 +24,12 @@ msgid "(API Version: %s)"
 msgstr "(Versão API: %s)"
 
 #: ../po/resources_strings.c:31
-msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr "Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a licença Apache, Versão 2.0:"
+msgid ""
+"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
+"Apache License, Version 2.0:"
+msgstr ""
+"Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a "
+"licença Apache, Versão 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
@@ -39,8 +43,7 @@ msgstr "%I:%M%P"
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43
-#: ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
 msgstr "%dd atrás"
@@ -55,8 +58,7 @@ msgstr "%d dias atrás"
 msgid "%d days ago"
 msgstr "%d dias atrás"
 
-#: ../po/resources_strings.c:55
-#: ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
 msgstr "%dh atrás"
@@ -71,8 +73,7 @@ msgstr "%d hr atrás"
 msgid "%d hrs ago"
 msgstr "%d hrs atrás"
 
-#: ../po/resources_strings.c:67
-#: ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
 msgstr "%dm atrás"
@@ -91,8 +92,7 @@ msgstr "%d mins atrás"
 msgid "Open"
 msgstr "Abrir"
 
-#: ../po/resources_strings.c:82
-#: ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
 msgid "Remove"
 msgstr "Remover"
 
@@ -112,8 +112,7 @@ msgstr "Próximo"
 msgid "Toggle Expanded View"
 msgstr "Alternar visão expandida"
 
-#: ../po/resources_strings.c:97
-#: ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
 msgstr "Menu"
 
@@ -127,7 +126,9 @@ msgstr "Minimizar"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr "Program não pode iniciar porque houve falha no carregamento do(s) seguinte(s) módulo(s):"
+msgstr ""
+"Program não pode iniciar porque houve falha no carregamento do(s) seguinte"
+"(s) módulo(s):"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
@@ -266,8 +267,12 @@ msgid "Third Party Gadget Installation"
 msgstr "Instalação de gadgets de terceiros"
 
 #: ../po/resources_strings.c:217
-msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr "Google ainda não testou ou verificou os recursos ou segurança deste gadget de terceiros.  Favor confirmar que quer instalar:"
+msgid ""
+"Google has not tested or verified the features or security of this third "
+"party Gadget. Please confirm that you want to install:"
+msgstr ""
+"Google ainda não testou ou verificou os recursos ou segurança deste gadget "
+"de terceiros.  Favor confirmar que quer instalar:"
 
 #: ../po/resources_strings.c:220
 msgid "Description: "
@@ -279,8 +284,12 @@ msgstr "Permissões requeridas: "
 
 #: ../po/resources_strings.c:226
 #, c-format
-msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. você quer pará-lo?"
+msgid ""
+"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
+"you want to stop it?"
+msgstr ""
+"Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. "
+"você quer pará-lo?"
 
 #: ../po/resources_strings.c:229
 msgid "Change Hotkey"
@@ -294,8 +303,7 @@ msgstr "Clique para introduzir a nova tecla de acesso:"
 msgid "Press new hotkey"
 msgstr "Pressione nova tecla de acesso"
 
-#: ../po/resources_strings.c:238
-#: ../po/resources_strings.c:250
+#: ../po/resources_strings.c:238 ../po/resources_strings.c:250
 msgid "Clear"
 msgstr "Limpar"
 
@@ -336,8 +344,7 @@ msgstr "Gadgets (GTK)"
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:274
-#: ../po/resources_strings.c:283
+#: ../po/resources_strings.c:274 ../po/resources_strings.c:283
 msgid "Gadget Designer"
 msgstr "Designer de gadgets"
 
@@ -380,13 +387,16 @@ msgstr "O gadget não pôde ser carregado:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:307
 #, c-format
-msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr "O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
+msgid ""
+"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr ""
+"O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr "O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
+msgstr ""
+"O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
@@ -395,4 +405,3 @@ msgstr "O gadget não funciona na plataforma Linux:%&#10;&#10;%s"
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
-
