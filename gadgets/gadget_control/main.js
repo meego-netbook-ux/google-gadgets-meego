@@ -23,22 +23,22 @@ var kPluginBoxHeight = 100;
 var kDefaultPluginRows = 2;
 var kDefaultPluginColumns = 2;
 var kCategoryGap = 15;
-var kFixedExtraWidth = 142;
-var kFixedExtraHeight = 183;
+var kFixedExtraWidth = 62;
+var kFixedExtraHeight = 153;
 var kBorderMarginH = 12;
 var kBorderMarginV = 30;
 var kWindowMarginH = 12;
 var kCategoryItemWidth = 140;
 
 var kMinWidth = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
-var kMinHeight = kFixedExtraHeight + kPluginBoxHeight + kBorderMarginV;
+var kMinHeight = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
 
 // Default layout: 714x555.
 var gPluginRows = kDefaultPluginRows;
 var gPluginColumns = kDefaultPluginColumns;
 var gPluginsPerPage = gPluginRows * gPluginColumns;
 var gPluginBoxGapX = 0;
-var gPluginBoxGapY = 0;
+var gPluginBoxGapY = 8;
 
 var gCurrentCategory = "";
 var gCurrentLanguage = "";
@@ -139,8 +139,8 @@ function view_onsize() {
 }
 
 function window_onsize() {
-  var plugins_width = window_body.width - kFixedExtraWidth;
-  var plugins_height = window_body.height - kFixedExtraHeight;
+  var plugins_width = window_body.width - kBorderMarginH;
+  var plugins_height = window_body.height - kFixedExtraHeight + 20;
   var columns = Math.floor(plugins_width / kPluginBoxWidth);
   var rows = Math.floor(plugins_height / kPluginBoxHeight);
   language_box.height = Math.min(440, window_body.height - 30);
