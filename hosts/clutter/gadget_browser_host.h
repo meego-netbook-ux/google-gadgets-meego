@@ -59,6 +59,9 @@ class GadgetBrowserHost : public ggadget::HostInterface {
   }
   virtual void RemoveGadget(Gadget *gadget, bool save_data) {
     ggadget::GetGadgetManager()->RemoveGadgetInstance(gadget->GetInstanceID());
+    g_signal_handler_disconnect (clutter_stage_get_default(),
+                                 stage_event_handler_id_);
+    stage_event_handler_id_ = 0;
   }
   virtual bool LoadFont(const char *filename) {
     return owner_->LoadFont(filename);
