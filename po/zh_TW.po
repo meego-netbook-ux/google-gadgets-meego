@@ -4,219 +4,219 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-10 10:35+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: GLSPTB_Gabor <gaborx.k.becht@intel.com>\n"
+"Last-Translator: Glscht_Wen <wen.hsinx.moh@intel.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Language: Chinese\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../po/resources_strings.c:25 ../po/resources_strings.c:244
+#: ../po/resources_strings.c:25
+#: ../po/resources_strings.c:244
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
-msgstr "Gadgets"
+msgstr "小工具"
 
 #: ../po/resources_strings.c:28
 #, c-format
 msgid "(API Version: %s)"
-msgstr "(Versão API: %s)"
+msgstr "(API 版本：%s)"
 
 #: ../po/resources_strings.c:31
-msgid ""
-"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
-"Apache License, Version 2.0:"
-msgstr ""
-"Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a "
-"licença Apache, Versão 2.0:"
+msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "著作權 © 2009 Google Inc。版權所有。由 Apache 獲得授權使用，版本 2.0："
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
-msgstr "Para mais informações favor visite nosso site do projeto:"
+msgstr "如需更多資訊，請洽詢我們的計畫網站："
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
-msgstr "%I:%M%P"
+msgstr "%I:%M %P"
 
 #: ../po/resources_strings.c:40
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43
+#: ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
-msgstr "%dd atrás"
+msgstr "%dd 之前"
 
 #: ../po/resources_strings.c:49
 #, c-format
 msgid "%d day ago"
-msgstr "%d dias atrás"
+msgstr "%d 天之前"
 
 #: ../po/resources_strings.c:52
 #, c-format
 msgid "%d days ago"
-msgstr "%d dias atrás"
+msgstr "%d 天之前"
 
-#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55
+#: ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
-msgstr "%dh atrás"
+msgstr "%dh 之前"
 
 #: ../po/resources_strings.c:61
 #, c-format
 msgid "%d hr ago"
-msgstr "%d hr atrás"
+msgstr "%d 小時之前"
 
 #: ../po/resources_strings.c:64
 #, c-format
 msgid "%d hrs ago"
-msgstr "%d hrs atrás"
+msgstr "%d 小時之前"
 
-#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67
+#: ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
-msgstr "%dm atrás"
+msgstr "%dm 之前"
 
 #: ../po/resources_strings.c:73
 #, c-format
 msgid "%d min ago"
-msgstr "%d min atrás"
+msgstr "%d 分鐘之前"
 
 #: ../po/resources_strings.c:76
 #, c-format
 msgid "%d mins ago"
-msgstr "%d mins atrás"
+msgstr "%d 分鐘之前"
 
 #: ../po/resources_strings.c:79
 msgid "Open"
-msgstr "Abrir"
+msgstr "開啟"
 
-#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82
+#: ../po/resources_strings.c:100
 msgid "Remove"
-msgstr "Remover"
+msgstr "刪除"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr "Não me mostre itens assim"
+msgstr "不要顯示這樣的項目"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
-msgstr "Anterior"
+msgstr "上一個"
 
 #: ../po/resources_strings.c:91
 msgid "Next"
-msgstr "Próximo"
+msgstr "下一個"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "Alternar visão expandida"
+msgstr "切換擴大視窗"
 
-#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97
+#: ../po/resources_strings.c:106
 msgid "Menu"
-msgstr "Menu"
+msgstr "目錄"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr "Adicionar gadgets"
+msgstr "新增小工具"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
-msgstr "Minimizar"
+msgstr "最小化"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr ""
-"Program não pode iniciar porque houve falha no carregamento do(s) seguinte"
-"(s) módulo(s):"
+msgstr "程式無法啟動，因為它無法載入以下模組："
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr "&Sobre..."
+msgstr "關於(&A)..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr "Adicionar &Gadgets..."
+msgstr "新增小工具(&G)..."
 
 #: ../po/resources_strings.c:121
 msgid "Always on &Top"
-msgstr "Sempre em &cima"
+msgstr "永遠顯示在上方(&T)"
 
 #: ../po/resources_strings.c:124
 msgid "Auto &Fit"
-msgstr "Auto &encaixar"
+msgstr "自動調整(&F)"
 
 #: ../po/resources_strings.c:127
 msgid "A&uto Hide"
-msgstr "A&uto Ocultar"
+msgstr "自動隱藏(&u)"
 
 #: ../po/resources_strings.c:130
 msgid "&Collapse"
-msgstr "&Encolher"
+msgstr "疊堆(&C)"
 
 #: ../po/resources_strings.c:133
 msgid "&Dock to Sidebar"
-msgstr "&Encostar à barra lateral"
+msgstr "固定到側邊攔(&D)"
 
 #: ../po/resources_strings.c:136
 msgid "Doc&k Sidebar"
-msgstr "Enc&ostar barra lateral"
+msgstr "固定到側邊攔(&k)"
 
 #: ../po/resources_strings.c:139
 msgid "E&xit"
-msgstr "S&air"
+msgstr "退出(&x)"
 
 #: ../po/resources_strings.c:142
 msgid "Ex&pand"
-msgstr "Ex&pandir"
+msgstr "展開(&p)"
 
 #: ../po/resources_strings.c:145
 msgid "&Font Size"
-msgstr "Tamanho &Font "
+msgstr "字體大小(&F)"
 
 #: ../po/resources_strings.c:148
 msgid "&Default"
-msgstr "&Padrão"
+msgstr "預設(&D)"
 
 #: ../po/resources_strings.c:151
 msgid "&Larger"
-msgstr "&Maior"
+msgstr "較大(&S)"
 
 #: ../po/resources_strings.c:154
 msgid "&Smaller"
-msgstr "&Menor"
+msgstr "較小(&S)"
 
 #: ../po/resources_strings.c:157
 msgid "Hide A&ll"
-msgstr "Ocultar T&udo"
+msgstr "隱藏全部(&l)"
 
 #: ../po/resources_strings.c:160
 msgid "&Left"
-msgstr "&Esquerda"
+msgstr "左邊(&L)"
 
 #: ../po/resources_strings.c:163
 msgid "&Options..."
-msgstr "&Opções..."
+msgstr "選項(&O)"
 
 #: ../po/resources_strings.c:166
 msgid "R&emove"
-msgstr "R&emover"
+msgstr "移除(&e)"
 
 #: ../po/resources_strings.c:169
 msgid "&Right"
-msgstr "&Direita"
+msgstr "右邊(&R)"
 
 #: ../po/resources_strings.c:172
 msgid "Show A&ll"
-msgstr "Mostrar T&udo"
+msgstr "顯示全部(&l)"
 
 #: ../po/resources_strings.c:175
 msgid "&Undock from Sidebar"
-msgstr "&Afastar da barra lateral"
+msgstr "從側邊攔拔除(&U)"
 
 #: ../po/resources_strings.c:178
 msgid "&Zoom"
-msgstr "&Zoom"
+msgstr "放大(&Z)"
 
 #: ../po/resources_strings.c:181
 msgid "100%"
@@ -248,160 +248,152 @@ msgstr "75%"
 
 #: ../po/resources_strings.c:202
 msgid "Change &Hotkey..."
-msgstr "Modificar &Tecla de acesso..."
+msgstr "更改快速鍵(&H)..."
 
 #: ../po/resources_strings.c:205
 msgid "De&bug Console"
-msgstr "De&purar console"
+msgstr "偵錯主控台(&b)"
 
 #: ../po/resources_strings.c:208
 msgid "&Sidebar"
-msgstr "&Barra lateral"
+msgstr "側邊攔(&s)"
 
 #: ../po/resources_strings.c:211
 msgid "Feedback..."
-msgstr "Feedback..."
+msgstr "回應..."
 
 #: ../po/resources_strings.c:214
 msgid "Third Party Gadget Installation"
-msgstr "Instalação de gadgets de terceiros"
+msgstr "第三方小工具安裝"
 
 #: ../po/resources_strings.c:217
-msgid ""
-"Google has not tested or verified the features or security of this third "
-"party Gadget. Please confirm that you want to install:"
-msgstr ""
-"Google ainda não testou ou verificou os recursos ou segurança deste gadget "
-"de terceiros.  Favor confirmar que quer instalar:"
+msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
+msgstr "這個第三方的小工具，Google 還沒有測試或驗證其功能或安全性。請確認您要安裝："
 
 #: ../po/resources_strings.c:220
 msgid "Description: "
-msgstr "Descrição: "
+msgstr "描述："
 
 #: ../po/resources_strings.c:223
 msgid "Required permissions: "
-msgstr "Permissões requeridas: "
+msgstr "所需的權限："
 
 #: ../po/resources_strings.c:226
 #, c-format
-msgid ""
-"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
-"you want to stop it?"
-msgstr ""
-"Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. "
-"você quer pará-lo?"
+msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
+msgstr "這個小工具的程序檔 (%s：%d) 也許處於忙碌中，或已經停止回應。您要停止這個程序檔嗎？"
 
 #: ../po/resources_strings.c:229
 msgid "Change Hotkey"
-msgstr "Modificar tecla de acesso"
+msgstr "更改快速鍵"
 
 #: ../po/resources_strings.c:232
 msgid "Click to input the new hotkey:"
-msgstr "Clique para introduzir a nova tecla de acesso:"
+msgstr "按一下之輸入新的快速鍵："
 
 #: ../po/resources_strings.c:235
 msgid "Press new hotkey"
-msgstr "Pressione nova tecla de acesso"
+msgstr "按一下新的快速鍵"
 
-#: ../po/resources_strings.c:238 ../po/resources_strings.c:250
+#: ../po/resources_strings.c:238
+#: ../po/resources_strings.c:250
 msgid "Clear"
-msgstr "Limpar"
+msgstr "清除"
 
 #: ../po/resources_strings.c:241
 msgid "Disabled"
-msgstr "Desabilitado"
+msgstr "已停用"
 
 #: ../po/resources_strings.c:247
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr "Gadgets , pressione %s para mostrar ou ocultar gadgets."
+msgstr "小工具，按一下 %s 以顯示或隱藏小工具。"
 
 #: ../po/resources_strings.c:253
 msgid "Trace"
-msgstr "Rastrear"
+msgstr "追蹤"
 
 #: ../po/resources_strings.c:256
 msgid "Info"
-msgstr "Info"
+msgstr "資訊"
 
 #: ../po/resources_strings.c:259
 msgid "Warning"
-msgstr "Alerta"
+msgstr "警告"
 
 #: ../po/resources_strings.c:262
 msgid "Error"
-msgstr "Erro"
+msgstr "錯誤"
 
 #: ../po/resources_strings.c:265
 msgid "Lock scroll"
-msgstr "Bloquear rolagem"
+msgstr "捲動鎖"
 
 #: ../po/resources_strings.c:268
 msgid "Gadgets (GTK)"
-msgstr "Gadgets (GTK)"
+msgstr "小工具 (GTK)"
 
 #: ../po/resources_strings.c:271
 msgid "Gadgets (Qt)"
-msgstr "Gadgets (Qt)"
+msgstr "小工具 (Qt)"
 
-#: ../po/resources_strings.c:274 ../po/resources_strings.c:283
+#: ../po/resources_strings.c:274
+#: ../po/resources_strings.c:283
 msgid "Gadget Designer"
-msgstr "Designer de gadgets"
+msgstr "小工具設計師"
 
 #: ../po/resources_strings.c:277
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr "Executar Gadgets no ambiente GNOME/GTK"
+msgstr "在 GNOME/GTK 環境裡執行小工具"
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr "Executar Gadgets no ambiente KDE/Qt"
+msgstr "在 KDE/Qt 環境裡執行小工具"
 
 #: ../po/resources_strings.c:286
 msgid "Reads content of local files and directories"
-msgstr "Lê conteúdo dos arquivos e diretórios locais"
+msgstr "讀取本地檔案和目錄的內容"
 
 #: ../po/resources_strings.c:289
 msgid "Creates or modifies local files and directories"
-msgstr "Cria ou modifica arquivos e diretórios locais"
+msgstr "建立或修改本地檔案和目錄"
 
 #: ../po/resources_strings.c:292
 msgid "Queries or modifies the status of hardware devices"
-msgstr "Questiona ou modifica o status de gadgets de hardware"
+msgstr "查詢或修改硬體裝置的狀態"
 
 #: ../po/resources_strings.c:295
 msgid "Accesses network"
-msgstr "Acessa a rede"
+msgstr "存取網路"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses personalization data"
-msgstr "Acessa dados de personalização"
+msgstr "存取個人數據"
 
 #: ../po/resources_strings.c:301
 msgid "Executes native code and local applications"
-msgstr "Executa código nativo e aplicativos locais"
+msgstr "執行本地代碼和本地應用程式"
 
 #: ../po/resources_strings.c:304
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr "O gadget não pôde ser carregado:&#10;&#10;%s"
+msgstr "這個小工具無法載入：&#10;&#10;%s"
 
 #: ../po/resources_strings.c:307
 #, c-format
-msgid ""
-"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr ""
-"O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
+msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr "這個小工具需要支援 API 的最新版本小工具 %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr ""
-"O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
+msgstr "這個小工具需要適用於 Linux 的最新版本小工具 %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr "O gadget não funciona na plataforma Linux:%&#10;&#10;%s"
+msgstr "這個小工具無法在 Linux 平台執行：%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
+

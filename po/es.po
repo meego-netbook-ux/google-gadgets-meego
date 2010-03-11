@@ -1,39 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 10:35+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator: GLSPTB_Gabor <gaborx.k.becht@intel.com>\n"
+"POT-Creation-Date: 2010-03-08 10:36+0000\n"
+"PO-Revision-Date: 2010-03-09 14:47-0800\n"
+"Last-Translator: Gonzalo <gonzalo.velasquez@ptiglobal.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Language: Spanish\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../po/resources_strings.c:25 ../po/resources_strings.c:244
-#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
+#: ../po/resources_strings.c:25
+#: ../po/resources_strings.c:244
 msgid "Gadgets"
 msgstr "Gadgets"
 
 #: ../po/resources_strings.c:28
 #, c-format
 msgid "(API Version: %s)"
-msgstr "(Versão API: %s)"
+msgstr "(Versión API: %s)"
 
 #: ../po/resources_strings.c:31
-msgid ""
-"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
-"Apache License, Version 2.0:"
-msgstr ""
-"Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a "
-"licença Apache, Versão 2.0:"
+msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "Copyright © 2009 Google Inc. Todos los derechos reservados.&#10;Autorizado bajo la licencia Apache, versión 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
-msgstr "Para mais informações favor visite nosso site do projeto:"
+msgstr "Para más información por favor visita nuestro sitio del proyecto:"
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
@@ -43,7 +44,8 @@ msgstr "%I:%M%P"
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43
+#: ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
 msgstr "%dd atrás"
@@ -51,14 +53,15 @@ msgstr "%dd atrás"
 #: ../po/resources_strings.c:49
 #, c-format
 msgid "%d day ago"
-msgstr "%d dias atrás"
+msgstr "%d día atrás"
 
 #: ../po/resources_strings.c:52
 #, c-format
 msgid "%d days ago"
 msgstr "%d dias atrás"
 
-#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55
+#: ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
 msgstr "%dh atrás"
@@ -66,14 +69,15 @@ msgstr "%dh atrás"
 #: ../po/resources_strings.c:61
 #, c-format
 msgid "%d hr ago"
-msgstr "%d hr atrás"
+msgstr "%d hora atrás"
 
 #: ../po/resources_strings.c:64
 #, c-format
 msgid "%d hrs ago"
-msgstr "%d hrs atrás"
+msgstr "%d horas atrás"
 
-#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67
+#: ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
 msgstr "%dm atrás"
@@ -81,24 +85,25 @@ msgstr "%dm atrás"
 #: ../po/resources_strings.c:73
 #, c-format
 msgid "%d min ago"
-msgstr "%d min atrás"
+msgstr "%d minuto atrás"
 
 #: ../po/resources_strings.c:76
 #, c-format
 msgid "%d mins ago"
-msgstr "%d mins atrás"
+msgstr "%d minutos atrás"
 
 #: ../po/resources_strings.c:79
 msgid "Open"
 msgstr "Abrir"
 
-#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82
+#: ../po/resources_strings.c:100
 msgid "Remove"
-msgstr "Remover"
+msgstr "Eliminar"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr "Não me mostre itens assim"
+msgstr "No me muestres items como este"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
@@ -106,19 +111,20 @@ msgstr "Anterior"
 
 #: ../po/resources_strings.c:91
 msgid "Next"
-msgstr "Próximo"
+msgstr "Siguiente"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "Alternar visão expandida"
+msgstr "Cambiar vista expandida"
 
-#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97
+#: ../po/resources_strings.c:106
 msgid "Menu"
-msgstr "Menu"
+msgstr "Menú"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr "Adicionar gadgets"
+msgstr "Añadir gadgets"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
@@ -126,97 +132,95 @@ msgstr "Minimizar"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr ""
-"Program não pode iniciar porque houve falha no carregamento do(s) seguinte"
-"(s) módulo(s):"
+msgstr "El programa no puede comenzar porque no pudo cargar el(los) siguiente(s) módulo(s):"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr "&Sobre..."
+msgstr "&Acerca de..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr "Adicionar &Gadgets..."
+msgstr "Añadir &Gadgets..."
 
 #: ../po/resources_strings.c:121
 msgid "Always on &Top"
-msgstr "Sempre em &cima"
+msgstr "Siempre encima"
 
 #: ../po/resources_strings.c:124
 msgid "Auto &Fit"
-msgstr "Auto &encaixar"
+msgstr "Autoajustar"
 
 #: ../po/resources_strings.c:127
 msgid "A&uto Hide"
-msgstr "A&uto Ocultar"
+msgstr "Auto ocultar"
 
 #: ../po/resources_strings.c:130
 msgid "&Collapse"
-msgstr "&Encolher"
+msgstr "Colapsar"
 
 #: ../po/resources_strings.c:133
 msgid "&Dock to Sidebar"
-msgstr "&Encostar à barra lateral"
+msgstr "Unir a la barra lateral"
 
 #: ../po/resources_strings.c:136
 msgid "Doc&k Sidebar"
-msgstr "Enc&ostar barra lateral"
+msgstr "Unir barra lateral"
 
 #: ../po/resources_strings.c:139
 msgid "E&xit"
-msgstr "S&air"
+msgstr "Salir"
 
 #: ../po/resources_strings.c:142
 msgid "Ex&pand"
-msgstr "Ex&pandir"
+msgstr "Expandir"
 
 #: ../po/resources_strings.c:145
 msgid "&Font Size"
-msgstr "Tamanho &Font "
+msgstr "Tamaño de fuente"
 
 #: ../po/resources_strings.c:148
 msgid "&Default"
-msgstr "&Padrão"
+msgstr "Predeterminado"
 
 #: ../po/resources_strings.c:151
 msgid "&Larger"
-msgstr "&Maior"
+msgstr "Más grande"
 
 #: ../po/resources_strings.c:154
 msgid "&Smaller"
-msgstr "&Menor"
+msgstr "Más pequeño"
 
 #: ../po/resources_strings.c:157
 msgid "Hide A&ll"
-msgstr "Ocultar T&udo"
+msgstr "Ocultar todo"
 
 #: ../po/resources_strings.c:160
 msgid "&Left"
-msgstr "&Esquerda"
+msgstr "Izquierda"
 
 #: ../po/resources_strings.c:163
 msgid "&Options..."
-msgstr "&Opções..."
+msgstr "Opciones..."
 
 #: ../po/resources_strings.c:166
 msgid "R&emove"
-msgstr "R&emover"
+msgstr "Eliminar"
 
 #: ../po/resources_strings.c:169
 msgid "&Right"
-msgstr "&Direita"
+msgstr "Derecha"
 
 #: ../po/resources_strings.c:172
 msgid "Show A&ll"
-msgstr "Mostrar T&udo"
+msgstr "Mostrar todo"
 
 #: ../po/resources_strings.c:175
 msgid "&Undock from Sidebar"
-msgstr "&Afastar da barra lateral"
+msgstr "Despegar de la barra lateral"
 
 #: ../po/resources_strings.c:178
 msgid "&Zoom"
-msgstr "&Zoom"
+msgstr "Acercar"
 
 #: ../po/resources_strings.c:181
 msgid "100%"
@@ -248,77 +252,70 @@ msgstr "75%"
 
 #: ../po/resources_strings.c:202
 msgid "Change &Hotkey..."
-msgstr "Modificar &Tecla de acesso..."
+msgstr "Cambiar atajo de teclado"
 
 #: ../po/resources_strings.c:205
 msgid "De&bug Console"
-msgstr "De&purar console"
+msgstr "Eliminar errores de la consola"
 
 #: ../po/resources_strings.c:208
 msgid "&Sidebar"
-msgstr "&Barra lateral"
+msgstr "Barra lateral"
 
 #: ../po/resources_strings.c:211
 msgid "Feedback..."
-msgstr "Feedback..."
+msgstr "Retroalimentación..."
 
 #: ../po/resources_strings.c:214
 msgid "Third Party Gadget Installation"
-msgstr "Instalação de gadgets de terceiros"
+msgstr "Instalación de gadget de terceros"
 
 #: ../po/resources_strings.c:217
-msgid ""
-"Google has not tested or verified the features or security of this third "
-"party Gadget. Please confirm that you want to install:"
-msgstr ""
-"Google ainda não testou ou verificou os recursos ou segurança deste gadget "
-"de terceiros.  Favor confirmar que quer instalar:"
+msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
+msgstr "Google no ha probado ni verificado las funcionalidades ni la seguridad de este gadget de terceros. Confirma por favor que quieres instalarlo:"
 
 #: ../po/resources_strings.c:220
 msgid "Description: "
-msgstr "Descrição: "
+msgstr "Descripción:"
 
 #: ../po/resources_strings.c:223
 msgid "Required permissions: "
-msgstr "Permissões requeridas: "
+msgstr "Permisos requeridos:"
 
 #: ../po/resources_strings.c:226
 #, c-format
-msgid ""
-"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
-"you want to stop it?"
-msgstr ""
-"Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. "
-"você quer pará-lo?"
+msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
+msgstr "Un script (%s:%d) en este gadget puede estar ocupado o haber dejado de responder. ¿Quiere detenerlo? "
 
 #: ../po/resources_strings.c:229
 msgid "Change Hotkey"
-msgstr "Modificar tecla de acesso"
+msgstr "Cambiar atajo de teclado"
 
 #: ../po/resources_strings.c:232
 msgid "Click to input the new hotkey:"
-msgstr "Clique para introduzir a nova tecla de acesso:"
+msgstr "Haz clic para ingresar la nueva combinación de teclas:"
 
 #: ../po/resources_strings.c:235
 msgid "Press new hotkey"
-msgstr "Pressione nova tecla de acesso"
+msgstr "Presiona la nueva combinación de teclas"
 
-#: ../po/resources_strings.c:238 ../po/resources_strings.c:250
+#: ../po/resources_strings.c:238
+#: ../po/resources_strings.c:250
 msgid "Clear"
-msgstr "Limpar"
+msgstr "Limpiar"
 
 #: ../po/resources_strings.c:241
 msgid "Disabled"
-msgstr "Desabilitado"
+msgstr "Deshabilitar"
 
 #: ../po/resources_strings.c:247
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr "Gadgets , pressione %s para mostrar ou ocultar gadgets."
+msgstr "Gadgets, presiona %s para mostrar u ocultar los gadgets."
 
 #: ../po/resources_strings.c:253
 msgid "Trace"
-msgstr "Rastrear"
+msgstr "Trazar"
 
 #: ../po/resources_strings.c:256
 msgid "Info"
@@ -326,15 +323,15 @@ msgstr "Info"
 
 #: ../po/resources_strings.c:259
 msgid "Warning"
-msgstr "Alerta"
+msgstr "Advertencia"
 
 #: ../po/resources_strings.c:262
 msgid "Error"
-msgstr "Erro"
+msgstr "Error"
 
 #: ../po/resources_strings.c:265
 msgid "Lock scroll"
-msgstr "Bloquear rolagem"
+msgstr "Bloquear despliegue"
 
 #: ../po/resources_strings.c:268
 msgid "Gadgets (GTK)"
@@ -344,64 +341,63 @@ msgstr "Gadgets (GTK)"
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:274 ../po/resources_strings.c:283
+#: ../po/resources_strings.c:274
+#: ../po/resources_strings.c:283
 msgid "Gadget Designer"
-msgstr "Designer de gadgets"
+msgstr "Diseñador gadget"
 
 #: ../po/resources_strings.c:277
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr "Executar Gadgets no ambiente GNOME/GTK"
+msgstr "Ejecutar Gadgets en un ambiente GNOME/GTK "
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr "Executar Gadgets no ambiente KDE/Qt"
+msgstr "Ejecutar Gadgets en un ambiente KDE/Qt"
 
 #: ../po/resources_strings.c:286
 msgid "Reads content of local files and directories"
-msgstr "Lê conteúdo dos arquivos e diretórios locais"
+msgstr "Lee contenido de archivos y directorios locales "
 
 #: ../po/resources_strings.c:289
 msgid "Creates or modifies local files and directories"
-msgstr "Cria ou modifica arquivos e diretórios locais"
+msgstr "Crea o modifica archivos y directorios locales "
 
 #: ../po/resources_strings.c:292
 msgid "Queries or modifies the status of hardware devices"
-msgstr "Questiona ou modifica o status de gadgets de hardware"
+msgstr "Busca o modifica el estado de los dispositivos de hardware"
 
 #: ../po/resources_strings.c:295
 msgid "Accesses network"
-msgstr "Acessa a rede"
+msgstr "Accede a la red"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses personalization data"
-msgstr "Acessa dados de personalização"
+msgstr "Accede personalización de datos"
 
 #: ../po/resources_strings.c:301
 msgid "Executes native code and local applications"
-msgstr "Executa código nativo e aplicativos locais"
+msgstr "Ejecuta código nativo y aplicaciones locales"
 
 #: ../po/resources_strings.c:304
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr "O gadget não pôde ser carregado:&#10;&#10;%s"
+msgstr "El gadget no pudo ser cargado:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:307
 #, c-format
-msgid ""
-"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr ""
-"O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
+msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr "El gadget requiere gadgets compatibles con al menos la versión de API %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr ""
-"O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
+msgstr "El gadget requiere gadgets para al menos la versión de Linux  %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr "O gadget não funciona na plataforma Linux:%&#10;&#10;%s"
+msgstr "El gadget no funciona en la plataforma Linux:%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
-msgstr "http://www.google.com"
+msgstr "http://www.google.es"
+
