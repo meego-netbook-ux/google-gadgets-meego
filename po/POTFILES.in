@@ -1,3 +1,4 @@
 # List of source files containing translatable strings.
 po/resources_strings.c
+po/control_strings.c
 hosts/clutter/gadgets-panel.desktop.in.in

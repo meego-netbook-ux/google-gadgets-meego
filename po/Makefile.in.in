@@ -105,11 +105,17 @@ all-no:
 $(GETTEXT_PACKAGE).pot: $(POTFILES)
 	$(GENPOT)
 
+control_strings.c: ../gadgets/gadget_control/en/strings.xml $(GENERATOR)
+	$(GENERATOR) $< $@
+
 resources_strings.c: ../resources/en/strings.xml $(GENERATOR)
-	$(GENERATOR) ../resources/en/strings.xml resources_strings.c
+	$(GENERATOR) $< $@
 
 resources_strings: resources_strings.c
-	$(COMPILE) -o resources_strings -I. -I.. $(GTK2_CFLAGS) $(XML_CPPFLAGS) resources_strings.c $(XML_LIBS) $(GTK2_LIBS)
+	$(COMPILE) -o $@ -I. -I.. $(GTK2_CFLAGS) $(XML_CPPFLAGS) $< $(XML_LIBS) $(GTK2_LIBS)
+
+control_strings: control_strings.c
+	$(COMPILE) -o $@ -I. -I.. $(GTK2_CFLAGS) $(XML_CPPFLAGS) $< $(XML_LIBS) $(GTK2_LIBS)
 
 generate: resources_strings install
 	linguas="$(USE_LINGUAS)"; \
