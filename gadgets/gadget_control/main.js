@@ -276,8 +276,9 @@ function AddCategoryButton(category, y) {
 }
 
 function category_onmouseover() {
+  category_hover_img.x = event.srcElement.offsetX;
   category_hover_img.y = event.srcElement.offsetY;
-  category_hover_img.visible = true;
+  /* category_hover_img.visible = true; */
 }
 
 function category_onmouseout() {

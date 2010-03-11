@@ -21,6 +21,7 @@ GADGET_CONTROL_FILES= \
 		images/add_button_default.png \
 		images/add_button_down.png \
 		images/add_button_hover.png \
+		images/bg_button.png \
 		images/bg_bottom_left.png \
 		images/bg_bottom_middle.png \
 		images/bg_bottom_right.png \
