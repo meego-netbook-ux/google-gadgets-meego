@@ -278,7 +278,15 @@ function AddCategoryButton(category, y) {
 function category_onmouseover() {
   category_hover_img.x = event.srcElement.offsetX;
   category_hover_img.y = event.srcElement.offsetY;
-  /* category_hover_img.visible = true; */
+  category_hover_img.visible = true;
+}
+
+function add_btn_onmouseover(img) {
+  img.src = "images/category_hover.png";
+}
+
+function add_btn_onmouseout(img) {
+  img.src = "images/bg_button.png";
 }
 
 function category_onmouseout() {
@@ -665,14 +673,15 @@ function welcome_no_updates () {
       </label>');
 
   main_div.appendElement (' \
-	<img width="180" pinX="50%" x="98" y="81" src="images/bg_button.png" stretchMiddle="true"/>');
+	<img name="add_btn_img" width="180" pinX="50%" x="98" y="81" \
+	     src="images/bg_button.png" stretchMiddle="true"/>');
 
   main_div.appendElement (' \
 	<label name="welcome_add_gg" align="center" width="160" color="#0598c9" \
 	       pinX="50%" pinY="50%" size="12" x="98" y="95" \
 	       enabled="true" onclick="welcome_add_gadget(false)" \
-	       onmouseover="category_onmouseover()" onmouseout="category_onmouseout()" \
-	       > \
+	       onmouseover="add_btn_onmouseover(add_btn_img)" \
+	       onmouseout="add_btn_onmouseout(add_btn_img)"> \
 	  &WELCOME_ADD_GADGET; \
 	</label> \
 ');

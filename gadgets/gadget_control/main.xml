@@ -75,26 +75,29 @@
     </div>
     <div name="main_div" width="100%" height="400" y="83">
       <div name="welcome_div" width="70%" height="80%" x="15%" y="10%">
-	<img name="category_hover_img" opacity="55" width="200" height="23"
+	<img name="category_hover_img" pinX="50%" opacity="100" width="200" height="23"
              visible="false" src="images/category_hover.png" stretchMiddle="true"/>
 	<img name="category_active_img" height="23" width="200" visible="false"
              src="images/category_active.png" stretchMiddle="true"/>
 	<label name="welcome_label" width="100%" wordWrap="true" color="#292929" size="14">
 	  &WELCOME_TO_GADGETS;
 	</label>
-	<img width="180" pinX="50%" x="98" y="81" src="images/bg_button.png" stretchMiddle="true"/>
+	<img name="add_btn_img" width="180" pinX="50%" x="98" y="81" 
+	     src="images/bg_button.png" stretchMiddle="true"/>
 	<label name="welcome_add_gg" align="center" width="160" color="#0598c9" 
 	       pinX="50%" pinY="50%" size="12" x="98" y="95"
 	       enabled='true' onclick='welcome_add_gadget(false)'
-	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
-	       >
+	       onmouseover='add_btn_onmouseover(add_btn_img)' 
+	       onmouseout='add_btn_onmouseout(add_btn_img)'>
 	  &WELCOME_ADD_GADGET;
 	</label>
-	<img width="180" pinX="50%" x="288" y="81" src="images/bg_button.png" stretchMiddle="true"/>
+	<img name="chk_btn_img" width="180" pinX="50%" x="288" y="81" 
+	     src="images/bg_button.png" stretchMiddle="true"/>
 	<label name="welcome_check_upd" align="center" width="160" color="#0598c9" 
 	       pinX="50%" pinY="50%" size="12" x="288" y="95" 
 	       enabled='true' onclick='welcome_add_gadget(true)'
-	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'>
+	       onmouseover='add_btn_onmouseover(chk_btn_img)' 
+	       onmouseout='add_btn_onmouseout(chk_btn_img)'>
 	  &WELCOME_CHECK_UPDATES;
 	</label>
       </div>
