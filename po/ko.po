@@ -7,263 +7,671 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 19:22+0000\n"
-"PO-Revision-Date: 2010-03-12 10:08-0700\n"
+"POT-Creation-Date: 2010-03-11 03:28+0000\n"
+"PO-Revision-Date: 2010-03-12 16:35-0700\n"
 "Last-Translator: KC Lee <kushylee@yahoo.com>\n"
-"Language-Team: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Poedit-Language: Korean\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/scim-panel-vkb-gtk.cpp:1267
-msgid "SCIM Help"
-msgstr "SCIM 도움말"
+#: ../po/resources_strings.c:25
+#: ../po/resources_strings.c:244
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
+msgid "Gadgets"
+msgstr "가젯"
 
-#: ../src/scim-panel-vkb-gtk.cpp:1284
-msgid "Smart Common Input Method"
-msgstr "스마트 공통 입력 방법 (SCIM)"
+#: ../po/resources_strings.c:28
+#, c-format
+msgid "(API Version: %s)"
+msgstr "(API 버전: %s)"
 
-#: ../src/scim-panel-vkb-gtk.cpp:1320
-msgid "Show brief help about SCIM and the current input method."
-msgstr "SCIM에 관한 간략한 도움말과 현재 입력 방법을 표시합니다."
+#: ../po/resources_strings.c:31
+msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
 
-#: ../src/scim-panel-vkb-gtk.cpp:1325
-msgid "Show command menu."
-msgstr "명령 메뉴를 표시합니다."
+#: ../po/resources_strings.c:34
+msgid "For more information please visit our project site:"
+msgstr "자세한 정보는 프로젝트 사이트를 방문하십시오."
 
-#: ../src/scim-panel-vkb-gtk.cpp:2500
-msgid "Smart Common Input Method platform "
-msgstr "스마트 공통 입력 방법 (SCIM) 플랫폼"
+#: ../po/resources_strings.c:37
+msgid "%I:%M%P"
+msgstr "%I:%M%P"
 
-#: ../src/scim-panel-vkb-gtk.cpp:2502
-msgid ""
-"\n"
-"(C) 2002-2005 James Su <suzhe@tsinghua.org.cn>"
-msgstr ""
-"\n"
-"(C) 2002-2005 James Su <suzhe@tsinghua.org.cn>"
+#: ../po/resources_strings.c:40
+msgid "%b %d"
+msgstr "%b %d"
 
-#. Reload Configuration.
-#: ../src/scim-panel-vkb-gtk.cpp:2565
-msgid "Reload Configuration"
-msgstr "구성 다시 로딩"
+#: ../po/resources_strings.c:43
+#: ../po/resources_strings.c:46
+#, c-format
+msgid "%dd ago"
+msgstr "%dd 전"
 
-#. Help
-#: ../src/scim-panel-vkb-gtk.cpp:2575
-msgid "Help ..."
-msgstr "도움말..."
+#: ../po/resources_strings.c:49
+#, c-format
+msgid "%d day ago"
+msgstr "%d 일 전"
 
-#: ../modules/SetupUI/scim_panel_setup.cpp:107
-msgid "Global Setup"
-msgstr "전체 설정"
+#: ../po/resources_strings.c:52
+#, c-format
+msgid "%d days ago"
+msgstr "%d 일 전"
 
-#: ../modules/SetupUI/scim_panel_setup.cpp:112
-msgid "Set up the global options used by all the panel setup modules."
-msgstr "모든 패널 설정 모듈이 사용할 전체 옵션을 설정하십시오."
+#: ../po/resources_strings.c:55
+#: ../po/resources_strings.c:58
+#, c-format
+msgid "%dh ago"
+msgstr "%dh 전"
 
-#: ../modules/SetupUI/scim_panel_setup.cpp:147
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:430
-msgid "Options"
-msgstr "옵션"
+#: ../po/resources_strings.c:61
+#, c-format
+msgid "%d hr ago"
+msgstr "%d 시간 전"
 
-#: ../modules/SetupUI/scim_panel_setup.cpp:161
-msgid "Setup Panel:"
-msgstr "설정 패널:"
+#: ../po/resources_strings.c:64
+#, c-format
+msgid "%d hrs ago"
+msgstr "%d 시간 전"
 
-#: ../modules/SetupUI/scim_panel_setup.cpp:184
-msgid "You should choose your currently used panel program here "
-msgstr "여기서 현재 사용하는 패널 프로그램을 선택해야 합니다."
+#: ../po/resources_strings.c:67
+#: ../po/resources_strings.c:70
+#, c-format
+msgid "%dm ago"
+msgstr "%dm 전"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:87
-msgid "Virtual Keyboard"
-msgstr "가상 키보드"
+#: ../po/resources_strings.c:73
+#, c-format
+msgid "%d min ago"
+msgstr "%d 분 전"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:92
-msgid "A panel daemon with VKB."
-msgstr "VKB를 가진 패널 대몬"
+#: ../po/resources_strings.c:76
+#, c-format
+msgid "%d mins ago"
+msgstr "%d 분 전"
 
-#. Create the label for this note page.
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:242
-msgid "IM Panel"
-msgstr "IM 패널"
+#: ../po/resources_strings.c:79
+msgid "Open"
+msgstr "열기"
 
-#. Create the ToolBar setup block.
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:247
-msgid "ToolBar"
-msgstr "도구 표시줄"
+#: ../po/resources_strings.c:82
+#: ../po/resources_strings.c:100
+msgid "Remove"
+msgstr "제거"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:259
-msgid "Show _input method icon"
-msgstr "입력 방법 아이콘 표시"
+#: ../po/resources_strings.c:85
+msgid "Don't show me items like this"
+msgstr "이러한 항목들을 표시하지 않기"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:266
-msgid "Show inp_ut method name"
-msgstr "입력 방법 이름 표시"
+#: ../po/resources_strings.c:88
+msgid "Previous"
+msgstr "이전"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:278
-msgid "Hi_de timeout:"
-msgstr "시간 초과 숨김:"
+#: ../po/resources_strings.c:91
+msgid "Next"
+msgstr "다음"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:292
-msgid "Show m_enu icon"
-msgstr "메뉴 아이콘 표시"
+#: ../po/resources_strings.c:94
+msgid "Toggle Expanded View"
+msgstr "확장 보기 토글"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:298
-msgid "Show _help icon"
-msgstr "도움말 아이콘 표시"
+#: ../po/resources_strings.c:97
+#: ../po/resources_strings.c:106
+msgid "Menu"
+msgstr "메뉴"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:304
-msgid "Show _property label"
-msgstr "등록 정보 라벨 표시"
+#: ../po/resources_strings.c:103
+msgid "Add gadgets"
+msgstr "가젯 추가"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:314
-msgid "Mode"
-msgstr "모드"
+#: ../po/resources_strings.c:109
+msgid "Minimize"
+msgstr "최소화"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:323
-msgid "Enable virtual _keyboard"
-msgstr "가상 키보드 사용"
+#: ../po/resources_strings.c:112
+msgid "Program can't start because it failed to load the following module(s):"
+msgstr "다음 모듈을 로드하지 못했으므로 프로그램을 시작할 수 없습니다."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:335
-msgid "_Font:"
-msgstr "글꼴:"
+#: ../po/resources_strings.c:115
+msgid "&About..."
+msgstr "정보..."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:340
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1007
-msgid "default"
-msgstr "기본값"
+#: ../po/resources_strings.c:118
+msgid "Add &Gadgets..."
+msgstr "가젯 추가..."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:353
-msgid "Normal_Text:"
-msgstr "NormalText:"
+#: ../po/resources_strings.c:121
+msgid "Always on &Top"
+msgstr "항상 위"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:372
-msgid "_NormalBG:"
-msgstr "NormalBG:"
+#: ../po/resources_strings.c:124
+msgid "Auto &Fit"
+msgstr "자동 맞춤"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:390
-msgid "_ActiveText:"
-msgstr "ActiveText:"
+#: ../po/resources_strings.c:127
+msgid "A&uto Hide"
+msgstr "자동 숨김"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:408
-msgid "Active_BG:"
-msgstr "ActiveBG:"
+#: ../po/resources_strings.c:130
+msgid "&Collapse"
+msgstr "압축"
 
-#. Create the label for this note page.
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:425
-msgid "VKB"
-msgstr "VKB"
+#: ../po/resources_strings.c:133
+msgid "&Dock to Sidebar"
+msgstr "슬라이드바로 도킹"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:441
-msgid "VKB _Program:"
-msgstr "VKB 프로그램:"
+#: ../po/resources_strings.c:136
+msgid "Doc&k Sidebar"
+msgstr "슬라이드바 도킹"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:462
-msgid "Para_meters:"
-msgstr "매개변수:"
+#: ../po/resources_strings.c:139
+msgid "E&xit"
+msgstr "종료"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:475
-msgid "Layout"
-msgstr "배치"
+#: ../po/resources_strings.c:142
+msgid "Ex&pand"
+msgstr "확장"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:492
-msgid "_Width:"
-msgstr "폭:"
+#: ../po/resources_strings.c:145
+msgid "&Font Size"
+msgstr "글꼴 크기"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:512
-msgid "_Height:"
-msgstr "높이:"
+#: ../po/resources_strings.c:148
+msgid "&Default"
+msgstr "기본"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:526
-msgid "_Dock panel"
-msgstr "도크 패널"
+#: ../po/resources_strings.c:151
+msgid "&Larger"
+msgstr "더 크게"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:533
-msgid "_Extended VKB Panel"
-msgstr "확장 VKB 패널"
+#: ../po/resources_strings.c:154
+msgid "&Smaller"
+msgstr "더 작게"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:539
-msgid "Reset Default _Value"
-msgstr "기본값 재설정"
+#: ../po/resources_strings.c:157
+msgid "Hide A&ll"
+msgstr "모두 숨김"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:634
-msgid "The toolbar will be hidden after this timeout elapsed. This option is only valid when \"Always show\" is selected. Set to zero to disable this behavior."
-msgstr "이 시간초과가 지나면 도구표시줄이 숨겨집니다. 이 옵션은 \"항상 보이기\"를 선택했을 때만 유효합니다. 이 동작을 비활성화하려면 제로로 설정하십시오."
+#: ../po/resources_strings.c:160
+msgid "&Left"
+msgstr "왼쪽"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:641
-msgid "If this option is checked, the input method icon will appear on the toolbar."
-msgstr "이 옵션에 체크 표시하면 입력 방법 아이콘이 도구표시줄에 나타납니다."
+#: ../po/resources_strings.c:163
+msgid "&Options..."
+msgstr "옵션..."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:645
-msgid "If this option is checked, the input method name will appear on the toolbar."
-msgstr "이 옵션에 체크 표시하면 입력 방법 이름이 도구표시줄에 나타납니다."
+#: ../po/resources_strings.c:166
+msgid "R&emove"
+msgstr "제거"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:650
-msgid "If this option is checked, the menu icon will appear on the toolbar."
-msgstr "이 옵션에 체크 표시하면 메뉴 아이콘이 도구표시줄에 나타납니다."
+#: ../po/resources_strings.c:169
+msgid "&Right"
+msgstr "오른쪽"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:654
-msgid "If this option is checked, the help icon will appear on the toolbar."
-msgstr "이 옵션에 체크 표시하면 도움말 아이콘이 도구표시줄에 나타납니다."
+#: ../po/resources_strings.c:172
+msgid "Show A&ll"
+msgstr "모두 표시"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:658
-msgid "If this option is checked, the text label of input method properties will appear on the toolbar."
-msgstr "이 옵션에 체크 표시하면 입력 방법 등로정보의 텍스트 라벨이 도구표시줄에 나타납니다."
+#: ../po/resources_strings.c:175
+msgid "&Undock from Sidebar"
+msgstr "슬라이드바로부터 도킹 해제"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:662
-msgid "The font setting will be used in the input and lookup table windows."
-msgstr "글꼴 설정이 입력 및 찾아보기 표 창에서 사용됩니다."
+#: ../po/resources_strings.c:178
+msgid "&Zoom"
+msgstr "확대/축소"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:666
-msgid "Set the virtual keyboard program"
-msgstr "가상 키보드 프로그램을 설정합니다."
+#: ../po/resources_strings.c:181
+msgid "100%"
+msgstr "100%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:669
-msgid "Set runtime parameters for the virtual keyboard program"
-msgstr "가상 키보드 프로그램의 런타임 매개변수를 설정합니다."
+#: ../po/resources_strings.c:184
+msgid "125%"
+msgstr "125%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:672
-msgid "Set vkb panel's width"
-msgstr "vkb 패널 폭을 설정합니다."
+#: ../po/resources_strings.c:187
+msgid "150%"
+msgstr "150%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:675
-msgid "Set vkb panel's height"
-msgstr "vkb 패널 높이를 설정합니다."
+#: ../po/resources_strings.c:190
+msgid "175%"
+msgstr "175%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:678
-msgid "If this option is checked, the vkb panel will always appear on the bottom of screen."
-msgstr "이 옵션에 체크 표시를 하면 vkb 패널이 화면 아래쪽에 항상 나타납니다."
+#: ../po/resources_strings.c:193
+msgid "200%"
+msgstr "200%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:682
-msgid "If this option is checked, the vkb panel will extend to the screen width no matter what window width you set."
-msgstr "이 옵션에 체크 표시를 하면 vkb 패널이 창 넓이에 관계 없이 화면 폭에 맞게 확장됩니다."
+#: ../po/resources_strings.c:196
+msgid "50%"
+msgstr "50%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:686
-msgid "Reset all options to default values"
-msgstr "모든 옵션을 기본값으로 재설정합니다."
+#: ../po/resources_strings.c:199
+msgid "75%"
+msgstr "75%"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:689
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:695
-msgid "To choose the text color of input panel under normal stat."
-msgstr "정상 상태에서 입력 패널의 텍스트 색상을 선택하기"
+#: ../po/resources_strings.c:202
+msgid "Change &Hotkey..."
+msgstr "핫키 변경..."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:692
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:698
-msgid "To choose the background color of input panel under normal stat."
-msgstr "정상 상태에서 입력 패널의 배경 색상을 선택하기"
+#: ../po/resources_strings.c:205
+msgid "De&bug Console"
+msgstr "디버그 콘솔"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1004
-msgid "Select Interface Font"
-msgstr "인터페이스 글꼴 선택"
+#: ../po/resources_strings.c:208
+msgid "&Sidebar"
+msgstr "사이드바"
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1050
-msgid "Select Virtual Keyboard Program"
-msgstr "가상 키보드 프로그램 선택"
+#: ../po/resources_strings.c:211
+msgid "Feedback..."
+msgstr "피드백..."
 
-#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1086
-msgid "Select Color"
-msgstr "색상 선택"
+#: ../po/resources_strings.c:214
+msgid "Third Party Gadget Installation"
+msgstr "타회사 가젯 설치"
+
+#: ../po/resources_strings.c:217
+msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
+msgstr "Google은 이 타회사 가젯의 기능이나 보안을 테스트하거나 검사하지 않았습니다. 다음 설치를 확인하십시오."
+
+#: ../po/resources_strings.c:220
+msgid "Description: "
+msgstr "설명:"
+
+#: ../po/resources_strings.c:223
+msgid "Required permissions: "
+msgstr "요구되는 권한:"
+
+#: ../po/resources_strings.c:226
+#, c-format
+msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
+msgstr "이 가젯의 스크립트(%s:%d)는 사용 중이거나 응답하지 않습니다. 중지하시겠습니까?"
+
+#: ../po/resources_strings.c:229
+msgid "Change Hotkey"
+msgstr "핫키 변경"
+
+#: ../po/resources_strings.c:232
+msgid "Click to input the new hotkey:"
+msgstr "새로운 핫키를 입력하려면 클릭합니다."
+
+#: ../po/resources_strings.c:235
+msgid "Press new hotkey"
+msgstr "새로운 핫키 누름"
+
+#: ../po/resources_strings.c:238
+#: ../po/resources_strings.c:250
+msgid "Clear"
+msgstr "지우기"
+
+#: ../po/resources_strings.c:241
+msgid "Disabled"
+msgstr "비활성"
+
+#: ../po/resources_strings.c:247
+#, c-format
+msgid "Gadgets, press %s to show or hide gadgets."
+msgstr "가젯을 표시하거나 숨기려면 %s를 누릅니다."
+
+#: ../po/resources_strings.c:253
+msgid "Trace"
+msgstr "트레이스"
+
+#: ../po/resources_strings.c:256
+msgid "Info"
+msgstr "정보"
+
+#: ../po/resources_strings.c:259
+msgid "Warning"
+msgstr "경고"
+
+#: ../po/resources_strings.c:262
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
+msgid "Error"
+msgstr "오류"
+
+#: ../po/resources_strings.c:265
+msgid "Lock scroll"
+msgstr "스크롤 잠금"
+
+#: ../po/resources_strings.c:268
+msgid "Gadgets (GTK)"
+msgstr "가젯 (GTK)"
+
+#: ../po/resources_strings.c:271
+msgid "Gadgets (Qt)"
+msgstr "가젯 (Qt)"
+
+#: ../po/resources_strings.c:274
+#: ../po/resources_strings.c:283
+msgid "Gadget Designer"
+msgstr "가젯 디자이너"
+
+#: ../po/resources_strings.c:277
+msgid "Run Gadgets in GNOME/GTK environment"
+msgstr "GNOME/GTK 환경에서 가젯 실행"
+
+#: ../po/resources_strings.c:280
+msgid "Run Gadgets in KDE/Qt environment"
+msgstr "KDE/Qt 환경에서 가젯 실행"
+
+#: ../po/resources_strings.c:286
+msgid "Reads content of local files and directories"
+msgstr "로컬 파일 및 디렉토리 내용을 읽습니다."
+
+#: ../po/resources_strings.c:289
+msgid "Creates or modifies local files and directories"
+msgstr "로컬 파일 및 디렉토리를 작성하거나 수정합니다."
+
+#: ../po/resources_strings.c:292
+msgid "Queries or modifies the status of hardware devices"
+msgstr "하드웨어 장치의 상태를 조회하거나 수정합니다."
+
+#: ../po/resources_strings.c:295
+msgid "Accesses network"
+msgstr "네트워크에 액세스합니다."
+
+#: ../po/resources_strings.c:298
+msgid "Accesses personalization data"
+msgstr "개인 데이터에 액세스합니다."
+
+#: ../po/resources_strings.c:301
+msgid "Executes native code and local applications"
+msgstr "원래 코드 및 로컬 응용 프로그램을 실행합니다."
+
+#: ../po/resources_strings.c:304
+#, c-format
+msgid "The gadget could not be loaded:&#10;&#10;%s"
+msgstr "가젯을 로드할 수 없습니다. &#10;&#10;%s"
+
+#: ../po/resources_strings.c:307
+#, c-format
+msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr "이 가젯은 %s:&#10;&#10;%s 버전 이상의 API를 지원하는 가젯이어야 합니다."
+
+#: ../po/resources_strings.c:310
+#, c-format
+msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
+msgstr "이 가젯은 %s:&#10;&#10;%s 버전 이상의 Linux용 가젯이어야 합니다."
+
+#: ../po/resources_strings.c:313
+msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
+msgstr "이 가젯은 Linux 플랫폼 %&#10;&#10;%s에서는 작동하지 않습니다."
+
+#: ../po/resources_strings.c:316
+msgid "http://www.google.com"
+msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "가젯 제어"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "다음만 표시:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "{{PAGE}} / {{TOTAL}}"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "추가"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "추가 중..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "추가됨"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "오프라인"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "업데이트"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "업데이트 중..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "업데이트됨"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "가젯 검색"
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "가젯 영역을 닫으시겠습니까? 그러면 설치된 모든 가젯이 제거됩니다."
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "가젯에 오신 것을 환영합니다. 이것들은 컴퓨터에서 재미있게 가지고 노는 것들입니다. 무엇을 하시겠습니까?"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "새로운 가젯 추가"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "업데이트 확인"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "죄송합니다. 업데이트된 가젯이 없습니다. 다음과 같이 할 수 있습니다."
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "버전"
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "모든 언어"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "불가리아어"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "카탈로니아어"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "체코어"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "덴마크어"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "독일어"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "그리스어"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "영어 (미국)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "영어 (영국)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "스페인어"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "핀란드어"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "프랑스어"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "힌두어"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "크로아티아어"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "헝가리어"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "인도네시아어"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "이탈리어어"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "일본어"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "한국어"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "네덜란드어"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "노르웨이어"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "폴란드어"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "포르투갈어 (브라질)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "포르투갈어 (포르투갈)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "루마니아어"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "러시아어"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "슬로바키아어"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "슬로베니아어"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "스웨덴어"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "태국어"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "터키어"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "중국어 (간체)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "중국어 (번체)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "모두"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "새로 만들기"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "권장 사항"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "Google 작성"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "최근 사용"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "업데이트"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "뉴스"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "스포츠"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "라이프스타일"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "재정"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "도구"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "재미거리 및 게임"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "기술"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "통신"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "공휴일"
 
