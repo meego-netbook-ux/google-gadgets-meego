@@ -329,7 +329,7 @@ function AddPluginBox(plugin, index, row, column) {
     '</div>\n' +
     " <img x='0' y='48' opacity='70' src=''/>" +
     " <div x='11' y='6' width='80' height='83' background='#ffffff'>" +
-    "  <img width='80' height='60' src=''" +
+    "  <img width='80' height='60' src='images/gadget-colored.png'" +
     "   cropMaintainAspect='true'/>" +
     " </div>" +
     " <button x='6' y='37' width='90' height='40' visible='false' size='10'" +
