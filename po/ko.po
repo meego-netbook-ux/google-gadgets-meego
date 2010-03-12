@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-10 19:22+0000\n"
+"PO-Revision-Date: 2010-03-12 01:31-0700\n"
+"Last-Translator: KC Lee <kushylee@yahoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-Language: Korean\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/scim-panel-vkb-gtk.cpp:1267
+msgid "SCIM Help"
+msgstr "SCIM 도움말"
+
+#: ../src/scim-panel-vkb-gtk.cpp:1284
+msgid "Smart Common Input Method"
+msgstr "스마트 공통 입력 방법 (SCIM)"
+
+#: ../src/scim-panel-vkb-gtk.cpp:1320
+msgid "Show brief help about SCIM and the current input method."
+msgstr "SCIM에 관한 간략한 도움말과 현재 입력 방법을 표시합니다."
+
+#: ../src/scim-panel-vkb-gtk.cpp:1325
+msgid "Show command menu."
+msgstr "명령 메뉴를 표시합니다."
+
+#: ../src/scim-panel-vkb-gtk.cpp:2500
+msgid "Smart Common Input Method platform "
+msgstr ""
+
+#: ../src/scim-panel-vkb-gtk.cpp:2502
+msgid ""
+"\n"
+"(C) 2002-2005 James Su <suzhe@tsinghua.org.cn>"
+msgstr ""
+
+#. Reload Configuration.
+#: ../src/scim-panel-vkb-gtk.cpp:2565
+msgid "Reload Configuration"
+msgstr ""
+
+#. Help
+#: ../src/scim-panel-vkb-gtk.cpp:2575
+msgid "Help ..."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_setup.cpp:107
+msgid "Global Setup"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_setup.cpp:112
+msgid "Set up the global options used by all the panel setup modules."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_setup.cpp:147
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:430
+msgid "Options"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_setup.cpp:161
+msgid "Setup Panel:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_setup.cpp:184
+msgid "You should choose your currently used panel program here "
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:87
+msgid "Virtual Keyboard"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:92
+msgid "A panel daemon with VKB."
+msgstr ""
+
+#. Create the label for this note page.
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:242
+msgid "IM Panel"
+msgstr ""
+
+#. Create the ToolBar setup block.
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:247
+msgid "ToolBar"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:259
+msgid "Show _input method icon"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:266
+msgid "Show inp_ut method name"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:278
+msgid "Hi_de timeout:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:292
+msgid "Show m_enu icon"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:298
+msgid "Show _help icon"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:304
+msgid "Show _property label"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:314
+msgid "Mode"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:323
+msgid "Enable virtual _keyboard"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:335
+msgid "_Font:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:340
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1007
+msgid "default"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:353
+msgid "Normal_Text:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:372
+msgid "_NormalBG:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:390
+msgid "_ActiveText:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:408
+msgid "Active_BG:"
+msgstr ""
+
+#. Create the label for this note page.
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:425
+msgid "VKB"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:441
+msgid "VKB _Program:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:462
+msgid "Para_meters:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:475
+msgid "Layout"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:492
+msgid "_Width:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:512
+msgid "_Height:"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:526
+msgid "_Dock panel"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:533
+msgid "_Extended VKB Panel"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:539
+msgid "Reset Default _Value"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:634
+msgid "The toolbar will be hidden after this timeout elapsed. This option is only valid when \"Always show\" is selected. Set to zero to disable this behavior."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:641
+msgid "If this option is checked, the input method icon will appear on the toolbar."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:645
+msgid "If this option is checked, the input method name will appear on the toolbar."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:650
+msgid "If this option is checked, the menu icon will appear on the toolbar."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:654
+msgid "If this option is checked, the help icon will appear on the toolbar."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:658
+msgid "If this option is checked, the text label of input method properties will appear on the toolbar."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:662
+msgid "The font setting will be used in the input and lookup table windows."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:666
+msgid "Set the virtual keyboard program"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:669
+msgid "Set runtime parameters for the virtual keyboard program"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:672
+msgid "Set vkb panel's width"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:675
+msgid "Set vkb panel's height"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:678
+msgid "If this option is checked, the vkb panel will always appear on the bottom of screen."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:682
+msgid "If this option is checked, the vkb panel will extend to the screen width no matter what window width you set."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:686
+msgid "Reset all options to default values"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:689
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:695
+msgid "To choose the text color of input panel under normal stat."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:692
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:698
+msgid "To choose the background color of input panel under normal stat."
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1004
+msgid "Select Interface Font"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1050
+msgid "Select Virtual Keyboard Program"
+msgstr ""
+
+#: ../modules/SetupUI/scim_panel_vkb_setup.cpp:1086
+msgid "Select Color"
+msgstr ""
+
