@@ -659,17 +659,22 @@ function welcome_no_updates () {
              src="images/category_active.png" stretchMiddle="true"/> \
 ');
   main_div.appendElement (' \
-      <label name="welcome_label" width="100%" wordWrap="true" color="#292929" size="16"> \
+      <label name="welcome_label" width="100%" height="50" \
+       wordWrap="true" color="#292929" size="14">                              \
 	&WELCOME_NO_UPDATES;                                            \
       </label>');
 
   main_div.appendElement (' \
-      <label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60" \
-	     enabled="true" onclick="welcome_add_gadget(false)"         \
-	     onmouseover="category_onmouseover()" onmouseout="category_onmouseout()" \
-	     > \
-	&WELCOME_ADD_GADGET; \
-      </label> \
+	<img width="180" pinX="50%" x="98" y="81" src="images/bg_button.png" stretchMiddle="true"/>');
+
+  main_div.appendElement (' \
+	<label name="welcome_add_gg" align="center" width="160" color="#0598c9" \
+	       pinX="50%" pinY="50%" size="12" x="98" y="95" \
+	       enabled="true" onclick="welcome_add_gadget(false)" \
+	       onmouseover="category_onmouseover()" onmouseout="category_onmouseout()" \
+	       > \
+	  &WELCOME_ADD_GADGET; \
+	</label> \
 ');
 }
 
