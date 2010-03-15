@@ -1,35 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: MediaMonkey 2.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-10 10:35+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Takashi Kazami <tkazami@gmail.com>\n"
+"PO-Revision-Date: 2010-03-10 11:34-0500\n"
+"Last-Translator: Annika <AnnikaNbpt@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Japanese\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-Language: Swedish\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: C:\\Clients\\Intel\\Moblin\\sv\n"
 
 #: ../po/resources_strings.c:25
 #: ../po/resources_strings.c:244
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
-msgstr "ガジェット"
+msgstr "Gadgets"
 
 #: ../po/resources_strings.c:28
 #, c-format
 msgid "(API Version: %s)"
-msgstr "(API バージョン: %s)"
+msgstr "(API-version: %s)"
 
 #: ../po/resources_strings.c:31
 msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "Copyright © 2009 Google Inc. Med ensamrätt.&#10;Licensieras under Apache License, Version 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
-msgstr "詳細については、当プロジェクトのサイトを参照してください:"
+msgstr "Gå till vår projektsajt för mer information:"
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
@@ -43,179 +50,179 @@ msgstr "%b %d"
 #: ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
-msgstr "%dd 前"
+msgstr "%dd sedan"
 
 #: ../po/resources_strings.c:49
 #, c-format
 msgid "%d day ago"
-msgstr "%d 日前"
+msgstr "%d dag sedan"
 
 #: ../po/resources_strings.c:52
 #, c-format
 msgid "%d days ago"
-msgstr "%d 日前"
+msgstr "%d dagar sedan"
 
 #: ../po/resources_strings.c:55
 #: ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
-msgstr "%dh 前"
+msgstr "%dh sedan"
 
 #: ../po/resources_strings.c:61
 #, c-format
 msgid "%d hr ago"
-msgstr "%d 時間前"
+msgstr "%d timme sedan"
 
 #: ../po/resources_strings.c:64
 #, c-format
 msgid "%d hrs ago"
-msgstr "%d 時間前"
+msgstr "%d timmar sedan"
 
 #: ../po/resources_strings.c:67
 #: ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
-msgstr "%dm 前"
+msgstr "%dm sedan"
 
 #: ../po/resources_strings.c:73
 #, c-format
 msgid "%d min ago"
-msgstr "%d 分前"
+msgstr "%d min sedan"
 
 #: ../po/resources_strings.c:76
 #, c-format
 msgid "%d mins ago"
-msgstr "%d 分前"
+msgstr "%d min sedan"
 
 #: ../po/resources_strings.c:79
 msgid "Open"
-msgstr "開く"
+msgstr "Öppna"
 
 #: ../po/resources_strings.c:82
 #: ../po/resources_strings.c:100
 msgid "Remove"
-msgstr "削除"
+msgstr "Ta bort"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr "このようなアイテムは表示しない"
+msgstr "Visa mig inte sådana här objekt"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
-msgstr "戻る"
+msgstr "Föregående"
 
 #: ../po/resources_strings.c:91
 msgid "Next"
-msgstr "次へ"
+msgstr "Nästa"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "拡張ビューの切り替え"
+msgstr "Växla expanderad vy"
 
 #: ../po/resources_strings.c:97
 #: ../po/resources_strings.c:106
 msgid "Menu"
-msgstr "メニュー"
+msgstr "Meny"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr "ガジェットの追加"
+msgstr "Lägg till gadgets"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
-msgstr "最小化する"
+msgstr "Minimera"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr "次のモジュールをロードできなかったため、プログラムは起動できません:"
+msgstr "Kan inte att starta program, det gick inte att ladda en/flera av följande moduler:"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr "情報(&A)..."
+msgstr "&Om..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr "ガジェットの追加(&G)..."
+msgstr "Lägg till &Gadgets..."
 
 #: ../po/resources_strings.c:121
 msgid "Always on &Top"
-msgstr "常に手前に表示(&T)"
+msgstr "Alltid övers&t"
 
 #: ../po/resources_strings.c:124
 msgid "Auto &Fit"
-msgstr "自動フィット(&F)"
+msgstr "Automatisk &passning"
 
 #: ../po/resources_strings.c:127
 msgid "A&uto Hide"
-msgstr "自動非表示(&u)"
+msgstr "Dölj a&utomatiskt"
 
 #: ../po/resources_strings.c:130
 msgid "&Collapse"
-msgstr "&Collapse"
+msgstr "&Dölj"
 
 #: ../po/resources_strings.c:133
 msgid "&Dock to Sidebar"
-msgstr "ドックからサイドバーへ移行(&D)"
+msgstr "&Docka till sidopanel"
 
 #: ../po/resources_strings.c:136
 msgid "Doc&k Sidebar"
-msgstr "ドック・サイドバー(&k)"
+msgstr "Doc&ka sidopanel"
 
 #: ../po/resources_strings.c:139
 msgid "E&xit"
-msgstr "終了(&x)"
+msgstr "A&vsluta"
 
 #: ../po/resources_strings.c:142
 msgid "Ex&pand"
-msgstr "拡張(&p)"
+msgstr "Ex&pandera"
 
 #: ../po/resources_strings.c:145
 msgid "&Font Size"
-msgstr "フォントのサイズ(&F)"
+msgstr "Typ&snittsstorlek"
 
 #: ../po/resources_strings.c:148
 msgid "&Default"
-msgstr "デフォルト(&D)"
+msgstr "Stan&dard"
 
 #: ../po/resources_strings.c:151
 msgid "&Larger"
-msgstr "拡大(&L)"
+msgstr "St&örre"
 
 #: ../po/resources_strings.c:154
 msgid "&Smaller"
-msgstr "縮小(&S)"
+msgstr "&Mindre"
 
 #: ../po/resources_strings.c:157
 msgid "Hide A&ll"
-msgstr "すべて隠す(&l)"
+msgstr "Dölj a&llt"
 
 #: ../po/resources_strings.c:160
 msgid "&Left"
-msgstr "左(&L)"
+msgstr "&Vänster"
 
 #: ../po/resources_strings.c:163
 msgid "&Options..."
-msgstr "オプション(&O)..."
+msgstr "A&lternativ..."
 
 #: ../po/resources_strings.c:166
 msgid "R&emove"
-msgstr "削除(&e)"
+msgstr "Ta &bort"
 
 #: ../po/resources_strings.c:169
 msgid "&Right"
-msgstr "右(&R)"
+msgstr "&Höger"
 
 #: ../po/resources_strings.c:172
 msgid "Show A&ll"
-msgstr "すべて表示(&l)"
+msgstr "Visa a&llt"
 
 #: ../po/resources_strings.c:175
 msgid "&Undock from Sidebar"
-msgstr "サイドバーからアンロック(&U)"
+msgstr "&Ta bort från sidopanel"
 
 #: ../po/resources_strings.c:178
 msgid "&Zoom"
-msgstr "ズーム(&Z)"
+msgstr "&Zooma"
 
 #: ../po/resources_strings.c:181
 msgid "100%"
@@ -247,150 +254,150 @@ msgstr "75%"
 
 #: ../po/resources_strings.c:202
 msgid "Change &Hotkey..."
-msgstr "ホットキーの変更(&H)..."
+msgstr "&Byt &snabbtangent..."
 
 #: ../po/resources_strings.c:205
 msgid "De&bug Console"
-msgstr "デバッグ・コンソール(&b)"
+msgstr "&Felsök konsol"
 
 #: ../po/resources_strings.c:208
 msgid "&Sidebar"
-msgstr "サイドバー(&S)"
+msgstr "&Sidopanel"
 
 #: ../po/resources_strings.c:211
 msgid "Feedback..."
-msgstr "フィードバック..."
+msgstr "Återkoppling..."
 
 #: ../po/resources_strings.c:214
 msgid "Third Party Gadget Installation"
-msgstr "サードパーティ製ガジェットのインストール"
+msgstr "Installation av tredje parts Gadget"
 
 #: ../po/resources_strings.c:217
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr "Google はこのサードパーティ製ガジェットについて、機能や安全性のテストまたは検証を行っていません。インストールしてもよろしいですか:"
+msgstr "Google har inte testat eller verifierat funktionerna eller säkerheten för denna tredje parts Gadget. Bekräfta att du vill installera:"
 
 #: ../po/resources_strings.c:220
 msgid "Description: "
-msgstr "説明:"
+msgstr "Beskrivning:"
 
 #: ../po/resources_strings.c:223
 msgid "Required permissions: "
-msgstr "必要な権限:"
+msgstr "Behörigheter som behövs:"
 
 #: ../po/resources_strings.c:226
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "このガジェットのスクリプト (%s:%d) は、ビジー状態にあるか、または応答を停止しています。中止しますか?"
+msgstr "Ett skript (%s:%d) på denna gadget kan vara upptaget eller har slutat svara. Vill du stoppa det?"
 
 #: ../po/resources_strings.c:229
 msgid "Change Hotkey"
-msgstr "ホットキーを変更する"
+msgstr "Byt snabbtangent"
 
 #: ../po/resources_strings.c:232
 msgid "Click to input the new hotkey:"
-msgstr "クリックして当たらしホットキーを入力してください:"
+msgstr "Klicka för att mata in den nya snabbtangenten:"
 
 #: ../po/resources_strings.c:235
 msgid "Press new hotkey"
-msgstr "新規ホットキーを押す"
+msgstr "Tryck på ny snabbtangent"
 
 #: ../po/resources_strings.c:238
 #: ../po/resources_strings.c:250
 msgid "Clear"
-msgstr "消去"
+msgstr "Töm"
 
 #: ../po/resources_strings.c:241
 msgid "Disabled"
-msgstr "無効"
+msgstr "Inaktiverad"
 
 #: ../po/resources_strings.c:247
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr "ガジェット、%s を押してガジェットの表示と非表示を切り替えます。"
+msgstr "Gadget, tryck på %s för att visa eller dölja gadgets."
 
 #: ../po/resources_strings.c:253
 msgid "Trace"
-msgstr "追跡"
+msgstr "Spåra"
 
 #: ../po/resources_strings.c:256
 msgid "Info"
-msgstr "情報"
+msgstr "Info"
 
 #: ../po/resources_strings.c:259
 msgid "Warning"
-msgstr "警告"
+msgstr "Varning"
 
 #: ../po/resources_strings.c:262
 msgid "Error"
-msgstr "エラー"
+msgstr "Fel"
 
 #: ../po/resources_strings.c:265
 msgid "Lock scroll"
-msgstr "スクロールをロックする"
+msgstr "Lås rullning"
 
 #: ../po/resources_strings.c:268
 msgid "Gadgets (GTK)"
-msgstr "ガジェット (GTK)"
+msgstr "Gadgets (GTK)"
 
 #: ../po/resources_strings.c:271
 msgid "Gadgets (Qt)"
-msgstr "ガジェット (Qt)"
+msgstr "Gadgets (Qt)"
 
 #: ../po/resources_strings.c:274
 #: ../po/resources_strings.c:283
 msgid "Gadget Designer"
-msgstr "ガジェット・デザイナー"
+msgstr "Gadget Designer"
 
 #: ../po/resources_strings.c:277
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr "GNOME/GTK 環境でガジェットを実行する"
+msgstr "Kör Gadgets i GNOME/GTK-miljö"
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr "KDE/Qt 環境でガジェットを実行する"
+msgstr "Kör Gadgets i KDE/Qt-miljö"
 
 #: ../po/resources_strings.c:286
 msgid "Reads content of local files and directories"
-msgstr "ローカルのファイルとディレクトリのコンテンツを読み込む"
+msgstr "Läser innehåll i lokala filer och kataloger"
 
 #: ../po/resources_strings.c:289
 msgid "Creates or modifies local files and directories"
-msgstr "ローカルのファイルとディレクトリを作成または修正"
+msgstr "Skapar eller modifierar lokala filer och kataloger"
 
 #: ../po/resources_strings.c:292
 msgid "Queries or modifies the status of hardware devices"
-msgstr "ハードウェア・デバイスのステータスを問い合わせるか修正する"
+msgstr "Avfrågar eller modifierar status för maskinvaruenheter"
 
 #: ../po/resources_strings.c:295
 msgid "Accesses network"
-msgstr "ネットワークにアクセスする"
+msgstr "Nätverksanslutet"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses personalization data"
-msgstr "個人化データにアクセスする"
+msgstr "Når anpassningsdata"
 
 #: ../po/resources_strings.c:301
 msgid "Executes native code and local applications"
-msgstr "ネイティブコードまたはローカル・アプリケーションを実行する"
+msgstr "Kör ursprungskod och lokala program"
 
 #: ../po/resources_strings.c:304
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr "ガジェットは次のものをロードできませんでそた: &#10;&#10;%s"
+msgstr "Kunde inte ladda gadget:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr "指定したガジェットは、少なくともバージョン %s:&#10;&#10;%s 以降のAPI をサポートするガジェットが必要です"
+msgstr "Gadget kräver Gadgets som stöder API åtminstone version %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr "指定したガジェットは、少なくともバージョン %s:&#10;&#10;%s 以降の Linux 用ガジェットが必要です"
+msgstr "Gadget kräver Gadgets för Linux åtminstone version %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr "指定したガジェットは、Linux プラットフォーム %s:&#10;&#10;%s 上では動作しません"
+msgstr "Gadget fungerar inte på Linux-plattform:%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
