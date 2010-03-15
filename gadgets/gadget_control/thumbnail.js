@@ -28,7 +28,7 @@ function ClearThumbnailTasks() {
   gWorkingTasks = [];
 }
 
-function AddThumbnailTask(plugin, index, thumbnail_element1, thumbnail_element2) {
+function AddThumbnailTask(plugin, index, thumbnail_element1) {
   var thumbnail_url = plugin.attributes.thumbnail_url;
   if (!thumbnail_url)
     return;
@@ -37,7 +37,6 @@ function AddThumbnailTask(plugin, index, thumbnail_element1, thumbnail_element2)
   if (image_data) {
     // Show the cached image first, and then check if it needs to be updated.
     thumbnail_element1.src = image_data;
-    thumbnail_element2.src = image_data;
     if (plugin.thumbnail_checked)
       return;
   }
@@ -49,8 +48,7 @@ function AddThumbnailTask(plugin, index, thumbnail_element1, thumbnail_element2)
     index: index,
     thumbnail_url: thumbnail_url,
     full_thumbnail_url: full_thumbnail_url,
-    thumbnail_element1: thumbnail_element1,
-    thumbnail_element2: thumbnail_element2
+    thumbnail_element1: thumbnail_element1
   };
   gPendingTasks.push(new_task);
 }
@@ -93,7 +91,6 @@ function StartThumbnailTask(task) {
                            task.full_thumbnail_url + " index=" + task.index);
         var data = request.responseStream;
         task.thumbnail_element1.src = data;
-        task.thumbnail_element2.src = data;
         if (task.thumbnail_element1.srcWidth > 0) {
           // Save the thumbnail only if the image is good.
           gadgetBrowserUtils.saveThumbnailToCache(task.thumbnail_url, data);

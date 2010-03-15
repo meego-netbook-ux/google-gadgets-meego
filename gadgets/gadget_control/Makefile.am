@@ -21,6 +21,8 @@ GADGET_CONTROL_FILES= \
 		images/add_button_default.png \
 		images/add_button_down.png \
 		images/add_button_hover.png \
+		images/bg_button.png \
+		images/gadget-colored.png \
 		images/bg_bottom_left.png \
 		images/bg_bottom_middle.png \
 		images/bg_bottom_right.png \
@@ -35,6 +37,7 @@ GADGET_CONTROL_FILES= \
 		images/close_button_over.png \
 		images/close_button_up.png \
 		images/hide_button.png \
+		images/hide_button_hover.png \
 		images/control_border.png \
 		images/default_thumbnail.jpg \
 		images/next_default.png \

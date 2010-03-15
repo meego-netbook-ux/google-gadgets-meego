@@ -23,22 +23,22 @@ var kPluginBoxHeight = 100;
 var kDefaultPluginRows = 2;
 var kDefaultPluginColumns = 2;
 var kCategoryGap = 15;
-var kFixedExtraWidth = 142;
-var kFixedExtraHeight = 183;
+var kFixedExtraWidth = 62;
+var kFixedExtraHeight = 153;
 var kBorderMarginH = 12;
 var kBorderMarginV = 30;
 var kWindowMarginH = 12;
 var kCategoryItemWidth = 140;
 
 var kMinWidth = kFixedExtraWidth + 2 * kPluginBoxWidth + kBorderMarginH;
-var kMinHeight = kFixedExtraHeight + kPluginBoxHeight + kBorderMarginV;
+var kMinHeight = kFixedExtraHeight + 2 * kPluginBoxHeight + kBorderMarginV;
 
 // Default layout: 714x555.
 var gPluginRows = kDefaultPluginRows;
 var gPluginColumns = kDefaultPluginColumns;
 var gPluginsPerPage = gPluginRows * gPluginColumns;
 var gPluginBoxGapX = 0;
-var gPluginBoxGapY = 0;
+var gPluginBoxGapY = 8;
 
 var gCurrentCategory = "";
 var gCurrentLanguage = "";
@@ -139,8 +139,8 @@ function view_onsize() {
 }
 
 function window_onsize() {
-  var plugins_width = window_body.width - kFixedExtraWidth;
-  var plugins_height = window_body.height - kFixedExtraHeight;
+  var plugins_width = window_body.width - kBorderMarginH;
+  var plugins_height = window_body.height - kFixedExtraHeight + 20;
   var columns = Math.floor(plugins_width / kPluginBoxWidth);
   var rows = Math.floor(plugins_height / kPluginBoxHeight);
   language_box.height = Math.min(440, window_body.height - 30);
@@ -268,7 +268,7 @@ function AddCategoryButton(category, y) {
   categories_div.appendElement(
     "<label x='10' width='" + kCategoryItemWidth + "' height='" +
     kCategoryButtonHeight + "' y='" + y +
-    "' align='left' vAlign='middle' enabled='true' color='#FFFFFF' name='" +
+    "' align='left' vAlign='middle' enabled='true' color='#292929' name='" +
     category + "' size='10' trimming='character-ellipsis'" +
     " onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'" +
     " onclick='SelectCategory(\"" + category + "\")'>" +
@@ -276,8 +276,17 @@ function AddCategoryButton(category, y) {
 }
 
 function category_onmouseover() {
+  category_hover_img.x = event.srcElement.offsetX;
   category_hover_img.y = event.srcElement.offsetY;
   category_hover_img.visible = true;
+}
+
+function add_btn_onmouseover(img) {
+  img.src = "images/category_hover.png";
+}
+
+function add_btn_onmouseout(img) {
+  img.src = "images/bg_button.png";
 }
 
 function category_onmouseout() {
@@ -314,28 +323,25 @@ function AddPluginBox(plugin, index, row, column) {
     " onmouseout='pluginbox_onmouseout(" + index + ")'>" +
     " <img width='100%' height='100%' stretchMiddle='true'/>" + //item 0
     (info_url ? //plugin title, item 1
-      " <a x='95' y='6' size='10' width='140' align='left' color='#FFFFFF'" +
-      "  overColor='#FFFFFF' underline='false' trimming='character-ellipsis'" +
+      " <a x='95' y='6' size='10' width='140' align='left' color='#292929'" +
+      "  overColor='#292929' underline='false' trimming='character-ellipsis'" +
       "  onmouseover='plugin_title_onmouseover(" + index + ")'" +
       "  onmouseout='plugin_title_onmouseout(" + index + ")' height='30' wordwrap='true'/>" :
      " <label x='95' y='6' size='10' width='140' align='left' height='30'" +
-      "  color='#FFFFFF' trimming='character-ellipsis' wordwrap='true'/>") +
+      "  color='#292929' trimming='character-ellipsis' wordwrap='true'/>") +
     '<div width="140" height="45" x="95" y="40">' + //plugin
                                                     //description, item2
-      '<label width="100%" height="100%" y="0" color="#FFFFFF" \n\
-        size="9" trimming="character-ellipsis" wordwrap="true"          \n\
+      '<label width="100%" height="100%" y="0" color="#8e8e8e" \n\
+        size="8" trimming="character-ellipsis" wordwrap="true"          \n\
         />' +
     '</div>\n' +
-    " <img x='0' y='48' opacity='70' src='images/thumbnails_shadow.png'/>" +
-    " <div x='11' y='6' width='80' height='83' background='#FFFFFF'>" +
-    "  <img width='80' height='60' src='images/default_thumbnail.jpg'" +
+    " <img x='0' y='48' opacity='70' src=''/>" +
+    " <div x='11' y='6' width='80' height='83' background='#ffffff'>" +
+    "  <img width='80' height='60' src='images/gadget-colored.png'" +
     "   cropMaintainAspect='true'/>" +
-    "  <img y='60' width='80' height='60' src='images/default_thumbnail.jpg'" +
-    "   flip='vertical' cropMaintainAspect='true'/>" +
-    "  <img src='images/thumbnails_default_mask.png'/>" +
     " </div>" +
     " <button x='6' y='37' width='90' height='40' visible='false' size='10'" +
-    "  color='#FFFFFF' stretchMiddle='true' trimming='character-ellipsis'" +
+    "  color='#292929' stretchMiddle='true' trimming='character-ellipsis'" +
     "  downImage='images/add_button_down.png' " +
     "  overImage='images/add_button_hover.png'" +
     "  onmousedown='add_button_onmousedown(" + index + ")'" +
@@ -353,12 +359,10 @@ function AddPluginBox(plugin, index, row, column) {
   desc.innerText = GetPluginDescription(plugin, gCurrentLanguage);
 
   var thumbnail_element1 = box.children.item(4).children.item(0);
-  var thumbnail_element2 = box.children.item(4).children.item(1);
   if (plugin.source == 1) { // built-in gadgets
     thumbnail_element1.src = plugin.attributes.thumbnail_url;
-    thumbnail_element2.src = plugin.attributes.thumbnail_url;
   } else if (plugin.source == 2) { // from plugins.xml
-    AddThumbnailTask(plugin, index, thumbnail_element1, thumbnail_element2);
+    AddThumbnailTask(plugin, index, thumbnail_element1);
   }
 
   plugin.button = box.children.item(5);
@@ -499,7 +503,6 @@ function MouseOverPlugin(box, index) {
   if (title.href) title.underline = true;
 
   box.children.item(0).src = "images/thumbnails_hover.png";
-  box.children.item(4).children.item(2).src = "images/thumbnails_hover_mask.png";
   // Show the "Add" button.
   box.children.item(5).visible = true;
 
@@ -514,7 +517,6 @@ function MouseOverPlugin(box, index) {
 function MouseOutPlugin(box, index) {
   box.children.item(1).underline = false;
   box.children.item(0).src = "";
-  box.children.item(4).children.item(2).src = "images/thumbnails_default_mask.png";
   // Hide the "Add" button when it's in normal state.
   if (!gCurrentPlugins[index].download_status)
     box.children.item(5).visible = false;
@@ -665,17 +667,23 @@ function welcome_no_updates () {
              src="images/category_active.png" stretchMiddle="true"/> \
 ');
   main_div.appendElement (' \
-      <label name="welcome_label" width="100%" wordWrap="true" color="white" size="16"> \
+      <label name="welcome_label" width="100%" height="50" \
+       wordWrap="true" color="#292929" size="14">                              \
 	&WELCOME_NO_UPDATES;                                            \
       </label>');
 
   main_div.appendElement (' \
-      <label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60" \
-	     enabled="true" onclick="welcome_add_gadget(false)"         \
-	     onmouseover="category_onmouseover()" onmouseout="category_onmouseout()" \
-	     > \
-	&WELCOME_ADD_GADGET; \
-      </label> \
+	<img name="add_btn_img" width="180" pinX="50%" x="98" y="81" \
+	     src="images/bg_button.png" stretchMiddle="true"/>');
+
+  main_div.appendElement (' \
+	<label name="welcome_add_gg" align="center" width="160" color="#0598c9" \
+	       pinX="50%" pinY="50%" size="12" x="98" y="95" \
+	       enabled="true" onclick="welcome_add_gadget(false)" \
+	       onmouseover="add_btn_onmouseover(add_btn_img)" \
+	       onmouseout="add_btn_onmouseout(add_btn_img)"> \
+	  &WELCOME_ADD_GADGET; \
+	</label> \
 ');
 }
 
@@ -692,7 +700,7 @@ function populate_plugins_div () {
         overImage="images/previous_hover.png"                           \n\
          onclick="previous_button_onclick()"/>                          \n\
       <label name="page_label" enabled="true" height="39" x="260"       \n\
-        align="center" color="#FFFFFF" size="10" vAlign="middle"        \n\
+        align="center" color="#292929" size="10" vAlign="middle"        \n\
         onsize="page_label_onsize()"/>                                  \n\
       <button name="next_button" x="280" image="images/next_default.png" \n\
         downImage="images/next_down.png" overImage="images/next_hover.png" \n\

@@ -31,7 +31,7 @@
 
   <div name="bg_middle_left" background="images/bg_middle_left.png"
     y="82" width="6" height="383"/>
-  <div name="bg_middle_middle" background="#333333"
+  <div name="bg_middle_middle" background="#ffffff"
     x="6" y="82" width="714" height="383"/>
   <div name="bg_middle_right" background="images/bg_middle_right.png"
     pinX="100%" x="100%" y="82" width="6" height="383"/>
@@ -45,16 +45,16 @@
 
   <div name="window_body" x="6" y="24" width="688" height="555"
     onsize="window_onsize()">
-    <div name="search_div" width="315" height="50" x="10" pinX="0">
-      <div width="266" height="23" y="17">
+    <div name="search_div" width="350" height="50" x="10" pinX="0">
+      <div width="100%" height="33" y="15">
         <img width="100%" height="100%" src="images/control_border.png"
           stretchMiddle="true"/>
-        <edit name="search_box" width="260" height="19" x="3" y="2"
-          value="&SEARCH_GADGETS;" color="#808080" size="10"
+        <edit name="search_box" width="100%" height="33" x="3" y="2"
+          value="&SEARCH_GADGETS;" color="#808080" size="14"
           onchange="search_box_onchange()" onfocusin="search_box_onfocusin()"
           onfocusout="search_box_onfocusout()"/>
       </div>
-      <button name="search_button" x="264" y="8"
+      <button name="search_button" x="300" y="22"
          image="images/search_lens_default.png"
         downImage="images/search_lens_down.png"
         overImage="images/search_lens_hover.png"
@@ -66,31 +66,38 @@
       &SHOW_ONLY_LABEL;
     </label>
     -->
-    <div name="language_box_div" width="166" height="23" x="100%" pinX="100%" y="17">
+    <div name="language_box_div" width="166" height="33" x="100%" pinX="100%" y="17">
       <img width="100%" height="100%" src="images/control_border.png"
         stretchMiddle="true"/>
-      <combobox name="language_box" width="160" height="440" x="3" y="2"
-        type="droplist" background="#FFFFFF" itemWidth="100%" itemHeight="19"
+      <combobox name="language_box" width="160" height="440" x="3" y="2" color="#808080"
+        type="droplist" background="#FFFFFF" itemWidth="100%" itemHeight="30"
         maxDroplistItems="30" onchange="language_box_onchange()"/>
     </div>
     <div name="main_div" width="100%" height="400" y="83">
-      <div name="welcome_div" width="100%" height="100%">
-	<img name="category_hover_img" opacity="55" width="200" height="23"
+      <div name="welcome_div" width="70%" height="80%" x="15%" y="10%">
+	<img name="category_hover_img" pinX="50%" opacity="100" width="200" height="23"
              visible="false" src="images/category_hover.png" stretchMiddle="true"/>
 	<img name="category_active_img" height="23" width="200" visible="false"
              src="images/category_active.png" stretchMiddle="true"/>
-	<label name="welcome_label" width="100%" wordWrap="true" color="white" size="16">
+	<label name="welcome_label" width="100%" wordWrap="true" color="#292929" size="14">
 	  &WELCOME_TO_GADGETS;
 	</label>
-	<label name="welcome_add_gg" width="180" color="white" size="14" x="10" y="60"
+	<img name="add_btn_img" width="180" pinX="50%" x="98" y="81" 
+	     src="images/bg_button.png" stretchMiddle="true"/>
+	<label name="welcome_add_gg" align="center" width="160" color="#0598c9" 
+	       pinX="50%" pinY="50%" size="12" x="98" y="95"
 	       enabled='true' onclick='welcome_add_gadget(false)'
-	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'
-	       >
+	       onmouseover='add_btn_onmouseover(add_btn_img)' 
+	       onmouseout='add_btn_onmouseout(add_btn_img)'>
 	  &WELCOME_ADD_GADGET;
 	</label>
-	<label name="welcome_check_upd" width="180" color="white" size="14" x="10" y="90" 
+	<img name="chk_btn_img" width="180" pinX="50%" x="288" y="81" 
+	     src="images/bg_button.png" stretchMiddle="true"/>
+	<label name="welcome_check_upd" align="center" width="160" color="#0598c9" 
+	       pinX="50%" pinY="50%" size="12" x="288" y="95" 
 	       enabled='true' onclick='welcome_add_gadget(true)'
-	       onmouseover='category_onmouseover()' onmouseout='category_onmouseout()'>
+	       onmouseover='add_btn_onmouseover(chk_btn_img)' 
+	       onmouseout='add_btn_onmouseout(chk_btn_img)'>
 	  &WELCOME_CHECK_UPDATES;
 	</label>
       </div>
@@ -99,16 +106,11 @@
   <label color="#ffffff" size="14" wordWrap="false" hAlign="left" vAlign="middle" bold="true"
     pinX="0%" x="10" height="40">&GADGET_NAME;</label>
   <div height="80" width="100%" hitTest="htcaption"/>
-  <button name="minimize_button" pinX="88" pinY="0" x="100%" y="3" height="30"
+  <button name="minimize_button" pinX="32" pinY="0" x="100%" y="7" height="22"
     image="images/hide_button.png"
-    overImage="images/hide_button.png"
-    downImage="images/hide_button.png"
+    overImage="images/hide_button_hover.png"
+    downImage="images/hide_button_hover.png"
     onclick="plugin.RemoveMe(true)" enabled="true"/>
-  <button name="close_button" pinX="48" pinY="0" x="100%" y="-2"
-    image="images/close_button_up.png"
-    overImage="images/close_button_over.png"
-    downImage="images/close_button_down.png"
-    onclick="ui_exit()" enabled="true"/>
 <!--
   <img name="resize_corner" src="images/resize_corner.png"
     hitTest="htbottomright" opacity="160"
