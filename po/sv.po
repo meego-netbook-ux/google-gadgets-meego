@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MediaMonkey 2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 10:35+0000\n"
-"PO-Revision-Date: 2010-03-10 11:34-0500\n"
+"POT-Creation-Date: 2010-03-17 09:40+0000\n"
+"PO-Revision-Date: 2010-03-18 14:37-0500\n"
 "Last-Translator: Annika <AnnikaNbpt@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -328,6 +328,8 @@ msgid "Warning"
 msgstr "Varning"
 
 #: ../po/resources_strings.c:262
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
 msgid "Error"
 msgstr "Fel"
 
@@ -402,4 +404,278 @@ msgstr "Gadget fungerar inte på Linux-plattform:%&#10;&#10;%s"
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "Gadgetkontroll"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "Visa endast:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "{{PAGE}} av {{TOTAL}}"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "Lägger till..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "Lade till"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "Offline"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "Uppdatera"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "Uppdaterar..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "Uppdaterade"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "Sök i gadgets"
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "Vill du stänga Gadgets Zone? Detta tar bort alla installerade gadgets."
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "Välkommen till Gadgets, de är fyllda med roliga grejor för datorn. Vad vill du göra?"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "Lägga till ny gadget"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "Söka efter uppdateringar"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "Vi har inga tillgängliga uppdaterade Gadgets. Du kan:"
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "Version "
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "Alla språk"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "Bulgariska"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "Katalanska"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "Tjeckiska"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "Danska"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "Tyska"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "Grekiska"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "Engelska (USA)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "Engelska (Storbritannien)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "Spanska"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "Finska"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "Franska"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "Hindi"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "Kroatiska"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "Ungerska"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "Indonesiska"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "Italienska"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "Japanska"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "Koreanska"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "Nederländska"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "Norska"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "Polska"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "Portugisiska (Brasilien)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "Portugisiska (Portugal)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "Rumänska"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "Ryska"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "Slovakiska"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "Slovenska"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "Svenska"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "Thailändska"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "Turkiska"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "Kinesiska (förenklad)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "Kinesiska (traditionell)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "Alla"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "Nya"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "Rekommendationer"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "Google-skapade"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "Nyligen använda"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "Uppdateringar"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "Nyheter"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "Sport"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "Livsstil"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "Finans"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "Verktyg"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "Kul och spel"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "Teknologi"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "Kommunikation"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "Helger"
 
