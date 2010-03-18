@@ -97,7 +97,7 @@ static gboolean SwitchAddButtonIcon (ClutterActor *actor,
 class SimpleClutterHost::Impl {
   struct GadgetInfo {
     GadgetInfo()
-      : gadget(NULL), main(NULL),
+      : gadget(NULL), main(NULL), details(NULL),
         details_on_right(false) {
     }
 

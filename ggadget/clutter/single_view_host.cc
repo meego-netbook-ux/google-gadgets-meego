@@ -640,7 +640,7 @@ class SingleViewHost::Impl {
       impl->on_show_hide_signal_(true);
   }
 
-  static void ActorHideHandler(ClutterActor, gpointer user_data) {
+  static void ActorHideHandler(ClutterActor* actor, gpointer user_data) {
     DLOG("View window is going to be hidden.");
     Impl *impl = reinterpret_cast<Impl *>(user_data);
     if (impl->view_ && impl->enable_signals_) {
