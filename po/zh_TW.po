@@ -671,5 +671,5 @@ msgstr "溝通"
 
 #: ../po/control_strings.c:238
 msgid "Holidays"
-msgstr "假日"
+msgstr "節日"
 
