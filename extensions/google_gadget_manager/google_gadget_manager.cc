@@ -271,7 +271,8 @@ void GoogleGadgetManager::OnUpdateDone(bool request_success,
                                 Variant(last_update_time_));
       ScheduleNextUpdate();
 
-      browser_gadget_->OnCommand (Gadget::CMD_UPDATE_METADATA);
+      if (browser_gadget_)
+        browser_gadget_->OnCommand (Gadget::CMD_UPDATE_METADATA);
       return;
     }
 
