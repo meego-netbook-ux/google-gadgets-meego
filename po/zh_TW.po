@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-10 10:35+0000\n"
+"POT-Creation-Date: 2010-03-17 09:40+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Glscht_Wen <wen.hsinx.moh@intel.com>\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,11 +26,11 @@ msgstr "(API 版本：%s)"
 
 #: ../po/resources_strings.c:31
 msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr "著作權 © 2009 Google Inc。版權所有。由 Apache 獲得授權使用，版本 2.0："
+msgstr "版權所有 © 2009 Google Inc。保留所有權利。依照 Apache 授權條款 2.0 版給予授權："
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
-msgstr "如需更多資訊，請洽詢我們的計畫網站："
+msgstr "如需更多資訊，請造訪我們的專案網站："
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
@@ -95,11 +95,11 @@ msgstr "開啟"
 #: ../po/resources_strings.c:82
 #: ../po/resources_strings.c:100
 msgid "Remove"
-msgstr "刪除"
+msgstr "移除"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr "不要顯示這樣的項目"
+msgstr "不要顯示像這樣的項目"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
@@ -111,16 +111,16 @@ msgstr "下一個"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "切換擴大視窗"
+msgstr "切換展開檢視"
 
 #: ../po/resources_strings.c:97
 #: ../po/resources_strings.c:106
 msgid "Menu"
-msgstr "目錄"
+msgstr "選單"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr "新增小工具"
+msgstr "加入小工具"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
@@ -136,11 +136,11 @@ msgstr "關於(&A)..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr "新增小工具(&G)..."
+msgstr "加入小工具(&G)..."
 
 #: ../po/resources_strings.c:121
 msgid "Always on &Top"
-msgstr "永遠顯示在上方(&T)"
+msgstr "永遠顯示在上層(&T)"
 
 #: ../po/resources_strings.c:124
 msgid "Auto &Fit"
@@ -152,7 +152,7 @@ msgstr "自動隱藏(&u)"
 
 #: ../po/resources_strings.c:130
 msgid "&Collapse"
-msgstr "疊堆(&C)"
+msgstr "摺疊(&C)"
 
 #: ../po/resources_strings.c:133
 msgid "&Dock to Sidebar"
@@ -172,7 +172,7 @@ msgstr "展開(&p)"
 
 #: ../po/resources_strings.c:145
 msgid "&Font Size"
-msgstr "字體大小(&F)"
+msgstr "字型大小(&F)"
 
 #: ../po/resources_strings.c:148
 msgid "&Default"
@@ -196,7 +196,7 @@ msgstr "左邊(&L)"
 
 #: ../po/resources_strings.c:163
 msgid "&Options..."
-msgstr "選項(&O)"
+msgstr "選項(&O)..."
 
 #: ../po/resources_strings.c:166
 msgid "R&emove"
@@ -212,11 +212,11 @@ msgstr "顯示全部(&l)"
 
 #: ../po/resources_strings.c:175
 msgid "&Undock from Sidebar"
-msgstr "從側邊攔拔除(&U)"
+msgstr "從側邊攔卸除(&U)"
 
 #: ../po/resources_strings.c:178
 msgid "&Zoom"
-msgstr "放大(&Z)"
+msgstr "縮放(&Z)"
 
 #: ../po/resources_strings.c:181
 msgid "100%"
@@ -248,19 +248,19 @@ msgstr "75%"
 
 #: ../po/resources_strings.c:202
 msgid "Change &Hotkey..."
-msgstr "更改快速鍵(&H)..."
+msgstr "變更快捷鍵(&H)..."
 
 #: ../po/resources_strings.c:205
 msgid "De&bug Console"
-msgstr "偵錯主控台(&b)"
+msgstr "除錯主控台(&B)"
 
 #: ../po/resources_strings.c:208
 msgid "&Sidebar"
-msgstr "側邊攔(&s)"
+msgstr "側邊攔(&S)"
 
 #: ../po/resources_strings.c:211
 msgid "Feedback..."
-msgstr "回應..."
+msgstr "給予我們回應..."
 
 #: ../po/resources_strings.c:214
 msgid "Third Party Gadget Installation"
@@ -268,7 +268,7 @@ msgstr "第三方小工具安裝"
 
 #: ../po/resources_strings.c:217
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr "這個第三方的小工具，Google 還沒有測試或驗證其功能或安全性。請確認您要安裝："
+msgstr "這個第三方建立的小工具，Google 尚未測試或驗證過其功能或安全性。請確認您是否要安裝："
 
 #: ../po/resources_strings.c:220
 msgid "Description: "
@@ -276,24 +276,24 @@ msgstr "描述："
 
 #: ../po/resources_strings.c:223
 msgid "Required permissions: "
-msgstr "所需的權限："
+msgstr "需求許可："
 
 #: ../po/resources_strings.c:226
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "這個小工具的程序檔 (%s：%d) 也許處於忙碌中，或已經停止回應。您要停止這個程序檔嗎？"
+msgstr "這個小工具的指令稿 (%s：%d) 也許處於忙碌中，或已經停止回應。您要停止它嗎？"
 
 #: ../po/resources_strings.c:229
 msgid "Change Hotkey"
-msgstr "更改快速鍵"
+msgstr "變更快捷鍵"
 
 #: ../po/resources_strings.c:232
 msgid "Click to input the new hotkey:"
-msgstr "按一下之輸入新的快速鍵："
+msgstr "點擊以輸入新的快捷鍵："
 
 #: ../po/resources_strings.c:235
 msgid "Press new hotkey"
-msgstr "按一下新的快速鍵"
+msgstr "按下新的快捷鍵"
 
 #: ../po/resources_strings.c:238
 #: ../po/resources_strings.c:250
@@ -307,7 +307,7 @@ msgstr "已停用"
 #: ../po/resources_strings.c:247
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr "小工具，按一下 %s 以顯示或隱藏小工具。"
+msgstr "小工具，按下 %s 以顯示或隱藏小工具。"
 
 #: ../po/resources_strings.c:253
 msgid "Trace"
@@ -322,12 +322,14 @@ msgid "Warning"
 msgstr "警告"
 
 #: ../po/resources_strings.c:262
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
 msgid "Error"
 msgstr "錯誤"
 
 #: ../po/resources_strings.c:265
 msgid "Lock scroll"
-msgstr "捲動鎖"
+msgstr "鎖定捲動"
 
 #: ../po/resources_strings.c:268
 msgid "Gadgets (GTK)"
@@ -368,11 +370,11 @@ msgstr "存取網路"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses personalization data"
-msgstr "存取個人數據"
+msgstr "存取個人資料"
 
 #: ../po/resources_strings.c:301
 msgid "Executes native code and local applications"
-msgstr "執行本地代碼和本地應用程式"
+msgstr "執行原生代碼和本地應用程式"
 
 #: ../po/resources_strings.c:304
 #, c-format
@@ -382,18 +384,292 @@ msgstr "這個小工具無法載入：&#10;&#10;%s"
 #: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr "這個小工具需要支援 API 的最新版本小工具 %s:&#10;&#10;%s"
+msgstr "這個小工具需要「Gadgets supporting API」為最新版本 %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr "這個小工具需要適用於 Linux 的最新版本小工具 %s:&#10;&#10;%s"
+msgstr "這個小工具需要「Gadgets for Linux」為最新版本 %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr "這個小工具無法在 Linux 平台執行：%&#10;&#10;%s"
+msgstr "這個小工具無法在 Linux 平台運作：%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "http://www.google.com"
-msgstr "http://www.google.com"
+msgstr "http://www.google.com.tw"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "小工具控制"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "只顯示："
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "第 {{PAGE}} 頁，共 {{TOTAL}} 頁"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "加入"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "正在加入..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "已加入"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "離線"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "更新"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "正在更新..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "已更新"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "搜尋小工具"
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "您想要關閉小工具區塊嗎？這會移除所有您已安裝好的小工具。"
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "歡迎來到小工具，它們能為您的電腦增添微妙的樂趣。您想要做什麼呢？"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "加入新的小工具"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "檢查是否有更新"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "很抱歉，我們沒有任何可用的更新版小工具。您可以："
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "版本"
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "全部語言"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "保加利亞文"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "嘉泰羅尼亞文"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "捷克文"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "丹麥文"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "德文"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "希臘文"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "英文 (美國)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "英文 (英國)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "西班牙文"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "芬蘭文"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "法文"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "北印度文"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "克羅蒂亞文"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "匈牙利文"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "印度尼西亞文"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "義大利文"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "日文"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "韓文"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "荷蘭文"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "挪威文"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "波蘭文"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "葡萄牙文 (巴西)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "葡萄牙文 (葡萄牙)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "羅馬尼亞文"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "俄文"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "斯洛伐克文"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "斯洛維尼亞文"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "瑞典文"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "泰文"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "土耳其文"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "中文 (簡體)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "中文 (正體)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "全部"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "新的"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "推薦"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "由 Google 所建立"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "最近使用的"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "更新"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "新聞"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "運動"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "生活"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "經濟"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "工具"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "娛樂與遊戲"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "科技"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "溝通"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "節日"
 
