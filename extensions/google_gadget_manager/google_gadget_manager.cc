@@ -1066,6 +1066,8 @@ class GoogleGadgetManager::GadgetBrowserScriptUtils
         NewSlot(this, &GadgetBrowserScriptUtils::SaveGadget));
     RegisterMethod("addGadget",
         NewSlot(gadget_manager_, &GoogleGadgetManager::NewGadgetInstance));
+    RegisterMethod("scheduleMetaDataUpdate",
+        NewSlot(gadget_manager_, &GoogleGadgetManager::ScheduleUpdate));
   }
 
   ~GadgetBrowserScriptUtils() {

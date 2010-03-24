@@ -712,9 +712,10 @@ function welcome_add_gadget(is_update) {
 
   populate_plugins_div ();
 
-  if (is_update)
+  if (is_update) {
     SelectCategory (kCategoryUpdates);
-  else
+    gadgetBrowserUtils.scheduleMetaDataUpdate (0);
+  } else
     SelectCategory(kCategoryAll);
   window_onsize ();
 }
