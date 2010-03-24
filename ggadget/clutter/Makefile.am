@@ -64,11 +64,13 @@ libggadget_clutter@GGL_EPOCH@_la_CXXFLAGS = \
 
 libggadget_clutter@GGL_EPOCH@_la_CPPFLAGS = \
 			  @CLUTTER_CFLAGS@ \
+			  @GTK2_CFLAGS@ \
 			  @RSVG_CFLAGS@ \
 			  $(PREDEFINED_MACROS)
 
 libggadget_clutter@GGL_EPOCH@_la_LIBADD = \
 			  @CLUTTER_LIBS@ \
+			  @GTK2_LIBS@ \
 			  @RSVG_LIBS@ \
 			  $(top_builddir)/ggadget/libggadget@GGL_EPOCH@.la \
 			  $(top_builddir)/ggadget/xdg/libggadget-xdg@GGL_EPOCH@.la

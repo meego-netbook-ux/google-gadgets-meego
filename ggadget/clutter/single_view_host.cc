@@ -24,6 +24,9 @@
 */
 
 #include <clutter/clutter.h>
+#include <clutter/x11/clutter-x11.h>
+#include <gdk/gdk.h>
+
 #include <string>
 #include <ggadget/gadget_consts.h>
 #include <ggadget/file_manager_interface.h>
@@ -155,6 +158,8 @@ class SingleViewHost::Impl {
 #endif
     g_signal_connect(G_OBJECT(actor_), "enter-event",
                      G_CALLBACK(EnterNotifyHandler), this);
+    g_signal_connect(G_OBJECT(actor_), "leave-event",
+                     G_CALLBACK(EnterNotifyHandler), this);
     g_signal_connect(G_OBJECT(actor_), "show",
                      G_CALLBACK(ActorShowHandler), this);
     g_signal_connect_after(G_OBJECT(actor_), "hide",
@@ -228,7 +233,23 @@ class SingleViewHost::Impl {
     // SingleViewHost will always show caption when window decorator is shown.
   }
 
-  void SetCursor(ViewInterface::CursorType type) {
+  void SetCursor(ViewInterface::CursorType type, bool respect_hittest = true) {
+    // Don't change cursor if it's in resize dragging mode.
+    if (resize_width_mode_ || resize_height_mode_)
+      return;
+    ViewInterface::HitTest hittest =
+      respect_hittest ? view_->GetHitTest() : ViewInterface::HT_CLIENT;
+    GdkCursor *cursor = CreateCursor(type, hittest);
+    GdkWindow *window;
+    window = gdk_window_foreign_new (
+              clutter_x11_get_stage_window (
+                 CLUTTER_STAGE (clutter_actor_get_stage (actor_))));
+    if (window) {
+      gdk_window_set_cursor (window, cursor);
+      g_object_unref (window);
+    }
+    if (cursor)
+      gdk_cursor_unref(cursor);
   }
 
   void ShowTooltip(const std::string &tooltip) {
@@ -445,6 +466,7 @@ class SingleViewHost::Impl {
 
     impl->view_->MarkRedraw ();
     impl->binder_->Redraw();
+    impl->StopResizeDrag();
 
     return false;
   }
@@ -518,6 +540,13 @@ class SingleViewHost::Impl {
   }
 
   void StopResizeDrag() {
+    if (resize_width_mode_ || resize_height_mode_) {
+      resize_width_mode_ = 0;
+      resize_height_mode_ = 0;
+      // QueueResize();
+      on_end_resize_drag_signal_();
+      SetCursor(ViewInterface::CURSOR_DEFAULT);
+    }
   }
 
   static gboolean MotionNotifyHandler(ClutterActor *actor,
@@ -551,7 +580,11 @@ class SingleViewHost::Impl {
       impl->move_dragging_ = false;
       impl->StopMoveDrag ();
     }
-    return false;
+    if (impl->resize_width_mode_ || impl->resize_height_mode_) {
+      impl->StopResizeDrag();
+      return TRUE;
+    }
+    return FALSE;
   }
 
   void BeginMoveDrag(int button) {
@@ -628,9 +661,14 @@ class SingleViewHost::Impl {
                                      gpointer user_data) {
     DLOG("EnterNotifyHandler(%p)", actor);
     Impl *impl = reinterpret_cast<Impl *>(user_data);
-    if (impl->move_dragging_)
-      impl->StopMoveDrag();
-    return FALSE;
+    if (event->type == CLUTTER_ENTER) {
+      if (impl->move_dragging_)
+        impl->StopMoveDrag();
+      return FALSE;
+    } else {
+      impl->SetCursor (ViewInterface::CURSOR_DEFAULT, false);
+      return FALSE;
+    }
   }
 
   static void ActorShowHandler(ClutterActor *actor, gpointer user_data) {

@@ -25,13 +25,14 @@ ggl_clutter_SOURCES		= main.cc \
 				gadget_browser_host.h
 
 ggl_clutter_CPPFLAGS 		= @CLUTTER_CFLAGS@ \
+				@GTK2_CFLAGS@ \
 			  	$(PREDEFINED_MACROS) \
 			  	-DPIXMAP_DIR=\"$(GGL_RESOURCE_DIR)/\" \
 			  	-DGGL_APP_NAME=\"ggl-clutter\"
 
 ggl_clutter_CXXFLAGS		= $(DEFAULT_COMPILE_FLAGS)
 
-ggl_clutter_LDADD		= @CLUTTER_LIBS@ \
+ggl_clutter_LDADD		= @CLUTTER_LIBS@ @GTK2_LIBS@ \
 				$(top_builddir)/ggadget/libggadget@GGL_EPOCH@.la \
 		  		$(top_builddir)/ggadget/clutter/libggadget-clutter@GGL_EPOCH@.la
 

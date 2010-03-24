@@ -26,6 +26,7 @@
 
 #include <glib/gi18n.h>
 #include <clutter/clutter.h>
+#include <gdk/gdk.h>
 #include <glib/gthread.h>
 #include <locale.h>
 #include <signal.h>
@@ -293,12 +294,15 @@ int main(int argc, char* argv[]) {
 
 #ifndef HAVE_MPL
   clutter_init(&argc, &argv);
+  gdk_init (&argc, &argv);
 #else
   if (!standalone) {
     MPL_PANEL_CLUTTER_INIT_WITH_GTK (&argc, &argv);
   }
-  else
+  else {
     clutter_init(&argc, &argv);
+    gdk_init (&argc, &argv);
+  }
 #endif
 
 

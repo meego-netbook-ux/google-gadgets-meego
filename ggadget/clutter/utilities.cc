@@ -53,6 +53,8 @@
 #include <ggadget/xdg/desktop_entry.h>
 #include <ggadget/xdg/utilities.h>
 
+#include <gdk/gdk.h>
+
 namespace ggadget {
 namespace clutter {
 
@@ -189,7 +191,7 @@ GdkPixbuf *LoadPixbufFromData(const std::string &data) {
   return pixbuf;
 }
 
-#if 0
+#if 1
 struct CursorTypeMapping {
   int type;
   GdkCursorType gdk_type;

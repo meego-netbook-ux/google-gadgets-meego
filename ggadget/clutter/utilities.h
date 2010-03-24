@@ -29,6 +29,7 @@
 #include <string>
 #include <clutter/clutter.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk/gdk.h>
 #include <ggadget/view_interface.h>
 #include <ggadget/view_host_interface.h>
 #include <ggadget/slot.h>
@@ -51,6 +52,17 @@ namespace clutter {
  * @param message the alert message.
  */
 void ShowAlertDialog(const char *title, const char *message);
+
+/**
+ * Creates a GdkCursor for a specified cursor type.
+ *
+ * @param type the cursor type, see @c ViewInterface::CursorType.
+ * @param hittest Current hit test value, used to match the cursor when there
+ *        is no suitable cursor for the specified type.
+ * @return a new  GdkCursor instance when succeeded, otherwize NULL.
+ */
+GdkCursor *CreateCursor(int type, ViewInterface::HitTest hittest);
+
 
 /**
  * Displays a dialog containing the message string and Yes and No buttons.
