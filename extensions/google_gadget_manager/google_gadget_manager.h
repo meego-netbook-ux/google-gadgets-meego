@@ -49,8 +49,8 @@ const int kGadgetsMetadataUpdateInterval = 7 * 86400 * 1000;
  * 2 * kGadgetMetadataRetryInterval, and so on, until the interval becomes
  * greater than @c kGadgetMetadataRetryMaxInterval.
  */
-const int kGadgetsMetadataRetryInterval = 2 * 3600 * 1000;
-const int kGadgetsMetadataRetryMaxInterval = 86400 * 1000;
+const int kGadgetsMetadataRetryInterval = 60 * 1000;
+const int kGadgetsMetadataRetryMaxInterval = 10 * 60 * 1000;
 
 /** Free metadata memory for every 3 minutes. */
 const int kFreeMetadataInterval = 180 * 1000;
