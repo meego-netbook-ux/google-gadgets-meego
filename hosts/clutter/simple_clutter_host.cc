@@ -22,6 +22,7 @@
   Iain Holmes <iain@linux.intel.com>
   Roger WANG <roger.wang@intel.com>
 */
+#include "config.h"
 
 #include <stdlib.h>
 #include <clutter/clutter.h>
@@ -630,7 +631,11 @@ SimpleClutterHost::SimpleClutterHost(OptionsInterface *options, double zoom,
                                      int view_debug_mode,
                                      Gadget::DebugConsoleConfig debug_console_config,
                                      int width, int height)
-  : impl_(new Impl(this, options, zoom, view_debug_mode,
+  :
+#ifdef HAVE_MPL
+  panel_ (NULL),
+#endif
+  impl_(new Impl(this, options, zoom, view_debug_mode,
                    debug_console_config, width, height)) {
   impl_->SetupUI();
   impl_->LoadGadgets();
@@ -667,6 +672,9 @@ int SimpleClutterHost::GetDefaultFontSize() {
 }
 
 bool SimpleClutterHost::OpenURL(const Gadget *gadget, const char *url) {
+#ifdef HAVE_MPL
+  mpl_panel_client_hide (panel_);
+#endif
   return ggadget::clutter::OpenURL(gadget, url);
 }
 

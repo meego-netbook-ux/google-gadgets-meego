@@ -380,6 +380,8 @@ int main(int argc, char* argv[]) {
                                    "gadgets-button",
                                    FALSE);
 
+    simple_clutter_host->SetMutterPanel (panel);
+
     MPL_PANEL_CLUTTER_SETUP_EVENTS_WITH_GTK (panel);
 
     stage = mpl_panel_clutter_get_stage (MPL_PANEL_CLUTTER (panel));

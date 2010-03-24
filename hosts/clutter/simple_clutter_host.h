@@ -26,12 +26,19 @@
 #ifndef HOSTS_CLUTTER_SIMPLE_CLUTTER_HOST_H__
 #define HOSTS_CLUTTER_SIMPLE_CLUTTER_HOST_H__
 
+#include "config.h"
+
 #include <string>
 #include <clutter/clutter.h>
 
 #include <ggadget/gadget.h>
 #include <ggadget/host_interface.h>
 #include <ggadget/options_interface.h>
+
+#ifdef HAVE_MPL
+#include <moblin-panel/mpl-panel-clutter.h>
+#include <moblin-panel/mpl-panel-common.h>
+#endif
 
 namespace hosts {
 namespace clutter {
@@ -63,6 +70,11 @@ class SimpleClutterHost : public ggadget::HostInterface {
   static gboolean ExitCallback (gpointer that);
 
   ClutterActor *GetActor();
+#ifdef HAVE_MPL
+  void SetMutterPanel (MplPanelClient* panel) {panel_ = panel;}
+ private:
+  MplPanelClient* panel_;
+#endif
  private:
   class Impl;
   Impl *impl_;
