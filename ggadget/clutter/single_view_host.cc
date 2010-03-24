@@ -682,7 +682,7 @@ class SingleViewHost::Impl {
     DLOG("View window is going to be hidden.");
     Impl *impl = reinterpret_cast<Impl *>(user_data);
     if (impl->view_ && impl->enable_signals_) {
-      //impl->on_show_hide_signal_(false);
+      impl->on_show_hide_signal_(false);
 
       if (impl->feedback_handler_ &&
           impl->type_ == ViewHostInterface::VIEW_HOST_DETAILS) {
