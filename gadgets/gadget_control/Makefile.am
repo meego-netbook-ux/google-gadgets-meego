@@ -14,9 +14,19 @@
 # limitations under the License.
 
 GADGET_CONTROL_FILES= \
+		de/strings.xml \
 		en/strings.xml \
+		en-GB/strings.xml \
+		es/strings.xml \
 		fr/strings.xml \
+		it/strings.xml \
+		ja/strings.xml \
+		nl/strings.xml \
+		pl/strings.xml \
+		pt-BR/strings.xml \
+		ru/strings.xml \
 		zh-CN/strings.xml \
+		zh-TW/strings.xml \
 		gadget.gmanifest \
 		images/add_button_default.png \
 		images/add_button_down.png \

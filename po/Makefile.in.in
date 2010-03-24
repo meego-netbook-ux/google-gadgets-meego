@@ -120,10 +120,14 @@ control_strings: control_strings.c
 generate: resources_strings install
 	linguas="$(USE_LINGUAS)"; \
 	for lang in $$linguas; do \
-	  dir=$(top_srcdir)/resources/$$lang; \
+	  lang2=`echo $$lang | sed 's/_/-/'` \
+	  dir=$(top_srcdir)/resources/$$lang2; \
+	  dir_ctrl=$(top_srcdir)/gadgets/gadget_control/$$lang2; \
 	  loc=`locale -a | grep -E ^$$lang`; \
 	  $(mkdir_p) $$dir; \
-          ./resources_strings $$dir/strings.xml $$loc; \
+	  $(mkdir_p) $$dir_ctrl; \
+      ./resources_strings $$dir/strings.xml $$loc; \
+      ./control_strings $$dir_ctrl/strings.xml $$loc; \
 	done	
 
 install: install-data

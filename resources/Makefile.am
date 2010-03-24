@@ -125,9 +125,19 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		scratchpad_sm.jpg \
 		todo_sm.jpg \
 		weather_sm.jpg \
+		de/strings.xml \
 		en/strings.xml \
+		en-GB/strings.xml \
+		es/strings.xml \
 		fr/strings.xml \
+		it/strings.xml \
+		ja/strings.xml \
+		nl/strings.xml \
+		pl/strings.xml \
+		pt-BR/strings.xml \
+		ru/strings.xml \
 		zh-CN/strings.xml \
+		zh-TW/strings.xml \
 		logo_moblin.png
 
 EXTRA_DIST=$(RESOURCE_FILES) add_control.png
