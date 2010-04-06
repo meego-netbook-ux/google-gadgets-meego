@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-04 03:18+0000\n"
-"PO-Revision-Date: 2010-03-06 19:09+0200\n"
+"POT-Creation-Date: 2010-04-05 09:38+0000\n"
+"PO-Revision-Date: 2010-04-06 15:05+0200\n"
 "Last-Translator: Yuri Nazarenko <yuri.nazarenko@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,9 +19,10 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:244
+#: ../po/resources_strings.c:247
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
-msgstr "Gadgets"
+msgstr "Гаджеты"
 
 #: ../po/resources_strings.c:28
 #, c-format
@@ -143,261 +144,541 @@ msgid "Add &Gadgets..."
 msgstr "Добавить &Gadgets..."
 
 #: ../po/resources_strings.c:121
+msgid "Add an &iGoogle Gadget"
+msgstr "Добавить гаджет &iGoogle"
+
+#: ../po/resources_strings.c:124
 msgid "Always on &Top"
 msgstr "Поверх &всего"
 
-#: ../po/resources_strings.c:124
+#: ../po/resources_strings.c:127
 msgid "Auto &Fit"
 msgstr "Автоматический &размер"
 
-#: ../po/resources_strings.c:127
+#: ../po/resources_strings.c:130
 msgid "A&uto Hide"
 msgstr "Автоматическое скрытие"
 
-#: ../po/resources_strings.c:130
+#: ../po/resources_strings.c:133
 msgid "&Collapse"
 msgstr "&Свернуть"
 
-#: ../po/resources_strings.c:133
+#: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
 msgstr "&Закрепить на боковой панели"
 
-#: ../po/resources_strings.c:136
+#: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
 msgstr "Закрепить боковую панель"
 
-#: ../po/resources_strings.c:139
+#: ../po/resources_strings.c:142
 msgid "E&xit"
 msgstr "Выйти"
 
-#: ../po/resources_strings.c:142
+#: ../po/resources_strings.c:145
 msgid "Ex&pand"
 msgstr "Расширить"
 
-#: ../po/resources_strings.c:145
+#: ../po/resources_strings.c:148
 msgid "&Font Size"
 msgstr "&Размер шрифта"
 
-#: ../po/resources_strings.c:148
+#: ../po/resources_strings.c:151
 msgid "&Default"
 msgstr "&По умолчанию"
 
-#: ../po/resources_strings.c:151
+#: ../po/resources_strings.c:154
 msgid "&Larger"
 msgstr "&Больше"
 
-#: ../po/resources_strings.c:154
+#: ../po/resources_strings.c:157
 msgid "&Smaller"
 msgstr "&Меньше"
 
-#: ../po/resources_strings.c:157
+#: ../po/resources_strings.c:160
 msgid "Hide A&ll"
 msgstr "Скрыть все"
 
-#: ../po/resources_strings.c:160
+#: ../po/resources_strings.c:163
 msgid "&Left"
 msgstr "&Слева"
 
-#: ../po/resources_strings.c:163
+#: ../po/resources_strings.c:166
 msgid "&Options..."
 msgstr "&Варианты..."
 
-#: ../po/resources_strings.c:166
+#: ../po/resources_strings.c:169
 msgid "R&emove"
 msgstr "Удалить"
 
-#: ../po/resources_strings.c:169
+#: ../po/resources_strings.c:172
 msgid "&Right"
 msgstr "&Справа"
 
-#: ../po/resources_strings.c:172
+#: ../po/resources_strings.c:175
 msgid "Show A&ll"
 msgstr "Отобразить все"
 
-#: ../po/resources_strings.c:175
+#: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
 msgstr "&Открепить от боковой панели"
 
-#: ../po/resources_strings.c:178
+#: ../po/resources_strings.c:181
 msgid "&Zoom"
 msgstr "&Масштабирование"
 
-#: ../po/resources_strings.c:181
+#: ../po/resources_strings.c:184
 msgid "100%"
 msgstr "100%"
 
-#: ../po/resources_strings.c:184
+#: ../po/resources_strings.c:187
 msgid "125%"
 msgstr "125%"
 
-#: ../po/resources_strings.c:187
+#: ../po/resources_strings.c:190
 msgid "150%"
 msgstr "150%"
 
-#: ../po/resources_strings.c:190
+#: ../po/resources_strings.c:193
 msgid "175%"
 msgstr "175%"
 
-#: ../po/resources_strings.c:193
+#: ../po/resources_strings.c:196
 msgid "200%"
 msgstr "200%"
 
-#: ../po/resources_strings.c:196
+#: ../po/resources_strings.c:199
 msgid "50%"
 msgstr "50%"
 
-#: ../po/resources_strings.c:199
+#: ../po/resources_strings.c:202
 msgid "75%"
 msgstr "75%"
 
-#: ../po/resources_strings.c:202
+#: ../po/resources_strings.c:205
 msgid "Change &Hotkey..."
 msgstr "Сменить &горячую клавишу..."
 
-#: ../po/resources_strings.c:205
+#: ../po/resources_strings.c:208
 msgid "De&bug Console"
 msgstr "Отладка консоли"
 
-#: ../po/resources_strings.c:208
+#: ../po/resources_strings.c:211
 msgid "&Sidebar"
 msgstr "&Боковая панель"
 
-#: ../po/resources_strings.c:211
+#: ../po/resources_strings.c:214
 msgid "Feedback..."
 msgstr "Обратная связь..."
 
-#: ../po/resources_strings.c:214
+#: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
 msgstr "Установка гаджета стороннего производителя"
 
-#: ../po/resources_strings.c:217
+#: ../po/resources_strings.c:220
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
 msgstr "В Google не проводилось тестирование или проверка функций или параметров безопасности этого гаджета стороннего производителя. Подтвердите необходимость установки:"
 
-#: ../po/resources_strings.c:220
+#: ../po/resources_strings.c:223
 msgid "Description: "
 msgstr "Описание:"
 
-#: ../po/resources_strings.c:223
+#: ../po/resources_strings.c:226
 msgid "Required permissions: "
 msgstr "Необходимые разрешения:"
 
-#: ../po/resources_strings.c:226
+#: ../po/resources_strings.c:229
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
 msgstr "Сценарий (%s:%d) этого гаджета может быть занят или не отвечает. Остановить его выполнение?"
 
-#: ../po/resources_strings.c:229
+#: ../po/resources_strings.c:232
 msgid "Change Hotkey"
 msgstr "Изменить горячую клавишу"
 
-#: ../po/resources_strings.c:232
+#: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
 msgstr "Нажмите для ввода новой горячей клавиши:"
 
-#: ../po/resources_strings.c:235
+#: ../po/resources_strings.c:238
 msgid "Press new hotkey"
 msgstr "Нажать новую горячую клавишу:"
 
-#: ../po/resources_strings.c:238
-#: ../po/resources_strings.c:250
+#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:253
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:244
 msgid "Disabled"
 msgstr "Отключено"
 
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
 msgstr "Gadgets, нажмите %s, чтобы отобразить или скрыть гаджеты."
 
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:256
 msgid "Trace"
 msgstr "Трассировать"
 
-#: ../po/resources_strings.c:256
+#: ../po/resources_strings.c:259
 msgid "Info"
 msgstr "Информация"
 
-#: ../po/resources_strings.c:259
+#: ../po/resources_strings.c:262
 msgid "Warning"
 msgstr "Внимание!"
 
-#: ../po/resources_strings.c:262
+#: ../po/resources_strings.c:265
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../po/resources_strings.c:265
+#: ../po/resources_strings.c:268
 msgid "Lock scroll"
 msgstr "Заблокировать прокрутку"
 
-#: ../po/resources_strings.c:268
+#: ../po/resources_strings.c:271
 msgid "Gadgets (GTK)"
 msgstr "Gadgets (GTK)"
 
-#: ../po/resources_strings.c:271
+#: ../po/resources_strings.c:274
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:274
-#: ../po/resources_strings.c:283
+#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:286
 msgid "Gadget Designer"
 msgstr "Разработчик Gadgets"
 
-#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
 msgstr "Запустить Gadgets в среде GNOME/GTK"
 
-#: ../po/resources_strings.c:280
+#: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
 msgstr "Запустить Gadgets в среде KDE/Qt"
 
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
 msgstr "Чтение содержимого локальных файлов и каталогов"
 
-#: ../po/resources_strings.c:289
+#: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
 msgstr "Создание или изменение локальных файлов или каталогов"
 
-#: ../po/resources_strings.c:292
+#: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
 msgstr "Уточнение и изменение статуса устройств"
 
-#: ../po/resources_strings.c:295
+#: ../po/resources_strings.c:298
 msgid "Accesses network"
 msgstr "Доступ к сети"
 
-#: ../po/resources_strings.c:298
+#: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
 msgstr "Доступ к данным персонализации"
 
-#: ../po/resources_strings.c:301
+#: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
 msgstr "Выполнение собственного кода и локальных приложений"
 
-#: ../po/resources_strings.c:304
+#: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
 msgstr "Не удалось загрузить гаджет:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:307
+#: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
 msgstr "Для этого гаджета требуется Gadgets с поддержкой API версии не ранее %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:310
+#: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
 msgstr "Для этого гаджета требуется Gadgets для Linux версии не ранее %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:313
+#: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
 msgstr "Этот гаджет не функционирует на платформе Linux:%&#10;&#10;%s"
 
-#: ../po/resources_strings.c:316
+#: ../po/resources_strings.c:319
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "Контроль за гаджетами"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "Отобразить только:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "{{PAGE}} из {{TOTAL}}"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "Добавить"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "Добавление..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "Добавлено"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "Оффлайн"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "Обновить"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "Обновление..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "Обновлено"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "Поиск гаджетов"
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "Выйти из Gadgets Zone? Все ваши установленные гаджеты будут удалены."
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "Приветствуем в разделе Гаджеты, где вы можете найти что-нибудь для развлечений на компьютере. Что вы хотите сделать?"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "Добавить новый гаджет"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "Проверить обновления"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "Обновления для гаджетов отсутствуют. Вы можете:"
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "Версия"
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr "Кб"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "Все языки"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "Болгарский"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "Каталанский"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "Чешский"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "Датский"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "Немецкий"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "Греческий"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "Английский (США)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "Английский (Великобритания)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "Испанский"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "Финский"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "Французский"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "Хинди"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "Хорватский"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "Венгерский"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "Индонезийский"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "Итальянский"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "Японский"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "Корейский"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "Нидерландский"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "Норвежский"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "Польский"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "Португальский (Бразилия)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "Португальский (Португалия)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "Румынский"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "Русский"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "Словацкий"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "Словенский"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "Шведский"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "Тайский"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "Турецкий"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "Китайский (упрощенное письмо)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "Китайский (традиционное письмо)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "Все"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "Новый"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "Рекомендации"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "Создано при помощи Google"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "Недавно использованный"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "Обнолвения"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "Новости"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "Спорт"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "Стиль жизни"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "Финансы"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "Инструменты"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "Игры и развлечения"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "Технология"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "Связь"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "Выходные"
 
