@@ -49,6 +49,8 @@ class GadgetBrowserHost : public ggadget::HostInterface {
 
     svh->ConnectOnShowHide
       (NewSlot (this, &hosts::clutter::GadgetBrowserHost::OnViewShowHideHandler, svh));
+    svh->ConnectOnBeginMoveDrag
+      (NewSlot (this, &hosts::clutter::GadgetBrowserHost::OnBeginMoveDragHandler, svh));
 
     return svh;
   }
@@ -103,6 +105,10 @@ class GadgetBrowserHost : public ggadget::HostInterface {
     return FALSE;
   }
 
+  bool OnBeginMoveDragHandler (int button,
+                               ggadget::clutter::SingleViewHost *svh) {
+    return true;
+  }
   void OnViewShowHideHandler(bool show, ggadget::clutter::SingleViewHost *svh) {
     ClutterActor *actor = svh->GetActor();
     if (actor) {
