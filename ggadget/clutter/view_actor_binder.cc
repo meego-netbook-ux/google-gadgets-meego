@@ -590,8 +590,8 @@ ViewActorBinder::Impl::kEventHandlers[] = {
   { "button-release-event", G_CALLBACK(ButtonReleaseHandler) },
   { "enter-event", G_CALLBACK(EnterNotifyHandler) },
   /*  { "expose-event", G_CALLBACK(ExposeHandler) },*/
-  { "focus-in", G_CALLBACK(FocusInHandler) },
-  { "focus-out", G_CALLBACK(FocusOutHandler) },
+  { "key-focus-in", G_CALLBACK(FocusInHandler) },
+  { "key-focus-out", G_CALLBACK(FocusOutHandler) },
   { "key-press-event", G_CALLBACK(KeyPressHandler) },
   { "key-release-event", G_CALLBACK(KeyReleaseHandler) },
   { "leave-event", G_CALLBACK(LeaveNotifyHandler) },

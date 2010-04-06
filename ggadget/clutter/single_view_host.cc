@@ -150,10 +150,10 @@ class SingleViewHost::Impl {
       clutter_actor_set_reactive (actor_, TRUE);
     }
 
-    g_signal_connect(G_OBJECT(actor_), "focus-in",
+    g_signal_connect(G_OBJECT(actor_), "key-focus-in",
                      G_CALLBACK(FocusInHandler), this);
 #ifdef _DEBUG
-    g_signal_connect(G_OBJECT(actor_), "focus-out",
+    g_signal_connect(G_OBJECT(actor_), "key-focus-out",
                      G_CALLBACK(FocusOutHandler), this);
 #endif
     g_signal_connect(G_OBJECT(actor_), "enter-event",
