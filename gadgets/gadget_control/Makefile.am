@@ -15,16 +15,21 @@
 
 GADGET_CONTROL_FILES= \
 		de/strings.xml \
-		en/strings.xml \
 		en-GB/strings.xml \
+		en/strings.xml \
 		es/strings.xml \
+		fi/strings.xml \
 		fr/strings.xml \
+		id/strings.xml \
 		it/strings.xml \
 		ja/strings.xml \
+		ko/strings.xml \
 		nl/strings.xml \
 		pl/strings.xml \
 		pt-BR/strings.xml \
 		ru/strings.xml \
+		sv/strings.xml \
+		wa/strings.xml \
 		zh-CN/strings.xml \
 		zh-TW/strings.xml \
 		gadget.gmanifest \
