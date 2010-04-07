@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-04 03:18+0000\n"
+"POT-Creation-Date: 2010-03-27 09:42+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Clara Steiner-Jay <csteiner@aracnet.com>\n"
+"Last-Translator: Andreas Machoy <amachoy@hotmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +14,8 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:244
+#: ../po/resources_strings.c:247
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
 msgstr "Gadgets"
 
@@ -138,261 +139,542 @@ msgid "Add &Gadgets..."
 msgstr "&Gadgets zufügen..."
 
 #: ../po/resources_strings.c:121
+msgid "Add an &iGoogle Gadget"
+msgstr "&iGoogle Gadget zufügen"
+
+#: ../po/resources_strings.c:124
 msgid "Always on &Top"
 msgstr "Immer &oben"
 
-#: ../po/resources_strings.c:124
+#: ../po/resources_strings.c:127
 msgid "Auto &Fit"
 msgstr "&Automatisch anpassen"
 
-#: ../po/resources_strings.c:127
+#: ../po/resources_strings.c:130
 msgid "A&uto Hide"
 msgstr "A&utomatisch ausblenden"
 
-#: ../po/resources_strings.c:130
+#: ../po/resources_strings.c:133
 msgid "&Collapse"
 msgstr "Ein&klappen"
 
-#: ../po/resources_strings.c:133
+#: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
 msgstr "A&n Seitenleiste andocken"
 
-#: ../po/resources_strings.c:136
+#: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
 msgstr "Seiten&leiste andocken"
 
-#: ../po/resources_strings.c:139
+#: ../po/resources_strings.c:142
 msgid "E&xit"
 msgstr "Bee&nden"
 
-#: ../po/resources_strings.c:142
+#: ../po/resources_strings.c:145
 msgid "Ex&pand"
 msgstr "Er&weitern"
 
-#: ../po/resources_strings.c:145
+#: ../po/resources_strings.c:148
 msgid "&Font Size"
 msgstr "Sch&riftsatz"
 
-#: ../po/resources_strings.c:148
+#: ../po/resources_strings.c:151
 msgid "&Default"
 msgstr "&Standard"
 
-#: ../po/resources_strings.c:151
+#: ../po/resources_strings.c:154
 msgid "&Larger"
 msgstr "&Größer"
 
-#: ../po/resources_strings.c:154
+#: ../po/resources_strings.c:157
 msgid "&Smaller"
 msgstr "&Kleiner"
 
-#: ../po/resources_strings.c:157
+#: ../po/resources_strings.c:160
 msgid "Hide A&ll"
 msgstr "A&lle ausblenden"
 
-#: ../po/resources_strings.c:160
+#: ../po/resources_strings.c:163
 msgid "&Left"
 msgstr "&Links"
 
-#: ../po/resources_strings.c:163
+#: ../po/resources_strings.c:166
 msgid "&Options..."
 msgstr "&Optionen..."
 
-#: ../po/resources_strings.c:166
+#: ../po/resources_strings.c:169
 msgid "R&emove"
 msgstr "Ent&fernen"
 
-#: ../po/resources_strings.c:169
+#: ../po/resources_strings.c:172
 msgid "&Right"
 msgstr "&Rechts"
 
-#: ../po/resources_strings.c:172
+#: ../po/resources_strings.c:175
 msgid "Show A&ll"
 msgstr "A&lle anzeigen"
 
-#: ../po/resources_strings.c:175
+#: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
 msgstr "V&on Seitenleiste abdocken"
 
-#: ../po/resources_strings.c:178
+#: ../po/resources_strings.c:181
 msgid "&Zoom"
 msgstr "&Vergrößern"
 
-#: ../po/resources_strings.c:181
+#: ../po/resources_strings.c:184
 msgid "100%"
 msgstr "100%"
 
-#: ../po/resources_strings.c:184
+#: ../po/resources_strings.c:187
 msgid "125%"
 msgstr "125%"
 
-#: ../po/resources_strings.c:187
+#: ../po/resources_strings.c:190
 msgid "150%"
 msgstr "150%"
 
-#: ../po/resources_strings.c:190
+#: ../po/resources_strings.c:193
 msgid "175%"
 msgstr "175%"
 
-#: ../po/resources_strings.c:193
+#: ../po/resources_strings.c:196
 msgid "200%"
 msgstr "200%"
 
-#: ../po/resources_strings.c:196
+#: ../po/resources_strings.c:199
 msgid "50%"
 msgstr "50%"
 
-#: ../po/resources_strings.c:199
+#: ../po/resources_strings.c:202
 msgid "75%"
 msgstr "75%"
 
-#: ../po/resources_strings.c:202
+#: ../po/resources_strings.c:205
 msgid "Change &Hotkey..."
 msgstr "&Hotkey ändern..."
 
-#: ../po/resources_strings.c:205
+#: ../po/resources_strings.c:208
 msgid "De&bug Console"
 msgstr "Konsole de&buggen "
 
-#: ../po/resources_strings.c:208
+#: ../po/resources_strings.c:211
 msgid "&Sidebar"
 msgstr "&Seitenleiste"
 
-#: ../po/resources_strings.c:211
+#: ../po/resources_strings.c:214
 msgid "Feedback..."
 msgstr "Feedback..."
 
-#: ../po/resources_strings.c:214
+#: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
 msgstr "Installation eines Gadget von Drittanbietern"
 
-#: ../po/resources_strings.c:217
+#: ../po/resources_strings.c:220
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
 msgstr "Google hat die Features oder die Sicherheit dieses Gadget von Drittanbietern nicht getestet. Installation bestätigen:"
 
-#: ../po/resources_strings.c:220
+#: ../po/resources_strings.c:223
 msgid "Description: "
 msgstr "Beschreibung: "
 
-#: ../po/resources_strings.c:223
+#: ../po/resources_strings.c:226
 msgid "Required permissions: "
 msgstr "Erforderliche Zulassungen: "
 
-#: ../po/resources_strings.c:226
+#: ../po/resources_strings.c:229
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
 msgstr "Ein Skript (%s:%d) auf diesem Gadget ist vielleicht beschäftigt oder antwortet nicht mehr. Soll es angehalten werden?"
 
-#: ../po/resources_strings.c:229
+#: ../po/resources_strings.c:232
 msgid "Change Hotkey"
 msgstr "Hotkey ändern"
 
-#: ../po/resources_strings.c:232
+#: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
 msgstr "Zur Eingabe des neuen Hotkey klicken:"
 
-#: ../po/resources_strings.c:235
+#: ../po/resources_strings.c:238
 msgid "Press new hotkey"
 msgstr "Neuen Hotkey drücken"
 
-#: ../po/resources_strings.c:238
-#: ../po/resources_strings.c:250
+#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:253
 msgid "Clear"
 msgstr "Löschen"
 
-#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:244
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
 msgstr "Gadgets, %s drücken, um Gadgets anzuzeigen oder auszublenden."
 
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:256
 msgid "Trace"
 msgstr "Spur"
 
-#: ../po/resources_strings.c:256
+#: ../po/resources_strings.c:259
 msgid "Info"
 msgstr "Info"
 
-#: ../po/resources_strings.c:259
+#: ../po/resources_strings.c:262
 msgid "Warning"
 msgstr "Warnung"
 
-#: ../po/resources_strings.c:262
+#: ../po/resources_strings.c:265
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
 msgid "Error"
 msgstr "Fehler"
 
-#: ../po/resources_strings.c:265
+#: ../po/resources_strings.c:268
 msgid "Lock scroll"
 msgstr "Bildlauf sperren"
 
-#: ../po/resources_strings.c:268
+#: ../po/resources_strings.c:271
 msgid "Gadgets (GTK)"
 msgstr "Gadgets (GTK)"
 
-#: ../po/resources_strings.c:271
+#: ../po/resources_strings.c:274
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:274
-#: ../po/resources_strings.c:283
+#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:286
 msgid "Gadget Designer"
 msgstr "Gadget Designer"
 
-#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
 msgstr "Gadgets in GNOME/GTK Umgebung ausführen"
 
-#: ../po/resources_strings.c:280
+#: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
 msgstr "Gadgets in KDE/Qt Umgebung ausführen"
 
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
 msgstr "Liest den Inhalt lokaler Dateien und Verzeichnisse"
 
-#: ../po/resources_strings.c:289
+#: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
 msgstr "Erstellt oder ändert lokale Dateien und Verzeichnisse"
 
-#: ../po/resources_strings.c:292
+#: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
 msgstr "Erfragt oder ändert den Status von Hardware-Geräten"
 
-#: ../po/resources_strings.c:295
+#: ../po/resources_strings.c:298
 msgid "Accesses network"
 msgstr "Greift auf Netzwerk zu"
 
-#: ../po/resources_strings.c:298
+#: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
 msgstr "Greift auf Personifizierungsdaten zu "
 
-#: ../po/resources_strings.c:301
+#: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
 msgstr "Führt nativen Code und lokale Anwendungen aus"
 
-#: ../po/resources_strings.c:304
+#: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
 msgstr "Gadget konnte nicht geladen werden:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:307
+#: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
 msgstr "Dieses Gadget erfordert Gadgets mit Untertstützung von API in dieser Version oder höher: %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:310
+#: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
 msgstr "Dieses Gadget erfordert Gadgets für Linux in dieser Version oder höher: %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:313
+#: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
 msgstr "Gadget funktioniert nicht auf Linux-Plattform:%&#10;&#10;%s"
 
-#: ../po/resources_strings.c:316
+#: ../po/resources_strings.c:319
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "Gadgets-Steuerung"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "Nur anzeigen:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "{{PAGE}} von {{TOTAL}}"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "Zufügen"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "Zufügen..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "Zugefügt"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "Abgemeldet"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "Aktualisierung"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "Aktualisieren"
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "Aktualisiert"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "Gadgets suchen"
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "Soll die Gadgets-Zone geschlossen werden? Damit werden alle installierten Gadgets entfernt."
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "Willkommen bei Gadgets, ein bisschen Spaß für deinen Computer. Was möchtest du tun?"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "Neues Gadget zufügen"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "Auf Aktualisierungen prüfen"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "Leider stehen keine aktualisierten Gadgets zur Verfügung. Du könntest:"
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "Version"
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "Alle Sprachen"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "Bulgarisch"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "Katalanisch"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "Tschechisch"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "Dänisch"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "Deutsch"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "Griechisch"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "Englisch (USA)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "Englisch (GB)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "Spanisch"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "Finnisch"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "Französisch"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "Hindi"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "Kroatisch"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "Ungarisch"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "Indonesisch"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "Italienisch"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "Japanisch"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "Koreanisch"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "Niederländisch"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "Norwegisch (Bokmål)"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "Polnisch"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "Portugiesisch (Brasilien)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "Portugiesisch (Portugal)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "Rumänisch"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "Russisch"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "Slowakisch"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "Slowenisch"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "Schwedisch"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "Thailändisch"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "Türkisch"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "Chinesisch (vereinfacht)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "Chinesisch (traditionell)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "Alle"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "Neu"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "Empfehlungen"
+
+# "Created by Google" ?
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "Erstellt von Google"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "neulich verwendet"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "Nachrichten"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "Sport"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "Lifestyle"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "Finanzen"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "Spaß und Spiel"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "Technologie"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "Kommunikation"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "Ferien"
 
