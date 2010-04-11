@@ -107,8 +107,10 @@ class GadgetBrowserHost : public ggadget::HostInterface {
 
   bool OnBeginMoveDragHandler (int button,
                                ggadget::clutter::SingleViewHost *svh) {
+    //disable moving gadget control with this
     return true;
   }
+
   void OnViewShowHideHandler(bool show, ggadget::clutter::SingleViewHost *svh) {
     ClutterActor *actor = svh->GetActor();
     if (actor) {
