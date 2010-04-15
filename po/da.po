@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-15 04:10+0000\n"
-"PO-Revision-Date: 2010-04-15 06:26+0100\n"
+"PO-Revision-Date: 2010-04-15 07:27+0100\n"
 "Last-Translator: Jon Hedemann <tradomusnordic@gmail.com>\n"
 "Language-Team: DANISH\n"
 "MIME-Version: 1.0\n"
@@ -101,585 +101,585 @@ msgstr "Åbn"
 #: ../po/resources_strings.c:82
 #: ../po/resources_strings.c:100
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr ""
+msgstr "Vis ikke objekter som disse"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
-msgstr ""
+msgstr "Forrige"
 
 #: ../po/resources_strings.c:91
 msgid "Next"
-msgstr ""
+msgstr "Næste"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr ""
+msgstr "Skift udvidet visning"
 
 #: ../po/resources_strings.c:97
 #: ../po/resources_strings.c:106
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr ""
+msgstr "Tilføj gadgets"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
-msgstr ""
+msgstr "Minimér"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr ""
+msgstr "Programmet kan ikke starte, da følgende modul(er) ikke kan indlæses:"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr ""
+msgstr "&Om..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr ""
+msgstr "Tilføj &Gadgets..."
 
 #: ../po/resources_strings.c:121
 msgid "Add an &iGoogle Gadget"
-msgstr ""
+msgstr "Tilføj en &iGoogle Gadget"
 
 #: ../po/resources_strings.c:124
 msgid "Always on &Top"
-msgstr ""
+msgstr "Altid &øverst"
 
 #: ../po/resources_strings.c:127
 msgid "Auto &Fit"
-msgstr ""
+msgstr "Tilpas &automatisk"
 
 #: ../po/resources_strings.c:130
 msgid "A&uto Hide"
-msgstr ""
+msgstr "S&kjul automatisk"
 
 #: ../po/resources_strings.c:133
 msgid "&Collapse"
-msgstr ""
+msgstr "&Fold sammen"
 
 #: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
-msgstr ""
+msgstr "&Føj til sidepanel"
 
 #: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
-msgstr ""
+msgstr "Doc&k sidepanel"
 
 #: ../po/resources_strings.c:142
 msgid "E&xit"
-msgstr ""
+msgstr "A&fslut"
 
 #: ../po/resources_strings.c:145
 msgid "Ex&pand"
-msgstr ""
+msgstr "Fo&ld ud"
 
 #: ../po/resources_strings.c:148
 msgid "&Font Size"
-msgstr ""
+msgstr "&Skriftstørrelse"
 
 #: ../po/resources_strings.c:151
 msgid "&Default"
-msgstr ""
+msgstr "&Standard"
 
 #: ../po/resources_strings.c:154
 msgid "&Larger"
-msgstr ""
+msgstr "&Større"
 
 #: ../po/resources_strings.c:157
 msgid "&Smaller"
-msgstr ""
+msgstr "&Mindre"
 
 #: ../po/resources_strings.c:160
 msgid "Hide A&ll"
-msgstr ""
+msgstr "Skjul a&lle"
 
 #: ../po/resources_strings.c:163
 msgid "&Left"
-msgstr ""
+msgstr "&Venstre"
 
 #: ../po/resources_strings.c:166
 msgid "&Options..."
-msgstr ""
+msgstr "&Valgmuligheder..."
 
 #: ../po/resources_strings.c:169
 msgid "R&emove"
-msgstr ""
+msgstr "F&jern"
 
 #: ../po/resources_strings.c:172
 msgid "&Right"
-msgstr ""
+msgstr "&Højre"
 
 #: ../po/resources_strings.c:175
 msgid "Show A&ll"
-msgstr ""
+msgstr "Vis a&lle"
 
 #: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
-msgstr ""
+msgstr "&Fjern fra sidepanel"
 
 #: ../po/resources_strings.c:181
 msgid "&Zoom"
-msgstr ""
+msgstr "&Zoom"
 
 #: ../po/resources_strings.c:184
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ../po/resources_strings.c:187
 msgid "125%"
-msgstr ""
+msgstr "125%"
 
 #: ../po/resources_strings.c:190
 msgid "150%"
-msgstr ""
+msgstr "150%"
 
 #: ../po/resources_strings.c:193
 msgid "175%"
-msgstr ""
+msgstr "175%"
 
 #: ../po/resources_strings.c:196
 msgid "200%"
-msgstr ""
+msgstr "200%"
 
 #: ../po/resources_strings.c:199
 msgid "50%"
-msgstr ""
+msgstr "50%"
 
 #: ../po/resources_strings.c:202
 msgid "75%"
-msgstr ""
+msgstr "75%"
 
 #: ../po/resources_strings.c:205
 msgid "Change &Hotkey..."
-msgstr ""
+msgstr "Skift &genvejstast..."
 
 #: ../po/resources_strings.c:208
 msgid "De&bug Console"
-msgstr ""
+msgstr "Fe&jlfindingskonsol"
 
 #: ../po/resources_strings.c:211
 msgid "&Sidebar"
-msgstr ""
+msgstr "&Sidepanel"
 
 #: ../po/resources_strings.c:214
 msgid "Feedback..."
-msgstr ""
+msgstr "Feedback..."
 
 #: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
-msgstr ""
+msgstr "Installation af tredjeparts-gadget"
 
 #: ../po/resources_strings.c:220
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr ""
+msgstr "Google har ikke testet eller verificeret funktionerne i eller sikkerheden ved anvendelsen af denne tredjeparts-gadget. Bekræft venligst installationen:"
 
 #: ../po/resources_strings.c:223
 msgid "Description: "
-msgstr ""
+msgstr "Beskrivelse:"
 
 #: ../po/resources_strings.c:226
 msgid "Required permissions: "
-msgstr ""
+msgstr "Påkrævede tilladelser:"
 
 #: ../po/resources_strings.c:229
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr ""
+msgstr "Et script (%s:%d) i denne gadget kører og svarer ikke. Vil du stoppe det?"
 
 #: ../po/resources_strings.c:232
 msgid "Change Hotkey"
-msgstr ""
+msgstr "Skift genvejstast"
 
 #: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
-msgstr ""
+msgstr "Klik for at vælge ny genvejstast:"
 
 #: ../po/resources_strings.c:238
 msgid "Press new hotkey"
-msgstr ""
+msgstr "Tryk på ny genvejstast"
 
 #: ../po/resources_strings.c:241
 #: ../po/resources_strings.c:253
 msgid "Clear"
-msgstr ""
+msgstr "Ryd"
 
 #: ../po/resources_strings.c:244
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiveret"
 
 #: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr ""
+msgstr "Gadgets, tryk på %s for at vise/skjule gadgets."
 
 #: ../po/resources_strings.c:256
 msgid "Trace"
-msgstr ""
+msgstr "Spor"
 
 #: ../po/resources_strings.c:259
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: ../po/resources_strings.c:262
 msgid "Warning"
-msgstr ""
+msgstr "Advarsel"
 
 #: ../po/resources_strings.c:265
 #: ../po/control_strings.c:49
 #: ../po/control_strings.c:64
 msgid "Error"
-msgstr ""
+msgstr "Fejl"
 
 #: ../po/resources_strings.c:268
 msgid "Lock scroll"
-msgstr ""
+msgstr "Lås rulning"
 
 #: ../po/resources_strings.c:271
 msgid "Gadgets (GTK)"
-msgstr ""
+msgstr "Gadgets (GTK)"
 
 #: ../po/resources_strings.c:274
 msgid "Gadgets (Qt)"
-msgstr ""
+msgstr "Gadgets (Qt)"
 
 #: ../po/resources_strings.c:277
 #: ../po/resources_strings.c:286
 msgid "Gadget Designer"
-msgstr ""
+msgstr "Gadget-designer"
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr ""
+msgstr "Kør Gadgets i GNOME/GTK-miljø"
 
 #: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr ""
+msgstr "Kør Gadgets i KDE/Qt-miljø"
 
 #: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
-msgstr ""
+msgstr "Læser indholdet af lokale filer og mapper"
 
 #: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
-msgstr ""
+msgstr "Opretter eller ændrer lokale filer og mapper"
 
 #: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
-msgstr ""
+msgstr "Forespørger på eller ændrer status for hardwareenheder"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses network"
-msgstr ""
+msgstr "Opretter adgang til netværk"
 
 #: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
-msgstr ""
+msgstr "Opretter adgang til brugertilpasningsdata"
 
 #: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
-msgstr ""
+msgstr "Eksekverer kildekode og lokale programmer"
 
 #: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr ""
+msgstr "Denne gadget kunne ikke indlæses:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr ""
+msgstr "Denne gadget kræver API-version %s:&#10;&#10;%s eller nyere, der understøtter gadgets"
 
 #: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr ""
+msgstr "Denne gadget kræver Linux-version %s:&#10;&#10;%s eller nyere, der understøtter gadgets"
 
 #: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr ""
+msgstr "Denne gadget fungerer ikke på Linux-platformen:%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:319
 msgid "http://www.google.com"
-msgstr ""
+msgstr "http://www.google.com"
 
 #: ../po/control_strings.c:25
 #: ../po/control_strings.c:28
 #: ../po/control_strings.c:31
 msgid "Gadgets Control"
-msgstr ""
+msgstr "Gadget-styring"
 
 #: ../po/control_strings.c:34
 msgid "Show only:"
-msgstr ""
+msgstr "Vis kun:"
 
 #: ../po/control_strings.c:37
 msgid "{{PAGE}} of {{TOTAL}}"
-msgstr ""
+msgstr "{{PAGE}} af {{TOTAL}}"
 
 #: ../po/control_strings.c:40
 msgid "Add"
-msgstr ""
+msgstr "Tilføj"
 
 #: ../po/control_strings.c:43
 msgid "Adding..."
-msgstr ""
+msgstr "Tilføjer..."
 
 #: ../po/control_strings.c:46
 msgid "Added"
-msgstr ""
+msgstr "Tilføjet"
 
 #: ../po/control_strings.c:52
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 #: ../po/control_strings.c:55
 msgid "Update"
-msgstr ""
+msgstr "Opdatér"
 
 #: ../po/control_strings.c:58
 msgid "Updating..."
-msgstr ""
+msgstr "Opdaterer..."
 
 #: ../po/control_strings.c:61
 msgid "Updated"
-msgstr ""
+msgstr "Opdateret"
 
 #: ../po/control_strings.c:67
 msgid "Search gadgets"
-msgstr ""
+msgstr "Find gadgets"
 
 #: ../po/control_strings.c:70
 msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
-msgstr ""
+msgstr "Vil du lukke Gadgets Zone? Dette vil fjerne alle dine installerede gadgets."
 
 #: ../po/control_strings.c:73
 msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
-msgstr ""
+msgstr "Velkommen til Gadgets, der er små, sjove programmer til din computer. Hvad kunne du tænke dig?"
 
 #: ../po/control_strings.c:76
 msgid "Add a new Gadget"
-msgstr ""
+msgstr "Tilføj en ny gadget"
 
 #: ../po/control_strings.c:79
 msgid "Check for updates"
-msgstr ""
+msgstr "Søg efter opdateringer"
 
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
-msgstr ""
+msgstr "Beklager, men vi kan ikke finde nogle opdaterede gadget. Du kan:"
 
 #: ../po/control_strings.c:85
 msgid "» "
-msgstr ""
+msgstr "» "
 
 #: ../po/control_strings.c:88
 msgid " / "
-msgstr ""
+msgstr " / "
 
 #: ../po/control_strings.c:91
 msgid "Version "
-msgstr ""
+msgstr "Version "
 
 #: ../po/control_strings.c:94
 msgid " KB"
-msgstr ""
+msgstr " KB"
 
 #: ../po/control_strings.c:97
 msgid "All languages"
-msgstr ""
+msgstr "Alle sprog"
 
 #: ../po/control_strings.c:100
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgarsk"
 
 #: ../po/control_strings.c:103
 msgid "Catalan"
-msgstr ""
+msgstr "Katalansk"
 
 #: ../po/control_strings.c:106
 msgid "Czech"
-msgstr ""
+msgstr "Tjekkisk"
 
 #: ../po/control_strings.c:109
 msgid "Danish"
-msgstr ""
+msgstr "Dansk"
 
 #: ../po/control_strings.c:112
 msgid "German"
-msgstr ""
+msgstr "Tysk"
 
 #: ../po/control_strings.c:115
 msgid "Greek"
-msgstr ""
+msgstr "Græsk"
 
 #: ../po/control_strings.c:118
 msgid "English (US)"
-msgstr ""
+msgstr "Engelsk (US)"
 
 #: ../po/control_strings.c:121
 msgid "English (UK)"
-msgstr ""
+msgstr "Engelsk (UK)"
 
 #: ../po/control_strings.c:124
 msgid "Spanish"
-msgstr ""
+msgstr "Spansk"
 
 #: ../po/control_strings.c:127
 msgid "Finnish"
-msgstr ""
+msgstr "Finsk"
 
 #: ../po/control_strings.c:130
 msgid "French"
-msgstr ""
+msgstr "Fransk"
 
 #: ../po/control_strings.c:133
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../po/control_strings.c:136
 msgid "Croatian"
-msgstr ""
+msgstr "Kroatisk"
 
 #: ../po/control_strings.c:139
 msgid "Hungarian"
-msgstr ""
+msgstr "Ungarsk"
 
 #: ../po/control_strings.c:142
 msgid "Indonesian"
-msgstr ""
+msgstr "Indonesisk"
 
 #: ../po/control_strings.c:145
 msgid "Italian"
-msgstr ""
+msgstr "Italiensk"
 
 #: ../po/control_strings.c:148
 msgid "Japanese"
-msgstr ""
+msgstr "Japansk"
 
 #: ../po/control_strings.c:151
 msgid "Korean"
-msgstr ""
+msgstr "Koreansk"
 
 #: ../po/control_strings.c:154
 msgid "Dutch"
-msgstr ""
+msgstr "Hollandsk"
 
 #: ../po/control_strings.c:157
 msgid "Norwegian"
-msgstr ""
+msgstr "Norsk"
 
 #: ../po/control_strings.c:160
 msgid "Polish"
-msgstr ""
+msgstr "Polsk"
 
 #: ../po/control_strings.c:163
 msgid "Portuguese (Brazil)"
-msgstr ""
+msgstr "Portugisisk (Brasilien)"
 
 #: ../po/control_strings.c:166
 msgid "Portuguese (Portugal)"
-msgstr ""
+msgstr "Portogisisk (Portugal)"
 
 #: ../po/control_strings.c:169
 msgid "Romanian"
-msgstr ""
+msgstr "Rumænsk"
 
 #: ../po/control_strings.c:172
 msgid "Russian"
-msgstr ""
+msgstr "Russisk"
 
 #: ../po/control_strings.c:175
 msgid "Slovak"
-msgstr ""
+msgstr "Slovakisk"
 
 #: ../po/control_strings.c:178
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovensk"
 
 #: ../po/control_strings.c:181
 msgid "Swedish"
-msgstr ""
+msgstr "Svensk"
 
 #: ../po/control_strings.c:184
 msgid "Thai"
-msgstr ""
+msgstr "Thailansk"
 
 #: ../po/control_strings.c:187
 msgid "Turkish"
-msgstr ""
+msgstr "Tyrkisk"
 
 #: ../po/control_strings.c:190
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "Kinesisk (forenklet)"
 
 #: ../po/control_strings.c:193
 msgid "Chinese (Traditional)"
-msgstr ""
+msgstr "Kinesisk (traditionelt)"
 
 #: ../po/control_strings.c:196
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../po/control_strings.c:199
 msgid "New"
-msgstr ""
+msgstr "Nye"
 
 #: ../po/control_strings.c:202
 msgid "Recommendations"
-msgstr ""
+msgstr "Anbefalinger"
 
 #: ../po/control_strings.c:205
 msgid "Google Created"
-msgstr ""
+msgstr "Udviklet af Google"
 
 #: ../po/control_strings.c:208
 msgid "Recently Used"
-msgstr ""
+msgstr "Senest anvendte"
 
 #: ../po/control_strings.c:211
 msgid "Updates"
-msgstr ""
+msgstr "Opdateringer"
 
 #: ../po/control_strings.c:214
 msgid "News"
-msgstr ""
+msgstr "Nyheder"
 
 #: ../po/control_strings.c:217
 msgid "Sports"
-msgstr ""
+msgstr "Sport"
 
 #: ../po/control_strings.c:220
 msgid "Lifestyle"
-msgstr ""
+msgstr "Livstil"
 
 #: ../po/control_strings.c:223
 msgid "Finance"
-msgstr ""
+msgstr "Finans"
 
 #: ../po/control_strings.c:226
 msgid "Tools"
-msgstr ""
+msgstr "Værktøjer"
 
 #: ../po/control_strings.c:229
 msgid "Fun and Games"
-msgstr ""
+msgstr "Sjov og spil"
 
 #: ../po/control_strings.c:232
 msgid "Technology"
-msgstr ""
+msgstr "Teknologi"
 
 #: ../po/control_strings.c:235
 msgid "Communication"
-msgstr ""
+msgstr "Kommunikation"
 
 #: ../po/control_strings.c:238
 msgid "Holidays"
-msgstr ""
+msgstr "Ferie"
 
