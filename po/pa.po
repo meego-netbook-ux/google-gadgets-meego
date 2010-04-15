@@ -1,0 +1,683 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-15 04:29+0000\n"
+"PO-Revision-Date: 2010-04-15 21:35+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:247
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
+msgid "Gadgets"
+msgstr "ਗੈਜਿੱਟ"
+
+#: ../po/resources_strings.c:28
+#, c-format
+msgid "(API Version: %s)"
+msgstr "(API ਵਰਜਨ: %s)"
+
+#: ../po/resources_strings.c:31
+msgid ""
+"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
+"Apache License, Version 2.0:"
+msgstr ""
+
+#: ../po/resources_strings.c:34
+msgid "For more information please visit our project site:"
+msgstr "ਇਹ ਜਾਣਾਕਰੀ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਇਹ ਵੈੱਬਸਾਈਟ ਵੇਖੋ:"
+
+#: ../po/resources_strings.c:37
+msgid "%I:%M%P"
+msgstr "%I:%M%P"
+
+#: ../po/resources_strings.c:40
+msgid "%b %d"
+msgstr "%b %d"
+
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
+#, c-format
+msgid "%dd ago"
+msgstr "%dd ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:49
+#, c-format
+msgid "%d day ago"
+msgstr "%d ਦਿਨ ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:52
+#, c-format
+msgid "%d days ago"
+msgstr "%d ਦਿਨ ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
+#, c-format
+msgid "%dh ago"
+msgstr "%dh ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:61
+#, c-format
+msgid "%d hr ago"
+msgstr "%d hr ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:64
+#, c-format
+msgid "%d hrs ago"
+msgstr "%d hrs ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
+#, c-format
+msgid "%dm ago"
+msgstr "%dm ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:73
+#, c-format
+msgid "%d min ago"
+msgstr "%d ਮਿੰਟ ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:76
+#, c-format
+msgid "%d mins ago"
+msgstr "%d ਮਿੰਟ ਪਹਿਲਾਂ"
+
+#: ../po/resources_strings.c:79
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
+msgid "Remove"
+msgstr "ਹਟਾਓ"
+
+#: ../po/resources_strings.c:85
+msgid "Don't show me items like this"
+msgstr "ਇੰਝ ਦੀਆਂ ਆਈਟਮਾਂ ਮੈਨੂੰ ਨਾ ਵੇਖਾਓ"
+
+#: ../po/resources_strings.c:88
+msgid "Previous"
+msgstr "ਪਿੱਛੇ"
+
+#: ../po/resources_strings.c:91
+msgid "Next"
+msgstr "ਅੱਗੇ"
+
+#: ../po/resources_strings.c:94
+msgid "Toggle Expanded View"
+msgstr ""
+
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
+msgid "Menu"
+msgstr "ਮੇਨੂ"
+
+#: ../po/resources_strings.c:103
+msgid "Add gadgets"
+msgstr "ਗੈਜ਼ਿੱਟ ਸ਼ਾਮਲ"
+
+#: ../po/resources_strings.c:109
+msgid "Minimize"
+msgstr "ਘੱਟੋ-ਘੱਟ"
+
+#: ../po/resources_strings.c:112
+msgid "Program can't start because it failed to load the following module(s):"
+msgstr ""
+
+#: ../po/resources_strings.c:115
+msgid "&About..."
+msgstr "ਇਸ ਬਾਰੇ(&A)..."
+
+#: ../po/resources_strings.c:118
+msgid "Add &Gadgets..."
+msgstr "ਗੈਜ਼ਿੱਟ ਸ਼ਾਮਲ(&G)..."
+
+#: ../po/resources_strings.c:121
+msgid "Add an &iGoogle Gadget"
+msgstr "&iGoogle ਗੈਜਿੱਟ ਸ਼ਾਮਲ"
+
+#: ../po/resources_strings.c:124
+msgid "Always on &Top"
+msgstr "ਹਮੇਸ਼ਾ ਉੱਤੇ ਰੱਖੋ(&O)"
+
+#: ../po/resources_strings.c:127
+msgid "Auto &Fit"
+msgstr "ਆਟੋ ਫਿੱਟ(&F)"
+
+#: ../po/resources_strings.c:130
+msgid "A&uto Hide"
+msgstr "ਆਟੋ ਓਹਲੇ(&u)"
+
+#: ../po/resources_strings.c:133
+msgid "&Collapse"
+msgstr "ਸਮੇਟੋ(&C)"
+
+#: ../po/resources_strings.c:136
+msgid "&Dock to Sidebar"
+msgstr "ਬਾਹੀ 'ਚ ਡੌਕ ਕਰੋ(&D)"
+
+#: ../po/resources_strings.c:139
+msgid "Doc&k Sidebar"
+msgstr "ਬਾਹੀ 'ਚ ਡੌਕ ਕਰੋ(&k)"
+
+#: ../po/resources_strings.c:142
+msgid "E&xit"
+msgstr "ਬੰਦ ਕਰੋ(&x)"
+
+#: ../po/resources_strings.c:145
+msgid "Ex&pand"
+msgstr "ਫੈਲਾਓ(&p)"
+
+#: ../po/resources_strings.c:148
+msgid "&Font Size"
+msgstr "ਫੋਂਟ ਸਾਈਜ਼(&F)"
+
+#: ../po/resources_strings.c:151
+msgid "&Default"
+msgstr "ਡਿਫਾਲਟ(&D)"
+
+#: ../po/resources_strings.c:154
+msgid "&Larger"
+msgstr "ਵੱਡਾ(&L)"
+
+#: ../po/resources_strings.c:157
+msgid "&Smaller"
+msgstr "ਛੋਟਾ(&S)"
+
+#: ../po/resources_strings.c:160
+msgid "Hide A&ll"
+msgstr "ਸਭ ਓਹਲੇ(&l)"
+
+#: ../po/resources_strings.c:163
+msgid "&Left"
+msgstr "ਖੱਬੇ(&L)"
+
+#: ../po/resources_strings.c:166
+msgid "&Options..."
+msgstr "ਚੋਣਾਂ(&O)..."
+
+#: ../po/resources_strings.c:169
+msgid "R&emove"
+msgstr "ਹਟਾਓ(&e)"
+
+#: ../po/resources_strings.c:172
+msgid "&Right"
+msgstr "ਸੱਜੇ(&R)"
+
+#: ../po/resources_strings.c:175
+msgid "Show A&ll"
+msgstr "ਸਭ ਵੇਖੋ(&l)"
+
+#: ../po/resources_strings.c:178
+msgid "&Undock from Sidebar"
+msgstr ""
+
+#: ../po/resources_strings.c:181
+msgid "&Zoom"
+msgstr "ਜ਼ੂਮ(&Z)"
+
+#: ../po/resources_strings.c:184
+msgid "100%"
+msgstr "100%"
+
+#: ../po/resources_strings.c:187
+msgid "125%"
+msgstr "125%"
+
+#: ../po/resources_strings.c:190
+msgid "150%"
+msgstr "150%"
+
+#: ../po/resources_strings.c:193
+msgid "175%"
+msgstr "175%"
+
+#: ../po/resources_strings.c:196
+msgid "200%"
+msgstr "200%"
+
+#: ../po/resources_strings.c:199
+msgid "50%"
+msgstr "50%"
+
+#: ../po/resources_strings.c:202
+msgid "75%"
+msgstr "75%"
+
+#: ../po/resources_strings.c:205
+msgid "Change &Hotkey..."
+msgstr "ਹਾਟ-ਕੀ ਬਦਲੋ(&H)..."
+
+#: ../po/resources_strings.c:208
+msgid "De&bug Console"
+msgstr "ਡੀਬੱਗ ਕਨਸੋਲ(&b)"
+
+#: ../po/resources_strings.c:211
+msgid "&Sidebar"
+msgstr "ਬਾਹੀ(&S)"
+
+#: ../po/resources_strings.c:214
+msgid "Feedback..."
+msgstr "ਫੀਡਬੈਕ..."
+
+#: ../po/resources_strings.c:217
+msgid "Third Party Gadget Installation"
+msgstr ""
+
+#: ../po/resources_strings.c:220
+msgid ""
+"Google has not tested or verified the features or security of this third "
+"party Gadget. Please confirm that you want to install:"
+msgstr ""
+
+#: ../po/resources_strings.c:223
+msgid "Description: "
+msgstr "ਵੇਰਵਾ: "
+
+#: ../po/resources_strings.c:226
+msgid "Required permissions: "
+msgstr "ਲੋੜੀਦੇ ਅਧਿਕਾਰ: "
+
+#: ../po/resources_strings.c:229
+#, c-format
+msgid ""
+"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
+"you want to stop it?"
+msgstr ""
+
+#: ../po/resources_strings.c:232
+msgid "Change Hotkey"
+msgstr "ਹਾਟ-ਕੀ ਬਦਲੋ"
+
+#: ../po/resources_strings.c:235
+msgid "Click to input the new hotkey:"
+msgstr ""
+
+#: ../po/resources_strings.c:238
+msgid "Press new hotkey"
+msgstr "ਨਵੀਂ ਹਾਟਕੀ ਦੱਬੋ"
+
+#: ../po/resources_strings.c:241 ../po/resources_strings.c:253
+msgid "Clear"
+msgstr "ਸਾਫ਼ ਕਰੋ"
+
+#: ../po/resources_strings.c:244
+msgid "Disabled"
+msgstr "ਆਯੋਗ"
+
+#: ../po/resources_strings.c:250
+#, c-format
+msgid "Gadgets, press %s to show or hide gadgets."
+msgstr ""
+
+#: ../po/resources_strings.c:256
+msgid "Trace"
+msgstr ""
+
+#: ../po/resources_strings.c:259
+msgid "Info"
+msgstr "ਜਾਣਕਾਰੀ"
+
+#: ../po/resources_strings.c:262
+msgid "Warning"
+msgstr "ਚੇਤਾਵਨੀ"
+
+#: ../po/resources_strings.c:265 ../po/control_strings.c:49
+#: ../po/control_strings.c:64
+msgid "Error"
+msgstr "ਗਲਤੀ"
+
+#: ../po/resources_strings.c:268
+msgid "Lock scroll"
+msgstr "ਸਕਰੋਲ ਲਾਕ ਕਰੋ"
+
+#: ../po/resources_strings.c:271
+msgid "Gadgets (GTK)"
+msgstr "ਗੈਜਿਟ (GTK)"
+
+#: ../po/resources_strings.c:274
+msgid "Gadgets (Qt)"
+msgstr "ਗੈਜਿਟ (Qt)"
+
+#: ../po/resources_strings.c:277 ../po/resources_strings.c:286
+msgid "Gadget Designer"
+msgstr ""
+
+#: ../po/resources_strings.c:280
+msgid "Run Gadgets in GNOME/GTK environment"
+msgstr ""
+
+#: ../po/resources_strings.c:283
+msgid "Run Gadgets in KDE/Qt environment"
+msgstr ""
+
+#: ../po/resources_strings.c:289
+msgid "Reads content of local files and directories"
+msgstr ""
+
+#: ../po/resources_strings.c:292
+msgid "Creates or modifies local files and directories"
+msgstr ""
+
+#: ../po/resources_strings.c:295
+msgid "Queries or modifies the status of hardware devices"
+msgstr ""
+
+#: ../po/resources_strings.c:298
+msgid "Accesses network"
+msgstr ""
+
+#: ../po/resources_strings.c:301
+msgid "Accesses personalization data"
+msgstr ""
+
+#: ../po/resources_strings.c:304
+msgid "Executes native code and local applications"
+msgstr ""
+
+#: ../po/resources_strings.c:307
+#, c-format
+msgid "The gadget could not be loaded:&#10;&#10;%s"
+msgstr ""
+
+#: ../po/resources_strings.c:310
+#, c-format
+msgid ""
+"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr ""
+
+#: ../po/resources_strings.c:313
+#, c-format
+msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
+msgstr ""
+
+#: ../po/resources_strings.c:316
+msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
+msgstr ""
+
+#: ../po/resources_strings.c:319
+msgid "http://www.google.com"
+msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25 ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "ਗੈਜਿੱਟ ਕੰਟਰੋਲ"
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "ਕੇਵਲ ਵੇਖੋ:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr ""
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "ਸ਼ਾਮਲ"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr ""
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "ਸ਼ਾਮਲ ਕੀਤੇ"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "ਆਫਲਾਈਨ"
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "ਅੱਪਡੇਟ"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "ਅੱਪਡੇਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "ਅੱਪਡੇਟ ਕੀਤੇ"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "ਗੈਜਿੱਟ ਖੋਜ"
+
+#: ../po/control_strings.c:70
+msgid ""
+"Do you want to close the Gadgets Zone? This will remove all your installed "
+"gadgets."
+msgstr ""
+
+#: ../po/control_strings.c:73
+msgid ""
+"Welcome to Gadgets, they're tiny bits of fun for your computer. What do you "
+"want to do?"
+msgstr ""
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "ਨਵਾਂ ਗੈਜਿੱਟ ਸ਼ਾਮਲ"
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "ਅੱਪਡੇਟ ਲਈ ਚੈਕ ਕਰੋ"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr ""
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "ਵਰਜਨ "
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "ਸਭ ਭਾਸ਼ਾਵਾਂ"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "ਬੁਲਗਾਰੀਆਈ"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "ਕਾਟਾਲਾਨ"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "ਚੈੱਕ"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "ਡੈਨਿਸ਼"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "ਜਰਮਨ"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "ਗਰੀਕ"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "ਅੰਗਰੇਜ਼ੀ (ਅਮਰੀਕੀ)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "ਅੰਗਰੇਜ਼ੀ (ਬਰਤਾਨਵੀ)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "ਸਪੇਨੀ"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "ਫੈਨਿਸ਼"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "ਫਰੈਂਚ"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "ਹਿੰਦੀ"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "ਕਰੋਟੀਆਈ"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "ਹੰਗਰੀਆਈ"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "ਇੰਡੋਨੇਸ਼ੀਆਈ"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "ਇਤਾਲਵੀ"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "ਜਾਪਾਨੀ"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "ਕੋਰੀਆਈ"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "ਡੱਚ"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "ਨਾਰਵੇਗੀਆਈ"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "ਪੋਲੈਂਡੀ"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "ਪੁਰਤਗਾਲੀ (ਬਰਾਜ਼ੀਲ)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "ਪੁਰਤਗਾਲੀ (ਪੁਰਤਗਾਲ)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "ਰੋਮਾਨੀਆਈ"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "ਰੂਸੀ"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "ਸਲੋਵਾਕ"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "ਸਲੋਵੀਨੀਆਈ"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "ਸਵੀਡਨੀ"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "ਥਾਈ"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "ਤੁਰਕ"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "ਚੀਨੀ (ਸਧਾਰਨ)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "ਚੀਨੀ (ਪੁਰਾਤਨ)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "ਸਭ"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "ਨਵਾਂ"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "ਸਿਫਾਰਸ਼ੀ"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "ਗੂਗਲ ਵਲੋਂ ਬਣਾਇਆ"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "ਅੱਪਡੇਟ"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "ਖ਼ਬਰਾਂ"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "ਖੇਡਾਂ"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "ਜੀਵਨ-ਜਾਂਚ"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "ਵਿੱਤ"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "ਟੂਲ"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "ਖੇਡਾਂ"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "ਤਕਨਾਲੋਜੀ"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "ਸੰਚਾਰ"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "ਛੁੱਟੀਆਂ"
+
