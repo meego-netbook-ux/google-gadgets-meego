@@ -452,6 +452,11 @@ class SimpleClutterHost::Impl {
     }
   }
 
+  static gboolean load_gadgets_callback (Impl* impl) {
+    impl->LoadGadgets();
+    return FALSE;
+  }
+
   void LoadGadgets() {
     gadget_manager_->EnumerateGadgetInstances(
         NewSlot(this, &Impl::EnumerateGadgetInstancesCallback));
@@ -638,7 +643,8 @@ SimpleClutterHost::SimpleClutterHost(OptionsInterface *options, double zoom,
   impl_(new Impl(this, options, zoom, view_debug_mode,
                    debug_console_config, width, height)) {
   impl_->SetupUI();
-  impl_->LoadGadgets();
+  g_timeout_add (200, (GSourceFunc)&SimpleClutterHost::Impl::load_gadgets_callback,
+                 (gpointer)impl_);
 }
 
 SimpleClutterHost::~SimpleClutterHost() {

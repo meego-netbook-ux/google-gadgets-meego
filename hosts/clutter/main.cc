@@ -355,13 +355,11 @@ int main(int argc, char* argv[]) {
   ggadget::HostInterface *host;
   ggadget::OptionsInterface *options = ggadget::CreateOptions(kOptionsName);
 
-  host = simple_clutter_host =
-    new hosts::clutter::SimpleClutterHost(options, zoom, debug_mode,
-                                          debug_console, 800, 600);
-
   ClutterActor* stage = NULL;
   gfloat stage_width, stage_height;
 #ifdef HAVE_MPL
+  MplPanelClient  *panel;
+
   if (standalone) {
 #endif
     stage = clutter_stage_get_default();
@@ -372,19 +370,29 @@ int main(int argc, char* argv[]) {
     clutter_actor_set_size(stage, 800, 600);
 #ifdef HAVE_MPL
   } else {
-    MplPanelClient  *panel;
-
     panel = mpl_panel_clutter_new ("gadgets",
                                    _("gadgets"),
                                    PIXMAP_DIR "gadgets-panel.css",
                                    "gadgets-button",
                                    FALSE);
 
-    simple_clutter_host->SetMutterPanel (panel);
-
     MPL_PANEL_CLUTTER_SETUP_EVENTS_WITH_GTK (panel);
 
     stage = mpl_panel_clutter_get_stage (MPL_PANEL_CLUTTER (panel));
+  }
+#endif
+  //we should construct the host later (and map the stage window
+  //early) to prevent a timeout in netbook UX toolbar -- sometimes
+  //loading all the gadgets will be long
+
+  clutter_actor_show (stage);
+  host = simple_clutter_host =
+    new hosts::clutter::SimpleClutterHost(options, zoom, debug_mode,
+                                          debug_console, 800, 600);
+
+#ifdef HAVE_MPL
+  if (!standalone) {
+    simple_clutter_host->SetMutterPanel (panel);
   }
 #endif
   g_signal_connect(stage, "allocation-changed",
@@ -393,8 +401,6 @@ int main(int argc, char* argv[]) {
   g_signal_connect(stage, "key-release-event",
                    G_CALLBACK (KeyReleaseEvent), NULL);
   clutter_actor_get_size (stage, &stage_width, &stage_height);
-
-  clutter_actor_show (stage);
 
   //background
   stage_background =
