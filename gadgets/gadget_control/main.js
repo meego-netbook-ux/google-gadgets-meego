@@ -247,20 +247,39 @@ function UpdateLanguageBox() {
     lang: kAllLanguage,
     disp: GetDisplayLanguage(kAllLanguage)
   });
+
+  var saved_lang = options.getValue ("language");
+  debug.trace ("saved language: " + saved_lang);
+  var selected = 0;
+
   for (var i = 0; i < languages.length; i++) {
     var language = languages[i].lang;
     language_box.appendElement(
       "<item name='" + language +
       "'><label vAlign='middle' size='10'>" + languages[i].disp +
       "</label></item>");
+    if (language == saved_lang)
+      selected = i;
   }
-  language_box.selectedIndex = 0;
-  SelectLanguage(kAllLanguage);
+  language_box.selectedIndex = selected;
+  if (saved_lang == "")
+    SelectLanguage(kAllLanguage);
+  else
+    SelectLanguage (saved_lang);
   gUpdatingLanguageBox = false;
 }
 
 function SelectLanguage(language) {
   gCurrentLanguage = language;
+  if (!gUpdatingLanguageBox) {
+    if (typeof(plugins_div) == "undefined") {
+      // when we start search in the welcome screen, we create the
+      // plugin_div in this way
+      populate_plugins_div ();
+    }
+    SelectCategory (kCategoryAll);
+    options.putValue ("language", language);
+  }
   // UpdateCategories();
 }
 
