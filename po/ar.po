@@ -7,36 +7,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-15 04:10+0000\n"
-"PO-Revision-Date: 2010-04-15 07:27+0100\n"
-"Last-Translator: Jon Hedemann <tradomusnordic@gmail.com>\n"
-"Language-Team: DANISH\n"
+"POT-Creation-Date: 2010-04-10 09:57+0000\n"
+"PO-Revision-Date: 2010-04-20 09:47+0000\n"
+"Last-Translator: Mehdi CHERFI <cherfim@gmail.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Poedit-Language: Danish\n"
-"X-Poedit-Country: DENMARK\n"
+"X-Poedit-Language: Arabic\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:247
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
-msgstr "Gadgets"
+msgstr "أدواة"
 
 #: ../po/resources_strings.c:28
 #, c-format
 msgid "(API Version: %s)"
-msgstr "(API Version: %s)"
+msgstr "(%s : نسخة API)"
 
 #: ../po/resources_strings.c:31
-msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgid ""
+"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
+"Apache License, Version 2.0:"
+msgstr ""
+"حقوق الطّبع © 2009 جوجل INC. كلّ الحقوق محفوظة.&#10; مرخّص تحت "
+"رخصة أباتشي نسخة 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
-msgstr "For more information please visit our project site:"
+msgstr ":لمزيد من المعلومات يرجى زيارة موقع المشروع "
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
@@ -46,187 +48,182 @@ msgstr "%I:%M%P"
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43
-#: ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
-msgstr "%dd siden"
+msgstr "%dd منذ"
 
 #: ../po/resources_strings.c:49
 #, c-format
 msgid "%d day ago"
-msgstr "%d dag siden"
+msgstr "يوم %d منذ"
 
 #: ../po/resources_strings.c:52
 #, c-format
 msgid "%d days ago"
-msgstr "%d dage siden"
+msgstr "أيّام %d منذ"
 
-#: ../po/resources_strings.c:55
-#: ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
-msgstr "%dh siden"
+msgstr "%dh منذ"
 
 #: ../po/resources_strings.c:61
 #, c-format
 msgid "%d hr ago"
-msgstr "%d time siden"
+msgstr "ساعة %dh منذ"
 
 #: ../po/resources_strings.c:64
 #, c-format
 msgid "%d hrs ago"
-msgstr "%d timer siden"
+msgstr "ساعات %dh منذ"
 
-#: ../po/resources_strings.c:67
-#: ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
-msgstr "%dm siden"
+msgstr "%dm منذ"
 
 #: ../po/resources_strings.c:73
 #, c-format
 msgid "%d min ago"
-msgstr "%d minut siden"
+msgstr "دقيقة %d منذ"
 
 #: ../po/resources_strings.c:76
 #, c-format
 msgid "%d mins ago"
-msgstr "%d minutter siden"
+msgstr "دقائق %d منذ"
 
 #: ../po/resources_strings.c:79
 msgid "Open"
-msgstr "Åbn"
+msgstr "فتح"
 
-#: ../po/resources_strings.c:82
-#: ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
 msgid "Remove"
-msgstr "Fjern"
+msgstr "حذف"
 
 #: ../po/resources_strings.c:85
 msgid "Don't show me items like this"
-msgstr "Vis ikke objekter som disse"
+msgstr "لا تظهر موادّا كهذه"
 
 #: ../po/resources_strings.c:88
 msgid "Previous"
-msgstr "Forrige"
+msgstr "سابق"
 
 #: ../po/resources_strings.c:91
 msgid "Next"
-msgstr "Næste"
+msgstr "تالي"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "Skift udvidet visning"
+msgstr "بدّل الرؤية المكبّرة"
 
-#: ../po/resources_strings.c:97
-#: ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
-msgstr "Menu"
+msgstr "قائمة"
 
 #: ../po/resources_strings.c:103
 msgid "Add gadgets"
-msgstr "Tilføj gadgets"
+msgstr "أضف أداة"
 
 #: ../po/resources_strings.c:109
 msgid "Minimize"
-msgstr "Minimér"
+msgstr "صغّر"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr "Programmet kan ikke starte, da følgende modul(er) ikke kan indlæses:"
+msgstr ":(البرنامج لم يبدأ نظرا لفشله في تحميل الوحدة(الوحداة"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr "&Om..."
+msgstr "...عن&"
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
-msgstr "Tilføj &Gadgets..."
+msgstr "أضف &أدواة"
 
 #: ../po/resources_strings.c:121
 msgid "Add an &iGoogle Gadget"
-msgstr "Tilføj en &iGoogle Gadget"
+msgstr "&iGoogle أضف أداة"
 
 #: ../po/resources_strings.c:124
 msgid "Always on &Top"
-msgstr "Altid &øverst"
+msgstr "دائما في اﻷعلى&"
 
 #: ../po/resources_strings.c:127
 msgid "Auto &Fit"
-msgstr "Tilpas &automatisk"
+msgstr "إحتواء &تلقائي"
 
 #: ../po/resources_strings.c:130
 msgid "A&uto Hide"
-msgstr "S&kjul automatisk"
+msgstr "إ&خفاء تلقائي"
 
 #: ../po/resources_strings.c:133
 msgid "&Collapse"
-msgstr "&Fold sammen"
+msgstr "ضمّ&"
 
 #: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
-msgstr "&Føj til sidepanel"
+msgstr "ثبّت على العارضة الجانبيّة&"
 
 #: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
-msgstr "Doc&k sidepanel"
+msgstr "ثبّت على العارضة ال&جانبيّة"
 
 #: ../po/resources_strings.c:142
 msgid "E&xit"
-msgstr "A&fslut"
+msgstr "خ&روج"
 
 #: ../po/resources_strings.c:145
 msgid "Ex&pand"
-msgstr "Fo&ld ud"
+msgstr "نشر&"
 
 #: ../po/resources_strings.c:148
 msgid "&Font Size"
-msgstr "&Skriftstørrelse"
+msgstr "حجم الكتابة&"
 
 #: ../po/resources_strings.c:151
 msgid "&Default"
-msgstr "&Standard"
+msgstr "مبدئي&"
 
 #: ../po/resources_strings.c:154
 msgid "&Larger"
-msgstr "&Større"
+msgstr "أ&كبر"
 
 #: ../po/resources_strings.c:157
 msgid "&Smaller"
-msgstr "&Mindre"
+msgstr "أص&غر"
 
 #: ../po/resources_strings.c:160
 msgid "Hide A&ll"
-msgstr "Skjul a&lle"
+msgstr "إخفاء ا&لكلّ"
 
 #: ../po/resources_strings.c:163
 msgid "&Left"
-msgstr "&Venstre"
+msgstr "شمال&"
 
 #: ../po/resources_strings.c:166
 msgid "&Options..."
-msgstr "&Valgmuligheder..."
+msgstr "خيارات&"
 
 #: ../po/resources_strings.c:169
 msgid "R&emove"
-msgstr "F&jern"
+msgstr "حذف&"
 
 #: ../po/resources_strings.c:172
 msgid "&Right"
-msgstr "&Højre"
+msgstr "يمين&"
 
 #: ../po/resources_strings.c:175
 msgid "Show A&ll"
-msgstr "Vis a&lle"
+msgstr "إ&ظهار الكلّ"
 
 #: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
-msgstr "&Fjern fra sidepanel"
+msgstr "أ&زل من العارضة الجانبيّة"
 
 #: ../po/resources_strings.c:181
 msgid "&Zoom"
-msgstr "&Zoom"
+msgstr "تكبير&"
 
 #: ../po/resources_strings.c:184
 msgid "100%"
@@ -258,428 +255,441 @@ msgstr "75%"
 
 #: ../po/resources_strings.c:205
 msgid "Change &Hotkey..."
-msgstr "Skift &genvejstast..."
+msgstr "...تغيير &الإختصار"
 
 #: ../po/resources_strings.c:208
 msgid "De&bug Console"
-msgstr "Fe&jlfindingskonsol"
+msgstr "لوحة مراقبة التّصحيح&"
 
 #: ../po/resources_strings.c:211
 msgid "&Sidebar"
-msgstr "&Sidepanel"
+msgstr "العار&ضة الجانبيّة"
 
 #: ../po/resources_strings.c:214
 msgid "Feedback..."
-msgstr "Feedback..."
+msgstr "...تعليق"
 
 #: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
-msgstr "Installation af tredjeparts-gadget"
+msgstr "تنزيل أدواة خارجية المصدر"
 
 #: ../po/resources_strings.c:220
-msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr "Google har ikke testet eller verificeret funktionerne i eller sikkerheden ved anvendelsen af denne tredjeparts-gadget. Bekræft venligst installationen:"
+msgid ""
+"Google has not tested or verified the features or security of this third "
+"party Gadget. Please confirm that you want to install:"
+msgstr ":جوجل لم تجرّب أو تتحقّق من إمكانيّات أو سلامة هذه الأداة ذات المصدر الخارجي. الرّجاء تأكيد التّنزيل"
+
 
 #: ../po/resources_strings.c:223
 msgid "Description: "
-msgstr "Beskrivelse:"
+msgstr " :وصف"
 
 #: ../po/resources_strings.c:226
 msgid "Required permissions: "
-msgstr "Påkrævede tilladelser:"
+msgstr " :إمتيازات مطلوبة"
 
 #: ../po/resources_strings.c:229
 #, c-format
-msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "Et script (%s:%d) i denne gadget kører og svarer ikke. Vil du stoppe det?"
+msgid ""
+"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
+"you want to stop it?"
+msgstr ""
+"تابع لهذه اﻷداة متوقّف أو لا يبدي تجاوبا. هل  (%s:%d) سكريبت"
+"تريد إيقافه ؟"
 
 #: ../po/resources_strings.c:232
 msgid "Change Hotkey"
-msgstr "Skift genvejstast"
+msgstr "تغيير الإختصار"
 
 #: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
-msgstr "Klik for at vælge ny genvejstast:"
+msgstr ":إضغط لإدخال الإختصار الجديد"
 
 #: ../po/resources_strings.c:238
 msgid "Press new hotkey"
-msgstr "Tryk på ny genvejstast"
+msgstr "إضغط على الإختصار الجديد"
 
-#: ../po/resources_strings.c:241
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:241 ../po/resources_strings.c:253
 msgid "Clear"
-msgstr "Ryd"
+msgstr "مسح"
 
 #: ../po/resources_strings.c:244
 msgid "Disabled"
-msgstr "Deaktiveret"
+msgstr "متوقّف"
 
 #: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr "Gadgets, tryk på %s for at vise/skjule gadgets."
+msgstr "لإظهار أو إخفاء الأدواة %s أدواة, إضغط على"
 
 #: ../po/resources_strings.c:256
 msgid "Trace"
-msgstr "Spor"
+msgstr "أثر"
 
 #: ../po/resources_strings.c:259
 msgid "Info"
-msgstr "Info"
+msgstr "معلومة"
 
 #: ../po/resources_strings.c:262
 msgid "Warning"
-msgstr "Advarsel"
+msgstr "تحذير"
 
-#: ../po/resources_strings.c:265
-#: ../po/control_strings.c:49
+#: ../po/resources_strings.c:265 ../po/control_strings.c:49
 #: ../po/control_strings.c:64
 msgid "Error"
-msgstr "Fejl"
+msgstr "خطأ"
 
 #: ../po/resources_strings.c:268
 msgid "Lock scroll"
-msgstr "Lås rulning"
+msgstr "إيقاف التّصفّح"
 
 #: ../po/resources_strings.c:271
 msgid "Gadgets (GTK)"
-msgstr "Gadgets (GTK)"
+msgstr "(GTK) أدواة"
 
 #: ../po/resources_strings.c:274
 msgid "Gadgets (Qt)"
-msgstr "Gadgets (Qt)"
+msgstr "(QT) أدواة"
 
-#: ../po/resources_strings.c:277
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:277 ../po/resources_strings.c:286
 msgid "Gadget Designer"
-msgstr "Gadget-designer"
+msgstr "مصمّم الأدواة"
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr "Kør Gadgets i GNOME/GTK-miljø"
+msgstr "GNOME/GTK شغّل الأدواة في محيط"
 
 #: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr "Kør Gadgets i KDE/Qt-miljø"
+msgstr "KDE/QT شغّل الأدواة في محيط"
 
 #: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
-msgstr "Læser indholdet af lokale filer og mapper"
+msgstr "قراءة محتوى الملفّات و المجلّدات المحلّية"
 
 #: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
-msgstr "Opretter eller ændrer lokale filer og mapper"
+msgstr "إنشاء أو تغيير محتوى الملفّات و المجلّدات المحلّية"
 
 #: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
-msgstr "Forespørger på eller ændrer status for hardwareenheder"
+msgstr "الإستعلام عن أو تغيير حالة مكوّنات الجهاز"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses network"
-msgstr "Opretter adgang til netværk"
+msgstr "الإتّصال بالشّبكة"
 
 #: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
-msgstr "Opretter adgang til brugertilpasningsdata"
+msgstr "دخول البيانات الشّخصيّة"
 
 #: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
-msgstr "Eksekverer kildekode og lokale programmer"
+msgstr "تشغيل التّعليمات الأصليّة و البرامج المحلّية"
 
 #: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr "Denne gadget kunne ikke indlæses:&#10;&#10;%s"
+msgstr "&#10;&#10;%s:تحميل اﻷداة غير ممكن"
 
 #: ../po/resources_strings.c:310
 #, c-format
-msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr "Denne gadget kræver API-version %s:&#10;&#10;%s eller nyere, der understøtter gadgets"
+msgid ""
+"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr ""
+"Gadget supporting API %s:&#10;&#10;%s اﻷداة تتطلّب على اﻷقلّ نسخة"
 
 #: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr "Denne gadget kræver Linux-version %s:&#10;&#10;%s eller nyere, der understøtter gadgets"
+msgstr ""
+"Gadgets for Linux %s:&#10;&#10;%s الأداة تتطلّب على الأقلّ نسخة"
 
 #: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr "Denne gadget fungerer ikke på Linux-platformen:%&#10;&#10;%s"
+msgstr "%&#10;&#10;%s:الأداة لا تشتغل على منصّة لينكس"
 
 #: ../po/resources_strings.c:319
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
 
-#: ../po/control_strings.c:25
-#: ../po/control_strings.c:28
+#: ../po/control_strings.c:25 ../po/control_strings.c:28
 #: ../po/control_strings.c:31
 msgid "Gadgets Control"
-msgstr "Gadget-styring"
+msgstr "التّحكّم في الأدواة"
 
 #: ../po/control_strings.c:34
 msgid "Show only:"
-msgstr "Vis kun:"
+msgstr ":أظهر فقط"
 
 #: ../po/control_strings.c:37
 msgid "{{PAGE}} of {{TOTAL}}"
-msgstr "{{PAGE}} af {{TOTAL}}"
+msgstr "{{TOTAL}} من {{PAGE}}"
 
 #: ../po/control_strings.c:40
 msgid "Add"
-msgstr "Tilføj"
+msgstr "أضف"
 
 #: ../po/control_strings.c:43
 msgid "Adding..."
-msgstr "Tilføjer..."
+msgstr "...إضافة"
 
 #: ../po/control_strings.c:46
 msgid "Added"
-msgstr "Tilføjet"
+msgstr "تمّت اﻹضافة"
 
 #: ../po/control_strings.c:52
 msgid "Offline"
-msgstr "Offline"
+msgstr "غير متّصل"
 
 #: ../po/control_strings.c:55
 msgid "Update"
-msgstr "Opdatér"
+msgstr "إحداثات"
 
 #: ../po/control_strings.c:58
 msgid "Updating..."
-msgstr "Opdaterer..."
+msgstr "...تحديث"
 
 #: ../po/control_strings.c:61
 msgid "Updated"
-msgstr "Opdateret"
+msgstr "تمّ التّحديث"
 
 #: ../po/control_strings.c:67
 msgid "Search gadgets"
-msgstr "Find gadgets"
+msgstr "البحث عن الأدواة"
 
 #: ../po/control_strings.c:70
-msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
-msgstr "Vil du lukke Gadgets Zone? Dette vil fjerne alle dine installerede gadgets."
+msgid ""
+"Do you want to close the Gadgets Zone? This will remove all your installed "
+"gadgets."
+msgstr ""
+"هل تريد غلق منطقة الأدواة؟ هذا سيزيل كلّ اﻷدواة"
+"المنزّلة"
 
 #: ../po/control_strings.c:73
-msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
-msgstr "Velkommen til Gadgets, der er små, sjove programmer til din computer. Hvad kunne du tænke dig?"
+msgid ""
+"Welcome to Gadgets, they're tiny bits of fun for your computer. What do you "
+"want to do?"
+msgstr ""
+"مرحبا بكم في اﻷدواة و الّتي تمثّل إظافة ممتعة لحاسوبك ماذا تريد "
+"أن تفعل ؟"
 
 #: ../po/control_strings.c:76
 msgid "Add a new Gadget"
-msgstr "Tilføj en ny gadget"
+msgstr "أضف أداة جديدة"
 
 #: ../po/control_strings.c:79
 msgid "Check for updates"
-msgstr "Søg efter opdateringer"
+msgstr "تحقّق من التّحديثات "
 
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
-msgstr "Beklager, men vi kan ikke finde nogle opdaterede gadget. Du kan:"
+msgstr ":عفوا, لا يوجد أيّ أداة حديثة متوفّرة, يمكنكم"
 
 #: ../po/control_strings.c:85
 msgid "» "
-msgstr "» "
+msgstr " «"
 
 #: ../po/control_strings.c:88
 msgid " / "
-msgstr " / "
+msgstr " / "
 
 #: ../po/control_strings.c:91
 msgid "Version "
-msgstr "Version "
+msgstr " نسخة"
 
 #: ../po/control_strings.c:94
 msgid " KB"
-msgstr " KB"
+msgstr "كيلوبايت "
 
 #: ../po/control_strings.c:97
 msgid "All languages"
-msgstr "Alle sprog"
+msgstr "كلّ اللّغات"
 
 #: ../po/control_strings.c:100
 msgid "Bulgarian"
-msgstr "Bulgarsk"
+msgstr "بلغاريّة"
 
 #: ../po/control_strings.c:103
 msgid "Catalan"
-msgstr "Katalansk"
+msgstr "كتلانيّة"
 
 #: ../po/control_strings.c:106
 msgid "Czech"
-msgstr "Tjekkisk"
+msgstr "تشيكوسلوفاكية"
 
 #: ../po/control_strings.c:109
 msgid "Danish"
-msgstr "Dansk"
+msgstr "دنمركيّة"
 
 #: ../po/control_strings.c:112
 msgid "German"
-msgstr "Tysk"
+msgstr "ألمانيّة"
 
 #: ../po/control_strings.c:115
 msgid "Greek"
-msgstr "Græsk"
+msgstr "اليونانيّة"
 
 #: ../po/control_strings.c:118
 msgid "English (US)"
-msgstr "Engelsk (US)"
+msgstr "(US) إنجليزيّة"
 
 #: ../po/control_strings.c:121
 msgid "English (UK)"
-msgstr "Engelsk (UK)"
+msgstr "(UK) إنجليزيّة"
 
 #: ../po/control_strings.c:124
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "إسبانيّة"
 
 #: ../po/control_strings.c:127
 msgid "Finnish"
-msgstr "Finsk"
+msgstr "فنلنديّة"
 
 #: ../po/control_strings.c:130
 msgid "French"
-msgstr "Fransk"
+msgstr "فرنسيّة"
 
 #: ../po/control_strings.c:133
 msgid "Hindi"
-msgstr "Hindi"
+msgstr "هنديّة"
 
 #: ../po/control_strings.c:136
 msgid "Croatian"
-msgstr "Kroatisk"
+msgstr "كرواتيّة"
 
 #: ../po/control_strings.c:139
 msgid "Hungarian"
-msgstr "Ungarsk"
+msgstr "هنغاريّة"
 
 #: ../po/control_strings.c:142
 msgid "Indonesian"
-msgstr "Indonesisk"
+msgstr "أندنوسيّة"
 
 #: ../po/control_strings.c:145
 msgid "Italian"
-msgstr "Italiensk"
+msgstr "إيطاليّة"
 
 #: ../po/control_strings.c:148
 msgid "Japanese"
-msgstr "Japansk"
+msgstr "يابانيّة"
 
 #: ../po/control_strings.c:151
 msgid "Korean"
-msgstr "Koreansk"
+msgstr "كوريّة"
 
 #: ../po/control_strings.c:154
 msgid "Dutch"
-msgstr "Hollandsk"
+msgstr "هولنديّة"
 
 #: ../po/control_strings.c:157
 msgid "Norwegian"
-msgstr "Norsk"
+msgstr "نرويجيّة"
 
 #: ../po/control_strings.c:160
 msgid "Polish"
-msgstr "Polsk"
+msgstr "بولنديّة"
 
 #: ../po/control_strings.c:163
 msgid "Portuguese (Brazil)"
-msgstr "Portugisisk (Brasilien)"
+msgstr "(Brazil) برتغاليّة"
 
 #: ../po/control_strings.c:166
 msgid "Portuguese (Portugal)"
-msgstr "Portogisisk (Portugal)"
+msgstr "(Portugal) برتغاليّة"
 
 #: ../po/control_strings.c:169
 msgid "Romanian"
-msgstr "Rumænsk"
+msgstr "رومانيّة"
 
 #: ../po/control_strings.c:172
 msgid "Russian"
-msgstr "Russisk"
+msgstr "روسيّة"
 
 #: ../po/control_strings.c:175
 msgid "Slovak"
-msgstr "Slovakisk"
+msgstr "سلوفاكيّة"
 
 #: ../po/control_strings.c:178
 msgid "Slovenian"
-msgstr "Slovensk"
+msgstr "سلوفيّة"
 
 #: ../po/control_strings.c:181
 msgid "Swedish"
-msgstr "Svensk"
+msgstr "سويديّة"
 
 #: ../po/control_strings.c:184
 msgid "Thai"
-msgstr "Thailansk"
+msgstr "تايلنديّة"
 
 #: ../po/control_strings.c:187
 msgid "Turkish"
-msgstr "Tyrkisk"
+msgstr "تركيّة"
 
 #: ../po/control_strings.c:190
 msgid "Chinese (Simplified)"
-msgstr "Kinesisk (forenklet)"
+msgstr "(Simplified) صينيّة"
 
 #: ../po/control_strings.c:193
 msgid "Chinese (Traditional)"
-msgstr "Kinesisk (traditionelt)"
+msgstr "(Traditional) صينيّة"
 
 #: ../po/control_strings.c:196
 msgid "All"
-msgstr "Alle"
+msgstr "كلّ"
 
 #: ../po/control_strings.c:199
 msgid "New"
-msgstr "Nye"
+msgstr "جديد"
 
 #: ../po/control_strings.c:202
 msgid "Recommendations"
-msgstr "Anbefalinger"
+msgstr "توصيّات"
 
 #: ../po/control_strings.c:205
 msgid "Google Created"
-msgstr "Udviklet af Google"
+msgstr "عمل جوجل"
 
 #: ../po/control_strings.c:208
 msgid "Recently Used"
-msgstr "Senest anvendte"
+msgstr "مستعملة حديثا"
 
 #: ../po/control_strings.c:211
 msgid "Updates"
-msgstr "Opdateringer"
+msgstr "تحديثات"
 
 #: ../po/control_strings.c:214
 msgid "News"
-msgstr "Nyheder"
+msgstr "أخبار"
 
 #: ../po/control_strings.c:217
 msgid "Sports"
-msgstr "Sport"
+msgstr "رياضة"
 
 #: ../po/control_strings.c:220
 msgid "Lifestyle"
-msgstr "Livstil"
+msgstr "طريقة عيش"
 
 #: ../po/control_strings.c:223
 msgid "Finance"
-msgstr "Finans"
+msgstr "إقتصاد"
 
 #: ../po/control_strings.c:226
 msgid "Tools"
-msgstr "Værktøjer"
+msgstr "أدواة"
 
 #: ../po/control_strings.c:229
 msgid "Fun and Games"
-msgstr "Sjov og spil"
+msgstr "مرح و ألعاب"
 
 #: ../po/control_strings.c:232
 msgid "Technology"
-msgstr "Teknologi"
+msgstr "تكنلوجيا"
 
 #: ../po/control_strings.c:235
 msgid "Communication"
-msgstr "Kommunikation"
+msgstr "إتّصالات"
 
 #: ../po/control_strings.c:238
 msgid "Holidays"
-msgstr "Ferie"
-
+msgstr "عطل"
