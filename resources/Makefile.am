@@ -125,6 +125,7 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		scratchpad_sm.jpg \
 		todo_sm.jpg \
 		weather_sm.jpg \
+		ar/strings.xml \
 		de/strings.xml \
 		en-GB/strings.xml \
 		en/strings.xml \
@@ -136,9 +137,11 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		ja/strings.xml \
 		ko/strings.xml \
 		nl/strings.xml \
+		pa/strings.xml \
 		pl/strings.xml \
 		pt-BR/strings.xml \
 		ru/strings.xml \
+		sk/strings.xml \
 		sv/strings.xml \
 		wa/strings.xml \
 		zh-CN/strings.xml \

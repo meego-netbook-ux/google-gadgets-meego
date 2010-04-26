@@ -14,6 +14,7 @@
 # limitations under the License.
 
 GADGET_CONTROL_FILES= \
+		ar/strings.xml \
 		de/strings.xml \
 		en-GB/strings.xml \
 		en/strings.xml \
@@ -25,9 +26,11 @@ GADGET_CONTROL_FILES= \
 		ja/strings.xml \
 		ko/strings.xml \
 		nl/strings.xml \
+		pa/strings.xml \
 		pl/strings.xml \
 		pt-BR/strings.xml \
 		ru/strings.xml \
+		sk/strings.xml \
 		sv/strings.xml \
 		wa/strings.xml \
 		zh-CN/strings.xml \
