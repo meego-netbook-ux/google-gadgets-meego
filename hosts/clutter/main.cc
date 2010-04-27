@@ -393,6 +393,7 @@ int main(int argc, char* argv[]) {
 #ifdef HAVE_MPL
   if (!standalone) {
     simple_clutter_host->SetMutterPanel (panel);
+    mpl_panel_client_show (panel);
   }
 #endif
   g_signal_connect(stage, "allocation-changed",
