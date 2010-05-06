@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-05 09:38+0000\n"
+"POT-Creation-Date: 2010-04-28 09:41+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: GLSPTB_Gabor <bechtg@gmail.com>\n"
 "Language-Team: \n"
@@ -13,8 +13,7 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:247
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
 msgstr "Gadgets"
@@ -25,8 +24,12 @@ msgid "(API Version: %s)"
 msgstr "(Versão API: %s)"
 
 #: ../po/resources_strings.c:31
-msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr "Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a licença Apache, Versão 2.0:"
+msgid ""
+"Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
+"Apache License, Version 2.0:"
+msgstr ""
+"Copyright © 2009 Google Inc. Todos direitos reservados.&#10;Licenciado sob a "
+"licença Apache, Versão 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
@@ -40,8 +43,7 @@ msgstr "%I:%M%P"
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43
-#: ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
 msgstr "%dd atrás"
@@ -56,8 +58,7 @@ msgstr "%d dias atrás"
 msgid "%d days ago"
 msgstr "%d dias atrás"
 
-#: ../po/resources_strings.c:55
-#: ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
 msgstr "%dh atrás"
@@ -72,8 +73,7 @@ msgstr "%d hr atrás"
 msgid "%d hrs ago"
 msgstr "%d hrs atrás"
 
-#: ../po/resources_strings.c:67
-#: ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
 msgstr "%dm atrás"
@@ -92,8 +92,7 @@ msgstr "%d mins atrás"
 msgid "Open"
 msgstr "Abrir"
 
-#: ../po/resources_strings.c:82
-#: ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
 msgid "Remove"
 msgstr "Remover"
 
@@ -113,8 +112,7 @@ msgstr "Próximo"
 msgid "Toggle Expanded View"
 msgstr "Alternar visão expandida"
 
-#: ../po/resources_strings.c:97
-#: ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
 msgstr "Menu"
 
@@ -128,7 +126,9 @@ msgstr "Minimizar"
 
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
-msgstr "Program não pode iniciar porque houve falha no carregamento do(s) seguinte(s) módulo(s):"
+msgstr ""
+"Program não pode iniciar porque houve falha no carregamento do(s) seguinte"
+"(s) módulo(s):"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
@@ -271,8 +271,12 @@ msgid "Third Party Gadget Installation"
 msgstr "Instalação de gadgets de terceiros"
 
 #: ../po/resources_strings.c:220
-msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
-msgstr "Google ainda não testou ou verificou os recursos ou segurança deste gadget de terceiros.  Favor confirmar que quer instalar:"
+msgid ""
+"Google has not tested or verified the features or security of this third "
+"party Gadget. Please confirm that you want to install:"
+msgstr ""
+"Google ainda não testou ou verificou os recursos ou segurança deste gadget "
+"de terceiros.  Favor confirmar que quer instalar:"
 
 #: ../po/resources_strings.c:223
 msgid "Description: "
@@ -284,8 +288,12 @@ msgstr "Permissões requeridas: "
 
 #: ../po/resources_strings.c:229
 #, c-format
-msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. você quer pará-lo?"
+msgid ""
+"A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
+"you want to stop it?"
+msgstr ""
+"Um script (%s:%d) neste gadget pode estar ocupado ou parou de funcionar. "
+"você quer pará-lo?"
 
 #: ../po/resources_strings.c:232
 msgid "Change Hotkey"
@@ -299,8 +307,7 @@ msgstr "Clique para introduzir a nova tecla de acesso:"
 msgid "Press new hotkey"
 msgstr "Pressione nova tecla de acesso"
 
-#: ../po/resources_strings.c:241
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:241 ../po/resources_strings.c:253
 msgid "Clear"
 msgstr "Limpar"
 
@@ -325,8 +332,7 @@ msgstr "Info"
 msgid "Warning"
 msgstr "Alerta"
 
-#: ../po/resources_strings.c:265
-#: ../po/control_strings.c:49
+#: ../po/resources_strings.c:265 ../po/control_strings.c:49
 #: ../po/control_strings.c:64
 msgid "Error"
 msgstr "Erro"
@@ -343,8 +349,7 @@ msgstr "Gadgets (GTK)"
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:277
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:277 ../po/resources_strings.c:286
 msgid "Gadget Designer"
 msgstr "Designer de gadgets"
 
@@ -387,13 +392,16 @@ msgstr "O gadget não pôde ser carregado:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
-msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr "O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
+msgid ""
+"The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr ""
+"O gadget requer Gadgets suportando o API, no mínimo na versão %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr "O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
+msgstr ""
+"O gadget  requer Gadgets para Linux, no mínimo na versão %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
@@ -403,8 +411,7 @@ msgstr "O gadget não funciona na plataforma Linux:%&#10;&#10;%s"
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
 
-#: ../po/control_strings.c:25
-#: ../po/control_strings.c:28
+#: ../po/control_strings.c:25 ../po/control_strings.c:28
 #: ../po/control_strings.c:31
 msgid "Gadgets Control"
 msgstr "Controle de gadgets  "
@@ -450,12 +457,20 @@ msgid "Search gadgets"
 msgstr "Pesquisar gadgets"
 
 #: ../po/control_strings.c:70
-msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
-msgstr "Você quer fechar a zona Gadgets? Isto vai remover todos os seus gadgets instalados."
+msgid ""
+"Do you want to close the Gadgets Zone? This will remove all your installed "
+"gadgets."
+msgstr ""
+"Você quer fechar a zona Gadgets? Isto vai remover todos os seus gadgets "
+"instalados."
 
 #: ../po/control_strings.c:73
-msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
-msgstr "Bem-vindo a Gadgets, que são pequenas coisas divertidas para seu computador. O que você quer fazer?"
+msgid ""
+"Welcome to Gadgets, they're tiny bits of fun for your computer. What do you "
+"want to do?"
+msgstr ""
+"Bem-vindo a Gadgets, que são pequenas coisas divertidas para seu computador. "
+"O que você quer fazer?"
 
 #: ../po/control_strings.c:76
 msgid "Add a new Gadget"
@@ -467,7 +482,8 @@ msgstr "Procurar atualizações"
 
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
-msgstr "Sinto muito, não temos nenhum Gadget atualizado disponível. Você poderia:"
+msgstr ""
+"Sinto muito, não temos nenhum Gadget atualizado disponível. Você poderia:"
 
 #: ../po/control_strings.c:85
 msgid "» "
@@ -676,4 +692,3 @@ msgstr "Comunicação"
 #: ../po/control_strings.c:238
 msgid "Holidays"
 msgstr "Feriados"
-
