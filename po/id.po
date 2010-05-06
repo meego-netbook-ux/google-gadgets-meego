@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: google-gadgets-moblin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-22 09:34+0000\n"
-"PO-Revision-Date: 2010-05-06 11:06+0700\n"
+"POT-Creation-Date: 2010-05-05 09:44+0000\n"
+"PO-Revision-Date: 2010-05-06 11:15+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-Country: Indonesia\n"
 
 #: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:244
+#: ../po/resources_strings.c:247
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
 msgstr "Gadgets"
@@ -144,263 +144,267 @@ msgid "Add &Gadgets..."
 msgstr "Tambah &Gadget..."
 
 #: ../po/resources_strings.c:121
+msgid "Add an &iGoogle Gadget"
+msgstr "Tambahkan suatu Gadget &iGoogle"
+
+#: ../po/resources_strings.c:124
 msgid "Always on &Top"
 msgstr "Selalu di &tas"
 
-#: ../po/resources_strings.c:124
+#: ../po/resources_strings.c:127
 msgid "Auto &Fit"
 msgstr "Selalu &Pas"
 
-#: ../po/resources_strings.c:127
+#: ../po/resources_strings.c:130
 msgid "A&uto Hide"
 msgstr "Semb&unyi Sendiri"
 
-#: ../po/resources_strings.c:130
+#: ../po/resources_strings.c:133
 msgid "&Collapse"
 msgstr "Li&pat"
 
-#: ../po/resources_strings.c:133
+#: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
 msgstr "&Dok ke Batang Sisi"
 
-#: ../po/resources_strings.c:136
+#: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
 msgstr "Dok &ke Batang Sisi"
 
-#: ../po/resources_strings.c:139
+#: ../po/resources_strings.c:142
 msgid "E&xit"
 msgstr "&Keluar"
 
-#: ../po/resources_strings.c:142
+#: ../po/resources_strings.c:145
 msgid "Ex&pand"
 msgstr "Ke&mbangkan"
 
-#: ../po/resources_strings.c:145
+#: ../po/resources_strings.c:148
 msgid "&Font Size"
 msgstr "Ukuran &Fonta"
 
-#: ../po/resources_strings.c:148
+#: ../po/resources_strings.c:151
 msgid "&Default"
 msgstr "&Bawaan"
 
-#: ../po/resources_strings.c:151
+#: ../po/resources_strings.c:154
 msgid "&Larger"
 msgstr "&Lebih Besar"
 
-#: ../po/resources_strings.c:154
+#: ../po/resources_strings.c:157
 msgid "&Smaller"
 msgstr "Lebih &Kecil"
 
-#: ../po/resources_strings.c:157
+#: ../po/resources_strings.c:160
 msgid "Hide A&ll"
 msgstr "Sembunyikan &Semua"
 
-#: ../po/resources_strings.c:160
+#: ../po/resources_strings.c:163
 msgid "&Left"
 msgstr "&Kiri"
 
-#: ../po/resources_strings.c:163
+#: ../po/resources_strings.c:166
 msgid "&Options..."
 msgstr "&Opsi..."
 
-#: ../po/resources_strings.c:166
+#: ../po/resources_strings.c:169
 msgid "R&emove"
 msgstr "&Hapus"
 
-#: ../po/resources_strings.c:169
+#: ../po/resources_strings.c:172
 msgid "&Right"
 msgstr "Ka&nan"
 
-#: ../po/resources_strings.c:172
+#: ../po/resources_strings.c:175
 msgid "Show A&ll"
 msgstr "Tampi&lkan Semua"
 
-#: ../po/resources_strings.c:175
+#: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
 msgstr "&Lepas Dok dari Batang Sisi"
 
-#: ../po/resources_strings.c:178
+#: ../po/resources_strings.c:181
 msgid "&Zoom"
 msgstr "&Zum"
 
-#: ../po/resources_strings.c:181
+#: ../po/resources_strings.c:184
 msgid "100%"
 msgstr "100%"
 
-#: ../po/resources_strings.c:184
+#: ../po/resources_strings.c:187
 msgid "125%"
 msgstr "125%"
 
-#: ../po/resources_strings.c:187
+#: ../po/resources_strings.c:190
 msgid "150%"
 msgstr "150%"
 
-#: ../po/resources_strings.c:190
+#: ../po/resources_strings.c:193
 msgid "175%"
 msgstr "175%"
 
-#: ../po/resources_strings.c:193
+#: ../po/resources_strings.c:196
 msgid "200%"
 msgstr "200%"
 
-#: ../po/resources_strings.c:196
+#: ../po/resources_strings.c:199
 msgid "50%"
 msgstr "50%"
 
-#: ../po/resources_strings.c:199
+#: ../po/resources_strings.c:202
 msgid "75%"
 msgstr "75%"
 
-#: ../po/resources_strings.c:202
+#: ../po/resources_strings.c:205
 msgid "Change &Hotkey..."
 msgstr "Ubah Kunci &Pintas..."
 
-#: ../po/resources_strings.c:205
+#: ../po/resources_strings.c:208
 msgid "De&bug Console"
 msgstr "Konsol De&bug"
 
-#: ../po/resources_strings.c:208
+#: ../po/resources_strings.c:211
 msgid "&Sidebar"
 msgstr "Batang &Sisi"
 
-#: ../po/resources_strings.c:211
+#: ../po/resources_strings.c:214
 msgid "Feedback..."
 msgstr "Umpan Balik..."
 
-#: ../po/resources_strings.c:214
+#: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
 msgstr "Pemasangan Gadget Pihak Ketiga"
 
-#: ../po/resources_strings.c:217
+#: ../po/resources_strings.c:220
 msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
 msgstr "Google belum menguji atau memverifikasi fitur atau keamanan dari Gadget pihak ketiga ini. Tegaskan bahwa Anda ingin memasangnya:"
 
-#: ../po/resources_strings.c:220
+#: ../po/resources_strings.c:223
 msgid "Description: "
 msgstr "Keterangan:"
 
-#: ../po/resources_strings.c:223
+#: ../po/resources_strings.c:226
 msgid "Required permissions: "
 msgstr "Ijin yang diperlukan:"
 
-#: ../po/resources_strings.c:226
+#: ../po/resources_strings.c:229
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
 msgstr "Suatu skrip (%s:%d) pada gadget ini mungkin sibuk atau berhenti merespon. Apakah Anda ingin menghentikannya?"
 
-#: ../po/resources_strings.c:229
+#: ../po/resources_strings.c:232
 msgid "Change Hotkey"
 msgstr "Ubah Kunci Pintas"
 
-#: ../po/resources_strings.c:232
+#: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
 msgstr "Klik untu memasukkan kunci pintas baru:"
 
-#: ../po/resources_strings.c:235
+#: ../po/resources_strings.c:238
 msgid "Press new hotkey"
 msgstr "Tekan kunci pintas baru"
 
-#: ../po/resources_strings.c:238
-#: ../po/resources_strings.c:250
+#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:253
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:244
 msgid "Disabled"
 msgstr "Dimatikan"
 
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
 msgstr "Gadget, tekan %s untuk menampilkan atau menyembunyikan gadget."
 
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:256
 msgid "Trace"
 msgstr "Lacak"
 
-#: ../po/resources_strings.c:256
+#: ../po/resources_strings.c:259
 msgid "Info"
 msgstr "Info"
 
-#: ../po/resources_strings.c:259
+#: ../po/resources_strings.c:262
 msgid "Warning"
 msgstr "Peringatan"
 
-#: ../po/resources_strings.c:262
+#: ../po/resources_strings.c:265
 #: ../po/control_strings.c:49
 #: ../po/control_strings.c:64
 msgid "Error"
 msgstr "Galat"
 
-#: ../po/resources_strings.c:265
+#: ../po/resources_strings.c:268
 msgid "Lock scroll"
 msgstr "Kunci penggulungan"
 
-#: ../po/resources_strings.c:268
+#: ../po/resources_strings.c:271
 msgid "Gadgets (GTK)"
 msgstr "Gadgets (GTK)"
 
-#: ../po/resources_strings.c:271
+#: ../po/resources_strings.c:274
 msgid "Gadgets (Qt)"
 msgstr "Gadgets (Qt)"
 
-#: ../po/resources_strings.c:274
-#: ../po/resources_strings.c:283
+#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:286
 msgid "Gadget Designer"
 msgstr "Perancang Gadget"
 
-#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
 msgstr "Jalankan Gadgets di lingkungan GNOME/GTK"
 
-#: ../po/resources_strings.c:280
+#: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
 msgstr "Jalankan Gadgets di lingkungan KDE/Qt"
 
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
 msgstr "Baca isi dari direktori dan berkas lokal"
 
-#: ../po/resources_strings.c:289
+#: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
 msgstr "Buat atau ubah direktori dan berkas lokal"
 
-#: ../po/resources_strings.c:292
+#: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
 msgstr "Memeriksa atau mengubah status perangkat keras"
 
-#: ../po/resources_strings.c:295
+#: ../po/resources_strings.c:298
 msgid "Accesses network"
 msgstr "Mengakses jaringan"
 
-#: ../po/resources_strings.c:298
+#: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
 msgstr "Mengakses data personalisasi"
 
-#: ../po/resources_strings.c:301
+#: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
 msgstr "Jalankan kode asli dan aplikasi lokal"
 
-#: ../po/resources_strings.c:304
+#: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
 msgstr "Gadget tak dapat dimuat:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:307
+#: ../po/resources_strings.c:310
 #, c-format
 msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
 msgstr "Gadget memerlukan API pendukung Gadgets paling tidak versi %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:310
+#: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
 msgstr "Gadget memerlukan Gadgets bagi Linux paling tidak versi %s:&#10;&#10;%s"
 
-#: ../po/resources_strings.c:313
+#: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
 msgstr "Gadget tidak berjalan pada platform Linux:%&#10;&#10;%s"
 
-#: ../po/resources_strings.c:316
+#: ../po/resources_strings.c:319
 msgid "http://www.google.com"
 msgstr "http://www.google.com"
 
