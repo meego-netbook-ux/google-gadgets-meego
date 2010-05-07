@@ -371,7 +371,7 @@ int main(int argc, char* argv[]) {
 #ifdef HAVE_MPL
   } else {
     panel = mpl_panel_clutter_new ("gadgets",
-                                   _("gadgets"),
+                                   _("Gadgets"),
                                    PIXMAP_DIR "gadgets-panel.css",
                                    "gadgets-button",
                                    FALSE);
