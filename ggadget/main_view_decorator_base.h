@@ -38,7 +38,7 @@ class MainViewDecoratorBase : public ViewDecoratorBase {
     BACK_BUTTON = 0,
     FORWARD_BUTTON,
     POP_IN_OUT_BUTTON,
-    MENU_BUTTON,
+    //    MENU_BUTTON,
     CLOSE_BUTTON,
     NUMBER_OF_BUTTONS
   };

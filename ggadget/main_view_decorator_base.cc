@@ -383,13 +383,13 @@ MainViewDecoratorBase::Impl::kButtonsInfo[] = {
     kVDButtonPopOutDown,
     &MainViewDecoratorBase::Impl::OnPopInOutButtonClicked,
   },
-  {
-    "VD_MENU_BUTTON_TOOLTIP",
-    kVDButtonMenuNormal,
-    kVDButtonMenuOver,
-    kVDButtonMenuDown,
-    &MainViewDecoratorBase::Impl::OnMenuButtonClicked,
-  },
+  // {
+  //   "VD_MENU_BUTTON_TOOLTIP",
+  //   kVDButtonMenuNormal,
+  //   kVDButtonMenuOver,
+  //   kVDButtonMenuDown,
+  //   &MainViewDecoratorBase::Impl::OnMenuButtonClicked,
+  // },
   {
     "VD_CLOSE_BUTTON_TOOLTIP",
     kVDButtonCloseNormal,
