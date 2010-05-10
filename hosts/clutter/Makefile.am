@@ -28,7 +28,8 @@ ggl_clutter_CPPFLAGS 		= @CLUTTER_CFLAGS@ \
 				@GTK2_CFLAGS@ \
 			  	$(PREDEFINED_MACROS) \
 			  	-DPIXMAP_DIR=\"$(GGL_RESOURCE_DIR)/\" \
-			  	-DGGL_APP_NAME=\"ggl-clutter\"
+			  	-DGGL_APP_NAME=\"ggl-clutter\" \
+			        -DLOCALEDIR=\"$(localedir)\"
 
 ggl_clutter_CXXFLAGS		= $(DEFAULT_COMPILE_FLAGS)
 

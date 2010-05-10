@@ -43,6 +43,7 @@ datarootdir = @datarootdir@
 libdir = @libdir@
 DATADIRNAME = @DATADIRNAME@
 itlocaledir = $(top_builddir)/po/locale
+itlocaledir_sys = $(prefix)/$(DATADIRNAME)/locale
 subdir = po
 install_sh = @install_sh@
 # Automake >= 1.8 provides @mkdir_p@.
@@ -137,24 +138,33 @@ install-data-yes: all
 	linguas="$(USE_LINGUAS)"; \
 	for lang in $$linguas; do \
 	  dir=$(DESTDIR)$(itlocaledir)/$$lang/LC_MESSAGES; \
+	  dirsys=$(DESTDIR)$(itlocaledir_sys)/$$lang/LC_MESSAGES; \
 	  $(mkdir_p) $$dir; \
+	  $(mkdir_p) $$dirsys; \
 	  if test -r $$lang.gmo; then \
 	    $(INSTALL_DATA) $$lang.gmo $$dir/$(GETTEXT_PACKAGE).mo; \
 	    echo "installing $$lang.gmo as $$dir/$(GETTEXT_PACKAGE).mo"; \
+	    $(INSTALL_DATA) $$lang.gmo $$dirsys/$(GETTEXT_PACKAGE).mo; \
+	    echo "installing $$lang.gmo as $$dirsys/$(GETTEXT_PACKAGE).mo"; \
 	  else \
 	    $(INSTALL_DATA) $(srcdir)/$$lang.gmo $$dir/$(GETTEXT_PACKAGE).mo; \
+	    $(INSTALL_DATA) $(srcdir)/$$lang.gmo $$dirsys/$(GETTEXT_PACKAGE).mo; \
 	    echo "installing $(srcdir)/$$lang.gmo as" \
-		 "$$dir/$(GETTEXT_PACKAGE).mo"; \
+		 "$$dir/$(GETTEXT_PACKAGE).mo and $$dirsys/$(GETTEXT_PACKAGE).mo"; \
 	  fi; \
 	  if test -r $$lang.gmo.m; then \
 	    $(INSTALL_DATA) $$lang.gmo.m $$dir/$(GETTEXT_PACKAGE).mo.m; \
+	    $(INSTALL_DATA) $$lang.gmo.m $$dirsys/$(GETTEXT_PACKAGE).mo.m; \
 	    echo "installing $$lang.gmo.m as $$dir/$(GETTEXT_PACKAGE).mo.m"; \
+	    echo "installing $$lang.gmo.m as $$dirsys/$(GETTEXT_PACKAGE).mo.m"; \
 	  else \
 	    if test -r $(srcdir)/$$lang.gmo.m ; then \
 	      $(INSTALL_DATA) $(srcdir)/$$lang.gmo.m \
 		$$dir/$(GETTEXT_PACKAGE).mo.m; \
+	      $(INSTALL_DATA) $(srcdir)/$$lang.gmo.m \
+		$$dirsys/$(GETTEXT_PACKAGE).mo.m; \
 	      echo "installing $(srcdir)/$$lang.gmo.m as" \
-		   "$$dir/$(GETTEXT_PACKAGE).mo.m"; \
+		   "$$dir/$(GETTEXT_PACKAGE).mo.m and $$dirsys/$(GETTEXT_PACKAGE).mo.m"; \
 	    else \
 	      true; \
 	    fi; \
@@ -172,6 +182,8 @@ uninstall:
 	for lang in $$linguas; do \
 	  rm -f $(DESTDIR)$(itlocaledir)/$$lang/LC_MESSAGES/$(GETTEXT_PACKAGE).mo; \
 	  rm -f $(DESTDIR)$(itlocaledir)/$$lang/LC_MESSAGES/$(GETTEXT_PACKAGE).mo.m; \
+	  rm -f $(DESTDIR)$(itlocaledir_sys)/$$lang/LC_MESSAGES/$(GETTEXT_PACKAGE).mo; \
+	  rm -f $(DESTDIR)$(itlocaledir_sys)/$$lang/LC_MESSAGES/$(GETTEXT_PACKAGE).mo.m; \
 	done
 
 check: all $(GETTEXT_PACKAGE).pot

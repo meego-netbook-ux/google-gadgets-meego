@@ -226,6 +226,12 @@ int main(int argc, char* argv[]) {
                              NULL).c_str());
   run_once.ConnectOnMessage(ggadget::NewSlot(OnClientMessage));
 
+  // set locale according to env vars
+  setlocale (LC_ALL, "");
+  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+
   // Parse command line.
   std::vector<std::string> gadget_paths;
   for (int i = 1; i < argc; i++) {
@@ -310,9 +316,6 @@ int main(int argc, char* argv[]) {
     DLOG("Another instance already exists.");
     exit(0);
   }
-
-  // set locale according to env vars
-  setlocale(LC_ALL, "");
 
   ggadget::SetupLogger(log_level, long_log);
 
