@@ -45,16 +45,16 @@
 
   <div name="window_body" x="6" y="24" width="688" height="555"
     onsize="window_onsize()">
-    <div name="search_div" width="350" height="50" x="10" pinX="0">
+    <div name="search_div" width="350" height="40" x="10" pinX="0">
       <div width="100%" height="33" y="15">
         <img width="100%" height="100%" src="images/control_border.png"
           stretchMiddle="true"/>
-        <edit name="search_box" width="100%" height="33" x="3" y="2"
-          value="&SEARCH_GADGETS;" color="#808080" size="14"
+        <edit name="search_box" width="98%" height="20" x="3" y="2"
+          value="&SEARCH_GADGETS;" color="#808080" size="10"
           onchange="search_box_onchange()" onfocusin="search_box_onfocusin()"
           onfocusout="search_box_onfocusout()"/>
       </div>
-      <button name="search_button" x="300" y="22"
+      <button name="search_button" x="300" y="20"
          image="images/search_lens_default.png"
         downImage="images/search_lens_down.png"
         overImage="images/search_lens_hover.png"
@@ -66,11 +66,11 @@
       &SHOW_ONLY_LABEL;
     </label>
     -->
-    <div name="language_box_div" width="166" height="33" x="100%" pinX="100%" y="17">
+    <div name="language_box_div" width="166" height="20" x="100%" pinX="100%" y="17">
       <img width="100%" height="100%" src="images/control_border.png"
         stretchMiddle="true"/>
       <combobox name="language_box" width="160" height="440" x="3" y="2" color="#808080"
-        type="droplist" background="#FFFFFF" itemWidth="100%" itemHeight="30"
+        type="droplist" background="#FFFFFF" itemWidth="100%" itemHeight="20"
         maxDroplistItems="30" onchange="language_box_onchange()"/>
     </div>
     <div name="main_div" width="100%" height="400" y="83">
