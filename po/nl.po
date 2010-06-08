@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-07 09:45+0000\n"
-"PO-Revision-Date: 2010-04-07 16:47-0800\n"
-"Last-Translator: GLS_NLD <albert.dijkstra@ptiglobal.net>\n"
+"POT-Creation-Date: 2010-06-07 09:21+0000\n"
+"PO-Revision-Date: 2010-06-08 13:36-0800\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -464,11 +464,11 @@ msgstr "Welkom bij Gadgets, deze zijn kleine stukjes plezier op jouw computer. W
 
 #: ../po/control_strings.c:76
 msgid "Add a new Gadget"
-msgstr "Een nieuwe gadget toevoegen"
+msgstr "Gadget toevoegen"
 
 #: ../po/control_strings.c:79
 msgid "Check for updates"
-msgstr "Op updates controleren"
+msgstr "Zoek updates"
 
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
