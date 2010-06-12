@@ -15,6 +15,7 @@
 
 GADGET_CONTROL_FILES= \
 		ar/strings.xml \
+		ast/strings.xml \
 		de/strings.xml \
 		en-GB/strings.xml \
 		en/strings.xml \
@@ -32,6 +33,7 @@ GADGET_CONTROL_FILES= \
 		ru/strings.xml \
 		sk/strings.xml \
 		sv/strings.xml \
+		tr/strings.xml \
 		wa/strings.xml \
 		zh-CN/strings.xml \
 		zh-TW/strings.xml \

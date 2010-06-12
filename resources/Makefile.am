@@ -126,6 +126,7 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		todo_sm.jpg \
 		weather_sm.jpg \
 		ar/strings.xml \
+		ast/strings.xml \
 		de/strings.xml \
 		en-GB/strings.xml \
 		en/strings.xml \
@@ -143,6 +144,7 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		ru/strings.xml \
 		sk/strings.xml \
 		sv/strings.xml \
+		tr/strings.xml \
 		wa/strings.xml \
 		zh-CN/strings.xml \
 		zh-TW/strings.xml \
