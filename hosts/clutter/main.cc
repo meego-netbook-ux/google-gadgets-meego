@@ -59,8 +59,8 @@
 #include "simple_clutter_host.h"
 
 #ifdef HAVE_MPL
-#include <moblin-panel/mpl-panel-clutter.h>
-#include <moblin-panel/mpl-panel-common.h>
+#include <meego-panel/mpl-panel-clutter.h>
+#include <meego-panel/mpl-panel-common.h>
 #endif
 
 //static ggadget::clutter::MainLoop g_main_loop;
@@ -303,7 +303,7 @@ int main(int argc, char* argv[]) {
   gdk_init (&argc, &argv);
 #else
   if (!standalone) {
-    MPL_PANEL_CLUTTER_INIT_WITH_GTK (&argc, &argv);
+    mpl_panel_clutter_init_with_gtk (&argc, &argv);
   }
   else {
     clutter_init(&argc, &argv);
@@ -379,7 +379,7 @@ int main(int argc, char* argv[]) {
                                    "gadgets-button",
                                    FALSE);
 
-    MPL_PANEL_CLUTTER_SETUP_EVENTS_WITH_GTK (panel);
+    mpl_panel_clutter_setup_events_with_gtk (MPL_PANEL_CLUTTER (panel));
 
     stage = mpl_panel_clutter_get_stage (MPL_PANEL_CLUTTER (panel));
   }
