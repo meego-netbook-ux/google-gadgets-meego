@@ -27,7 +27,7 @@ msgstr "(Verzia API: %s)"
 
 #: ../po/resources_strings.c:31
 msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
-msgstr ""
+msgstr "Copyright © 2009 Google Inc. Všetky práva vyhradené. Pod licenciou Apache License, Version 2.0:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
@@ -44,47 +44,47 @@ msgstr "%b %d"
 #: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
-msgstr ""
+msgstr "pred %dd"
 
 #: ../po/resources_strings.c:49
 #, c-format
 msgid "%d day ago"
-msgstr ""
+msgstr "pred %d dňom"
 
 #: ../po/resources_strings.c:52
 #, c-format
 msgid "%d days ago"
-msgstr ""
+msgstr "pred %d dňami"
 
 #: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
-msgstr ""
+msgstr "pred %dh"
 
 #: ../po/resources_strings.c:61
 #, c-format
 msgid "%d hr ago"
-msgstr ""
+msgstr "pred %d hodinou"
 
 #: ../po/resources_strings.c:64
 #, c-format
 msgid "%d hrs ago"
-msgstr ""
+msgstr "pred %d hodinami"
 
 #: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
-msgstr ""
+msgstr "pred %dm"
 
 #: ../po/resources_strings.c:73
 #, c-format
 msgid "%d min ago"
-msgstr ""
+msgstr "pred %d minútou"
 
 #: ../po/resources_strings.c:76
 #, c-format
 msgid "%d mins ago"
-msgstr ""
+msgstr "pred %d minútami"
 
 #: ../po/resources_strings.c:79
 msgid "Open"
@@ -99,13 +99,13 @@ msgid "Don't show me items like this"
 msgstr ""
 
 #: ../po/resources_strings.c:88
+#, fuzzy
 msgid "Previous"
-msgstr ""
+msgstr "Predchádzajúci"
 
 #: ../po/resources_strings.c:91
-#, fuzzy
 msgid "Next"
-msgstr "Next"
+msgstr "Ďalší"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
@@ -129,7 +129,7 @@ msgstr ""
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
-msgstr ""
+msgstr "O &aplikácii..."
 
 #: ../po/resources_strings.c:118
 msgid "Add &Gadgets..."
