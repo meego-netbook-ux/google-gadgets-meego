@@ -36,8 +36,8 @@
 #include <ggadget/options_interface.h>
 
 #ifdef HAVE_MPL
-#include <moblin-panel/mpl-panel-clutter.h>
-#include <moblin-panel/mpl-panel-common.h>
+#include <meego-panel/mpl-panel-clutter.h>
+#include <meego-panel/mpl-panel-common.h>
 #endif
 
 namespace hosts {
