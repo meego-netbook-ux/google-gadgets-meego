@@ -970,13 +970,13 @@ fi
 has_mpl=no
 if test x$build_moblin_panel = xyes; then
   PKG_CHECK_MODULES(MPL,
-                    [meego-panel >= 0.50.0], [has_mpl=yes],
+                    [moblin-panel >= 0.50.0], [has_mpl=yes],
                     [has_mpl=no])
 
   AS_AC_EXPAND(GGL_RES_DIR, $GGL_RESOURCE_DIR)
 #  AC_DEFINE_UNQUOTED([GGL_RES_DIR], "$GGL_RES_DIR", [GGL theme directory])
 
-  PANEL_DIR=$($PKG_CONFIG meego-panel --variable=meego_panel_panels_dir)
+  PANEL_DIR=$($PKG_CONFIG moblin-panel --variable=moblin_panel_panels_dir)
   AC_SUBST(PANEL_DIR)
 fi
 
@@ -984,7 +984,7 @@ if test x$has_mpl != xno; then
 #  PREDEFINED_MACROS="$PREDEFINED_MACROS -DHAVE_MPL"
   AC_DEFINE([HAVE_MPL], [], [Define if we have moblin panel.])
 else
-  AC_MSG_WARN([[Development package of meego-panel is not enabled]])
+  AC_MSG_WARN([[Development package of moblin-panel is not enabled]])
 fi
 
 # Check gtkmozembed
@@ -1661,7 +1661,7 @@ Build options:
   Build webkit-script-runtime     $build_webkit_script_runtime
   Build gtkwebkit-browser-element $build_gtkwebkit_browser_element
   Build analytics-usage-collector $build_usage_collector
-  Build meego panel              $has_mpl
+  Build moblin panel              $has_mpl
 
  Other features:
   GTK SVG Support                 $has_librsvg

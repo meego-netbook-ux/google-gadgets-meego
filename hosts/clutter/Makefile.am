@@ -69,7 +69,7 @@ paneldir = @PANEL_DIR@
 panel_DATA = $(desktop_data)
 
 servicedir = $(datadir)/dbus-1/services
-service_in_files = com.meego.UX.Shell.Panels.gadgets.service.in
+service_in_files = org.moblin.UX.Shell.Panels.gadgets.service.in
 service_DATA = $(service_in_files:.service.in=.service)
 
 EXTRA_DIST = gadgets-panel.css.in $(service_in_files) $(BITMAPS)
