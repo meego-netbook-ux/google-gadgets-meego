@@ -133,6 +133,7 @@ RESOURCE_FILES= builtin_gadgets.xml \
 		es/strings.xml \
 		fi/strings.xml \
 		fr/strings.xml \
+		gl/strings.xml \
 		id/strings.xml \
 		it/strings.xml \
 		ja/strings.xml \

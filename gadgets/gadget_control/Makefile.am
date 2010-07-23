@@ -22,6 +22,7 @@ GADGET_CONTROL_FILES= \
 		es/strings.xml \
 		fi/strings.xml \
 		fr/strings.xml \
+		gl/strings.xml \
 		id/strings.xml \
 		it/strings.xml \
 		ja/strings.xml \
