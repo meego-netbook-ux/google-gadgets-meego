@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 09:42+0000\n"
+"POT-Creation-Date: 2010-07-03 11:56+0000\n"
 "PO-Revision-Date: 2010-05-12 22:55+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
@@ -12,8 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 
-#: ../po/resources_strings.c:25
-#: ../po/resources_strings.c:247
+#: ../po/resources_strings.c:25 ../po/resources_strings.c:247
 #: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
 msgid "Gadgets"
 msgstr "小工具"
@@ -33,14 +32,13 @@ msgstr "如需更多資訊，請造訪我們的專案網站："
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
-msgstr "%I:%M %P"
+msgstr "%P %I:%M"
 
 #: ../po/resources_strings.c:40
 msgid "%b %d"
 msgstr "%b %d"
 
-#: ../po/resources_strings.c:43
-#: ../po/resources_strings.c:46
+#: ../po/resources_strings.c:43 ../po/resources_strings.c:46
 #, c-format
 msgid "%dd ago"
 msgstr "%dd 之前"
@@ -55,8 +53,7 @@ msgstr "%d 天之前"
 msgid "%d days ago"
 msgstr "%d 天之前"
 
-#: ../po/resources_strings.c:55
-#: ../po/resources_strings.c:58
+#: ../po/resources_strings.c:55 ../po/resources_strings.c:58
 #, c-format
 msgid "%dh ago"
 msgstr "%dh 之前"
@@ -71,8 +68,7 @@ msgstr "%d 小時之前"
 msgid "%d hrs ago"
 msgstr "%d 小時之前"
 
-#: ../po/resources_strings.c:67
-#: ../po/resources_strings.c:70
+#: ../po/resources_strings.c:67 ../po/resources_strings.c:70
 #, c-format
 msgid "%dm ago"
 msgstr "%dm 之前"
@@ -91,8 +87,7 @@ msgstr "%d 分鐘之前"
 msgid "Open"
 msgstr "開啟"
 
-#: ../po/resources_strings.c:82
-#: ../po/resources_strings.c:100
+#: ../po/resources_strings.c:82 ../po/resources_strings.c:100
 msgid "Remove"
 msgstr "移除"
 
@@ -112,8 +107,7 @@ msgstr "下一個"
 msgid "Toggle Expanded View"
 msgstr "切換展開檢視"
 
-#: ../po/resources_strings.c:97
-#: ../po/resources_strings.c:106
+#: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
 msgstr "選單"
 
@@ -298,8 +292,7 @@ msgstr "點擊以輸入新的快捷鍵："
 msgid "Press new hotkey"
 msgstr "按下新的快捷鍵"
 
-#: ../po/resources_strings.c:241
-#: ../po/resources_strings.c:253
+#: ../po/resources_strings.c:241 ../po/resources_strings.c:253
 msgid "Clear"
 msgstr "清除"
 
@@ -324,8 +317,7 @@ msgstr "資訊"
 msgid "Warning"
 msgstr "警告"
 
-#: ../po/resources_strings.c:265
-#: ../po/control_strings.c:49
+#: ../po/resources_strings.c:265 ../po/control_strings.c:49
 #: ../po/control_strings.c:64
 msgid "Error"
 msgstr "錯誤"
@@ -342,8 +334,7 @@ msgstr "小工具 (GTK)"
 msgid "Gadgets (Qt)"
 msgstr "小工具 (Qt)"
 
-#: ../po/resources_strings.c:277
-#: ../po/resources_strings.c:286
+#: ../po/resources_strings.c:277 ../po/resources_strings.c:286
 msgid "Gadget Designer"
 msgstr "小工具設計師"
 
@@ -402,8 +393,7 @@ msgstr "這個小工具無法在 Linux 平台運作：%&#10;&#10;%s"
 msgid "http://www.google.com"
 msgstr "http://www.google.com.tw"
 
-#: ../po/control_strings.c:25
-#: ../po/control_strings.c:28
+#: ../po/control_strings.c:25 ../po/control_strings.c:28
 #: ../po/control_strings.c:31
 msgid "Gadgets Control"
 msgstr "小工具控制"
@@ -675,4 +665,3 @@ msgstr "溝通"
 #: ../po/control_strings.c:238
 msgid "Holidays"
 msgstr "節日"
-
