@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-30 09:24+0000\n"
+"POT-Creation-Date: 2010-07-03 11:56+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Anna Bergman <anna.b.bergman@gmail.com>\n"
 "Language-Team: \n"
@@ -111,7 +111,7 @@ msgstr "Seuraava"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr "Vaihda laakennettuun näkymään"
+msgstr "Vaihda laajennettuun näkymään"
 
 #: ../po/resources_strings.c:97
 #: ../po/resources_strings.c:106
@@ -285,7 +285,7 @@ msgstr "Vaaditut käyttöoikeudet:"
 #: ../po/resources_strings.c:229
 #, c-format
 msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
-msgstr "Tämän pienoisohjelman komentosarja (%s:%d) on ehkä käytössä tai on lakannut vastaamasta. Haluatko pydäyttää sen?"
+msgstr "Tämän pienoisohjelman komentosarja (%s:%d) on ehkä käytössä tai on lakannut vastaamasta. Haluatko pysäyttää sen?"
 
 #: ../po/resources_strings.c:232
 msgid "Change Hotkey"
@@ -467,7 +467,7 @@ msgstr "Tarkista päivitykset"
 
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
-msgstr "Sori, pienoisohjelmille ei ole päivityksiä. Voit:"
+msgstr "Sorry, pienoisohjelmille ei ole päivityksiä. Voit:"
 
 #: ../po/control_strings.c:85
 msgid "» "
