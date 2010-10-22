@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-15 04:29+0000\n"
-"PO-Revision-Date: 2010-04-15 21:35+0530\n"
+"POT-Creation-Date: 2010-08-27 23:08+0000\n"
+"PO-Revision-Date: 2010-10-22 08:03+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../po/resources_strings.c:25 ../po/resources_strings.c:247
@@ -31,6 +31,8 @@ msgid ""
 "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the "
 "Apache License, Version 2.0:"
 msgstr ""
+"Copyright © 2009 Google Inc. ਸਭ ਹੱਕ ਰਾਖਵੇਂ ਹਨ। &#10;ਆਪਚੇ ਲਾਈਸੈਂਸ ਵਰਜਨ ੨.੦ "
+"ਅਧੀਨ ਜਾਰੀ ਕੀਤੇ ਗਏ ਹਨ:"
 
 #: ../po/resources_strings.c:34
 msgid "For more information please visit our project site:"
@@ -111,7 +113,7 @@ msgstr "ਅੱਗੇ"
 
 #: ../po/resources_strings.c:94
 msgid "Toggle Expanded View"
-msgstr ""
+msgstr "ਫੈਲੀ ਝਲਕ ਬਦਲੋ"
 
 #: ../po/resources_strings.c:97 ../po/resources_strings.c:106
 msgid "Menu"
@@ -128,6 +130,7 @@ msgstr "ਘੱਟੋ-ਘੱਟ"
 #: ../po/resources_strings.c:112
 msgid "Program can't start because it failed to load the following module(s):"
 msgstr ""
+"ਪਰੋਗਰਾਮ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਕਿਉਂਕਿ ਅੱਗੇ ਦਿੱਤੇ ਮੋਡੀਊਲ ਲੋਡ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ:"
 
 #: ../po/resources_strings.c:115
 msgid "&About..."
@@ -215,7 +218,7 @@ msgstr "ਸਭ ਵੇਖੋ(&l)"
 
 #: ../po/resources_strings.c:178
 msgid "&Undock from Sidebar"
-msgstr ""
+msgstr "ਸਾਈਡਬਾਰ ਅਣ-ਡੌਕ ਕਰੋ(&U)"
 
 #: ../po/resources_strings.c:181
 msgid "&Zoom"
@@ -267,13 +270,16 @@ msgstr "ਫੀਡਬੈਕ..."
 
 #: ../po/resources_strings.c:217
 msgid "Third Party Gadget Installation"
-msgstr ""
+msgstr "ਸੁਤੰਤਰ ਗੈਜਿੱਟ ਇੰਸਟਾਲੇਸ਼ਨ"
 
 #: ../po/resources_strings.c:220
 msgid ""
 "Google has not tested or verified the features or security of this third "
 "party Gadget. Please confirm that you want to install:"
 msgstr ""
+"ਗੂਗਲ ਨੇ ਇਹ ਸੁਤੰਤਰ ਗੈਜਿੱਟ ਨੂੰ ਟੈਸਟ ਨਹੀਂ ਕੀਤਾ, ਨਾ ਹੀ ਫੀਚਰ ਜਾਂਚੇ ਹਨ ਤੇ ਸੁਰੱਖਿਆ "
+"ਲਈ ਵੀ ਜਾਂਚ "
+"ਨਹੀਂ ਕੀਤੀ ਹੋਈ ਹੈ। ਇਹ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਤੁਸੀਂ ਇਸ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ:"
 
 #: ../po/resources_strings.c:223
 msgid "Description: "
@@ -289,6 +295,8 @@ msgid ""
 "A script (%s:%d) on this gadget may be busy or have stopped responding. Do "
 "you want to stop it?"
 msgstr ""
+"ਇਸ ਗੈਜਿੱਟ ਉੱਤੇ ਸਕ੍ਰਿਪਟ (%s:%d) ਰੁੱਝੀ ਹੋ ਸਕਦੀ ਹੈ ਜਾਂ ਜਵਾਬ ਦੇਣ ਤੋਂ ਰੁਕ ਗਈ ਹੈ। "
+"ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਰੋਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: ../po/resources_strings.c:232
 msgid "Change Hotkey"
@@ -296,7 +304,7 @@ msgstr "ਹਾਟ-ਕੀ ਬਦਲੋ"
 
 #: ../po/resources_strings.c:235
 msgid "Click to input the new hotkey:"
-msgstr ""
+msgstr "ਨਵੀਂ ਹੋਸਟ-ਕੀ ਇੰਪੁੱਟ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ:"
 
 #: ../po/resources_strings.c:238
 msgid "Press new hotkey"
@@ -313,11 +321,11 @@ msgstr "ਆਯੋਗ"
 #: ../po/resources_strings.c:250
 #, c-format
 msgid "Gadgets, press %s to show or hide gadgets."
-msgstr ""
+msgstr "ਗੈਜਿੱਟ, ਗੈੱਜਿਟ ਵੇਖਣ ਜਾਂ ਓਹਲੇ ਕਰਨ ਲਈ %s ਦੱਬੋ।"
 
 #: ../po/resources_strings.c:256
 msgid "Trace"
-msgstr ""
+msgstr "ਟਰੇਸ"
 
 #: ../po/resources_strings.c:259
 msgid "Info"
@@ -346,59 +354,59 @@ msgstr "ਗੈਜਿਟ (Qt)"
 
 #: ../po/resources_strings.c:277 ../po/resources_strings.c:286
 msgid "Gadget Designer"
-msgstr ""
+msgstr "ਗੈਜਿੱਟ ਡਿਜ਼ਾਇਨਰ"
 
 #: ../po/resources_strings.c:280
 msgid "Run Gadgets in GNOME/GTK environment"
-msgstr ""
+msgstr "ਗਨੋਮ/GTK ਇੰਵਾਇਰਨਮੈਂਟ 'ਚ ਗੈਜਿੱਟ ਚਲਾਓ"
 
 #: ../po/resources_strings.c:283
 msgid "Run Gadgets in KDE/Qt environment"
-msgstr ""
+msgstr "ਕੇਡੀਈ/Qt ਇੰਵਾਇਰਨਮੈਂਟ 'ਚ ਗੈਜਿੱਟ ਚਲਾਓ"
 
 #: ../po/resources_strings.c:289
 msgid "Reads content of local files and directories"
-msgstr ""
+msgstr "ਲੋਕਲ ਫਾਇਲਾਂ ਤੇ ਡਾਇਰੈਕਟਰੀਆਂ ਦੀ ਸਮੱਗਰੀ ਪੜ੍ਹੋ"
 
 #: ../po/resources_strings.c:292
 msgid "Creates or modifies local files and directories"
-msgstr ""
+msgstr "ਲੋਕਲ ਫਾਇਲਾਂ ਤੇ ਡਾਇਰੈਕਟਰੀਆਂ ਬਣਾਓ ਜਾਂ ਸੋਧੋ"
 
 #: ../po/resources_strings.c:295
 msgid "Queries or modifies the status of hardware devices"
-msgstr ""
+msgstr "ਹਾਰਡਵੇਅਰ ਜੰਤਰਾਂ ਦੀ ਹਾਲਤ ਬਾਰੇ ਪਤਾ ਕਰੋ ਜਾਂ ਸੋਧੋ"
 
 #: ../po/resources_strings.c:298
 msgid "Accesses network"
-msgstr ""
+msgstr "ਨੈੱਟਵਰਕ ਅਸੈੱਸ ਕਰੋ"
 
 #: ../po/resources_strings.c:301
 msgid "Accesses personalization data"
-msgstr ""
+msgstr "ਨਿੱਜੀ ਡਾਟਾ ਅਸੈੱਸ ਕਰੋ"
 
 #: ../po/resources_strings.c:304
 msgid "Executes native code and local applications"
-msgstr ""
+msgstr "ਨੇਟਿਵ ਕੋਡ ਤੇ ਲੋਕਲ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ"
 
 #: ../po/resources_strings.c:307
 #, c-format
 msgid "The gadget could not be loaded:&#10;&#10;%s"
-msgstr ""
+msgstr "ਗੈੱਜਿੱਟ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:310
 #, c-format
 msgid ""
 "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
-msgstr ""
+msgstr "ਗੈਜਿੱਟ ਲਈ ਗੈੱਜਿਟਸ ਸਹਿਯੋਗੀ API ਦਾ ਚਾਹੀਦਾ ਵਰਜਨ %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:313
 #, c-format
 msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
-msgstr ""
+msgstr "ਗੈਜਿੱਟ ਲਈ ਲੀਨਕਸ ਉੱਤੇ ਤਾਜ਼ਾ ਵਰਜਨ ਚਾਹੀਦਾ ਹੈ %s:&#10;&#10;%s"
 
 #: ../po/resources_strings.c:316
 msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
-msgstr ""
+msgstr "ਗੈਜਿੱਟ ਲੀਨਕਸ ਪਲੇਟਫਾਰਮ ਉੱਤੇ ਕੰਮ ਨਹੀਂ ਕਰ ਸਕਦਾ:%&#10;&#10;%s"
 
 #: ../po/resources_strings.c:319
 msgid "http://www.google.com"
@@ -415,7 +423,7 @@ msgstr "ਕੇਵਲ ਵੇਖੋ:"
 
 #: ../po/control_strings.c:37
 msgid "{{PAGE}} of {{TOTAL}}"
-msgstr ""
+msgstr "{{TOTAL}} ਵਿੱਚੋਂ {{PAGE}}"
 
 #: ../po/control_strings.c:40
 msgid "Add"
@@ -423,7 +431,7 @@ msgstr "ਸ਼ਾਮਲ"
 
 #: ../po/control_strings.c:43
 msgid "Adding..."
-msgstr ""
+msgstr "ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ..."
 
 #: ../po/control_strings.c:46
 msgid "Added"
@@ -454,12 +462,16 @@ msgid ""
 "Do you want to close the Gadgets Zone? This will remove all your installed "
 "gadgets."
 msgstr ""
+"ਕੀ ਤੁਸੀਂ ਗੈਜਿੱਟ ਜੋਨ ਬੰਦ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਤੁਹਾਡੇ ਕੋਲ ਇੰਸਟਾਲ ਸਭ ਗੈਜਿੱਟ ਹਟਾ "
+"ਦੇਵੇਗਾ।"
 
 #: ../po/control_strings.c:73
 msgid ""
 "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you "
 "want to do?"
 msgstr ""
+"ਗੈੱਜਿਟ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ, ਇਹ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਉੱਤੇ ਨਿੰਮੇ ਨਿੰਮੇ ਟਿਮਕਣੇ ਹਨ। ਕੀ "
+"ਤੁਸੀਂ ਇਹਨਾਂ ਨੂੰ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: ../po/control_strings.c:76
 msgid "Add a new Gadget"
@@ -472,6 +484,7 @@ msgstr "ਅੱਪਡੇਟ ਲਈ ਚੈਕ ਕਰੋ"
 #: ../po/control_strings.c:82
 msgid "Sorry, we don't have any updated Gadgets available. You could:"
 msgstr ""
+"ਅਫਸੋਸ, ਸਾਡੇ ਕੋਲ ਕੋਈ ਵੀ ਅੱਪਡੇਟ ਕੀਤਾ ਗੈਜਿੱਟ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ। ਤੁਸੀਂ ਕਰ ਸਕਦੇ ਹੋ:"
 
 #: ../po/control_strings.c:85
 msgid "» "
