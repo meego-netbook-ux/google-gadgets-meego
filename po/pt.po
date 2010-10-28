@@ -1,0 +1,684 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: meego-google-gadgets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-24 01:33+0000\n"
+"PO-Revision-Date: 2010-10-28 12:40-0000\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+
+#: ../po/resources_strings.c:25
+#: ../po/resources_strings.c:247
+#: ../hosts/clutter/gadgets-panel.desktop.in.in.h:1
+msgid "Gadgets"
+msgstr "\"Gadgets\""
+
+#: ../po/resources_strings.c:28
+#, c-format
+msgid "(API Version: %s)"
+msgstr "(Versão API: %s)"
+
+#: ../po/resources_strings.c:31
+msgid "Copyright © 2009 Google Inc. All Rights Reserved.&#10;Licensed under the Apache License, Version 2.0:"
+msgstr "Copyright © 2009 Google Inc. Todos os direitos reservados.&#10;Licenciado nos termos da Apache License, Versão 2.0:"
+
+#: ../po/resources_strings.c:34
+msgid "For more information please visit our project site:"
+msgstr "Para mais informações, visite a página do projeto:"
+
+#: ../po/resources_strings.c:37
+msgid "%I:%M%P"
+msgstr "%I:%M%P"
+
+#: ../po/resources_strings.c:40
+msgid "%b %d"
+msgstr "%d %b"
+
+#: ../po/resources_strings.c:43
+#: ../po/resources_strings.c:46
+#, c-format
+msgid "%dd ago"
+msgstr "%dd atrás"
+
+#: ../po/resources_strings.c:49
+#, c-format
+msgid "%d day ago"
+msgstr "%d dia atrás"
+
+#: ../po/resources_strings.c:52
+#, c-format
+msgid "%d days ago"
+msgstr "%d dias atrás"
+
+#: ../po/resources_strings.c:55
+#: ../po/resources_strings.c:58
+#, c-format
+msgid "%dh ago"
+msgstr "%dh atrás"
+
+#: ../po/resources_strings.c:61
+#, c-format
+msgid "%d hr ago"
+msgstr "%d hr atrás"
+
+#: ../po/resources_strings.c:64
+#, c-format
+msgid "%d hrs ago"
+msgstr "%d hrs atrás"
+
+#: ../po/resources_strings.c:67
+#: ../po/resources_strings.c:70
+#, c-format
+msgid "%dm ago"
+msgstr "%dm atrás"
+
+#: ../po/resources_strings.c:73
+#, c-format
+msgid "%d min ago"
+msgstr "%d min atrás"
+
+#: ../po/resources_strings.c:76
+#, c-format
+msgid "%d mins ago"
+msgstr "%d mins atrás"
+
+#: ../po/resources_strings.c:79
+msgid "Open"
+msgstr "Abrir"
+
+#: ../po/resources_strings.c:82
+#: ../po/resources_strings.c:100
+msgid "Remove"
+msgstr "Remover"
+
+#: ../po/resources_strings.c:85
+msgid "Don't show me items like this"
+msgstr "Não mostrar itens similares"
+
+#: ../po/resources_strings.c:88
+msgid "Previous"
+msgstr "Anterior"
+
+#: ../po/resources_strings.c:91
+msgid "Next"
+msgstr "Seguinte"
+
+#: ../po/resources_strings.c:94
+msgid "Toggle Expanded View"
+msgstr "Alternar para vista detalhada"
+
+#: ../po/resources_strings.c:97
+#: ../po/resources_strings.c:106
+msgid "Menu"
+msgstr "Menu"
+
+#: ../po/resources_strings.c:103
+msgid "Add gadgets"
+msgstr "Adicionar \"gadgets\""
+
+#: ../po/resources_strings.c:109
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: ../po/resources_strings.c:112
+msgid "Program can't start because it failed to load the following module(s):"
+msgstr "O programa não consegue iniciar porque ocorreu uma falha no(s) módulo(s):"
+
+#: ../po/resources_strings.c:115
+msgid "&About..."
+msgstr "&Acerca..."
+
+#: ../po/resources_strings.c:118
+msgid "Add &Gadgets..."
+msgstr "Adicionar \"&gadgets\"..."
+
+#: ../po/resources_strings.c:121
+msgid "Add an &iGoogle Gadget"
+msgstr "Adicionar um \"gadget\" &iGoogle"
+
+#: ../po/resources_strings.c:124
+msgid "Always on &Top"
+msgstr "Sempre no &topo"
+
+#: ../po/resources_strings.c:127
+msgid "Auto &Fit"
+msgstr "Ajuste auto&mático"
+
+#: ../po/resources_strings.c:130
+msgid "A&uto Hide"
+msgstr "Ocultar a&utomaticamente"
+
+#: ../po/resources_strings.c:133
+msgid "&Collapse"
+msgstr "&Colapsar"
+
+#: ../po/resources_strings.c:136
+msgid "&Dock to Sidebar"
+msgstr "Acoplar à barra late&ral"
+
+#: ../po/resources_strings.c:139
+msgid "Doc&k Sidebar"
+msgstr "&Barra lateral"
+
+#: ../po/resources_strings.c:142
+msgid "E&xit"
+msgstr "&Sair"
+
+#: ../po/resources_strings.c:145
+msgid "Ex&pand"
+msgstr "Ex&pandir"
+
+#: ../po/resources_strings.c:148
+msgid "&Font Size"
+msgstr "Taman&ho das letras"
+
+#: ../po/resources_strings.c:151
+msgid "&Default"
+msgstr "&Omissões"
+
+#: ../po/resources_strings.c:154
+msgid "&Larger"
+msgstr "&Maior"
+
+#: ../po/resources_strings.c:157
+msgid "&Smaller"
+msgstr "Me&nor"
+
+#: ../po/resources_strings.c:160
+msgid "Hide A&ll"
+msgstr "Ocu&ltar tudo"
+
+#: ../po/resources_strings.c:163
+msgid "&Left"
+msgstr "Es&querda"
+
+#: ../po/resources_strings.c:166
+msgid "&Options..."
+msgstr "&Opções"
+
+#: ../po/resources_strings.c:169
+msgid "R&emove"
+msgstr "R&emover"
+
+#: ../po/resources_strings.c:172
+msgid "&Right"
+msgstr "Di&reita"
+
+#: ../po/resources_strings.c:175
+msgid "Show A&ll"
+msgstr "Mostrar tu&do"
+
+#: ../po/resources_strings.c:178
+msgid "&Undock from Sidebar"
+msgstr "Retirar &da barra lateral"
+
+#: ../po/resources_strings.c:181
+msgid "&Zoom"
+msgstr "&Ampliação"
+
+#: ../po/resources_strings.c:184
+msgid "100%"
+msgstr "100%"
+
+#: ../po/resources_strings.c:187
+msgid "125%"
+msgstr "125%"
+
+#: ../po/resources_strings.c:190
+msgid "150%"
+msgstr "150%"
+
+#: ../po/resources_strings.c:193
+msgid "175%"
+msgstr "175%"
+
+#: ../po/resources_strings.c:196
+msgid "200%"
+msgstr "200%"
+
+#: ../po/resources_strings.c:199
+msgid "50%"
+msgstr "50%"
+
+#: ../po/resources_strings.c:202
+msgid "75%"
+msgstr "75%"
+
+#: ../po/resources_strings.c:205
+msgid "Change &Hotkey..."
+msgstr "Alterar tecla de atal&ho..."
+
+#: ../po/resources_strings.c:208
+msgid "De&bug Console"
+msgstr "Consola de depu&ração"
+
+#: ../po/resources_strings.c:211
+msgid "&Sidebar"
+msgstr "Barra &lateral"
+
+#: ../po/resources_strings.c:214
+msgid "Feedback..."
+msgstr "\"Feedback\"..."
+
+#: ../po/resources_strings.c:217
+msgid "Third Party Gadget Installation"
+msgstr "Inatalação de \"gadgets\" de terceiros"
+
+#: ../po/resources_strings.c:220
+msgid "Google has not tested or verified the features or security of this third party Gadget. Please confirm that you want to install:"
+msgstr "A google não testou nem verificou as funcionalidades ou segurança deste \"gadget\". Por favor, confirme a instalação:"
+
+#: ../po/resources_strings.c:223
+msgid "Description: "
+msgstr "Descrição:"
+
+#: ../po/resources_strings.c:226
+msgid "Required permissions: "
+msgstr "Permissões necessárias:"
+
+#: ../po/resources_strings.c:229
+#, c-format
+msgid "A script (%s:%d) on this gadget may be busy or have stopped responding. Do you want to stop it?"
+msgstr "O \"script\" (%s:%d) neste \"gadget\" pode estar ocupado ou deixou de responder. Pretende terminar?"
+
+#: ../po/resources_strings.c:232
+msgid "Change Hotkey"
+msgstr "Alterar tecla de atalho"
+
+#: ../po/resources_strings.c:235
+msgid "Click to input the new hotkey:"
+msgstr "Clique para introduzir o novo atalho:"
+
+#: ../po/resources_strings.c:238
+msgid "Press new hotkey"
+msgstr "Escolha o novo atalho"
+
+#: ../po/resources_strings.c:241
+#: ../po/resources_strings.c:253
+msgid "Clear"
+msgstr "Limpar"
+
+#: ../po/resources_strings.c:244
+msgid "Disabled"
+msgstr "Inativo"
+
+#: ../po/resources_strings.c:250
+#, c-format
+msgid "Gadgets, press %s to show or hide gadgets."
+msgstr "\"Gadgets\", prima %s para mostrar/ocultar \"gadgets\"."
+
+#: ../po/resources_strings.c:256
+msgid "Trace"
+msgstr "Vestígios"
+
+#: ../po/resources_strings.c:259
+msgid "Info"
+msgstr "Info"
+
+#: ../po/resources_strings.c:262
+msgid "Warning"
+msgstr "Aviso"
+
+#: ../po/resources_strings.c:265
+#: ../po/control_strings.c:49
+#: ../po/control_strings.c:64
+msgid "Error"
+msgstr "Erro"
+
+#: ../po/resources_strings.c:268
+msgid "Lock scroll"
+msgstr "Bloquear deslocação"
+
+#: ../po/resources_strings.c:271
+msgid "Gadgets (GTK)"
+msgstr "\"Gadgets\" (GTK)"
+
+#: ../po/resources_strings.c:274
+msgid "Gadgets (Qt)"
+msgstr "\"Gadgets\" (Qt)"
+
+#: ../po/resources_strings.c:277
+#: ../po/resources_strings.c:286
+msgid "Gadget Designer"
+msgstr "Criador de \"gadgets\""
+
+#: ../po/resources_strings.c:280
+msgid "Run Gadgets in GNOME/GTK environment"
+msgstr "Executar \"gadgets\" no GNOME/GTK "
+
+#: ../po/resources_strings.c:283
+msgid "Run Gadgets in KDE/Qt environment"
+msgstr "Executar \"gadgets\" no KDE/Qt"
+
+#: ../po/resources_strings.c:289
+msgid "Reads content of local files and directories"
+msgstr "Acede ao conteúdos dos ficheiros e diretórios locais"
+
+#: ../po/resources_strings.c:292
+msgid "Creates or modifies local files and directories"
+msgstr "Cria ou modifica os ficheiros e diretórios locais"
+
+#: ../po/resources_strings.c:295
+msgid "Queries or modifies the status of hardware devices"
+msgstr "Consulta ou modifica o estado dos dispositivos"
+
+#: ../po/resources_strings.c:298
+msgid "Accesses network"
+msgstr "Acede à rede"
+
+#: ../po/resources_strings.c:301
+msgid "Accesses personalization data"
+msgstr "Acede aos dados de personalização"
+
+#: ../po/resources_strings.c:304
+msgid "Executes native code and local applications"
+msgstr "Executa códigos e aplicações locais"
+
+#: ../po/resources_strings.c:307
+#, c-format
+msgid "The gadget could not be loaded:&#10;&#10;%s"
+msgstr "O \"gadget\" não foi carregado:&#10;&#10;%s"
+
+#: ../po/resources_strings.c:310
+#, c-format
+msgid "The gadget requires Gadgets supporting API at least version %s:&#10;&#10;%s"
+msgstr "O \"gadget\" requer aplicações que tenham, pelo menos, suporte à versão API %s:&#10;&#10;%s"
+
+#: ../po/resources_strings.c:313
+#, c-format
+msgid "The gadget requires Gadgets for Linux at least version %s:&#10;&#10;%s"
+msgstr "O \"gadget\" requer aplicações para Linux que tenham, pelo menos, a versão %s:&#10;&#10;%s"
+
+#: ../po/resources_strings.c:316
+msgid "The gadget doesn't work on Linux platform:%&#10;&#10;%s"
+msgstr "O \"gadget\" não funciona em plataformas Linux:%&#10;&#10;%s"
+
+#: ../po/resources_strings.c:319
+msgid "http://www.google.com"
+msgstr "http://www.google.com"
+
+#: ../po/control_strings.c:25
+#: ../po/control_strings.c:28
+#: ../po/control_strings.c:31
+msgid "Gadgets Control"
+msgstr "Controlo de \"gadgets\""
+
+#: ../po/control_strings.c:34
+msgid "Show only:"
+msgstr "Mostrar apenas:"
+
+#: ../po/control_strings.c:37
+msgid "{{PAGE}} of {{TOTAL}}"
+msgstr "{{PAGE}} de {{TOTAL}}"
+
+#: ../po/control_strings.c:40
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../po/control_strings.c:43
+msgid "Adding..."
+msgstr "Adicionando..."
+
+#: ../po/control_strings.c:46
+msgid "Added"
+msgstr "Adicionado"
+
+#: ../po/control_strings.c:52
+msgid "Offline"
+msgstr "\"Off-line\""
+
+#: ../po/control_strings.c:55
+msgid "Update"
+msgstr "Atualizar"
+
+#: ../po/control_strings.c:58
+msgid "Updating..."
+msgstr "Atualizando..."
+
+#: ../po/control_strings.c:61
+msgid "Updated"
+msgstr "Atualizado"
+
+#: ../po/control_strings.c:67
+msgid "Search gadgets"
+msgstr "Pesquisar \"gadgets\""
+
+#: ../po/control_strings.c:70
+msgid "Do you want to close the Gadgets Zone? This will remove all your installed gadgets."
+msgstr "Pretende fechar a zona de \"gadgets\"? Isto irá remover todos os \"gadgets\" instalados."
+
+#: ../po/control_strings.c:73
+msgid "Welcome to Gadgets, they're tiny bits of fun for your computer. What do you want to do?"
+msgstr "Bem-vindo aos \"Gadgets\", pequenas aplicações para melhorar o seu computador.O que pretende fazer?"
+
+#: ../po/control_strings.c:76
+msgid "Add a new Gadget"
+msgstr "Adicionar novo \"gadget\""
+
+#: ../po/control_strings.c:79
+msgid "Check for updates"
+msgstr "Verificar atualizações"
+
+#: ../po/control_strings.c:82
+msgid "Sorry, we don't have any updated Gadgets available. You could:"
+msgstr "Parece que não existem atualizações. No entanto, pode:"
+
+#: ../po/control_strings.c:85
+msgid "» "
+msgstr "» "
+
+#: ../po/control_strings.c:88
+msgid " / "
+msgstr " / "
+
+#: ../po/control_strings.c:91
+msgid "Version "
+msgstr "Versão"
+
+#: ../po/control_strings.c:94
+msgid " KB"
+msgstr " KB"
+
+#: ../po/control_strings.c:97
+msgid "All languages"
+msgstr "Todos os idiomas"
+
+#: ../po/control_strings.c:100
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+#: ../po/control_strings.c:103
+msgid "Catalan"
+msgstr "Catalão"
+
+#: ../po/control_strings.c:106
+msgid "Czech"
+msgstr "Checo"
+
+#: ../po/control_strings.c:109
+msgid "Danish"
+msgstr "Dinamarquês"
+
+#: ../po/control_strings.c:112
+msgid "German"
+msgstr "Alemão"
+
+#: ../po/control_strings.c:115
+msgid "Greek"
+msgstr "Grego"
+
+#: ../po/control_strings.c:118
+msgid "English (US)"
+msgstr "Inglês (US)"
+
+#: ../po/control_strings.c:121
+msgid "English (UK)"
+msgstr "Inglês (UK)"
+
+#: ../po/control_strings.c:124
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: ../po/control_strings.c:127
+msgid "Finnish"
+msgstr "Finlandês"
+
+#: ../po/control_strings.c:130
+msgid "French"
+msgstr "Francês"
+
+#: ../po/control_strings.c:133
+msgid "Hindi"
+msgstr "Hindi"
+
+#: ../po/control_strings.c:136
+msgid "Croatian"
+msgstr "Croata"
+
+#: ../po/control_strings.c:139
+msgid "Hungarian"
+msgstr "Húngaro"
+
+#: ../po/control_strings.c:142
+msgid "Indonesian"
+msgstr "Indonésio"
+
+#: ../po/control_strings.c:145
+msgid "Italian"
+msgstr "Italiano"
+
+#: ../po/control_strings.c:148
+msgid "Japanese"
+msgstr "Japonês"
+
+#: ../po/control_strings.c:151
+msgid "Korean"
+msgstr "Coreano"
+
+#: ../po/control_strings.c:154
+msgid "Dutch"
+msgstr "Holandês"
+
+#: ../po/control_strings.c:157
+msgid "Norwegian"
+msgstr "Norueguês"
+
+#: ../po/control_strings.c:160
+msgid "Polish"
+msgstr "Polaco"
+
+#: ../po/control_strings.c:163
+msgid "Portuguese (Brazil)"
+msgstr "Português (Brasil)"
+
+#: ../po/control_strings.c:166
+msgid "Portuguese (Portugal)"
+msgstr "Português (Portugal)"
+
+#: ../po/control_strings.c:169
+msgid "Romanian"
+msgstr "Romeno"
+
+#: ../po/control_strings.c:172
+msgid "Russian"
+msgstr "Russo"
+
+#: ../po/control_strings.c:175
+msgid "Slovak"
+msgstr "Eslovaco"
+
+#: ../po/control_strings.c:178
+msgid "Slovenian"
+msgstr "Esloveno"
+
+#: ../po/control_strings.c:181
+msgid "Swedish"
+msgstr "Sueco"
+
+#: ../po/control_strings.c:184
+msgid "Thai"
+msgstr "Tailandês"
+
+#: ../po/control_strings.c:187
+msgid "Turkish"
+msgstr "Turco"
+
+#: ../po/control_strings.c:190
+msgid "Chinese (Simplified)"
+msgstr "Chinês (Simplificado)"
+
+#: ../po/control_strings.c:193
+msgid "Chinese (Traditional)"
+msgstr "Chinês (Tradicional)"
+
+#: ../po/control_strings.c:196
+msgid "All"
+msgstr "Todos"
+
+#: ../po/control_strings.c:199
+msgid "New"
+msgstr "Novo"
+
+#: ../po/control_strings.c:202
+msgid "Recommendations"
+msgstr "Recomendados"
+
+#: ../po/control_strings.c:205
+msgid "Google Created"
+msgstr "Criados pela Google"
+
+#: ../po/control_strings.c:208
+msgid "Recently Used"
+msgstr "Recentes"
+
+#: ../po/control_strings.c:211
+msgid "Updates"
+msgstr "Atualizações"
+
+#: ../po/control_strings.c:214
+msgid "News"
+msgstr "Notícias"
+
+#: ../po/control_strings.c:217
+msgid "Sports"
+msgstr "Desporto"
+
+#: ../po/control_strings.c:220
+msgid "Lifestyle"
+msgstr "Estilos de vida"
+
+#: ../po/control_strings.c:223
+msgid "Finance"
+msgstr "Finanças"
+
+#: ../po/control_strings.c:226
+msgid "Tools"
+msgstr "Ferramentas"
+
+#: ../po/control_strings.c:229
+msgid "Fun and Games"
+msgstr "Diversão e jogos"
+
+#: ../po/control_strings.c:232
+msgid "Technology"
+msgstr "Tecnologia"
+
+#: ../po/control_strings.c:235
+msgid "Communication"
+msgstr "Comunicações"
+
+#: ../po/control_strings.c:238
+msgid "Holidays"
+msgstr "Feriados"
+
