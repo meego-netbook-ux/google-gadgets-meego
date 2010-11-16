@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: meego-google-gadgets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 09:42+0000\n"
-"PO-Revision-Date: 2010-10-27 23:33+0800\n"
-"Last-Translator: Wei-Lun Chao <chaoweilun@gmail.com>\n"
+"POT-Creation-Date: 2010-11-16 00:10+0000\n"
+"PO-Revision-Date: 2010-11-16 15:51+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Taiwan)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "如需更多資訊，請造訪我們的專案網站："
 
 #: ../po/resources_strings.c:37
 msgid "%I:%M%P"
-msgstr "%I:%M %P"
+msgstr "%P %I:%M"
 
 #: ../po/resources_strings.c:40
 msgid "%b %d"
@@ -143,7 +143,7 @@ msgstr "加入小工具(&G)…"
 
 #: ../po/resources_strings.c:121
 msgid "Add an &iGoogle Gadget"
-msgstr "加入 iGoogle 小工具(&G)"
+msgstr "加入 iGoogle 小工具(&I)"
 
 #: ../po/resources_strings.c:124
 msgid "Always on &Top"
@@ -163,11 +163,11 @@ msgstr "摺疊(&C)"
 
 #: ../po/resources_strings.c:136
 msgid "&Dock to Sidebar"
-msgstr "固定到側邊攔(&D)"
+msgstr "固定到側邊欄(&D)"
 
 #: ../po/resources_strings.c:139
 msgid "Doc&k Sidebar"
-msgstr "固定到側邊攔(&K)"
+msgstr "固定到側邊欄(&K)"
 
 #: ../po/resources_strings.c:142
 msgid "E&xit"
@@ -263,7 +263,7 @@ msgstr "除錯主控臺(&B)"
 
 #: ../po/resources_strings.c:211
 msgid "&Sidebar"
-msgstr "側邊攔(&S)"
+msgstr "側邊欄(&S)"
 
 #: ../po/resources_strings.c:214
 msgid "Feedback..."
@@ -490,135 +490,135 @@ msgstr " KB"
 
 #: ../po/control_strings.c:97
 msgid "All languages"
-msgstr "全部語言"
+msgstr "全部文言"
 
 #: ../po/control_strings.c:100
 msgid "Bulgarian"
-msgstr "保加利亞語"
+msgstr "保加利亞文"
 
 #: ../po/control_strings.c:103
 msgid "Catalan"
-msgstr "嘉泰羅尼亞語"
+msgstr "嘉泰羅尼亞文"
 
 #: ../po/control_strings.c:106
 msgid "Czech"
-msgstr "捷克語"
+msgstr "捷克文"
 
 #: ../po/control_strings.c:109
 msgid "Danish"
-msgstr "丹麥語"
+msgstr "丹麥文"
 
 #: ../po/control_strings.c:112
 msgid "German"
-msgstr "德語"
+msgstr "德文"
 
 #: ../po/control_strings.c:115
 msgid "Greek"
-msgstr "希臘語"
+msgstr "希臘文"
 
 #: ../po/control_strings.c:118
 msgid "English (US)"
-msgstr "英語 (美國)"
+msgstr "英文 (美國)"
 
 #: ../po/control_strings.c:121
 msgid "English (UK)"
-msgstr "英語 (英國)"
+msgstr "英文 (英國)"
 
 #: ../po/control_strings.c:124
 msgid "Spanish"
-msgstr "西班牙語"
+msgstr "西班牙文"
 
 #: ../po/control_strings.c:127
 msgid "Finnish"
-msgstr "芬蘭語"
+msgstr "芬蘭文"
 
 #: ../po/control_strings.c:130
 msgid "French"
-msgstr "法語"
+msgstr "法文"
 
 #: ../po/control_strings.c:133
 msgid "Hindi"
-msgstr "北印度語"
+msgstr "北印度文"
 
 #: ../po/control_strings.c:136
 msgid "Croatian"
-msgstr "克羅蒂亞語"
+msgstr "克羅蒂亞文"
 
 #: ../po/control_strings.c:139
 msgid "Hungarian"
-msgstr "匈牙利語"
+msgstr "匈牙利文"
 
 #: ../po/control_strings.c:142
 msgid "Indonesian"
-msgstr "印度尼西亞語"
+msgstr "印度尼西亞文"
 
 #: ../po/control_strings.c:145
 msgid "Italian"
-msgstr "義大利語"
+msgstr "義大利文"
 
 #: ../po/control_strings.c:148
 msgid "Japanese"
-msgstr "日語"
+msgstr "日文"
 
 #: ../po/control_strings.c:151
 msgid "Korean"
-msgstr "韓語"
+msgstr "韓文"
 
 #: ../po/control_strings.c:154
 msgid "Dutch"
-msgstr "荷蘭語"
+msgstr "荷蘭文"
 
 #: ../po/control_strings.c:157
 msgid "Norwegian"
-msgstr "挪威語"
+msgstr "挪威文"
 
 #: ../po/control_strings.c:160
 msgid "Polish"
-msgstr "波蘭語"
+msgstr "波蘭文"
 
 #: ../po/control_strings.c:163
 msgid "Portuguese (Brazil)"
-msgstr "葡萄牙語 (巴西)"
+msgstr "葡萄牙文 (巴西)"
 
 #: ../po/control_strings.c:166
 msgid "Portuguese (Portugal)"
-msgstr "葡萄牙語 (葡萄牙)"
+msgstr "葡萄牙文 (葡萄牙)"
 
 #: ../po/control_strings.c:169
 msgid "Romanian"
-msgstr "羅馬尼亞語"
+msgstr "羅馬尼亞文"
 
 #: ../po/control_strings.c:172
 msgid "Russian"
-msgstr "俄語"
+msgstr "俄文"
 
 #: ../po/control_strings.c:175
 msgid "Slovak"
-msgstr "斯洛伐克語"
+msgstr "斯洛伐克文"
 
 #: ../po/control_strings.c:178
 msgid "Slovenian"
-msgstr "斯洛維尼亞語"
+msgstr "斯洛維尼亞文"
 
 #: ../po/control_strings.c:181
 msgid "Swedish"
-msgstr "瑞典語"
+msgstr "瑞典文"
 
 #: ../po/control_strings.c:184
 msgid "Thai"
-msgstr "泰語"
+msgstr "泰文"
 
 #: ../po/control_strings.c:187
 msgid "Turkish"
-msgstr "土耳其語"
+msgstr "土耳其文"
 
 #: ../po/control_strings.c:190
 msgid "Chinese (Simplified)"
-msgstr "漢語 (簡化)"
+msgstr "中文 (簡體)"
 
 #: ../po/control_strings.c:193
 msgid "Chinese (Traditional)"
-msgstr "漢語 (傳統)"
+msgstr "中文 (正體)"
 
 #: ../po/control_strings.c:196
 msgid "All"
